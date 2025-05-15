@@ -1,0 +1,250 @@
+/* Neurosoft specific CSS extenssion of the RTD theme */
+
+/* Fonts --------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap&subset=greek,latin-ext');
+
+
+body {
+   font-family: "Ubuntu","proxima-nova","Helvetica Neue",Arial,sans-serif;
+   font-weight: 400;
+}
+
+h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend {
+   font-family: "Ubuntu","ff-tisa-web-pro","Georgia",Arial,sans-serif;
+}
+
+.btn {
+   font-family: "Ubuntu","proxima-nova","Helvetica Neue",Arial,sans-serif;
+}
+
+.caption-text {
+   font-size: 16px !important;
+   font-family: "Ubuntu","proxima-nova","Helvetica Neue",Arial,sans-serif !important;   
+   font-weight: 400;
+}
+
+.caption-number {
+   font-size: 16px !important;
+   font-family: "Ubuntu","proxima-nova","Helvetica Neue",Arial,sans-serif !important;
+   font-weight: 400 !important;
+}
+
+.caption-number::after {
+   content: "- "
+}
+
+.caption {
+   padding-top: 0.7em;
+   font-family: "Ubuntu","proxima-nova","Helvetica Neue",Arial,sans-serif !important;
+   font-weight: 400 !important;
+}
+
+
+/* Colors --------------------------------------------------------------- */
+
+
+a {
+   color: #1fa7d8;
+   text-decoration: none;
+   cursor: pointer
+}
+
+.wy-nav-side {
+   background: #003349;
+}
+
+.wy-side-nav-search {
+   background-color: #5BC2E7;
+}
+
+.wy-side-nav-search input[type=text] {
+   border-color: #5BC2E7;
+}
+
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+   color: #5BC2E7;
+}
+
+.wy-nav-top {
+   background: #003349;
+}
+
+
+.wy-side-nav-search>div.version {
+   margin-top: -.4045em;
+   margin-bottom: .809em;
+   font-weight: normal;
+   color: rgba(255,255,255,0.7);
+}
+
+.rst-content .note {
+   background: #ebf8fd;
+}
+
+.rst-content .note .admonition-title {
+   background: #5BC2E7;
+}
+
+/* override table width restrictions -- bug*/
+
+.wy-table-responsive table td {
+   /* !important prevents the common CSS stylesheets from overriding
+      this as on RTD they are loaded after this stylesheet */
+   white-space: normal !important;
+   vertical-align: top !important;
+}
+
+.wy-table-responsive {
+   overflow: visible !important;
+}
+
+.wy-table td p, .rst-content table.docutils td p, .rst-content table.field-list td p {
+   line-height: 24px;
+}
+
+th>p {
+   margin-bottom: 0px;
+   font-size: 1rem !important;
+   line-height: 24px !important;
+   padding-bottom: 4px;
+}
+
+td>p {
+   margin-bottom: 0px;
+   font-size: 1rem !important;
+   line-height: 24px !important;
+   padding-bottom: 4px;
+}
+
+td>ul.simple {
+   margin-bottom: 0px !important;
+   font-size: 1rem !important;
+   line-height: 24px !important;
+}
+
+td>div.highlight-default {
+   margin-bottom: 4px !important;
+}
+
+th.stub {
+   vertical-align: top;
+}
+
+/* Bredcrumb --------------------------------------------------------------- */
+
+.nrs-lang {
+   position: relative;
+   display: inline-block;
+   height: 18px;
+   width: 24px;
+   cursor: pointer;
+   color: #404040 !important;
+   border: 1px solid #404040;
+   border-radius: 2px;
+   margin: 6px 2px 2px 2px;
+   padding: 0px !important;
+   text-align: center;
+   text-transform: uppercase;
+   font-size: small;
+}
+
+.nrs-lang-active {
+   position: relative;
+   display: inline-block;
+   height: 18px;
+   width: 24px;
+   cursor: default;
+   color: #C0C0C0;
+   border: 1px solid #C0C0C0;
+   border-radius: 2px;
+   margin: 6px 2px 2px 2px;
+   padding: 0px;
+   text-align: center;
+   text-transform: uppercase;
+   font-size: small;
+}
+
+/* Math --------------------------------------------------------------- */
+
+
+div.math {
+   position: relative;
+   padding-right: 2.5em;
+}
+.eqno {
+   height: 100%;
+   position: absolute;
+   right: 0;
+   padding-left: 5px;
+   padding-bottom: 5px;
+   /* Fix for mouse over in Firefox */
+   padding-right: 1px;
+}
+.eqno:before {
+   /* Force vertical alignment of number */
+   display: inline-block;
+   height: 100%;
+   vertical-align: middle;
+   content: "";
+}
+.eqno .headerlink {
+   display: none;
+   visibility: hidden;
+   font-size: 14px;
+   padding-left: .3em;
+}
+.eqno:hover .headerlink {
+   display: inline-block;
+   visibility: hidden;
+   margin-right: -1.05em;
+}
+.eqno .headerlink:after {
+   visibility: visible;
+   content: "\f0c1";
+   font-family: FontAwesome;
+   display: inline-block;
+   margin-left: -.9em;
+}
+/* Make responsive */
+.MathJax_Display {
+   max-width: 100%;
+   overflow-x: auto;
+   overflow-y: hidden;
+}
+
+/* Example box ------------------------------------------------------------- */
+
+.admonition-przyklad.admonition, .admonition-example.admonition, .admonition-beispiel.admonition, .admonition-ejemplo.admonition {
+   background-color: #eee;
+}
+
+.admonition-przyklad.admonition>.admonition-title, .admonition-example.admonition>.admonition-title, .admonition-beispiel.admonition>.admonition-title, .admonition-ejemplo.admonition>.admonition-title {
+   background-color: #aaa !important;
+}
+
+.admonition-przyklad.admonition>.admonition-title::before, .admonition-example.admonition>.admonition-title::before, .admonition-beispiel.admonition>.admonition-title::before, .admonition-przyklad.admonition>.admonition-ejemplo::before  {
+   content: "▼";
+}
+
+/* Math  */
+
+img.math, div.math p img {
+   overflow: visible;
+}
+
+/* Citation */
+
+dl.citation {
+   color: inherit !important;
+   font-size: 16px !important;
+}
+
+dl.citation>dd p {
+   font-size: 16px !important;
+   margin-bottom: .5rem;
+}
+
+dl.citation>dt {
+   line-height: 24px !important;
+}

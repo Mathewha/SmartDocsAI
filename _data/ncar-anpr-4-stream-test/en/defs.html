@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Definitions &mdash; ncar-anpr-4-stream-test 4.4.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.pldefs.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Confidence" href="confidence.html" />
+    <link rel="prev" title="ANPR/MMR quality verification for video stream processing" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-anpr-4-stream-test
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.4.1
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Definitions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#obszar-detekcji">1.1. Detection area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jakosc-detekcji">1.2. Detection quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jakosc-identyfikacji">1.3. Identification quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jakosc-klasyfikacji">1.4. Classification quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jakosc-rozpoznawania-marki">1.5. Maker recognition quality</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="confidence.html">2. Confidence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaluation.html">3. Evaluation criteria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">4. Running the test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conclusions.html">5. Conclusions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extras</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="appendix_a.html">Appendix A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">See also</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Downloads</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anpr-4-stream-test.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anpr-4-stream-test.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anpr-4-stream-test.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">User</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ncar-anpr-4-stream-test</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-anpr-4-stream-test</a></li>
+  
+
+  <li>&gt; <span class="section-number">1. </span>Definitions</li>
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <div class="nrs-lang-active">en</div>
+      
+    
+      
+        <a href=".//../../pl/defs.html" class="nrs-lang">pl</a>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="definicje">
+<span id="defs"></span><h1><span class="section-number">1. </span>Definitions<a class="headerlink" href="#definicje" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="obszar-detekcji">
+<span id="defs-detection-area"></span><h2><span class="section-number">1.1. </span>Detection area<a class="headerlink" href="#obszar-detekcji" title="Permalink to this headline">¶</a></h2>
+<p>The detection area is the place where vehicle detection and identification takes place. By design, the detection area covers the full cross-section of the road, i.e. all lanes where the tested devices are mounted, along with the emergency lane (if any). The system should be designed to ensure detection of all vehicles moving in a given direction.</p>
+<p>In locations where there is an emergency lane, the detection area also includes the lane – vehicles moving partially or completely in the emergency lane should be counted as vehicles passing in the slow lane unless the system design provides for a separate detection for the emergency lane.</p>
+<p>On a road with two-way traffic, it is stipulated that all vehicles traveling in the indicated lane, in the specified direction, should be detected, even if they only partially pass over it. It is assumed that a vehicle should be detected when at least one wheel from each axle of the vehicle passes entirely in the indicated lane (within the area designated by horizontal markings). In such a measurement system, a vehicle is assumed to be outside the detection area when it has fully moved with all wheels into the opposite lane.</p>
+</div>
+<div class="section" id="jakosc-detekcji">
+<span id="defs-detection-quality"></span><h2><span class="section-number">1.2. </span>Detection quality<a class="headerlink" href="#jakosc-detekcji" title="Permalink to this headline">¶</a></h2>
+<p>Detection level <img class="math" src="_images/math/10c4a4654f8643bced15e25ee32fe837bd78977b.svg" style="vertical-align: -3px"/> is a measure quantifying (in percentage terms) the ratio of the number of vehicles detected by the tested system to the number of all vehicles passing through a given detection area, at a given time, in a given direction, in a designated lane, at a speed that allows effective measurement. The detection level can be determined for vehicles moving in any direction or in a well-defined direction, rejecting vehicles moving against the flow, for example.</p>
+<p>It is assumed that the system detects only moving vehicles – effective measurement is possible when the vehicle is moving at speed:</p>
+<ul class="simple">
+<li><p>at least ≥ <strong>3.6</strong> km/h (≥1 m/s),</p></li>
+<li><p>at most ≤ <strong>252</strong> km/h (≤70 m/s).</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The vehicle speed requirement can be extended, for example, by allowing <em>stop&amp;go</em> traffic, but it is recommended to treat such cases as special, tested in a separate procedure.</p>
+</div>
+<p>Two sources of error are taken into account in determining the detection level:</p>
+<ul class="simple">
+<li><p><img class="math" src="_images/math/ab35f060a482411e24d0bb53d3ff7ba24ea3e458.svg" style="vertical-align: -3px"/> – omission of a vehicle by the system (number of vehicles omitted),</p></li>
+<li><p><img class="math" src="_images/math/c65d4a5b408679cd5613cd440f21ba1972f2166f.svg" style="vertical-align: -6px"/> – detection of a non-existent vehicle by the system (number of falsely detected vehicles).</p></li>
+</ul>
+<p>If  <img class="math" src="_images/math/696e4a984ba3f82a7cd270230ace110ef751b52a.svg" style="vertical-align: 0px"/> is the number of vehicles that actually passed through the measurement point then the detection level <img class="math" src="_images/math/10c4a4654f8643bced15e25ee32fe837bd78977b.svg" style="vertical-align: -3px"/> is determined from the formula:</p>
+<div class="math" id="equation-eq-1">
+<p><span class="eqno">(1)<a class="headerlink" href="#equation-eq-1" title="Permalink to this equation">¶</a></span><img src="_images/math/de23daceb7beaa2d1af7a0cf7e3edafc6558f4de.svg"/></p>
+</div><p>By design, the system should detect the passage of any vehicle, such as:</p>
+<ul class="simple">
+<li><p>motorcycles and mopeds,</p></li>
+<li><p>passenger cars, including those with trailers,</p></li>
+<li><p>light commercial vehicles (LCV), including those with trailers,</p></li>
+<li><p>tractors and other agricultural machinery, including multi-trailers,</p></li>
+<li><p>trucks, including those with trailers,</p></li>
+<li><p>tractor-trailers, stand-alone and with semi-trailer,</p></li>
+<li><p>buses, including those with trailers,</p></li>
+<li><p>special, multi-axle vehicles for oversize transport,</p></li>
+<li><p>military vehicles, including transporters and tanks.</p></li>
+</ul>
+<p>When calculating the detection level, vehicles that the system may not detect are not taken into account:</p>
+<ul class="simple">
+<li><p>bicycles,</p></li>
+<li><p>mopeds,</p></li>
+<li><p>light wooden vehicles (such as a carriage),</p></li>
+<li><p>road machinery, such as rollers, milling machines, etc.</p></li>
+</ul>
+<p>If multiple vehicles pass through the detection field at the same time, each should be detected independently.</p>
+</div>
+<div class="section" id="jakosc-identyfikacji">
+<span id="defs-identification-quality"></span><h2><span class="section-number">1.3. </span>Identification quality<a class="headerlink" href="#jakosc-identyfikacji" title="Permalink to this headline">¶</a></h2>
+<p>In the simplest case, by identification of a vehicle is meant its detection and subsequent recognition of the license plate number. By the term <em>identification quality</em> <img class="math" src="_images/math/6c3a91b5601504cf71f25853b6ba4f0b1b99f3c4.svg" style="vertical-align: -6px"/> is meant the percentage value that is the ratio of the number of correctly recognized vehicle plates <img class="math" src="_images/math/170b69ca9fbf0b54a80755b299087cf270a81db5.svg" style="vertical-align: -3px"/> to the number of all identifiable vehicles <img class="math" src="_images/math/0f3d21cd23830d61b1a7078982827c146d4722fc.svg" style="vertical-align: -3px"/> that passed through the detection area, in the specified direction, at the specified time, at the correct speed:</p>
+<div class="math" id="equation-eq-2">
+<p><span class="eqno">(2)<a class="headerlink" href="#equation-eq-2" title="Permalink to this equation">¶</a></span><img src="_images/math/48c5d63566e8ec9d0d4402e819ec34e34eb361dd.svg"/></p>
+</div><p>The number of vehicles that can be identified in a certain number of vehicles <img class="math" src="_images/math/0f3d21cd23830d61b1a7078982827c146d4722fc.svg" style="vertical-align: -3px"/> is determined by an expert during the test. Vehicles are not taken into account:</p>
+<ul class="simple">
+<li><p>motorcycles, for measurements from the front,</p></li>
+<li><p>agricultural machinery without a license plate marking,</p></li>
+<li><p>vehicles without a license plate,</p></li>
+<li><p>vehicles with an illegible license plate, about which the expert has doubts, in determining the registration number.</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>If the ANPR camera does not cover the entire detection area, as a result of which, for a vehicle detected by detection, the plate is not visible, or visible only partially, such a vehicle should be classified as unidentified (without plate recognition) but identifiable, i.e. included in the <img class="math" src="_images/math/0f3d21cd23830d61b1a7078982827c146d4722fc.svg" style="vertical-align: -3px"/> group.</p>
+</div>
+<p>It is assumed that the registration number is:</p>
+<ul class="simple">
+<li><p>a string of uppercase letters and numbers – if there is a lowercase letter in the plate, it should be converted to uppercase,</p></li>
+<li><p>no longer than 10 characters,</p></li>
+<li><p>without separators and other special characters,</p></li>
+<li><p>all characters written together – characters other than a letter or number should be omitted.</p></li>
+</ul>
+<p>To avoid ambiguity, the license plate number should be encoded in the output in UTF-8 encoding. For some countries, recognition of the corresponding national characters is required (e.g. umlaut in German plates). For license plates from countries where the Latin alphabet is not used, it is allowed to recognize letters and numbers in the alphabet appropriate for the country (e.g. Cyrillic), but it is also allowed to convert characters from non-Latin to Latin alphabet, for example, such conversion can be used for Russian plates, plates of Middle Eastern countries (Arabic script) or Chinese plates.</p>
+<p>Number plate recognition should not be affected:</p>
+<ul class="simple">
+<li><p>letter color and background color,</p></li>
+<li><p>reflectivity (at night, the plates must be illuminated with at least infrared light),</p></li>
+<li><p>arrangement of characters (single-row, double-row).</p></li>
+</ul>
+<p>If there is more than one vehicle in the image to be analyzed then the detection system should detect each vehicle independently, and the identification system should recognize the license plate of each vehicle separately.</p>
+<p>If the ANPR board recognition system provides recognition results in the form of variants (different alternatives), the first variant, i.e. the variant with the highest confidence level (if the manufacturer has marked such a level), is taken as the result, and the other results are discarded.</p>
+<p>The license plate is considered to be recognized correctly if the selected variant from the automatic recognition agrees verbatim as to the number of characters and their values with the result indicated by the expert – when comparing any characters other than letters and numbers are ignored. In the comparison, country codes are not taken into account (for example, the so-called eurolabel from European tables). In the comparison, letters are capitalized.</p>
+</div>
+<div class="section" id="jakosc-klasyfikacji">
+<span id="defs-classification-quality"></span><h2><span class="section-number">1.4. </span>Classification quality<a class="headerlink" href="#jakosc-klasyfikacji" title="Permalink to this headline">¶</a></h2>
+<p>Classification quality, or vehicle type recognition quality <img class="math" src="_images/math/250647ff40d7e8175e6d859bc163cda447b7a49d.svg" style="vertical-align: -3px"/>, is a measure quantifying (in percentage terms) the ratio of the number of correctly recognized vehicle types <img class="math" src="_images/math/0c337c084a3d2bd1f227190c6324df7ac4c9c369.svg" style="vertical-align: -3px"/> to the number of all classifiable vehicles <img class="math" src="_images/math/eb59c37f1648d6cea2ca5cd4068e0f666e203a46.svg" style="vertical-align: -3px"/> that passed through the detection area within a specified time, at the correct speed and in the direction according to the system’s configuration (in particular, the system can be adapted to recognize in a given detection area vehicle types coming from one specific direction):</p>
+<div class="math" id="equation-eq-3">
+<p><span class="eqno">(3)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">¶</a></span><img src="_images/math/a28e5431d0ff19cd9b21cab1784891dbcf6d3ea1.svg"/></p>
+</div><p>The number of vehicles that can be classified in a specific series of vehicles is determined by an expert during the test. Vehicles are not taken into account:</p>
+<ul class="simple">
+<li><p>bicycles,</p></li>
+<li><p>mopeds,</p></li>
+<li><p>light wooden vehicles (such as a carriage),</p></li>
+<li><p>road machinery like rollers, milling machines, etc.,</p></li>
+<li><p>vehicles that the expert is unable to assign to any of the classes recognized by the system.</p></li>
+</ul>
+<p>The system must be able to recognize the following classes of vehicles:</p>
+<ul class="simple">
+<li><p>personal car</p></li>
+<li><p>LCV (light commercial vehicle)</p></li>
+<li><p>trucks (vehicles with GVW &gt;3.5 tons and truck tractors),</p></li>
+<li><p>buses</p></li>
+<li><p>other</p></li>
+</ul>
+</div>
+<div class="section" id="jakosc-rozpoznawania-marki">
+<span id="defs-maker-quality"></span><h2><span class="section-number">1.5. </span>Maker recognition quality<a class="headerlink" href="#jakosc-rozpoznawania-marki" title="Permalink to this headline">¶</a></h2>
+<p>It is assumed that the system recognizes the maker of vehicles based on a photo of the front. Recognition of the vehicle maker in rear photos is not evaluated and is, as a rule, significantly worse than for the front. In a large number of cases (e.g., trucks) it is completely impossible.</p>
+<p>Maker recognition quality <img class="math" src="_images/math/bd48e0e1176054fdba97474228505be334ca767b.svg" style="vertical-align: -3px"/> is a measure that quantifies (in percentage terms) the ratio of the number of correctly recognized makers of vehicles <img class="math" src="_images/math/a60b75767c05789e36829bdd1c7af8619aa1b2ec.svg" style="vertical-align: -3px"/> to the number of all recognizable vehicles <img class="math" src="_images/math/af9234b8c7246d8e22245b33af951024da065d50.svg" style="vertical-align: -3px"/> that passed through the detection area) in a specified time, at the correct speed and in the direction according to the system configuration (the system in particular can be adapted to recognize in a given detection area the maker of vehicles coming from one specific direction):</p>
+<div class="math" id="equation-eq-4">
+<p><span class="eqno">(4)<a class="headerlink" href="#equation-eq-4" title="Permalink to this equation">¶</a></span><img src="_images/math/65bf88053d6b2de3c78bbf1c851f20f1880fda3c.svg"/></p>
+</div><p>The number of vehicles that can be recognized in a specific series of vehicles is determined by an expert during the test. Vehicles are not taken into account:</p>
+<ul class="simple">
+<li><p>bicycles,</p></li>
+<li><p>mopeds,</p></li>
+<li><p>motorcycles,</p></li>
+<li><p>road machinery like rollers, milling machines, etc.,</p></li>
+<li><p>tractors and other agricultural machinery,</p></li>
+<li><p>vehicles not produced in series,</p></li>
+<li><p>special and military vehicles,</p></li>
+<li><p>vehicles for which no maker was specified by the manufacturer,</p></li>
+<li><p>vehicles for which the expert is unable to determine the brand.</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The system does not need to be able to recognize vehicle maker at night unless it has been specially prepared for this, e.g. by attaching special high-powered IR lighting.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="confidence.html" class="btn btn-neutral float-right" title="2. Confidence" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="ANPR/MMR quality verification for video stream processing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2024, NeuroCar Sp. z o.o., All rights reserved (www.neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+.. _conclusions:
+
+Wnioski
+---------
+
+.. _conclusions_formal_verification:
+
+Weryfikacja formalna
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Weryfikacja formalna realizowana jest przez Zamawiającego po otrzymaniu raportu, i polega na:
+
+#. Weryfikacji kompletności danych (wideo + dane surowe),
+#. Weryfikacji zgodności danych z procedurą – ocena wyboru prób,
+#. Weryfikacji terminów przekazania danych.
+
+Jeżeli na etapie weryfikacji formalnej Zamawiający odkryje nieścisłości powinny one zostać wyjaśnione przez Wykonawcę w formie pisemnej.
+
+Ostatecznie Zamawiający informuje Wykonawcę, że przedstawione materiały zostały zaakceptowane / odrzucone z powodów formalnych.
+
+.. _conclusions_factual_verification:
+
+Weryfikacja merytoryczna
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Weryfikacja merytoryczna polega na ocenie przez Zamawiającego materiałów dostarczonych przez Wykonawcę w zakresie:
+
+#. kompletności detekcji pojazdów – na podstawie wideo dostarczonych danych surowych + tabelarycznych,
+#. poprawności oceny atrybutów poszczególnych przejazdów pojazdów,
+#. poprawności oceny wyliczonych miar jakości,
+#. zgodności wyznaczonych miar jakości z założonymi wymaganiami.
+
+Zamawiający może zwrócić się do Wykonawcy o wyjaśnienie ew. uzupełnienie lub korektę dostarczonych danych przetworzonych.
+
+.. _conclusions_acceptance:
+
+Akceptacja testu
+~~~~~~~~~~~~~~~~~
+
+Zamawiający akceptuje test na postawie wyników weryfikacji formalnej oraz weryfikacji merytorycznej – akceptacja oznacza, że Wykonawca spełnił wszystkie kryteria formalne i merytoryczne zawarte w wymaganiach. Akceptacja wymagana jest w formie pisemnej.
+
+.. _conclusions_repetition:
+
+Powtórzenie testu
+~~~~~~~~~~~~~~~~~
+
+Jeżeli z powodów formalnych bądź merytorycznych test nie został zaakceptowany Wykonawca ma prawo do ponownego, jednokrotnego powtórzenia testu. Ponowne przeprowadzenie testu powinno być uzgodnione w Zamawiającym.
+

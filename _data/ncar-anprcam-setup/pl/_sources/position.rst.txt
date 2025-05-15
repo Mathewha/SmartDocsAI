@@ -1,0 +1,167 @@
+.. |br| raw:: html
+
+   <br/>
+
+
+.. _position:
+
+Pozycja
+=======
+
+Podczas wybierania punktu montażowego kamery ANPR, należy wziąć pod uwagę wytyczne opisane w poniższych podsekcjach.
+
+.. _position_height:
+
+Wysokość
+--------
+
+Pozycja kamery powinna być wybrana w taki sposób, aby można było obserwować ruch tablicy rejestracyjnej podczas przejazdu pojazdu. Dlatego zaleca się, aby kamera była zamontowana na wysokości nieco powyżej dachu pojazdu:
+
+.. image:: _static/img/pict-a.svg
+   :align: center
+
+Wysokość montażu :math:`H` zależy od dostępności konstrukcji montażowych, a w praktyce oznacza to:
+
+.. math::  2.0\ m \leq H \leq 10.0\ m 
+
+.. warning::
+
+   Zamontowanie kamery zbyt nisko (np. na poziomie dachu pojazdu) spowoduje, że kamera może być oślepiana w nocy przez reflektory samochodu, a także uniemożliwi analizę ruchu pojazdu (np. wykrywanie kierunku lub określanie prędkości).
+
+.. _position_distance:
+
+Odległość
+---------
+
+Odległość :math:`L` od kamery do linii detekcji (patrz punkt :ref:`fov_detection_line`) jest bezpośrednio wyprowadzana z wysokości instalacji kamery :math:`H`. Optymalna odległość :math:`L` to odległość, dla której kąt :math:`(\alpha)` między osią optyczną kamery a płaszczyzną drogi wynosi :math:`22,5^\circ`.
+
+Na przykład, dla wysokości montażu :math:`H = 6\ m` można obliczyć:
+
+.. math::  L = H \cdot \cot(\alpha) = 6 \cdot \cot(22.5^\circ) \approx 6 \cdot 2.4 = 14.5\ m
+
+Kąt :math:`(\alpha)` można dostosować do warunków konkretnego systemu pomiarowego, ale powinien mieścić się w zakresie:
+
+.. math::   15^\circ \leq \alpha \leq 30^\circ 
+
+.. warning::
+
+   Jeśli kąt :math:`(\alpha)` jest zbyt mały (:math:`<15^\circ`), może dojść do przysłaniania pojazdów jadących jeden za drugim. Jeśli kąt :math:`(\alpha)` jest zbyt duży (:math:`>30^\circ`), geometria tablicy rejestracyjnej zostanie zaburzona – a w nocy światło z oświetlacza podczerwieni nie będzie się prawidłowo odbijać, co osłabi wykrywanie pojazdów.
+
+.. _position_angle:
+
+
+W poniższej tabeli wskazano optymalną odległość :math:`L_{opt}` w odniesieniu do wysokości montażu kamery. Dla wskazanej wysokości podano także minimalną i maksymalną odległość :math:`L` wynikające z ograniczeń kątów:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 25 25 25
+
+   * - Wysokość |br| :math:`H`
+     - Odległość min.  |br| :math:`L_{min}`
+     - Odległość opt.  |br| :math:`L_{opt}`
+     - Odległość maks.  |br| :math:`L_{max}`
+   * - 2.0 m (6.6 ft)
+     - 3.5 m (11.5 ft)
+     - 4.8 m (15.7 ft)
+     - 7.5 m (24.6 ft)
+   * - 2.5 m (8.2 ft)
+     - 4.3 m (14.1 ft)
+     - 6.0 m (19.7 ft)
+     - 9.3 m (30.5 ft)
+   * - 3.0 m (9.8 ft)
+     - 5.2 m (17.1 ft)
+     - 7.2 m (23.6 ft)
+     - 11.2 m (36.7 ft)
+   * - 3.5 m (11.5 ft)
+     - 6.1 m (20.0 ft)
+     - 8.4 m (27.6 ft)
+     - 13.1 m (43.0 ft)
+   * - 4.0 m (13.1 ft)
+     - 6.9 m (22.6 ft)
+     - 9.7 m (31.8 ft)
+     - 14.9 m (48.9 ft)
+   * - 4.5 m (14.8 ft)
+     - 7.8 m (25.6 ft)
+     - 10.9 m (35.7 ft)
+     - 16.8 m (55.1 ft)
+   * - 5.0 m (16.4 ft)
+     - 8.7 m (28.5 ft)
+     - 12.1 m (39.7 ft)
+     - 18.7 m (61.4 ft)
+   * - 5.5 m (18.0 ft)
+     - 9.6 m (31.5 ft)
+     - 13.3 m (43.6 ft)
+     - 20.6 m (67.6 ft)
+   * - 6.0 m (19.7 ft)
+     - 10.4 m (34.1 ft)
+     - 14.5 m (47.6 ft)
+     - 22.4 m (73.5 ft)
+   * - 6.5 m (21.3 ft)
+     - 11.3 m (37.1 ft)
+     - 15.7 m (51.5 ft)
+     - 24.3 m (79.7 ft)
+   * - 7.0 m (23.0 ft)
+     - 12.2 m (40.0 ft)
+     - 16.9 m (55.5 ft)
+     - 26.2 m (86.0 ft)
+   * - 7.5 m (24.6 ft)
+     - 13.1 m (43.0 ft)
+     - 18.1 m (59.4 ft)
+     - 28.1 m (92.2 ft)
+   * - 8.0 m (26.2 ft)
+     - 13.9 m (45.6 ft)
+     - 19.3 m (63.4 ft)
+     - 29.9 m (98.1 ft)
+   * - 8.5 m (27.9 ft)
+     - 14.8 m (48.6 ft)
+     - 20.5 m (67.3 ft)
+     - 31.8 m (104.3 ft)
+   * - 9.0 m (29.5 ft)
+     - 15.7 m (51.5 ft)
+     - 21.7 m (71.2 ft)
+     - 33.7 m (110.6 ft)
+   * - 9.5 m (31.1 ft)
+     - 16.6 m (54.5 ft)
+     - 22.9 m (75.2 ft)
+     - 35.5 m (116.5 ft)
+   * - 10.0 m (32.8 ft)
+     - 17.4 m (57.1 ft)
+     - 24.1 m (79.1 ft)
+     - 37.4 m (122.7 ft)
+
+Aby zapewnić niezawodne rozpoznawanie, ogniskowa obiektywu kamery powinna być wystarczająca do osiągnięcia wymaganej liczby pikseli dla znaku (patrz :ref:`fov_char_size`).
+
+
+
+Kąt
+---
+
+Kamera ANPR może być zamontowana w pasie ruchu lub na jego krawędzi:
+
+.. image:: _static/img/pict-b.svg
+   :align: center  
+
+Ważne jest, aby kąt poziomy :math:`\beta` pomiędzy osią optyczną kamery a osią drogi nie był większy niż :math:`30^\circ`:
+
+.. math::   -30^\circ \leq \beta \leq +30^\circ 
+
+.. warning::
+
+   Jeśli :math:`\beta` znajduje się poza wskazanym zakresem, zniekształcenie obrazu może powodować pogorszenie jakości detekcji (znaki na tablicy rejestracyjnej będą zbyt wąskie), a oświetlenie IR nie będzie odpowiednie (zbyt mała ilość odbitego światła).
+
+.. _position_tilt:
+
+Pochylenie
+----------
+
+Podczas konfigurowania kamery ANPR zwracaj uwagę na prawidłowe wypoziomowanie - dłuższa krawędź tablicy rejestracyjnej powinna być równoległa do poziomej krawędzi pola widzenia kamery:
+
+.. image:: _static/img/pict-c.svg
+   :align: center  
+
+Zaleca się, aby kąt nachylenia :math:`\gamma` mieścił się w zakresie :math:`\pm5^\circ`, ale musi być w zakresie:
+
+.. math::   -30^\circ \leq \gamma \leq +30^\circ 
+
+Aby to osiągnąć, może być konieczne użycie specjalnych uchwytów montażowych do kamer lub podkładek poziomujących kamery.
+

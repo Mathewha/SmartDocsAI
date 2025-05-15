@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>NeuroCar System VI - Technical specification &mdash; ncar-sys-vi-4-spec 4.0.5 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.pl/pro/ncar-sys-vi-4-spec/index.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Operating principle" href="operation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-sys-vi-4-spec
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.0.5
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Table of contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="operation.html">1. Operating principle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">2. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="construction.html">3. Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">4. Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">5. Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">6. Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">7. Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">See also</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Downloads</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">User</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">ncar-sys-vi-4-spec</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-sys-vi-4-spec</a></li>
+  
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <a href=".//../../pl/index.html" class="nrs-lang">pl</a>
+      
+    
+      
+        <div class="nrs-lang-active">en</div>
+      
+    
+      
+        <a href=".//../../de/index.html" class="nrs-lang">de</a>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <img alt="_images/ncar-logo-mono.svg" class="align-right" src="_images/ncar-logo-mono.svg" /><div class="section" id="neurocar-system-vi-specyfikacja-techniczna">
+<h1>NeuroCar System VI - Technical specification<a class="headerlink" href="#neurocar-system-vi-specyfikacja-techniczna" title="Permalink to this headline">¶</a></h1>
+<p>Version <code class="docutils literal notranslate"><span class="pre">EN</span></code> 4.0.5 released on Nov 12, 2022.</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="_images/vi-logo.png"><img alt="_images/vi-logo.png" src="_images/vi-logo.png" style="width: 100%;" /></a>
+</div>
+<p>Design and operation of a system for vehicle detection and identification based on license plate recognition (ANPR) and vehicle manufacturer and model version recognition (MMR). For operation, the system uses only the video stream from a camera looking at the front or rear of the vehicle.</p>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Table of contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="operation.html">1. Operating principle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">2. Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#detekcja">2.1. Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#numer-rejestracyjny">2.2. Registration number</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#kategoria">2.3. Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#marka-i-model">2.4. Make and model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#kolor">2.5. Color</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#kierunek">2.6. Direction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#pas-ruchu">2.7. Lane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#kraj">2.8. Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#predkosc">2.9. Speed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#towary-niebezpieczne">2.10. Dangerous goods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#wiele-kamer">2.11. Multivision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#alerty">2.12. Alerts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#monitorowanie">2.13. Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="construction.html">3. Design</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="construction.html#przetwarzanie-w-chmurze">3.1. Cloud computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="construction.html#przetwarzanie-lokalne">3.2. Fog computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="construction.html#przetwarzanie-w-kamerze">3.3. Edge computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="construction.html#przetwarzanie-hybrydowe">3.4. Hybrid computing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">4. Devices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#kamera-anpr">4.1. ANPR camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#smartcamera">4.2. Smartcamera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#smartphone">4.3. Smartphone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#kontroler-cpu">4.4. CPU</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">5. Software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="software.html#terminal-vi">5.1. Terminal VI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software.html#backoffice">5.2. BackOffice</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="software.html#baza">5.2.1. Base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software.html#pojazdy">5.2.2. Vehicles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software.html#monitor">5.2.3. Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software.html#analityka">5.2.4. Analytics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software.html#support">5.2.5. Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">6. Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data.html#vehicletrace">6.1. VehicleTrace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#cameraviews">6.2. CameraViews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#camerarecording">6.3. CameraRecording</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#status">6.4. Status</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">7. Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="integration.html#api">7.1. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration.html#notyfikacje">7.2. Notifications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="integration.html#dane">7.2.1. Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="integration.html#powiadomienia">7.2.2. Notifications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="integration.html#import">7.3. Import</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">See also</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="operation.html" class="btn btn-neutral float-right" title="1. Operating principle" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, NeuroCar Sp. z o.o., All rights reserved (www.neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

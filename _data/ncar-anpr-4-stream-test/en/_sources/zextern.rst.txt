@@ -1,0 +1,9 @@
+.. _ref:
+
+=========
+Odesłania
+=========
+
+.. bibliography:: zextern.bib
+  :cited:
+  :style: plain

@@ -1,0 +1,402 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pl" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pl" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Pozycja &mdash; ncar-anprcam-setup 4.0.3 - dokumentacja</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.pl/pro/ncar-anprcam-setup/position.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="2. Pasy ruchu" href="lanes.html" />
+    <link rel="prev" title="Konfiguracja kamery ANPR" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-anprcam-setup
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.0.3
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Spis treści</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Pozycja</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#wysokosc">1.1. Wysokość</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#odleglosc">1.2. Odległość</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kat">1.3. Kąt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pochylenie">1.4. Pochylenie</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lanes.html">2. Pasy ruchu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fov.html">3. Kadr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameters.html">4. Parametry</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dodatki</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">Odesłania</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Zmiany</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Licencja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">Zobacz także</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Do pobrania</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anprcam-setup.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anprcam-setup.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anprcam-setup.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">Użytkownik</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ncar-anprcam-setup</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-anprcam-setup</a></li>
+  
+
+  <li>&gt; <span class="section-number">1. </span>Pozycja</li>
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <a href=".//../../en/position.html" class="nrs-lang">en</a>
+      
+    
+      
+        <div class="nrs-lang-active">pl</div>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pozycja">
+<span id="position"></span><h1><span class="section-number">1. </span>Pozycja<a class="headerlink" href="#pozycja" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<p>Podczas wybierania punktu montażowego kamery ANPR, należy wziąć pod uwagę wytyczne opisane w poniższych podsekcjach.</p>
+<div class="section" id="wysokosc">
+<span id="position-height"></span><h2><span class="section-number">1.1. </span>Wysokość<a class="headerlink" href="#wysokosc" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Pozycja kamery powinna być wybrana w taki sposób, aby można było obserwować ruch tablicy rejestracyjnej podczas przejazdu pojazdu. Dlatego zaleca się, aby kamera była zamontowana na wysokości nieco powyżej dachu pojazdu:</p>
+<img alt="_images/pict-a.svg" class="align-center" src="_images/pict-a.svg" /><p>Wysokość montażu <img class="math" src="_images/math/c139dbbeea54d6d0b895d171ef349e7e5ddf76bf.svg" alt="H" style="vertical-align: 0px"/> zależy od dostępności konstrukcji montażowych, a w praktyce oznacza to:</p>
+<div class="math">
+<p><img src="_images/math/9b69e964c76e47a74c8b9bec89cc1c046bceadeb.svg" alt="2.0\ m \leq H \leq 10.0\ m"/></p>
+</div><div class="admonition warning">
+<p class="admonition-title">Ostrzeżenie</p>
+<p>Zamontowanie kamery zbyt nisko (np. na poziomie dachu pojazdu) spowoduje, że kamera może być oślepiana w nocy przez reflektory samochodu, a także uniemożliwi analizę ruchu pojazdu (np. wykrywanie kierunku lub określanie prędkości).</p>
+</div>
+</div>
+<div class="section" id="odleglosc">
+<span id="position-distance"></span><h2><span class="section-number">1.2. </span>Odległość<a class="headerlink" href="#odleglosc" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Odległość <img class="math" src="_images/math/3e94390a3e99747003bff0b1c8a50ad19128d0b9.svg" alt="L" style="vertical-align: 0px"/> od kamery do linii detekcji (patrz punkt <a class="reference internal" href="fov.html#fov-detection-line"><span class="std std-ref">Linia detekcji</span></a>) jest bezpośrednio wyprowadzana z wysokości instalacji kamery <img class="math" src="_images/math/c139dbbeea54d6d0b895d171ef349e7e5ddf76bf.svg" alt="H" style="vertical-align: 0px"/>. Optymalna odległość <img class="math" src="_images/math/3e94390a3e99747003bff0b1c8a50ad19128d0b9.svg" alt="L" style="vertical-align: 0px"/> to odległość, dla której kąt <img class="math" src="_images/math/35a186774db10ec42b3d6977b743b326f9bab159.svg" alt="(\alpha)" style="vertical-align: -4px"/> między osią optyczną kamery a płaszczyzną drogi wynosi <img class="math" src="_images/math/94e193ebf503a0c3b2842edf32de7251221e2689.svg" alt="22,5^\circ" style="vertical-align: -3px"/>.</p>
+<p>Na przykład, dla wysokości montażu <img class="math" src="_images/math/3d6b31d99324a6801860f40af11d44ba941a7fc7.svg" alt="H = 6\ m" style="vertical-align: 0px"/> można obliczyć:</p>
+<div class="math">
+<p><img src="_images/math/4ff89fe35362f3d41e481362b10e2f2331ed5fb8.svg" alt="L = H \cdot \cot(\alpha) = 6 \cdot \cot(22.5^\circ) \approx 6 \cdot 2.4 = 14.5\ m"/></p>
+</div><p>Kąt <img class="math" src="_images/math/35a186774db10ec42b3d6977b743b326f9bab159.svg" alt="(\alpha)" style="vertical-align: -4px"/> można dostosować do warunków konkretnego systemu pomiarowego, ale powinien mieścić się w zakresie:</p>
+<div class="math">
+<p><img src="_images/math/702b2744a1f9c851ef91f259889a63734e7f7d61.svg" alt="15^\circ \leq \alpha \leq 30^\circ"/></p>
+</div><div class="admonition warning">
+<p class="admonition-title">Ostrzeżenie</p>
+<p>Jeśli kąt <img class="math" src="_images/math/35a186774db10ec42b3d6977b743b326f9bab159.svg" alt="(\alpha)" style="vertical-align: -4px"/> jest zbyt mały (<img class="math" src="_images/math/bddf968265b4d0b21f8e04e57e73f2e654271dcf.svg" alt="&lt;15^\circ" style="vertical-align: 0px"/>), może dojść do przysłaniania pojazdów jadących jeden za drugim. Jeśli kąt <img class="math" src="_images/math/35a186774db10ec42b3d6977b743b326f9bab159.svg" alt="(\alpha)" style="vertical-align: -4px"/> jest zbyt duży (<img class="math" src="_images/math/6903b2d7badac2f9c7cb11d4e9dae00d62cd76b1.svg" alt="&gt;30^\circ" style="vertical-align: 0px"/>), geometria tablicy rejestracyjnej zostanie zaburzona – a w nocy światło z oświetlacza podczerwieni nie będzie się prawidłowo odbijać, co osłabi wykrywanie pojazdów.</p>
+</div>
+<p id="position-angle">W poniższej tabeli wskazano optymalną odległość <img class="math" src="_images/math/4221bdf2c8d47dd7bc08331c26d62eb13c963a8f.svg" alt="L_{opt}" style="vertical-align: -5px"/> w odniesieniu do wysokości montażu kamery. Dla wskazanej wysokości podano także minimalną i maksymalną odległość <img class="math" src="_images/math/3e94390a3e99747003bff0b1c8a50ad19128d0b9.svg" alt="L" style="vertical-align: 0px"/> wynikające z ograniczeń kątów:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Wysokość <br/> <img class="math" src="_images/math/c139dbbeea54d6d0b895d171ef349e7e5ddf76bf.svg" alt="H" style="vertical-align: 0px"/></p></th>
+<th class="head"><p>Odległość min.  <br/> <img class="math" src="_images/math/5de40b2c4f148cf9958864fb9a5dfe3662c7a481.svg" alt="L_{min}" style="vertical-align: -2px"/></p></th>
+<th class="head"><p>Odległość opt.  <br/> <img class="math" src="_images/math/4221bdf2c8d47dd7bc08331c26d62eb13c963a8f.svg" alt="L_{opt}" style="vertical-align: -5px"/></p></th>
+<th class="head"><p>Odległość maks.  <br/> <img class="math" src="_images/math/365715ed44864b960eb5291ce8eb6822774d5bed.svg" alt="L_{max}" style="vertical-align: -2px"/></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2.0 m (6.6 ft)</p></td>
+<td><p>3.5 m (11.5 ft)</p></td>
+<td><p>4.8 m (15.7 ft)</p></td>
+<td><p>7.5 m (24.6 ft)</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.5 m (8.2 ft)</p></td>
+<td><p>4.3 m (14.1 ft)</p></td>
+<td><p>6.0 m (19.7 ft)</p></td>
+<td><p>9.3 m (30.5 ft)</p></td>
+</tr>
+<tr class="row-even"><td><p>3.0 m (9.8 ft)</p></td>
+<td><p>5.2 m (17.1 ft)</p></td>
+<td><p>7.2 m (23.6 ft)</p></td>
+<td><p>11.2 m (36.7 ft)</p></td>
+</tr>
+<tr class="row-odd"><td><p>3.5 m (11.5 ft)</p></td>
+<td><p>6.1 m (20.0 ft)</p></td>
+<td><p>8.4 m (27.6 ft)</p></td>
+<td><p>13.1 m (43.0 ft)</p></td>
+</tr>
+<tr class="row-even"><td><p>4.0 m (13.1 ft)</p></td>
+<td><p>6.9 m (22.6 ft)</p></td>
+<td><p>9.7 m (31.8 ft)</p></td>
+<td><p>14.9 m (48.9 ft)</p></td>
+</tr>
+<tr class="row-odd"><td><p>4.5 m (14.8 ft)</p></td>
+<td><p>7.8 m (25.6 ft)</p></td>
+<td><p>10.9 m (35.7 ft)</p></td>
+<td><p>16.8 m (55.1 ft)</p></td>
+</tr>
+<tr class="row-even"><td><p>5.0 m (16.4 ft)</p></td>
+<td><p>8.7 m (28.5 ft)</p></td>
+<td><p>12.1 m (39.7 ft)</p></td>
+<td><p>18.7 m (61.4 ft)</p></td>
+</tr>
+<tr class="row-odd"><td><p>5.5 m (18.0 ft)</p></td>
+<td><p>9.6 m (31.5 ft)</p></td>
+<td><p>13.3 m (43.6 ft)</p></td>
+<td><p>20.6 m (67.6 ft)</p></td>
+</tr>
+<tr class="row-even"><td><p>6.0 m (19.7 ft)</p></td>
+<td><p>10.4 m (34.1 ft)</p></td>
+<td><p>14.5 m (47.6 ft)</p></td>
+<td><p>22.4 m (73.5 ft)</p></td>
+</tr>
+<tr class="row-odd"><td><p>6.5 m (21.3 ft)</p></td>
+<td><p>11.3 m (37.1 ft)</p></td>
+<td><p>15.7 m (51.5 ft)</p></td>
+<td><p>24.3 m (79.7 ft)</p></td>
+</tr>
+<tr class="row-even"><td><p>7.0 m (23.0 ft)</p></td>
+<td><p>12.2 m (40.0 ft)</p></td>
+<td><p>16.9 m (55.5 ft)</p></td>
+<td><p>26.2 m (86.0 ft)</p></td>
+</tr>
+<tr class="row-odd"><td><p>7.5 m (24.6 ft)</p></td>
+<td><p>13.1 m (43.0 ft)</p></td>
+<td><p>18.1 m (59.4 ft)</p></td>
+<td><p>28.1 m (92.2 ft)</p></td>
+</tr>
+<tr class="row-even"><td><p>8.0 m (26.2 ft)</p></td>
+<td><p>13.9 m (45.6 ft)</p></td>
+<td><p>19.3 m (63.4 ft)</p></td>
+<td><p>29.9 m (98.1 ft)</p></td>
+</tr>
+<tr class="row-odd"><td><p>8.5 m (27.9 ft)</p></td>
+<td><p>14.8 m (48.6 ft)</p></td>
+<td><p>20.5 m (67.3 ft)</p></td>
+<td><p>31.8 m (104.3 ft)</p></td>
+</tr>
+<tr class="row-even"><td><p>9.0 m (29.5 ft)</p></td>
+<td><p>15.7 m (51.5 ft)</p></td>
+<td><p>21.7 m (71.2 ft)</p></td>
+<td><p>33.7 m (110.6 ft)</p></td>
+</tr>
+<tr class="row-odd"><td><p>9.5 m (31.1 ft)</p></td>
+<td><p>16.6 m (54.5 ft)</p></td>
+<td><p>22.9 m (75.2 ft)</p></td>
+<td><p>35.5 m (116.5 ft)</p></td>
+</tr>
+<tr class="row-even"><td><p>10.0 m (32.8 ft)</p></td>
+<td><p>17.4 m (57.1 ft)</p></td>
+<td><p>24.1 m (79.1 ft)</p></td>
+<td><p>37.4 m (122.7 ft)</p></td>
+</tr>
+</tbody>
+</table>
+<p>Aby zapewnić niezawodne rozpoznawanie, ogniskowa obiektywu kamery powinna być wystarczająca do osiągnięcia wymaganej liczby pikseli dla znaku (patrz <a class="reference internal" href="fov.html#fov-char-size"><span class="std std-ref">Rozmiar znaków</span></a>).</p>
+</div>
+<div class="section" id="kat">
+<h2><span class="section-number">1.3. </span>Kąt<a class="headerlink" href="#kat" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Kamera ANPR może być zamontowana w pasie ruchu lub na jego krawędzi:</p>
+<img alt="_images/pict-b.svg" class="align-center" src="_images/pict-b.svg" /><p>Ważne jest, aby kąt poziomy <img class="math" src="_images/math/46b24166141e1d247014bfba456356601ea65756.svg" alt="\beta" style="vertical-align: -3px"/> pomiędzy osią optyczną kamery a osią drogi nie był większy niż <img class="math" src="_images/math/eecf8d363fbe6bb5a0bfeae6265fbfd4e4e05342.svg" alt="30^\circ" style="vertical-align: 0px"/>:</p>
+<div class="math">
+<p><img src="_images/math/55b9a5c92ac1dc305a334f735d21a54061e97964.svg" alt="-30^\circ \leq \beta \leq +30^\circ"/></p>
+</div><div class="admonition warning">
+<p class="admonition-title">Ostrzeżenie</p>
+<p>Jeśli <img class="math" src="_images/math/46b24166141e1d247014bfba456356601ea65756.svg" alt="\beta" style="vertical-align: -3px"/> znajduje się poza wskazanym zakresem, zniekształcenie obrazu może powodować pogorszenie jakości detekcji (znaki na tablicy rejestracyjnej będą zbyt wąskie), a oświetlenie IR nie będzie odpowiednie (zbyt mała ilość odbitego światła).</p>
+</div>
+</div>
+<div class="section" id="pochylenie">
+<span id="position-tilt"></span><h2><span class="section-number">1.4. </span>Pochylenie<a class="headerlink" href="#pochylenie" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Podczas konfigurowania kamery ANPR zwracaj uwagę na prawidłowe wypoziomowanie - dłuższa krawędź tablicy rejestracyjnej powinna być równoległa do poziomej krawędzi pola widzenia kamery:</p>
+<img alt="_images/pict-c.svg" class="align-center" src="_images/pict-c.svg" /><p>Zaleca się, aby kąt nachylenia <img class="math" src="_images/math/78d12c7b3e15f3c105a1f8bbe09f93daa8538526.svg" alt="\gamma" style="vertical-align: -3px"/> mieścił się w zakresie <img class="math" src="_images/math/f023dced665b7b29c12ce1f91a3202f7bc2b2899.svg" alt="\pm5^\circ" style="vertical-align: -1px"/>, ale musi być w zakresie:</p>
+<div class="math">
+<p><img src="_images/math/d2b01728bb591cc45a90468e6687b380ef0120cc.svg" alt="-30^\circ \leq \gamma \leq +30^\circ"/></p>
+</div><p>Aby to osiągnąć, może być konieczne użycie specjalnych uchwytów montażowych do kamer lub podkładek poziomujących kamery.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lanes.html" class="btn btn-neutral float-right" title="2. Pasy ruchu" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Konfiguracja kamery ANPR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2025, NeuroCar Sp. z o.o., All rights reserved (https://neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

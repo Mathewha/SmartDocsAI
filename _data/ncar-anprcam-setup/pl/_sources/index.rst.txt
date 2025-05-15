@@ -1,0 +1,35 @@
+.. image:: _static/img/ncar-logo-mono.svg
+   :align: right
+
+========================
+Konfiguracja kamery ANPR
+========================
+
+Wersja ``PL`` |version| wydana dnia |today|.
+
+.. figure:: _static/img/pict.svg
+   :alt: picture
+
+
+.. include:: summary.rst
+
+------------------
+
+.. toctree::
+   :caption: Spis treści
+   :numbered:
+   :maxdepth: 3
+
+   position
+   lanes
+   fov
+   parameters
+
+.. toctree::
+   :caption: Dodatki
+   :maxdepth: 3
+
+   zextern
+   changelog
+   license
+   seealso

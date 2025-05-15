@@ -1,0 +1,8 @@
+**NeuroCar Kamera ANPR – Model 4** to uniwersalny system przeznaczony do
+detekcji i identyfikacji pojazdów na podstawie analizy wideo. Kamera przetwarza
+strumień wideo, automatycznie wykrywa każdy pojazd i identyfikuje go poprzez
+rozpoznawanie numeru rejestracyjnego (ANPR). Dodatkowo rozpoznawane są także:
+klasa pojazdu, producent i wersja modelowa oraz kolor. Kamera może pracować
+w przestrzeni zamkniętej i na zewnątrz, 24/7 (dzień-noc), w ekstremalnych
+warunkach pogodowych bez zewnętrznych źródeł światła. Dzięki niskiemu poborowi
+mocy i niskiemu napięciu zasilania urządzenie może pracować na bateriach.

@@ -1,0 +1,53 @@
+
+.. image:: _static/img/ncar-logo-chromatic.png
+   :align: right
+
+.. _index:
+
+================================
+Kamera ANPR 4 – Karta katalogowa
+================================
+
+Wersja ``PL`` |version|, udostępniona dnia |today|.
+
+
+.. image:: _static/img/badge-id.svg
+
+.. image:: _static/img/p.png
+
+.. image:: _static/img/badge-category-hardware.svg
+
+.. image:: _static/img/p.png
+
+.. image:: _static/img/badge-group-cameras.svg
+
+.. image:: _static/img/p.png
+
+.. image:: _static/img/badge-subgroup-anpr.svg
+
+.. image:: _static/img/p.png
+
+.. image:: _static/img/badge-status-ready.svg
+
+.. figure:: _static/img/pict.jpg
+   :width: 100%
+
+.. include:: summary.rst
+
+------------------
+
+.. toctree::
+   :caption: Spis treści
+
+   func
+   hard
+   soft
+   acc
+   dim
+   zextern
+   changelog
+   seealso
+
+
+
+

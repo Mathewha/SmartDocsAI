@@ -1,0 +1,473 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pl" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pl" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. Przebieg testu &mdash; ncar-anpr-4-stream-test 4.4.1 - dokumentacja</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.pltest.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="5. Wnioski" href="conclusions.html" />
+    <link rel="prev" title="3. Kryteria oceny" href="evaluation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-anpr-4-stream-test
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.4.1
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Spis treści</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="defs.html">1. Definicje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="confidence.html">2. Wiarygodność</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaluation.html">3. Kryteria oceny</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Przebieg testu</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#warunki">4.1. Warunki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#proba">4.2. Próba</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#zapis-wideo">4.3. Zapis wideo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dane-zrodlowe">4.4. Dane źródłowe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#procedura">4.5. Procedura</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dane-przetworzone">4.6. Dane przetworzone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wyniki">4.7. Wyniki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#raport">4.8. Raport</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conclusions.html">5. Wnioski</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dodatki</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="appendix_a.html">Załącznik A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">Odesłania</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Zmiany</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Licencja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">Zobacz także</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Do pobrania</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anpr-4-stream-test.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anpr-4-stream-test.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anpr-4-stream-test.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">Użytkownik</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ncar-anpr-4-stream-test</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-anpr-4-stream-test</a></li>
+  
+
+  <li>&gt; <span class="section-number">4. </span>Przebieg testu</li>
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <a href=".//../../en/test.html" class="nrs-lang">en</a>
+      
+    
+      
+        <div class="nrs-lang-active">pl</div>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="przebieg-testu">
+<span id="test"></span><h1><span class="section-number">4. </span>Przebieg testu<a class="headerlink" href="#przebieg-testu" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<div class="section" id="warunki">
+<span id="test-conditions"></span><h2><span class="section-number">4.1. </span>Warunki<a class="headerlink" href="#warunki" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Zakłada się, że system powinien identyfikować pojazdy na oczekiwanym poziomie jakości o dowolnej porze dnia i nocy (z wyjątkiem rozpoznawania marki, gdzie dopuszczalne jest działanie jedynie w dzień) w dowolnych warunkach atmosferycznych. Wyjątkiem są jednak sytuacje, gdy nastąpi jeden z czynników:</p>
+<ul class="simple">
+<li><p>znacząca liczba pojazdów porusza się z prędkością spoza dopuszczalnego zakresu (np. przejazd z korku),</p></li>
+<li><p>występuje opad śniegu,</p></li>
+<li><p>temperatura powietrza w otoczeniu spada poniżej 0° C, co może doprowadzić do oblodzenia tablic i redukcji ich czytelności,</p></li>
+<li><p>występuje silna anomalia atmosferyczna w postaci burzy z gradobiciem,</p></li>
+<li><p>występuje silna anomalia atmosferyczna w postaci burzy piaskowej.</p></li>
+</ul>
+<p>Jeżeli w trakcie testu wystąpi dowolny z powyższych czynników test powinien być zawieszony i przesunięty na kolejny dogodny termin.</p>
+</div>
+<div class="section" id="proba">
+<span id="test-samples"></span><h2><span class="section-number">4.2. </span>Próba<a class="headerlink" href="#proba" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Aby uzyskać statystycznie wiarygodny wynik dla wartości testowanych przewiduje się, że wstępnie wygenerowany rozmiar próbki testowej nie może być mniejszy niż 1200 pojazdów.</p>
+<p>Próbka ta podzielona powinna być na trzy testy cząstkowe:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DR500</span></code> – 500 pojazdów zarejestrowanych w dzień, przed południem,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DP500</span></code> – 500 pojazdów zarejestrowanych w dzień, po południu,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">N200</span></code> – 200 pojazdów zarejestrowanych w nocy.</p></li>
+</ul>
+<p>Za dzień należy rozumieć okres od początku astronomicznego dnia (astronomiczny wschód słońca) +1 godzina, do końca astronomicznego dnia (astronomiczny zachód słońca) –1 godzina. Za noc należy rozumieć okres 2 godzin po astronomicznym zachodzie słońca oraz do 2 godzin przed astronomicznym wschodem słońca.</p>
+<p>Sformułowanie <em>przed południem</em> oznacza co najmniej 1 godzinę przed astronomicznym południem natomiast sformułowanie <em>po południu</em> oznacza co najmniej 1 godzinę po astronomicznym południu. Wyznaczenie astronomicznego wschodu, zachodu słońca oraz południa odbywa się na podstawie informacji o lokalizacji pomiarowej i właściwych tablic astronomicznych. Wyliczone wartości wpisywane są do protokołu testów.</p>
+</div>
+<div class="section" id="zapis-wideo">
+<span id="test-video"></span><h2><span class="section-number">4.3. </span>Zapis wideo<a class="headerlink" href="#zapis-wideo" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Wymaga się, aby w trakcie prowadzenia testu zapisywany był materiał wideo obejmujący co najmniej całe pole widzenia kamery ANPR. Wideo powinno być zapisywane w postaci cyfrowej, w formie skompresowanej (H.264), w rozdzielczości co najmniej 640 × 360, 25 klatek na sekundę). Referencyjny zapis wideo może pochodzi bezpośrednio z kamery ANPR ew. z kamery umieszczonej w pobliżu, skierowanej na pole pomiarowe.</p>
+<p>Zakłada się, że zapis wideo powinien być ciągły w całym okresie testu cząstkowego. Dopuszcza się, że w materiale wideo wystąpią luki jednak nie mogą one przekraczać więcej niż 1% wymaganego czasu nagrania, z długość jednej luki nie może przekraczać 0.5 s.</p>
+</div>
+<div class="section" id="dane-zrodlowe">
+<span id="test-source-data"></span><h2><span class="section-number">4.4. </span>Dane źródłowe<a class="headerlink" href="#dane-zrodlowe" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Wymaga się, aby w trakcie testu zbierane były dane źródłowe generowane przez testowany system. Dla każdego zarejestrowanego przejazdu pojazdu dane te powinny zawierać:</p>
+<ul>
+<li><p><strong>Metadane</strong>:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>sygnaturę czasową, z dokładnością co najmniej do 0.1 s,</p></li>
+<li><p>unikatowy identyfikator miejsca wykonania pomiaru,</p></li>
+<li><p>wynik rozpoznawania ANPR w formie testowej,</p></li>
+<li><p>wynik rozpoznawania typu w formie testowej,</p></li>
+<li><p>wynik rozpoznawania marki w firmie testowej.</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p><strong>Zdjęcia</strong>:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>zdjęcie całego pola detekcji – cały kard z kamery ANPR,</p></li>
+<li><p>wycinek zdjęcia zawierający przód pojazdu - pozwalający na ocenę poprawności rozpoznawania marki,</p></li>
+<li><p>wycinek zdjęcia zawierający całą tablicę rejestracyjną (wraz z jej otoczeniem/ramką) – znaki w tym wycinku powinny mieć co najmniej 16 px.</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="procedura">
+<span id="test-procedure"></span><h2><span class="section-number">4.5. </span>Procedura<a class="headerlink" href="#procedura" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Test przeprowadzony zostanie w trzech etapach, oddzielnie dla próbek <code class="docutils literal notranslate"><span class="pre">DP500</span></code>, <code class="docutils literal notranslate"><span class="pre">DR500</span></code> oraz <code class="docutils literal notranslate"><span class="pre">N200</span></code>.</p>
+<p>W pierwszym kroku określona musi być pora dla wykonania testu dla każdej z próbek. Następnie, o zadanym czasie, zarejestrowanych powinno być kolejno co najmniej tyle pojazdów ile przewidziano w każdej próbce z tym, że jeżeli podczas rejestrowania pojawi się pojazd nieidentyfikowalny (w którymkolwiek z ocenianych kryteriów) to próbka zostanie powiększona o jeden.</p>
+<p>Wszystkie pojazdy wykluczone z testu muszą zostać umieszczone w raporcie z przebiegu testu (w postaci zdjęcia), a ponadto dla każdego takiego przypadku koniecznym jest komentarz na jakiej podstawie zdecydowano o wykluczeniu.</p>
+<p>Każdy pojazd w próbce musi mieć swój unikatowy numer kolejny, a wszystkie pojazdy w danej próbce muszą być ponumerowane w sposób monotoniczne rosnący względem czasu.</p>
+<p>Tuż po zebraniu danej próbki dane źródłowe oraz zapis wideo powinny zostać podpisane cyfrowo (ważna jest tu sygnatura czasowa podpisu) i przekazanie do komisji weryfikacyjnej, przy czym czas od momentu zakończenia rejestracji próbki do momentu przekazania wydrukowanej dokumentacji nie powinien być dłuższy niż trzy godziny, pod sankcją zakwalifikowania próbki jako „w całości źle rozpoznanej”.</p>
+</div>
+<div class="section" id="dane-przetworzone">
+<span id="test-output-data"></span><h2><span class="section-number">4.6. </span>Dane przetworzone<a class="headerlink" href="#dane-przetworzone" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Po zgromadzeniu wszystkich próbek (<code class="docutils literal notranslate"><span class="pre">DR500</span></code>, <code class="docutils literal notranslate"><span class="pre">DP500</span></code>, <code class="docutils literal notranslate"><span class="pre">N200</span></code>) wykonawca opracowuje tabelaryczne zestawienie wszystkich danych źródłowych. Zestawienie takie powinno być umieszczone w tabelce zapisanej jako arkusz kalkulacyjny (Microsoft Excel / LibreOffice Calc), gdzie każdy zarejestrowany przejazd umieszczony powinien być w oddzielnym wierszu. Tabela z danymi przetworzonymi powinna zawierać co najmniej takie kolumny:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 14%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Nazwa</p></th>
+<th class="head"><p>Format</p></th>
+<th class="head"><p>Przykład</p></th>
+<th class="head"><p>Opis</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">counter</span></code></p></td>
+<td><p>liczba</p></td>
+<td><p>1</p></td>
+<td><p>numer kolejny pojazdu na liście, numerowane od 1</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">terminal</span></code></p></td>
+<td><p>tekst</p></td>
+<td><p>ncar-h-cpu-06c00103</p></td>
+<td><p>numer seryjny / unikatowy identyfikator urządzenia generującego dane</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">date</span></code></p></td>
+<td><p>data</p></td>
+<td><p>2022-10-27</p></td>
+<td><p>data na podstawie znacznika czasowego, czas lokalny, wyświetlana w formacie YYYY-MM-DD</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">time</span></code></p></td>
+<td><p>data</p></td>
+<td><p>09:00:00</p></td>
+<td><p>godzina na podstawie znacznika czasowego, czas lokalny, wyświetlana w formacie HH:MM:SS</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ms</span></code></p></td>
+<td><p>liczba</p></td>
+<td><p>960</p></td>
+<td><p>milisekunda na podstawie znacznika czasowego</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">place</span></code></p></td>
+<td><p>tekst</p></td>
+<td><p>pl-wrozyczliwa-wja-l1</p></td>
+<td><p>unikatowy identyfikator lokalizacji, gdzie zarejestrowano pojazd</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">class</span></code></p></td>
+<td><p>liczba</p></td>
+<td><p>7</p></td>
+<td><p>rozpoznany typ pojazdu, zgodnie z testowaną taksonomią (np. TLS 5+1)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">number</span></code></p></td>
+<td><p>text</p></td>
+<td><p>DW6C448</p></td>
+<td><p>rozpoznany, znormalizowany numer rejestracyjny</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">maker</span></code></p></td>
+<td><p>text</p></td>
+<td><p>BMW</p></td>
+<td><p>rozpoznana nazwa producenta</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">model</span></code></p></td>
+<td><p>text</p></td>
+<td><p>4</p></td>
+<td><p>rozpoznana wersja modelowa (jeżeli dostępna)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">det_ok</span></code></p></td>
+<td><p>liczba</p></td>
+<td><p>+1</p></td>
+<td><p>czy detekcja danego pojazdu jest poprawna ?</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">class_ok</span></code></p></td>
+<td><p>liczba</p></td>
+<td><p>+1</p></td>
+<td><p>czy typ danego pojazdu został określony poprawnie ?</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">maker_ok</span></code></p></td>
+<td><p>liczba</p></td>
+<td><p>+1</p></td>
+<td><p>czy producent danego pojazdu został określony poprawnie ?</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">anpr_ok</span></code></p></td>
+<td><p>liczba</p></td>
+<td><p>+1</p></td>
+<td><p>czy numer rejestracyjny danego pojazdu został rozpoznany poprawnie ?</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">notice</span></code></p></td>
+<td><p>tekst</p></td>
+<td></td>
+<td><p>uwagi (jeżeli dotyczą)</p></td>
+</tr>
+</tbody>
+</table>
+<p>W kolumnach <code class="docutils literal notranslate"><span class="pre">det_ok</span></code>, <code class="docutils literal notranslate"><span class="pre">class_ok</span></code>, <code class="docutils literal notranslate"><span class="pre">maker_ok</span></code> oraz <code class="docutils literal notranslate"><span class="pre">anpr_ok</span></code> wpisane wartości liczbowe są interpretowane następująco:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Wartość</p></th>
+<th class="head"><p>Znaczenie</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>+1</strong></p></td>
+<td><p>wskazana wartość jest poprawna, bierze udział w ocenie</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>-1</strong></p></td>
+<td><p>wskazana wartość jest niepoprawna, bierze udział w ocenie</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>0</strong></p></td>
+<td><p>dany rekord pomiarowy jest wykluczony z oceny</p></td>
+</tr>
+</tbody>
+</table>
+<p>Wzorzec takiej tabelki umieszczony jest jako <a class="reference internal" href="appendix_a.html#appendix-a"><span class="std std-ref">Załącznik A</span></a> do niniejszego dokumentu.</p>
+</div>
+<div class="section" id="wyniki">
+<span id="test-results"></span><h2><span class="section-number">4.7. </span>Wyniki<a class="headerlink" href="#wyniki" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Jakość detekcji, identyfikacji i skuteczność rozpoznawania typu wyznaczona zostanie dla wszystkich pomiarów łącznie. W przypadku oceny skuteczności rozpoznawania marki należy wziąć próbkę 1000-elementową powstałą przez złączenie próbek <code class="docutils literal notranslate"><span class="pre">DR500</span></code> i <code class="docutils literal notranslate"><span class="pre">DP500</span></code>.</p>
+<p>Wyniki powinny zostać zestawione tabelarycznie wraz ze wskazaniem:</p>
+<ul class="simple">
+<li><p>ile pojazdów z danej próby objęto oceną</p></li>
+<li><p>ile pojazdów ma poprawnie określone oceniane parametry,</p></li>
+<li><p>jaka jest wartość średnia danego współczynnika jakościowego,</p></li>
+<li><p>jaka jest wartość uwiarygodniona statystycznie danego współczynnika jakościowego.</p></li>
+</ul>
+<p>Poniżej pokazano przykład końcowego zestawienia:</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="_images/summary.jpg"><img alt="_images/summary.jpg" src="_images/summary.jpg" style="width: 100%;" /></a>
+</div>
+</div>
+<div class="section" id="raport">
+<span id="test-report"></span><h2><span class="section-number">4.8. </span>Raport<a class="headerlink" href="#raport" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Podsumowaniem testu jest opracowanie przez wykonawcę raportu (w formacie PDF), który zawiera:</p>
+<ol class="arabic simple">
+<li><p>informacje o inwestycji / projekcie, w ramach którego przeprowadzono test,</p></li>
+<li><p>informację o testowanym urządzeniu,</p></li>
+<li><p>informację o testowanych lokalizacjach,</p></li>
+<li><p>informację o wybranych momentach, w których pozyskano dane (<code class="docutils literal notranslate"><span class="pre">DR500</span></code>, <code class="docutils literal notranslate"><span class="pre">DP500</span></code>, <code class="docutils literal notranslate"><span class="pre">N200</span></code>),</p></li>
+<li><p>zestawienie wyników zgodnie z punktem 4.7,</p></li>
+<li><p>analizę wyników - stwierdzenie, czy test zakończył się pozytywnie w każdym testowanym zakresie.</p></li>
+</ol>
+<div class="admonition attention">
+<p class="admonition-title">Uwaga</p>
+<p>Raport powinien zostać przygotowany i dostarczony do zamawiającego nie później niż 5 dni roboczych od dnia przekazania danych źródłowych.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="conclusions.html" class="btn btn-neutral float-right" title="5. Wnioski" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="evaluation.html" class="btn btn-neutral float-left" title="3. Kryteria oceny" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2024, NeuroCar Sp. z o.o., All rights reserved (www.neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

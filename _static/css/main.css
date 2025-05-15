@@ -1,0 +1,50 @@
+body {
+    background-color: #f9f9f9;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    padding: 40px;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.form {
+    text-align: center;
+}
+
+.result-title a {
+    font-weight: 700;
+}
+
+
+.result-meta {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.snippet {
+    margin-bottom: 1em;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.5em;
+    /* Opcjonalne: około 3 wiersze dla standardowego tekstu */
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.lang-switch {
+    text-align: center;
+}

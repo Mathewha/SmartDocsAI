@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pl" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pl" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ocena jakości ANPR/MMR dla przetwarzania strumienia wideo &mdash; ncar-anpr-4-stream-test 4.4.1 - dokumentacja</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.plindex.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="1. Definicje" href="defs.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-anpr-4-stream-test
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.4.1
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Spis treści</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="defs.html">1. Definicje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="confidence.html">2. Wiarygodność</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaluation.html">3. Kryteria oceny</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">4. Przebieg testu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conclusions.html">5. Wnioski</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dodatki</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="appendix_a.html">Załącznik A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">Odesłania</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Zmiany</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Licencja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">Zobacz także</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Do pobrania</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anpr-4-stream-test.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anpr-4-stream-test.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anpr-4-stream-test.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">Użytkownik</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">ncar-anpr-4-stream-test</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-anpr-4-stream-test</a></li>
+  
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <a href=".//../../en/index.html" class="nrs-lang">en</a>
+      
+    
+      
+        <div class="nrs-lang-active">pl</div>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <img alt="_images/ncar-logo-mono.svg" class="align-right" src="_images/ncar-logo-mono.svg" /><div class="section" id="ocena-jakosci-anpr-mmr-dla-przetwarzania-strumienia-wideo">
+<h1>Ocena jakości ANPR/MMR dla przetwarzania strumienia wideo<a class="headerlink" href="#ocena-jakosci-anpr-mmr-dla-przetwarzania-strumienia-wideo" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<p>Wersja <code class="docutils literal notranslate"><span class="pre">PL</span></code> 4.4.1 wydana dnia 14 lut 2024.</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="_images/anpr-logo.jpg"><img alt="_images/anpr-logo.jpg" src="_images/anpr-logo.jpg" style="width: 100%;" /></a>
+</div>
+<p>Opis procedury weryfikacji jakości dla systemu realizującego detekcję, klasyfikację i identyfikację pojazdów ze strumienia wideo – rozpoznawanie tablic rejestracyjnych (ANPR), rozpoznawanie typu pojazdu oraz rozpoznawanie marki i modelu (MMR). Procedura przygotowana jest dla trybu pracy <em>free flow</em>, w którym analizowany jest wejściowy strumień wideo, a wynikiem jest sekwencja – jeden rekord danych dla każdego pojazdu przejeżdżającego w polu widzenia kamery.</p>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Spis treści</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="defs.html">1. Definicje</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="defs.html#obszar-detekcji">1.1. Obszar detekcji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defs.html#jakosc-detekcji">1.2. Jakość detekcji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defs.html#jakosc-identyfikacji">1.3. Jakość identyfikacji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defs.html#jakosc-klasyfikacji">1.4. Jakość klasyfikacji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defs.html#jakosc-rozpoznawania-marki">1.5. Jakość rozpoznawania marki</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="confidence.html">2. Wiarygodność</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="confidence.html#zmienna-losowa">2.1. Zmienna losowa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="confidence.html#przedzial-ufnosci">2.2. Przedział ufności</a></li>
+<li class="toctree-l2"><a class="reference internal" href="confidence.html#minimalne-wielkosci-proby">2.3. Minimalne wielkości próby</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="evaluation.html">3. Kryteria oceny</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="evaluation.html#parametry-jakosciowe">3.1. Parametry jakościowe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evaluation.html#rozmiary-znakow">3.2. Rozmiary znaków</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evaluation.html#ksztalty-znakow">3.3. Kształty znaków</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evaluation.html#niejednoznacznosci-typu">3.4. Niejednoznaczności typu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evaluation.html#niejednoznacznosci-marki">3.5. Niejednoznaczności marki</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="evaluation.html#widocznosc">3.5.1. Widoczność</a></li>
+<li class="toctree-l3"><a class="reference internal" href="evaluation.html#noc">3.5.2. Noc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="evaluation.html#nazwa-producenta">3.5.3. Nazwa producenta</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">4. Przebieg testu</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="test.html#warunki">4.1. Warunki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test.html#proba">4.2. Próba</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test.html#zapis-wideo">4.3. Zapis wideo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test.html#dane-zrodlowe">4.4. Dane źródłowe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test.html#procedura">4.5. Procedura</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test.html#dane-przetworzone">4.6. Dane przetworzone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test.html#wyniki">4.7. Wyniki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test.html#raport">4.8. Raport</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conclusions.html">5. Wnioski</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="conclusions.html#weryfikacja-formalna">5.1. Weryfikacja formalna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusions.html#weryfikacja-merytoryczna">5.2. Weryfikacja merytoryczna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusions.html#akceptacja-testu">5.3. Akceptacja testu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusions.html#powtorzenie-testu">5.4. Powtórzenie testu</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Dodatki</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="appendix_a.html">Załącznik A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">Odesłania</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Zmiany</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Licencja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">Zobacz także</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="defs.html" class="btn btn-neutral float-right" title="1. Definicje" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2024, NeuroCar Sp. z o.o., All rights reserved (www.neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+Budowa i działanie systemu do detekcji i identyfikacji pojazdów na bazie  rozpoznawania tablic rejestracyjnych (ANPR) oraz rozpoznawania producenta i wersji modelowej pojazdu (MMR). Do działania system wykorzystuje wyłącznie strumień wideo z kamery patrzącej na przód lub tył pojazdu. 

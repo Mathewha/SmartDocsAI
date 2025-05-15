@@ -1,0 +1,21 @@
+.. _changelog:
+
+-----
+
+======
+Zmiany
+======
+
+.. topic:: 4.0.2 ``2020-04-12``
+
+    * Rozszerzenie niektórych opisów
+    * Lepsze formatowanie dokumentu w formie PDF-a
+
+.. topic:: 4.0.1 ``2020-03-08``
+
+    * Dodatkowe informacje o akcesoriach
+
+.. topic:: 4.0.0 ``2020-03-01``
+
+    * Inicjacja dokumentu
+

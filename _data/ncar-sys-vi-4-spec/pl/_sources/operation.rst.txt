@@ -1,0 +1,18 @@
+.. _operation:
+
+================
+Zasada działania
+================
+
+System **NeuroCar – Vehicle Identification** (*NeuroCar VI*) służy automatycznej detekcji i identyfikacji pojazdów poprzez analizę strumienia wideo dostarczanego przez kamerę. Podstawowym sposobem identyfikacji jest rozpoznanie tablicy rejestracyjnej – w wersji rozszerzonej możliwe jest także automatyczne rozpoznanie kategorii pojazdu, jego marki (wersji modelowej), prędkości oraz kraju pochodzenia.
+
+.. image:: _static/img/ncar-vi-sys.png
+   :alt: system
+
+
+Pojazd przejeżdżający w polu widzenia kamery jest automatycznie wykrywany, a następnie w różnych momentach (ujęciach) wykrywana i odczytywana jest tablica rejestracyjna. W rezultacie do pamięci systemu trafia rekord pomiarowych zawierający zdjęcie pojazdu oraz różnego typu dane pozyskane z analizy obrazu.
+
+Dane zebrane przez urządzenia pomiarowe przechowywane są w systemie centralnym (*BackOffice*) zainstalowanym w chmurze, przy pomocy którego użytkownicy mogą te dane wygodnie przeszukiwać i analizować. System centralny posiada także funkcje diagnostyczne usprawniające kontrolowanie poprawności działania infrastruktury pomiarowej.
+
+Dzięki modułowej budowie oraz wykorzystaniu otwartych protokołów możliwa jest łatwa integracja – użytkownicy mogą dodawać własne źródła danych lub mogą przyłączać do systemu własne procesy wykorzystujące informacje zbierane w systemie centralnym – poprzez `WEB API <https://pl.wikipedia.org/wiki/WebAPI>`_.
+

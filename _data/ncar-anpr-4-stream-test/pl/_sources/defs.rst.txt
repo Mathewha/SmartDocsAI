@@ -1,0 +1,161 @@
+.. _defs:
+
+Definicje
+-----------
+
+.. _defs_detection_area:
+
+Obszar detekcji
+~~~~~~~~~~~~~~~~~
+
+Obszar detekcji to miejsce gdzie następuje detekcja i identyfikacja pojazdu. Z założenia obszar detekcji obejmuje pełny przekrój drogi, czyli wszystkie pasy ruchu, na których zamontowano testowane urządzenia wraz z pasem awaryjnym (jeżeli występuje). System powinien być tak skonstruowany, by zapewnić detekcję wszystkich pojazdów poruszających się w danym kierunku.
+
+W lokalizacjach, w których istnieje pas awaryjny obszar detekcji zawiera także tenże pas – pojazdy poruszające się częściowo lub całkowicie po pasie awaryjnym powinny być zaliczone jako pojazdy przejeżdżające po pasie wolnym chyba, że konstrukcja systemu przewiduje oddzielny odczyt dla pasa awaryjnego.
+
+Na drodze z ruchem dwukierunkowym przewiduje się, że wykrywane powinny być wszystkie pojazdy jadące wskazanym pasem ruchu, w określonym
+kierunku, nawet wówczas, gdy przejeżdżają po nim tylko częściowo. Zakłada się, że pojazd powinien być wykryty gdy co najmniej jedno koło z każdej osi pojazdu w całości przejedzie po wskazanym pasie ruchu (w obrębie wyznaczonym przez oznakowanie poziome). W takim układzie
+pomiarowym przyjmuje się, że pojazd jest poza obszarem detekcji gdy w całości wyjechał wszystkimi kołami na przeciwny pas ruchu.
+
+.. _defs_detection_quality:
+
+Jakość detekcji
+~~~~~~~~~~~~~~~~
+
+Poziom detekcji :math:`r_d` to miara określająca ilościowo (procentowo) stosunek liczby wykrytych przez badany system pojazdów do liczby wszystkich pojazdów przejeżdżających przez dany obszar detekcji, w zadanym czasie, w zadanym kierunku, na wskazanym pasie ruchu, z prędkością umożliwiającą skuteczny pomiar. Poziom detekcji można określić dla pojazdów poruszających się w dowolnym kierunku lub w ściśle określonym, odrzucając pojazdy poruszające się np. pod prąd.
+
+Zakłada się, że system wykrywa wyłącznie pojazdy w ruchu – skuteczny pomiar jest możliwy wówczas, gdy pojazd porusza się z prędkością:
+
+* co najmniej ≥ **3.6** km/h (≥1 m/s),
+* co najwyżej ≤ **252** km/h (≤70 m/s).
+
+.. attention::
+
+    Wymaganie co do prędkości pojazdu można rozszerzyć np. dopuszczając ruch typu *stop&go* jednak zalecane jest traktowanie takich przypadków jako szczególne, testowane w odrębnej procedurze.
+
+Przy wyznaczaniu poziomu detekcji brane są pod uwagę dwa źródła błędów:
+
+* :math:`\varepsilon_m` – pominięcie pojazdu przez system (liczba pojazdów pominiętych),
+* :math:`\varepsilon_f` – wykrycie nieistniejącego pojazdu przez system (liczba fałszywie wykrytych pojazdów).
+
+Jeżeli :math:`N` to liczba pojazdów, które faktycznie przejechały przez punkt pomiarowy to poziom detekcji :math:`r_d` określamy ze wzoru:
+
+.. math:: r_d = \frac { ( N - \varepsilon_m - \varepsilon_f ) }  { N }
+    :label: eq_1
+
+Z założenia system powinien wykryć przejazd dowolnego pojazdu, takiego jak:
+
+* motocykle i motorowery,
+* samochody osobowe, także z przyczepami,
+* samochody dostawcze, także z przyczepami,
+* ciągniki i inne maszyny rolnicze, także wieloczłonowe,
+* samochody ciężarowe, także z przyczepami,
+* ciągniki siodłowe, samodzielne oraz z naczepą,
+* autobusy, także z przyczepami,
+* pojazdy specjalne, wieloosiowe do transportu ponadgabarytowego,
+* pojazdy wojskowe, w tym transportery i czołgi.
+
+Podczas wyliczania poziomu detekcji nie bierze się pod uwagę pojazdów, których system może nie wykryć:
+
+* rowerów,
+* motorowerów,
+* lekkich pojazdów drewnianych (np. furmanka),
+* maszyn drogowych, typu walce, frezarki, itp.
+
+Jeżeli przez pole detekcji przejedzie wiele pojazdów jednocześnie każdy z nich powinien być wykryty niezależnie.
+
+.. _defs_identification_quality:
+
+Jakość identyfikacji
+~~~~~~~~~~~~~~~~~~~~~
+
+W najprostszym przypadku przez identyfikację pojazdu rozumie się jego detekcję, a następnie rozpoznanie numeru tablicy rejestracyjnej. Przez pojęcie *jakość identyfikacji* :math:`r_p` rozumie się wartość procentową będącą stosunkiem liczby poprawnie rozpoznanych tablic pojazdów :math:`K_{OK}` do liczby wszystkich pojazdów dających się zidentyfikować :math:`N_{ID}`, które przejechały przez punkt pomiarowy (obszar detekcji), w określonym kierunku, w określonym czasie, z właściwą prędkością:
+
+.. math:: r_p = \frac { K_{OK} } { N_{ID} } 
+    :label: eq_2
+
+Liczbę pojazdów, które da się zidentyfikować w określonym szeregu pojazdów :math:`N_{ID}` wyznacza ekspert podczas testu. Pod uwagę nie są brane pojazdy:
+
+* motocykle, dla pomiarów od przodu,
+* maszyny rolnicze bez oznakowania tablicą rejestracyjną,
+* pojazdy nieposiadające tablicy rejestracyjnej,
+* pojazdy z tablicą rejestracyjną nieczytelną, co do których ekspert ma wątpliwości, w określeniu numeru rejestracyjnego.
+
+.. attention::
+
+    Jeżeli kamera ANPR nie obejmuje całego obszaru detekcji w wyniku czego dla wykrytego przez detekcję pojazdu tablica jest niewidoczna, bądź widoczna tylko częściowo pojazd taki należy zakwalifikować jako pojazd niezidentyfikowany (bez rozpoznania tablicy) ale dający się zidentyfikować, czyli zaliczony do grupy :math:`N_{ID}`.
+
+Przyjmuje się, że numer rejestracyjny to:
+
+* ciąg dużych liter i cyfr – jeżeli w treści tablicy jest mała litera to powinna być ona zamieniona na dużą,
+* nie dłuższy niż 10 znaków,
+* bez separatorów oraz innych znaków specjalnych,
+* wszystkie znaki pisane łącznie – znaki inne niż litera lub cyfra powinny być pominięte.
+
+W celu uniknięcia niejednoznaczności numer rejestracyjny powinien być zakodowany w danych wyjściowych w kodowaniu UTF-8. W przypadku niektórych krajów wymagane jest rozpoznawanie odpowiednich znaków narodowych (np. umlaut w tablicach niemieckich). W przypadku tablic rejestracyjnych z krajów, gdzie nie stosuje się alfabetu łacińskiego dopuszcza się rozpoznawanie liter i cyfr w odpowiednim dla danego kraju alfabecie (np. cyrylica) ale także dopuszcza się konwersję znaków z alfabetu niełacińskiego na łaciński, przykładowo konwersję taką można stosować dla tablic rosyjskich, tablic krajów bliskowschodnich (pismo arabskie) czy też tablic chińskich.
+
+Na rozpoznawanie tablic nie powinny mieć wpływu:
+
+* kolor liter i kolor tła,
+* odblaskowość (w nocy tablica musi być oświetlona co najmniej światłem podczerwonym),
+* ułożenie znaków (jednorzędowa, dwurzędowa).
+
+Jeżeli w obrazie poddanym analizie znajduje się więcej niż jeden pojazd to układ detekcji powinien wykryć każdy pojazd niezależnie, a układ identyfikacji powinien rozpoznać tablice rejestracyjne każdego z pojazdów z osobna.
+
+Jeżeli system rozpoznawania tablic ANPR dostarcza wyniki rozpoznawania w postaci wariantów (różnych alternatyw), to jako wynik brany jest wariant pierwszy tzn. wariant o najwyższym poziomie ufności (jeżeli producent oznaczył taki poziom), a pozostałe wyniki są odrzucane.
+
+Tablica rejestracyjna jest uznawana za rozpoznaną poprawnie, jeżeli wybrany wariant z automatycznego rozpoznawania zgadza się literalnie co do liczby znaków oraz ich wartości z wynikiem wskazanym przez eksperta – przy porównaniu wszelkie znaki inne od liter i cyfr są pomijane. W porównywaniu nie są brane pod uwagę kody kraju (np. tzw. europlakietki z tablic europejskich). W porównywaniu litery są kapitalizowane.
+
+.. _defs_classification_quality:
+
+Jakość klasyfikacji
+~~~~~~~~~~~~~~~~~~~~
+
+Skuteczność klasyfikacji, czyli skuteczność rozpoznawania typu :math:`r_t` to miara określająca ilościowo (procentowo) stosunek liczby prawidłowo rozpoznanych typów pojazdów :math:`T_{OK}` do liczby wszystkich pojazdów dających się sklasyfikować :math:`N_{TID}`, które przejechały przez punkt pomiarowy (obszar detekcji) w określonym czasie, z właściwą prędkością i w kierunku zgodnym z konfiguracją systemu (system w szczególności może być przystosowany do rozpoznawania w danym obszarze detekcji typów pojazdów nadjeżdżających z jednego, określonego kierunku):
+
+.. math:: r_t =  \frac {T_{OK}} {N_{TID}}
+    :label: eq_3
+
+Liczbę pojazdów, które da się sklasyfikować w określonym szeregu pojazdów wyznacza ekspert podczas testu. Pod uwagę nie są brane pojazdy:
+
+* rowery,
+* motorowery,
+* lekkie pojazdy drewniane (np. furmanka),
+* maszyny drogowe typu walce, frezarki, itp.,
+* pojazdy, których ekspert nie jest w stanie przyporządkować do żadnej z rozpoznawanych przez system klas.
+
+System musi umożliwiać rozpoznawanie następujących klas pojazdów:
+
+* osobowe
+* dostawcze
+* ciężarowe (pojazdy o DMC >3.5 tony oraz ciągniki siodłowe),
+* autobusy
+* inne
+
+.. _defs_maker_quality:
+
+Jakość rozpoznawania marki
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Zakłada się, że system rozpoznaje markę pojazdów na podstawie zdjęcia przodu. Rozpoznawanie marki pojazdu na zdjęciach z tyłu nie podlega ocenie i jest z zasady istotnie gorsze niż w przypadku przodów. W dużej liczbie przypadków (np. pojazdy ciężarowe) jest całkowicie niemożliwe.
+
+Skuteczność rozpoznawania marki :math:`r_m` to miara określająca ilościowo (procentowo) stosunek liczby prawidłowo rozpoznanych marek pojazdów :math:`M_{OK}` do liczby wszystkich pojazdów dających się rozpoznać :math:`N_{MID}`, które przejechały przez punkt pomiarowy (obszar detekcji) w określonym czasie, z właściwą prędkości i w kierunku zgodnym z konfiguracją systemu (system w szczególności może być przystosowany do rozpoznawania w danym obszarze detekcji marek pojazdów nadjeżdżających z jednego, określonego kierunku):
+
+.. math:: r_m = \frac {M_{OK}} {N_{MID}}
+    :label: eq_4
+
+
+Liczbę pojazdów, które da się rozpoznać w określonym szeregu pojazdów wyznacza ekspert podczas testu. Pod uwagę nie są brane pojazdy:
+
+* rowery,
+* motorowery,
+* motocykle,
+* maszyny drogowe typu walce, frezarki, itp.,
+* ciągniki i inne maszyny rolnicze,
+* pojazdy nie produkowane seryjnie,
+* pojazdy specjalne i wojskowe,
+* pojazdy, dla których przez producenta nie została określona marka,
+* pojazdy, dla których ekspert nie jest w stanie określić marki.
+
+.. attention::
+
+    System nie musi umożliwiać rozpoznawania marek pojazdów w nocy chyba, że został do tego specjalnie przygotowany np. przez dołączenie specjalnego oświetlenia IR o dużej mocy.

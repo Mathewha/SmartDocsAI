@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. Parameters &mdash; ncar-anprcam-setup 4.0.3 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.pl/pro/ncar-anprcam-setup/parameters.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="References" href="zextern.html" />
+    <link rel="prev" title="3. Field of view" href="fov.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-anprcam-setup
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.0.3
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="position.html">1. Position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lanes.html">2. Lanes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fov.html">3. Field of view</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tryb-lpr">4.1. LPR mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#klatki-na-sekunde">4.2. Frames per second</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#czas-ekspozycji">4.3. Exposure time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#oswietlenie">4.4. Illumination</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">See also</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Downloads</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anprcam-setup.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anprcam-setup.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anprcam-setup.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">User</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ncar-anprcam-setup</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-anprcam-setup</a></li>
+  
+
+  <li>&gt; <span class="section-number">4. </span>Parameters</li>
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <div class="nrs-lang-active">en</div>
+      
+    
+      
+        <a href=".//../../pl/parameters.html" class="nrs-lang">pl</a>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="parametry">
+<span id="params"></span><h1><span class="section-number">4. </span>Parameters<a class="headerlink" href="#parametry" title="Permalink to this headline">¶</a></h1>
+<p>Internal camera settings also affect the quality of recognition - in particular, consider:</p>
+<div class="section" id="tryb-lpr">
+<span id="params-lpr-mode"></span><h2><span class="section-number">4.1. </span>LPR mode<a class="headerlink" href="#tryb-lpr" title="Permalink to this headline">¶</a></h2>
+<p>It is recommended that the cameras operate in LPR mode 24 hours a day:</p>
+<div class="figure align-default">
+<img alt="lprmode" src="_images/lpr_mode.png" />
+</div>
+</div>
+<div class="section" id="klatki-na-sekunde">
+<span id="params-fps"></span><h2><span class="section-number">4.2. </span>Frames per second<a class="headerlink" href="#klatki-na-sekunde" title="Permalink to this headline">¶</a></h2>
+<p>It is recommended to use the following settings:</p>
+<div class="figure align-default">
+<img alt="fps" src="_images/fps.png" />
+</div>
+<ul class="simple">
+<li><p><strong>25 fps - HDR X</strong>- For access control and parking lot applications,</p></li>
+<li><p><strong>30 fps - HDR X</strong> - For monitoring urban traffic.</p></li>
+</ul>
+<p>For vehicle detection on highways, it may be advisable to live <strong>50 fps</strong> settings, however - this depends on the geometry of the measurement point and may cause problems due to the camera’s limited ability to compensate for different lighting conditions.</p>
+</div>
+<div class="section" id="czas-ekspozycji">
+<span id="params-exposure"></span><h2><span class="section-number">4.3. </span>Exposure time<a class="headerlink" href="#czas-ekspozycji" title="Permalink to this headline">¶</a></h2>
+<p>It is recommended that the exposure time meet the following requirements:</p>
+<ul class="simple">
+<li><p><strong>&lt; 1000 ms</strong> – for access control systems and parking lot applications,</p></li>
+<li><p><strong>&lt; 600 ms</strong> – for other applications.</p></li>
+</ul>
+<div class="figure align-default">
+<img alt="exposure" src="_images/exposure.png" />
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is recommended that the ANPR camera automatically adjust the exposure time according to the lighting conditions.</p>
+</div>
+</div>
+<div class="section" id="oswietlenie">
+<span id="params-illumination"></span><h2><span class="section-number">4.4. </span>Illumination<a class="headerlink" href="#oswietlenie" title="Permalink to this headline">¶</a></h2>
+<p>The recommended illumination settings depend on how far the camera is from the vehicle <img class="math" src="_images/math/3e94390a3e99747003bff0b1c8a50ad19128d0b9.svg" alt="L" style="vertical-align: 0px"/>. If the <img class="math" src="_images/math/3e94390a3e99747003bff0b1c8a50ad19128d0b9.svg" alt="L" style="vertical-align: 0px"/> is relatively small, it may be necessary to reduce the intensity level to prevent overexposure of the license plate at night.</p>
+<div class="figure align-default">
+<img alt="illumination" src="_images/illumination.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="zextern.html" class="btn btn-neutral float-right" title="References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fov.html" class="btn btn-neutral float-left" title="3. Field of view" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2025, NeuroCar Sp. z o.o., All rights reserved (https://neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

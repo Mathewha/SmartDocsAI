@@ -1,0 +1,46 @@
+.. _lanes:
+
+Pasy ruchu
+==========
+
+Biorąc pod uwagę liczbę pasów, które mają być pokryte przez wykrywanie pojazdów, pozycja kamery ANPR względem pasa powinna być zgodna z poniższymi podrozdziałami.
+
+.. _lanes_1_lane:
+
+1 pas
+-----
+
+Kamera ANPR obejmująca jeden pas ruchu może być zainstalowana albo w obrębie pasa, albo na jego krawędzi:
+
+.. image:: _static/img/pict-e.svg
+
+.. image:: _static/img/pict-f.svg
+
+Upewnij się, że przód pojazdu jest widoczny wystarczająco długo w polu widzenia kamer - oznacza to, że pole widzenia powinno być głównie szersze niż pas ruchu (około 2 razy).
+
+.. _lanes_2_lanes:
+
+2 pasy
+------
+
+Aby wykrywać dwa pasy, kamera ANPR powinna być zainstalowana na linii oddzielającej pasy:
+
+.. image:: _static/img/pict-g.svg
+
+.. warning::
+
+   Nie zaleca się instalowania kamery na skraju drogi ze względu na wysokie prawdopodobieństwo zacienienia pojazdów (brak widoczności tablicy rejestracyjnej). Jeśli technicznie nie ma innej możliwości, lepiej zainstalować kamerę na skraju szybszego pasa, gdzie jeździ mniej ciężarówek.
+
+.. _lanes_3_lanes:
+
+3 pasy
+------
+
+Dla trzech pasów, kamera ANPR powinna być zainstalowana nad środkowym pasem:
+
+.. image:: _static/img/pict-h.svg
+
+.. warning::
+
+   Dla trzech pasów ruchu należy pamiętać o ograniczeniach dotyczących minimalnej wysokości znaków na tablicy rejestracyjnej. W takim przypadku istnieje ryzyko, że taki wymóg nie zostanie spełniony, przez co poziom wykrywania pojazdów i jakość rozpoznawania tablic rejestracyjnych będą niższe niż oczekiwano.
+

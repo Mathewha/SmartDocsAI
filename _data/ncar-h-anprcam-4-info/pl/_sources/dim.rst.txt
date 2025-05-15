@@ -1,0 +1,9 @@
+.. _dim:
+
+-----
+
+=======
+Wymiary
+=======
+
+.. image:: _static/img/dimmensions.png

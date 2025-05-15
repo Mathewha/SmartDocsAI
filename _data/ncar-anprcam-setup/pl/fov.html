@@ -1,0 +1,288 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pl" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pl" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Kadr &mdash; ncar-anprcam-setup 4.0.3 - dokumentacja</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.pl/pro/ncar-anprcam-setup/fov.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="4. Parametry" href="parameters.html" />
+    <link rel="prev" title="2. Pasy ruchu" href="lanes.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-anprcam-setup
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.0.3
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Spis treści</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="position.html">1. Pozycja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lanes.html">2. Pasy ruchu</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Kadr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#linia-detekcji">3.1. Linia detekcji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#szerokosc-kadru">3.2. Szerokość kadru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wysokosc-kadru">3.3. Wysokość kadru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rozmiar-znakow">3.4. Rozmiar znaków</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="parameters.html">4. Parametry</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dodatki</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">Odesłania</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Zmiany</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Licencja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">Zobacz także</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Do pobrania</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anprcam-setup.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anprcam-setup.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anprcam-setup.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">Użytkownik</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ncar-anprcam-setup</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-anprcam-setup</a></li>
+  
+
+  <li>&gt; <span class="section-number">3. </span>Kadr</li>
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <a href=".//../../en/fov.html" class="nrs-lang">en</a>
+      
+    
+      
+        <div class="nrs-lang-active">pl</div>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="kadr">
+<span id="fov"></span><h1><span class="section-number">3. </span>Kadr<a class="headerlink" href="#kadr" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<p>Podczas dostosowywania kadru - pola widzenia (ang. <em>Field-of-View</em>, <em>FoV</em>) kamery ANPR - czyli zmiany ogniskowej obiektywu i ostrości, należy przestrzegać następujących zaleceń:</p>
+<div class="section" id="linia-detekcji">
+<span id="fov-detection-line"></span><h2><span class="section-number">3.1. </span>Linia detekcji<a class="headerlink" href="#linia-detekcji" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Linia detekcji to wirtualna pozioma linia w polu widzenia (FoV), która wskazuje, gdzie powinna nastąpić oczekiwana detekcja tablicy rejestracyjnej. Najczęściej jest to linia w środku wysokości pola widzenia:</p>
+<a class="reference internal image-reference" href="_images/pict-d.svg"><img alt="_images/pict-d.svg" class="align-center" src="_images/pict-d.svg" width="100%" /></a>
+<p>Wymagania wymienione w poniższych podsekcjach dotyczą parametrów tablicy rejestracyjnej zlokalizowanej na linii detekcji.</p>
+</div>
+<div class="section" id="szerokosc-kadru">
+<span id="fov-width"></span><h2><span class="section-number">3.2. </span>Szerokość kadru<a class="headerlink" href="#szerokosc-kadru" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Ustawienie szerokości FoV zależy od liczby obserwowanych pasów ruchu (patrz punkt <a class="reference internal" href="lanes.html#lanes"><span class="std std-ref">Pasy ruchu</span></a>). Najczęściej optymalna szerokość wynosi 6 m na wysokości linii detekcji.</p>
+<p>Dla jednego pasa ruchu szerokość kadru powinna zachodzić na ok. 25% na przyległe pasy:</p>
+<a class="reference internal image-reference" href="_images/pict-d.svg"><img alt="_images/pict-d.svg" class="align-center" src="_images/pict-d.svg" width="100%" /></a>
+<p>Dla dwóch pasów ruchu szerokość kadru będzie dokładnie obejmować dwa pasy:</p>
+<a class="reference internal image-reference" href="_images/pict-i.svg"><img alt="_images/pict-i.svg" class="align-center" src="_images/pict-i.svg" width="100%" /></a>
+</div>
+<div class="section" id="wysokosc-kadru">
+<span id="fov-height"></span><h2><span class="section-number">3.3. </span>Wysokość kadru<a class="headerlink" href="#wysokosc-kadru" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Ustawienie wysokości FoV zależy od dwóch czynników:</p>
+<ul class="simple">
+<li><p>minimalna wysokość znaków (opisana w następnej sekcji),</p></li>
+<li><p>maksymalna prędkość pojazdu (w połączeniu z liczbą klatek na sekundę - FPS).</p></li>
+</ul>
+<p>Silnik ANPR wymaga, aby dla danego przejazdu pojazdu w polu widzenia tablica rejestracyjna była widoczna (rozpoznana) co najmniej dwa razy. Oznacza to, że pole widzenia na wysokość musi obejmować wystarczająco duży odcinek drogi, aby tablica rejestracyjna była widoczna (czytelna) dwa razy przy maksymalnej prędkości. Jednocześnie powinny być spełnione inne wymagania.</p>
+<p>W tym przypadku użytkownik może modyfikować powiększenie, kąt <img class="math" src="_images/math/35a186774db10ec42b3d6977b743b326f9bab159.svg" alt="(\alpha)" style="vertical-align: -4px"/> i FPS kamery.</p>
+</div>
+<div class="section" id="rozmiar-znakow">
+<span id="fov-char-size"></span><h2><span class="section-number">3.4. </span>Rozmiar znaków<a class="headerlink" href="#rozmiar-znakow" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Zalecana wysokość znaków tablicy rejestracyjnej na linii detekcji wynosi <img class="math" src="_images/math/22cc215db015f7d6318323e30f544f14bae5f6a3.svg" alt="S = 16" style="vertical-align: 0px"/> pikseli.</p>
+<a class="reference internal image-reference" href="_images/pict-j.svg"><img alt="_images/pict-j.svg" class="align-center" src="_images/pict-j.svg" width="100%" /></a>
+<div class="admonition warning">
+<p class="admonition-title">Ostrzeżenie</p>
+<p>Wymagana wysokość odnosi się do obrazu przetwarzanego przez silnik ANPR, a nie do natywnego obrazu z kamery. Obecnie obraz jest resamplowany do rozdzielczości 1024x576 pikseli, nawet jeśli natywna rozdzielczość kamery wynosi 8 megapikseli.</p>
+</div>
+<p>Wysokość znaku wynosząca 16 pikseli w przetworzonym obrazie jest uważana za optymalną gęstość pikseli. Silnik może nadal rozpoznawać tablice z mniejszymi wysokościami znaków (nawet do 10-12 pikseli na znak w obrazach bez zakłóceń). Jednak silnik nie odrzuci wyników wyłącznie na podstawie wielkości piksela znaku.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="parameters.html" class="btn btn-neutral float-right" title="4. Parametry" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lanes.html" class="btn btn-neutral float-left" title="2. Pasy ruchu" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2025, NeuroCar Sp. z o.o., All rights reserved (https://neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+.. |br| raw:: html
+  
+   <BR/>
+
+.. _confidence:
+
+Wiarygodność
+------------
+
+.. _confidence_random_variable:
+
+Zmienna losowa
+~~~~~~~~~~~~~~
+
+Wynik każdego z opisanych zadań systemu, tj. automatycznej detekcji, identyfikacji, klasyfikacji, rozpoznawania marki – zrealizowanych w odniesieniu do pojedynczego pojazdu – można określić jako sukces (wynik poprawny) lub porażkę (wynik niepoprawny). Wynik jest zatem zmienną losową o `rozkładzie zero-jedynkowym <https://pl.wikipedia.org/wiki/Rozk%C5%82ad_zero-jedynkowy>`__ o parametrze :math:`p` oznaczającym prawdopodobieństwo sukcesu.
+
+W zależności od zadania sukcesem jest zatem poprawne wykrycie pojazdu, poprawne odczytanie tablicy rejestracyjnej, poprawne rozpoznanie typu, poprawne rozpoznanie marki. W każdym zadaniu pod uwagę musi być brana liczność pojazdów :math:`N`, z tym, że w przypadku analizy jakości detekcji :math:`r_d` będzie to liczba wszystkich pojazdów :math:`N`, a w przypadku pozostałych parametrów :math:`r_p` , :math:`r_t` , :math:`r_m` należy uwzględnić wyznaczone liczy pojazdów :math:`N_{ID}`, :math:`N_{TID}` oraz :math:`N_{MID}`.
+
+.. _confidence_interval:
+
+Przedział ufności
+~~~~~~~~~~~~~~~~~~
+
+Testowane parametry (poziom detekcji, poziom identyfikacji, poziom klasyfikacji, skuteczność rozpoznawania marki) to wyrażone procentowo
+prawdopodobieństwa :math:`p`.
+
+W celu weryfikacji wymagań zdefiniowanych wcześniej należy:
+
+* Przyjąć określony `poziom ufności <https://pl.wikipedia.org/wiki/Poziom_ufno%C5%9Bci>`__ dla oceny – najczęściej:
+
+  .. math:: 1 - \alpha = 95\%
+      :label: eq_5
+
+* Obliczyć oszacowanie (estymatę) :math:`\hat{p}` danego testowanego parametru.
+* Obliczyć dolną wartość :math:`\hat{p}_L` symetrycznego przedziału ufności wyliczoną metodą Wilsona :cite:`wallis` :
+
+  .. math:: {\hat{p}_L = max\left\{  0, \frac{2N\hat{p}  +  z^2 - \left[ z \sqrt{z^2 - (1/N) + 4N \hat{p} (1-\hat{p}) + (4\hat{p}-2)} + 1 \right]}{2 \cdot (N+z^2)}  \right\}} ,
+      :label: eq_6
+
+ – gdzie wartość :math:`z \approx 1.6448536` wynika z przyjętego poziomu ufności, a rzeczywista wartość testowanego parametru :math:`p` jest z prawdopodobieństwem 95% wyższa od wartości :math:`\hat{p}_L`. 
+ 
+ – ze względu na to, że wymaganie jest :math:`\hat{p}_L \le p` za wartość :math:`{\alpha}` w wyliczaniu :math:`z` brana jest podwojona wartość zakładanego poziomu ufności, czyli w tym wypadku 90%.
+
+* Sprawdzić, czy wartość :math:`\hat{p}_L` jest większa od wartości progowej podanej w punkcie wymaganiach.
+
+
+.. _confidence_trial_size:
+
+Minimalne wielkości próby
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Na podstawie :cite:`tls2012` wiadomo, że przy ocenie wskazanego współczynnika jakościowego, dla wybranego poziomu ufności, w trakcie testu muszą być uwzględnione co najmniej następujące ilości pojazdów:
+
++-----------------+-----------------+--------------------------+---------------------------+
+| Oczekiwana |br| | Maksymalny |br| | Liczba pojazdów |br|     | Liczba pojazdów |br|      |
+| jakość          | błąd            | :math:`1 - \alpha = 95\%`| :math:`1 - \alpha = 99\%` |
++=================+=================+==========================+===========================+
+| 80%             | 20%             | 62                       | 107                       |
++-----------------+-----------------+--------------------------+---------------------------+
+| 85%             | 15%             | 88                       | 151                       |
++-----------------+-----------------+--------------------------+---------------------------+
+| 90%             | 10%             | 139                      | 239                       |
++-----------------+-----------------+--------------------------+---------------------------+
+| 95%             | 5%              | 292                      | 505                       |
++-----------------+-----------------+--------------------------+---------------------------+
+| 97%             | 3%              | 497                      | 859                       |
++-----------------+-----------------+--------------------------+---------------------------+
+| 98%             | 2%              | 753                      | 1301                      |
++-----------------+-----------------+--------------------------+---------------------------+
+| 99%             | 1%              | 1522                     | 2628                      |
++-----------------+-----------------+--------------------------+---------------------------+
+

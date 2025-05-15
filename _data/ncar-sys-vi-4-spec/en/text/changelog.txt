@@ -1,0 +1,38 @@
+Changelog
+*********
+
+
+4.0.5 "2022-11-11"
+^^^^^^^^^^^^^^^^^^
+
+* added language version "EN"
+
+* added language version "DE"
+
+
+4.0.4 "2022-10-11"
+^^^^^^^^^^^^^^^^^^
+
+* conversion to "RST" format
+
+
+4.0.3 "2022-09-06"
+^^^^^^^^^^^^^^^^^^
+
+* corrections
+
+
+4.0.1 "2022-07-10"
+^^^^^^^^^^^^^^^^^^
+
+* adding software information
+
+* adding information about data structures
+
+* adding integration information (API)
+
+
+4.0.0 "2022-03-15"
+^^^^^^^^^^^^^^^^^^
+
+* document initiation

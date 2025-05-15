@@ -1,0 +1,21 @@
+.. _acc:
+
+-----
+
+=========
+Akcesoria
+=========
+
+.. figure:: _static/img/dummy.png
+    :width: 240px
+    :align: right
+
+.. |acc_1| image:: _static/img/ID-NCAR-H-ANPRCAMGRIP-4.svg
+
+|acc_1| Uchwyt montażowy przeznaczony do montażu na maszcie, posiadający dwa
+stopnie swobody pozwalające na odpowiednie ustawienie kamery. Wykonany
+ze aluminium pomalowanego proszkowo, posiada otwory pozwalające na odpowiednie
+przeprowadzenie kabli zasilających – ``opcja``.
+
+---
+

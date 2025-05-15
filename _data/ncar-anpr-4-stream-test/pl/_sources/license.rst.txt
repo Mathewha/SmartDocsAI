@@ -1,0 +1,12 @@
+.. _license:
+
+========
+Licencja
+========
+
+.. |copy|   unicode:: U+000A9 .. COPYRIGHT SIGN
+
+.. note:: Copyright |copy| 2024 NeuroCar Sp. z o.o. – Wszelkie prawa zastrzeżone.
+
+Powyższa informacja o prawach autorskich i niniejsza informacja o zezwoleniu powinny być zawarte we wszystkich kopiach lub istotnych częściach dokumentu.
+

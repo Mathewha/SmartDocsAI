@@ -1,0 +1,115 @@
+.. _evaluation:
+
+Kryteria oceny
+--------------
+
+.. _evaluation_quality_params:
+
+Parametry jakościowe
+~~~~~~~~~~~~~~~~~~~~~
+
+Poniżej wskazano typowe wartości parametrów jakościowych, jakie powinien osiągnąć testowany system w optymalnych warunkach:
+
+* dla pojazdów obserwowanych z przodu:
+
+  .. list-table::
+     :widths: 33 33 33
+     :header-rows: 1
+
+     * - Parametr
+       - Oznaczenie
+       - Poziom
+     * - detekcja
+       - :math:`r_d`
+       - ≥97%
+     * - identyfikacja
+       - :math:`r_p`
+       - ≥95%
+     * - klasyfikacja
+       - :math:`r_t`
+       - ≥90%
+     * - marka
+       - :math:`r_m`
+       - ≥80%
+
+* wymagana wartość tych parametrów powinna być ustalona z końcowym odbiorcą systemu,
+* dla pojazdów obserwowanych z tyłu – parametry jakościowe będą niższe, niż dla pojazdów obserwowanych z przodu.
+
+.. attention::
+
+   Każdy z powyższych parametrów powinien być wyznaczony na poziomie ufności = **95%**.
+
+.. _evaluation_char_size:
+
+Rozmiary znaków
+~~~~~~~~~~~~~~~~~
+
+Przewiduje się, że test przeprowadzony zostanie dla strumienia wideo, w którym obserwowane będą tablice rejestracyjne, w których wysokość
+znaków wyrażona w pikselach (umowna *rozdzielczość optyczna*) będzie wynosić **16 pikseli** (dla znormalizowanej, dużej litery ``X``). Jeżeli wskazane wymaganie, w przypadku określonego pojazdu, nie będzie spełnione przejazd taki powinien być usunięty z testu.
+
+.. _evaluation_char_ambiguity:
+
+Kształty znaków
+~~~~~~~~~~~~~~~~~
+
+W trakcie oceny poprawności rozpoznawania numerów rejestracyjnych mogą pojawić się niejednoznaczności wynikające z jakości obrazu poddawanego weryfikacji, np. problemu w ustaleniu właściwego znaku dla par:
+
+* ``0`` ↔ ``O``
+* ``I`` ↔ ``1``
+* ``S`` ↔ ``5``
+* ``2`` ↔ ``Z``
+* ``6`` ↔ ``G``
+
+W takich przypadkach poprawność znaku powinna zostać wskazana w sposób niepodważalny, np. przez weryfikację w urzędowej bazie danych, w której można odnaleźć dane analizowanego pojazdu (np. baza pojazdów Ubezpieczeniowego Funduszu Gwarancyjnego). Jeżeli określenie poprawnego rozpoznania danego znaku nie jest możliwe przejazd taki powinien zostać wykluczony z oceny.
+
+.. _evaluation_class_ambiguity:
+
+Niejednoznaczności typu
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Jeżeli na podstawie zdjęcia ekspert nie jest stanie jednoznacznie ocenić typu pojazdu zgodnie z przyjętą taksonomią przejazd taki powinien zostać wykluczony z oceny.
+
+
+.. _evaluation_maker_ambiguity:
+
+Niejednoznaczności marki
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _evaluation_maker_ambiguity_visibility:
+
+Widoczność
+^^^^^^^^^^^
+
+Przyjmuje się, że rozpoznawanie marki pojazdu jest możliwe wówczas, gdy obraz z kamery zawiera widoczną sylwetkę całego przodu pojazdu. W szczególności zakłada się, że oprócz tablicy rejestracyjnej w pełni widoczne powinny być:
+
+* prawy i lewy reflektor pojazdu,
+* obszar od tablicy rejestracyjnego do dolnej krawędzi przedniej szyby (w poziomie, w górę),
+* obszar od tablicy rejestracyjnej do powierzchni drogi (w poziomie, w dół).
+
+Poniżej przedstawiono zdjęcie z kamery ANPR, w którym czerwoną ramką oznaczono fragment niezbędny do poprawnego rozpoznania marki.
+
+.. figure:: _static/img/mmr-fov.jpg
+   :width: 100%
+
+Jeżeli przód pojazdy nie jest widoczny jak na powyższym przykładzie, np. jest częściowo przesłonięty przez inne pojazdy lub elementy infrastruktury to przejazd taki powinien zostać wykluczony z oceny.
+
+.. _evaluation_maker_ambiguity_nights:
+
+Noc
+^^^^
+
+Zakłada się również, że z oceny jakości rozpoznawania marki będą wykluczone wszystkie ujęcia nocne, takie jak na przykładzie poniżej (tu pole pomiarowe oświetlone jest wyłącznie oświetlaczem IR):
+
+.. figure:: _static/img/mmr-night.jpg
+   :width: 100%
+
+.. _evaluation_maker_ambiguity_name:
+
+Nazwa producenta
+^^^^^^^^^^^^^^^^^^
+
+W niektórych sytuacjach ujednoznacznienia wymaga nazwa producenta. Sytuacja taka ma miejsce, gdy:
+
+* ten sam producent używa innej nazwy firmowej w różnych regionach (np. "Opel" jest zamiennie stosowany z "Vauxhall"),
+* ten sam producent przekształcił się i z czasem zmienił nazwę (np. "Citroen" od dnia 1 czerwca 2016 r. produkuje samochody pod nazwą "DS").
+
