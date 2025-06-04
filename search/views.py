@@ -18,21 +18,21 @@ SNIPPET_LENGTH = 500  # maksymalna długość snippetów
 
 
 def _get_snippet(
-    src: Dict[str, Any],
-    highlight: Dict[str, List[str]],
-    eff_lang: str,
-    query_present: bool,
-    is_section: bool
+        src: Dict[str, Any],
+        highlight: Dict[str, List[str]],
+        eff_lang: str,
+        query_present: bool,
+        is_section: bool
 ) -> str:
     """Zwraca snippet: podsumowanie lub content z podświetleniem fragmentów."""
     field_base = 'content' if is_section else 'summary'
 
     # Try lang‐specific, then English, then Polish, then empty
     text = (
-        src.get(f"{field_base}.{eff_lang}") or
-        src.get(f"{field_base}.en") or
-        src.get(f"{field_base}.pl") or
-        ""
+            src.get(f"{field_base}.{eff_lang}") or
+            src.get(f"{field_base}.en") or
+            src.get(f"{field_base}.pl") or
+            ""
     )
 
     # Truncate if needed
@@ -53,12 +53,10 @@ def _get_snippet(
     return snippet
 
 
-
-
 def _query_block(
-    query: str | None,
-    lang: str | None,
-    is_section: bool = False
+        query: str | None,
+        lang: str | None,
+        is_section: bool = False
 ) -> Dict[str, Any]:
     filters: List[Dict[str, Any]] = []
     if lang in {"pl", "en"}:
@@ -80,7 +78,18 @@ def _query_block(
                     f"{base}.en^{3}" if base == 'title' else f"{base}.en",
                     f"{base}.pl^{3}" if base == 'title' else f"{base}.pl",
                 ])
-        must = [{"multi_match": {"query": query, "fields": fields, "operator": "and"}}]
+
+        # Use multi_match with fuzziness for better typo tolerance
+        must = [{
+            "multi_match": {
+                "query": query,
+                "fields": fields,
+                "operator": "and",
+                "fuzziness": "AUTO",  # Added fuzziness for typo tolerance
+                "prefix_length": 1,  # Prevent too aggressive fuzzy matching
+                "max_expansions": 50  # Limit expansions for performance
+            }
+        }]
         bool_q = {"must": must}
         if filters:
             bool_q["filter"] = filters
@@ -97,12 +106,13 @@ def _highlight_block(query_present: bool, is_section: bool = False) -> Dict[str,
 
     if is_section:
         fields = {
-            "title.*":     {"fragment_size": SNIPPET_LENGTH // 2, "number_of_fragments": 1},
-            "content.*":   {"fragment_size": SNIPPET_LENGTH // 2, "number_of_fragments": 2},
+            "title.*": {"fragment_size": SNIPPET_LENGTH // 2, "number_of_fragments": 1},
+            "content.*": {"fragment_size": SNIPPET_LENGTH // 2, "number_of_fragments": 2},
+            "doc_title.*": {"fragment_size": SNIPPET_LENGTH // 2, "number_of_fragments": 1},
         }
     else:
         fields = {
-            "title.*":   {"fragment_size": SNIPPET_LENGTH // 2, "number_of_fragments": 1},
+            "title.*": {"fragment_size": SNIPPET_LENGTH // 2, "number_of_fragments": 1},
             "summary.*": {"fragment_size": SNIPPET_LENGTH // 2, "number_of_fragments": 2},
         }
 
@@ -115,19 +125,19 @@ def _highlight_block(query_present: bool, is_section: bool = False) -> Dict[str,
 
 
 def _build_body(
-    query: str | None,
-    lang: str | None,
-    is_section: bool = False
+        query: str | None,
+        lang: str | None,
+        is_section: bool = False
 ) -> Dict[str, Any]:
     return {"query": _query_block(query, lang, is_section)}
 
 
 def _format_hit(
-    hit: Dict[str, Any],
-    eff_lang: str,
-    query_str: str,
-    query_present: bool,
-    is_section: bool = False
+        hit: Dict[str, Any],
+        eff_lang: str,
+        query_str: str,
+        query_present: bool,
+        is_section: bool = False
 ) -> Dict[str, Any]:
     src = hit.get("_source", {})
     highlight = hit.get("highlight", {})
@@ -162,64 +172,248 @@ def _format_hit(
     return {"title": title, "meta": meta, "snippet": snippet, "href": href, "icon": icon}
 
 
+def _create_suggestion_config(query: str, lang: str | None) -> Dict[str, Any]:
+    """Create optimized suggestion configuration."""
+    suggest_config = {}
+
+    # Define fields to suggest on based on language preference
+    if lang == "pl":
+        field_priority = ["title.pl", "content.pl", "title.en", "content.en"]
+    else:
+        field_priority = ["title.en", "content.en", "title.pl", "content.pl"]
+
+    # Create phrase suggestions with better configuration
+    for i, field in enumerate(field_priority):
+        field_key = field.replace(".", "_")
+        suggest_config[f"phrase_{field_key}"] = {
+            "text": query,
+            "phrase": {
+                "field": field,
+                "size": 3,  # Get more suggestions
+                "real_word_error_likelihood": 0.95,  # High likelihood of real word errors
+                "max_errors": 0.8,  #  up to 80% of words to have errors
+                "confidence": 0.0001,  # Very low confidence threshold
+                "separator": " ",
+                "direct_generator": [{
+                    "field": field,
+                    "suggest_mode": "always",
+                    "min_word_length": 2,
+                    "prefix_length": 1,
+                    "min_doc_freq": 1,
+                    "max_edits": 2,
+                    "max_inspections": 5,
+                    "max_term_freq": 0.01,
+                    "size": 5
+                }],
+                "highlight": {
+                    "pre_tag": "<em>",
+                    "post_tag": "</em>"
+                },
+                "collate": {
+                    "query": {
+                        "source": {
+                            "match": {
+                                "{{field_name}}": "{{suggestion}}"
+                            }
+                        }
+                    },
+                    "params": {"field_name": field},
+                    "prune": True
+                }
+            }
+        }
+
+    # term suggestions as fallback
+    for i, field in enumerate(field_priority):
+        field_key = field.replace(".", "_")
+        suggest_config[f"term_{field_key}"] = {
+            "text": query,
+            "term": {
+                "field": field,
+                "size": 3,
+                "suggest_mode": "always",
+                "min_word_length": 2,
+                "prefix_length": 1,
+                "min_doc_freq": 1,
+                "max_edits": 2,
+                "max_inspections": 5,
+                "max_term_freq": 0.01
+            }
+        }
+
+    return suggest_config
+
+
+def _extract_suggestions(resp: Dict[str, Any], lang: str | None) -> Dict[str, str | None]:
+    """Extract the best suggestions from OpenSearch response."""
+    if "suggest" not in resp:
+        return {"term": None, "phrase": None}
+
+    suggest_data = resp["suggest"]
+    best_phrase = None
+    best_term = None
+
+    # Define field priority based on language
+    if lang == "pl":
+        field_priority = ["title_pl", "content_pl", "title_en", "content_en"]
+    else:
+        field_priority = ["title_en", "content_en", "title_pl", "content_pl"]
+
+    # Extract phrase suggestions with priority
+    for field in field_priority:
+        phrase_key = f"phrase_{field}"
+        if phrase_key in suggest_data:
+            suggestions = suggest_data[phrase_key]
+            for suggestion_group in suggestions:
+                options = suggestion_group.get("options", [])
+                if options:
+                    # Get the best scoring option that was collated (validated)
+                    for option in options:
+                        if option.get("collate_match", False) and option.get("score", 0) > 0:
+                            best_phrase = option["text"]
+                            break
+                    if best_phrase:
+                        break
+            if best_phrase:
+                break
+
+    # If no good phrase suggestion, try term suggestions
+    if not best_phrase:
+        for field in field_priority:
+            term_key = f"term_{field}"
+            if term_key in suggest_data:
+                suggestions = suggest_data[term_key]
+                for suggestion_group in suggestions:
+                    options = suggestion_group.get("options", [])
+                    if options and options[0].get("freq", 0) > 0:
+                        best_term = options[0]["text"]
+                        break
+                if best_term:
+                    break
+
+    return {"term": best_term, "phrase": best_phrase}
+
+
+def _fallback_search(client: OpenSearch, query: str, lang: str | None, is_section: bool) -> Dict[str, Any]:
+    """Perform a fallback search with relaxed constraints when no results found."""
+    index_name = INDEX_SECTIONS if is_section else INDEX_DOCS
+
+    # Try a more relaxed search
+    if is_section:
+        bases = ["doc_title", "title", "content"]
+    else:
+        bases = ["title", "summary"]
+
+    fields: List[str] = []
+    for base in bases:
+        if lang:
+            fields.append(f"{base}.{lang}")
+        else:
+            fields.extend([f"{base}.en", f"{base}.pl"])
+
+    # Use should with lower minimum_should_match for more flexibility
+    query_words = query.split()
+    should_clauses = []
+
+    for word in query_words:
+        should_clauses.append({
+            "multi_match": {
+                "query": word,
+                "fields": fields,
+                "fuzziness": "AUTO",
+                "boost": 1.0
+            }
+        })
+
+    fallback_body = {
+        "query": {
+            "bool": {
+                "should": should_clauses,
+                "minimum_should_match": max(1, len(query_words) // 2)  # Match at least half the words
+            }
+        },
+        "highlight": _highlight_block(True, is_section),
+        "size": MAX_HITS,
+        "track_total_hits": True
+    }
+
+    return client.search(index=index_name, body=fallback_body)
+
+
 def search_documents(request: HttpRequest) -> HttpResponse:
     query = request.GET.get("q", "").strip()
     lang = request.GET.get("lang") or None
     sort_by = request.GET.get("sort", "relevance")
 
+    page = 1
     try:
-        page = int(request.GET.get("page", 1))
-    except (TypeError, ValueError):
-        page = 1
-    page = max(page, 1)
+        page = max(int(request.GET.get("page", 1)), 1)
+    except ValueError:
+        pass
     offset = (page - 1) * MAX_HITS
 
-    client: OpenSearch = get_client()
+    client = get_client()
     is_section = bool(query)
     index_name = INDEX_SECTIONS if is_section else INDEX_DOCS
 
     body = _build_body(query or None, lang, is_section)
     if query:
         body["highlight"] = _highlight_block(True, is_section)
+        # Add improved suggestion configuration
+        body["suggest"] = _create_suggestion_config(query, lang)
+
     if sort_by == "date":
         body["sort"] = [{"release_date": "desc"}]
 
-    # Ensure exact total count (no 10k cap)
     body["track_total_hits"] = True
-
     body["from"] = offset
     body["size"] = MAX_HITS
 
+    # Execute primary search
     resp = client.search(index=index_name, body=body)
-    total = resp.get("hits", {}).get("total", {}).get("value", 0)
+    total = resp["hits"]["total"]["value"]
+
+    # If no results and we have a query, try fallback search
+    if total == 0 and query:
+        logger.info(f"No results for query '{query}', trying fallback search")
+        try:
+            fallback_resp = _fallback_search(client, query, lang, is_section)
+            if fallback_resp["hits"]["total"]["value"] > 0:
+                resp = fallback_resp
+                total = resp["hits"]["total"]["value"]
+                logger.info(f"Fallback search found {total} results")
+        except Exception as e:
+            logger.warning(f"Fallback search failed: {e}")
+
     total_pages = max((total + MAX_HITS - 1) // MAX_HITS, 1)
 
+    # Extract suggestions using the improved helper function
+    suggestions = _extract_suggestions(resp, lang)
+
+    # Format hits
     eff_lang = lang or "en"
     query_present = bool(query)
-    raw_hits = resp.get("hits", {}).get("hits", [])
-    results: List[Dict[str, Any]] = []
+    raw_hits = resp["hits"]["hits"]
+    results = []
     for i, hit in enumerate(raw_hits, start=offset + 1):
         fmt = _format_hit(hit, eff_lang, query, query_present, is_section)
         fmt["number"] = i
         results.append(fmt)
 
-    logger.debug(
-        "search q='%s' lang=%s sort=%s page=%d hits=%d total=%d total_pages=%d index=%s",
-        query, lang, sort_by, page, len(results), total, total_pages, index_name
-    )
+    # Use phrase suggestion if available, otherwise use term suggestion
+    best_suggestion = suggestions["phrase"] or suggestions["term"]
 
-    return render(
-        request,
-        "search.html",
-        {
-            "results": results,
-            "query": query,
-            "selected_lang": lang,
-            "sort_by": sort_by,
-            "page": page,
-            "total": total,
-            "total_pages": total_pages,
-            "start_index": offset + 1,
-            "index_used": index_name
-        }
-    )
+    return render(request, "search.html", {
+        "results": results,
+        "query": query,
+        "selected_lang": lang,
+        "sort_by": sort_by,
+        "page": page,
+        "total": total,
+        "total_pages": total_pages,
+        "start_index": offset + 1,
+        "index_used": index_name,
+        "suggestion": best_suggestion,  # Use the best available suggestion
+        "term_suggestion": suggestions["term"],
+        "phrase_suggestion": suggestions["phrase"],
+    })
