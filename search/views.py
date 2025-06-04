@@ -345,16 +345,23 @@ def semantic_search(client: OpenSearch, query: str, lang: str | None, is_section
     """Perform a KNN semantic search using vector embeddings."""
     index_name = INDEX_SECTIONS if is_section else INDEX_DOCS
     query_vector = embed_text(query)
-    body: Dict[str, Any] = {
-        "size": MAX_HITS,
-        "query": {
-            "knn": {
-                "embedding": {"vector": query_vector, "k": MAX_HITS}
-            }
-        }
+    knn_query = {
+        "knn": {"embedding": {"vector": query_vector, "k": MAX_HITS}}
     }
+
     if lang in {"pl", "en"}:
-        body["filter"] = [{"term": {"language": lang}}]
+        body = {
+            "size": MAX_HITS,
+            "query": {
+                "bool": {
+                    "must": knn_query,
+                    "filter": [{"term": {"language": lang}}],
+                }
+            },
+        }
+    else:
+        body = {"size": MAX_HITS, "query": knn_query}
+
     return client.search(index=index_name, body=body)
 
 
