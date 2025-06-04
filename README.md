@@ -127,7 +127,8 @@ sequenceDiagram
   - Indexes and retrieves documents efficiently.
   - Supports both **keyword-based** and **vector-based** search.
   - Uses **BM25** (default in OpenSearch) for traditional retrieval and **SentenceTransformer-based embeddings** for semantic matching.
-  - saves recent user search
+  - Users can choose the search mode (keyword vs semantic) via a selector in the UI.
+  - Saves recent user search
 
 - **Frontend (React)**
   - Provides an interactive UI for users to input queries and receive search results.
