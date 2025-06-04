@@ -27,8 +27,6 @@ import sys
 from pathlib import Path
 from typing import Dict, List, Any
 
-from search.embedding import embed_text
-
 import django
 from opensearchpy import OpenSearch, helpers
 from django.conf import settings
@@ -49,7 +47,6 @@ django.setup()
 
 # ────────── Index Settings with Language-Specific Analyzers ──────────
 DOCUMENT_INDEX_SETTINGS = {
-    "settings": {"index": {"knn": True}},
     "mappings": {
         "dynamic_templates": [
             {"pl_text": {"match_mapping_type": "string", "match": "*.pl", "mapping": {"type": "text", "analyzer": "polish"}}},
@@ -64,14 +61,12 @@ DOCUMENT_INDEX_SETTINGS = {
             "title.en":     {"type": "text", "analyzer": "english"},
             "title.pl":     {"type": "text", "analyzer": "polish"},
             "summary.en":   {"type": "text", "analyzer": "english"},
-            "summary.pl":   {"type": "text", "analyzer": "polish"},
-            "embedding":   {"type": "knn_vector", "dimension": 384}
+            "summary.pl":   {"type": "text", "analyzer": "polish"}
         }
     }
 }
 
 SECTION_INDEX_SETTINGS = {
-    "settings": {"index": {"knn": True}},
     "mappings": {
         "dynamic_templates": [
             {"pl_text": {"match_mapping_type": "string", "match": "*.pl", "mapping": {"type": "text", "analyzer": "polish"}}},
@@ -92,8 +87,7 @@ SECTION_INDEX_SETTINGS = {
             "content.en":   {"type": "text", "analyzer": "english"},
             "content.pl":   {"type": "text", "analyzer": "polish"},
             "level":        {"type": "integer"},
-            "order":        {"type": "integer"},
-            "embedding":    {"type": "knn_vector", "dimension": 384}
+            "order":        {"type": "integer"}
         }
     }
 }
@@ -146,7 +140,6 @@ def index_catalog(
 
             suffix = ".pl" if lang == "pl" else ".en"
             # Use index op_type to fully overwrite existing document
-            embedding_text = f"{title} {summary or ''}".strip()
             doc_actions.append({
                 "_op_type": "index",
                 "_index": doc_index,
@@ -158,8 +151,7 @@ def index_catalog(
                     "release_date": release_date,
                     "path": path,
                     f"title{suffix}": title,
-                    f"summary{suffix}": summary or "",
-                    "embedding": embed_text(embedding_text)
+                    f"summary{suffix}": summary or ""
                 }
             })
 
@@ -238,8 +230,7 @@ def process_sections(
                 f"title{suffix}": title,
                 f"content{suffix}": content,
                 "level": level,
-                "order": i,
-                "embedding": embed_text(content)
+                "order": i
             }
         })
 
