@@ -18,8 +18,8 @@
         {# removed length since backend doesn’t handle it yet #}
       </select>
       <select name="mode">
-        <option value="keyword">Keyword</option>
-        <option value="semantic" {% if mode == "semantic" %}selected{% endif %}>Semantic</option>
+        <option value="keyword" {% if mode != 'semantic' %}selected{% endif %}>Keyword</option>
+        <option value="semantic" {% if mode == 'semantic' %}selected{% endif %}>Semantic</option>
       </select>
       <button type="submit">Search</button>
     </form>
@@ -39,8 +39,9 @@
       </strong>
       <a href="?q={{ term_suggestion|urlencode }}
                 {% if selected_lang %}&lang={{ selected_lang }}{% endif %}
+                {% if sort_by %}&sort={{ sort_by }}{% endif %}">
                 {% if sort_by %}&sort={{ sort_by }}{% endif %}
-                {% if mode %}&mode={{ mode }}{% endif %}">
+                &mode={{ mode }}">
         <strong>{{ term_suggestion }}</strong>
       </a>?
     </p>
@@ -60,8 +61,9 @@
       </strong>
       <a href="?q={{ phrase_suggestion|urlencode }}
                 {% if selected_lang %}&lang={{ selected_lang }}{% endif %}
+                {% if sort_by %}&sort={{ sort_by }}{% endif %}">
                 {% if sort_by %}&sort={{ sort_by }}{% endif %}
-                {% if mode %}&mode={{ mode }}{% endif %}">
+                &mode={{ mode }}">
         <strong>{{ phrase_suggestion|safe }}</strong>
       </a>?
     </p>
@@ -87,19 +89,7 @@
         {% if total == 1 %}document{% else %}documents{% endif %}
       {% endif %}
     </p>
-  {% endif %}
-
-  {# ── results list ── #}
-  <ol class="search-results" start="{{ start_index }}">
-    {% for doc in results %}
-      <li>
-        <div class="result-title">
-          {{ doc.icon|safe }}
-          <a href="{{ doc.href }}" target="_blank">{{ doc.title }}</a>
-        </div>
-        {% if doc.meta %}
-          <div class="result-meta">{{ doc.meta }}</div>
-        {% endif %}
+@@ -97,41 +103,41 @@
         {% if doc.snippet %}
           <div class="snippet">{{ doc.snippet|safe }}</div>
         {% else %}
@@ -125,7 +115,8 @@
       {% if page > 1 %}
         <a href="?{% if query %}q={{ query|urlencode }}&{% endif %}
                   {% if selected_lang %}lang={{ selected_lang }}&{% endif %}
-                  sort={{ sort_by }}{% if mode %}&mode={{ mode }}{% endif %}&page={{ page|add:'-1' }}">
+                  sort={{ sort_by }}&page={{ page|add:'-1' }}">
+                  sort={{ sort_by }}&mode={{ mode }}&page={{ page|add:'-1' }}">
           {% if selected_lang == "pl" %}Poprzednia{% else %}Previous{% endif %}
         </a>
       {% endif %}
@@ -133,7 +124,8 @@
       {% if page < total_pages %}
         <a href="?{% if query %}q={{ query|urlencode }}&{% endif %}
                   {% if selected_lang %}lang={{ selected_lang }}&{% endif %}
-                  sort={{ sort_by }}{% if mode %}&mode={{ mode }}{% endif %}&page={{ page|add:'1' }}">
+                  sort={{ sort_by }}&page={{ page|add:'1' }}">
+                  sort={{ sort_by }}&mode={{ mode }}&page={{ page|add:'1' }}">
           {% if selected_lang == "pl" %}Następna{% else %}Next{% endif %}
         </a>
       {% endif %}
