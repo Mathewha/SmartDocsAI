@@ -128,6 +128,7 @@ sequenceDiagram
   - Supports both **keyword-based** and **vector-based** search.
   - Uses **BM25** (default in OpenSearch) for traditional retrieval and **SentenceTransformer-based embeddings** for semantic matching.
   - Users can choose the search mode (keyword vs semantic) via a selector in the UI.
+
   - Before using semantic search, create the indices with embeddings via `python -m tools.index`.
   - Saves recent user search
 
@@ -140,6 +141,9 @@ Use the dropdown labeled **Mode** on the search page to switch between keyword a
 http://localhost:8000/search/?q=example&mode=semantic
 ```
 
+=======
+  - Saves recent user search
+ main
 
 - **Frontend (React)**
   - Provides an interactive UI for users to input queries and receive search results.
