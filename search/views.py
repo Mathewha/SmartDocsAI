@@ -8,6 +8,7 @@ from django.http import HttpRequest, HttpResponse
 from opensearchpy import OpenSearch
 
 from ndoc.opensearch import get_client  # helper
+from embedding import embed_text
 
 logger = logging.getLogger(__name__)
 
@@ -340,9 +341,23 @@ def _fallback_search(client: OpenSearch, query: str, lang: str | None, is_sectio
     return client.search(index=index_name, body=fallback_body)
 
 
+def semantic_search(query: str, lang: str | None) -> Dict[str, Any]:
+    """Perform semantic KNN search on sections index."""
+    client = get_client()
+    query_vector = embed_text(query)
+    body = {
+        "size": MAX_HITS,
+        "query": {"knn": {"embedding": {"vector": query_vector, "k": MAX_HITS}}},
+    }
+    if lang:
+        body["filter"] = [{"term": {"language": lang}}]
+    return client.search(index=INDEX_SECTIONS, body=body)
+
+
 def search_documents(request: HttpRequest) -> HttpResponse:
     query = request.GET.get("q", "").strip()
     lang = request.GET.get("lang") or None
+    mode = request.GET.get("mode", "keyword")
     sort_by = request.GET.get("sort", "relevance")
 
     page = 1
@@ -355,6 +370,32 @@ def search_documents(request: HttpRequest) -> HttpResponse:
     client = get_client()
     is_section = bool(query)
     index_name = INDEX_SECTIONS if is_section else INDEX_DOCS
+
+    if mode == "semantic" and query:
+        resp = semantic_search(query, lang)
+        total = resp["hits"]["total"]["value"]
+        total_pages = max((total + MAX_HITS - 1) // MAX_HITS, 1)
+        eff_lang = lang or "en"
+        results = []
+        for i, hit in enumerate(resp["hits"]["hits"], start=1):
+            fmt = _format_hit(hit, eff_lang, query, True, True)
+            fmt["number"] = i
+            results.append(fmt)
+
+        return render(request, "search.html", {
+            "results": results,
+            "query": query,
+            "selected_lang": lang,
+            "sort_by": sort_by,
+            "page": page,
+            "total": total,
+            "total_pages": total_pages,
+            "start_index": 1,
+            "index_used": INDEX_SECTIONS,
+            "suggestion": None,
+            "term_suggestion": None,
+            "phrase_suggestion": None,
+        })
 
     body = _build_body(query or None, lang, is_section)
     if query:
