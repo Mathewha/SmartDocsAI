@@ -430,6 +430,7 @@ def search_documents(request: HttpRequest) -> HttpResponse:
         "query": query,
         "selected_lang": lang,
         "sort_by": sort_by,
+        "mode": mode,
         "page": page,
         "total": total,
         "total_pages": total_pages,
