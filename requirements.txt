@@ -1,0 +1,3 @@
+django
+opensearch-py
+sentence-transformers>=2.0
