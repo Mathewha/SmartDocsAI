@@ -8,6 +8,7 @@ from django.http import HttpRequest, HttpResponse
 from opensearchpy import OpenSearch
 
 from ndoc.opensearch import get_client  # helper
+from .embedding import embed_text
 
 logger = logging.getLogger(__name__)
 
@@ -340,10 +341,28 @@ def _fallback_search(client: OpenSearch, query: str, lang: str | None, is_sectio
     return client.search(index=index_name, body=fallback_body)
 
 
+def semantic_search(client: OpenSearch, query: str, lang: str | None, is_section: bool) -> Dict[str, Any]:
+    """Perform a KNN semantic search using vector embeddings."""
+    index_name = INDEX_SECTIONS if is_section else INDEX_DOCS
+    query_vector = embed_text(query)
+    body: Dict[str, Any] = {
+        "size": MAX_HITS,
+        "query": {
+            "knn": {
+                "embedding": {"vector": query_vector, "k": MAX_HITS}
+            }
+        }
+    }
+    if lang in {"pl", "en"}:
+        body["filter"] = [{"term": {"language": lang}}]
+    return client.search(index=index_name, body=body)
+
+
 def search_documents(request: HttpRequest) -> HttpResponse:
     query = request.GET.get("q", "").strip()
     lang = request.GET.get("lang") or None
     sort_by = request.GET.get("sort", "relevance")
+    mode = request.GET.get("mode", "keyword")
 
     page = 1
     try:
@@ -369,12 +388,15 @@ def search_documents(request: HttpRequest) -> HttpResponse:
     body["from"] = offset
     body["size"] = MAX_HITS
 
-    # Execute primary search
-    resp = client.search(index=index_name, body=body)
-    total = resp["hits"]["total"]["value"]
+    if mode == "semantic" and query:
+        resp = semantic_search(client, query, lang, is_section)
+        total = len(resp["hits"]["hits"])
+    else:
+        resp = client.search(index=index_name, body=body)
+        total = resp["hits"]["total"]["value"]
 
     # If no results and we have a query, try fallback search
-    if total == 0 and query:
+    if total == 0 and query and mode != "semantic":
         logger.info(f"No results for query '{query}', trying fallback search")
         try:
             fallback_resp = _fallback_search(client, query, lang, is_section)
@@ -413,6 +435,7 @@ def search_documents(request: HttpRequest) -> HttpResponse:
         "total_pages": total_pages,
         "start_index": offset + 1,
         "index_used": index_name,
+        "mode": mode,
         "suggestion": best_suggestion,  # Use the best available suggestion
         "term_suggestion": suggestions["term"],
         "phrase_suggestion": suggestions["phrase"],
