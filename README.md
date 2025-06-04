@@ -127,7 +127,19 @@ sequenceDiagram
   - Indexes and retrieves documents efficiently.
   - Supports both **keyword-based** and **vector-based** search.
   - Uses **BM25** (default in OpenSearch) for traditional retrieval and **SentenceTransformer-based embeddings** for semantic matching.
-  - saves recent user search
+  - Users can choose the search mode (keyword vs semantic) via a selector in the UI.
+  - Before using semantic search, create the indices with embeddings via `python -m tools.index`.
+  - Saves recent user search
+
+> **Note** If you encounter an error stating `Field 'embedding' is not knn_vector type`, re-create the indices with `python -m tools.index` to include the `embedding` vector field.
+
+### Selecting the Search Mode
+Use the dropdown labeled **Mode** on the search page to switch between keyword and semantic search. You can also set `mode=semantic` in the query string, for example:
+
+```
+http://localhost:8000/search/?q=example&mode=semantic
+```
+
 
 - **Frontend (React)**
   - Provides an interactive UI for users to input queries and receive search results.
