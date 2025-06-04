@@ -6,6 +6,7 @@ from typing import Any, Dict, List
 from django.shortcuts import render
 from django.http import HttpRequest, HttpResponse
 from opensearchpy import OpenSearch
+from opensearchpy.exceptions import RequestError
 
 from ndoc.opensearch import get_client  # helper
 from .embedding import embed_text
@@ -396,8 +397,13 @@ def search_documents(request: HttpRequest) -> HttpResponse:
     body["size"] = MAX_HITS
 
     if mode == "semantic" and query:
-        resp = semantic_search(client, query, lang, is_section)
-        total = len(resp["hits"]["hits"])
+        try:
+            resp = semantic_search(client, query, lang, is_section)
+            total = len(resp["hits"]["hits"])
+        except RequestError as e:
+            logger.warning("Semantic search failed: %s", e)
+            resp = client.search(index=index_name, body=body)
+            total = resp["hits"]["total"]["value"]
     else:
         resp = client.search(index=index_name, body=body)
         total = resp["hits"]["total"]["value"]
