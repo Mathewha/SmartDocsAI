@@ -18,15 +18,15 @@ def create_semantic_search_body(query: str, lang: str | None, is_section: bool =
     # Get the embedding for the query
     query_embedding = get_embedding(query)
 
-    # Build the k-NN query using the classic ``embedding``/``vector`` syntax
-    # supported by older versions of OpenSearch. This keeps compatibility with
-    # deployments that haven't upgraded to the newer ``query_vector`` format.
+    # Build the k-NN query using the modern ``query_vector`` syntax. This works
+    # with OpenSearch 2.x and is backward compatible with versions that still
+    # accept the old ``embedding``/``vector`` form.
     base_query = {
         "knn": {
-            "embedding": {
-                "vector": query_embedding,
-                "k": settings.MAX_HITS,
-            }
+            "field": "embedding",
+            "query_vector": query_embedding,
+            "k": settings.MAX_HITS,
+            "num_candidates": max(settings.MAX_HITS * 2, 10),
         }
     }
 
