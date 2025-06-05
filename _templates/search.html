@@ -12,17 +12,24 @@
         <option value="en" {% if selected_lang == 'en' %}selected{% endif %}>English</option>
         <option value="pl" {% if selected_lang == 'pl' %}selected{% endif %}>Polski</option>
       </select>
+      <select name="mode">
+        <option value="keyword" {% if search_mode == 'keyword' %}selected{% endif %}>
+          {% if selected_lang == "pl" %}Wyszukiwanie słów kluczowych{% else %}Keyword Search{% endif %}
+        </option>
+        <option value="semantic" {% if search_mode == 'semantic' %}selected{% endif %}>
+          {% if selected_lang == "pl" %}Wyszukiwanie semantyczne{% else %}Semantic Search{% endif %}
+        </option>
+      </select>
       <select name="sort">
         <option value="relevance" {% if sort_by == 'relevance' %}selected{% endif %}>Relevance</option>
         <option value="date" {% if sort_by == 'date' %}selected{% endif %}>Release date</option>
-        {# removed length since backend doesn’t handle it yet #}
       </select>
       <button type="submit">Search</button>
     </form>
   </div>
 
   {# ── term suggestion ── #}
-  {% if term_suggestion and term_suggestion != query %}
+  {% if term_suggestion and term_suggestion != query and search_mode == 'keyword' %}
     <p class="did-you-mean">
       <strong>
         {% if selected_lang == "pl" %}
@@ -35,14 +42,15 @@
       </strong>
       <a href="?q={{ term_suggestion|urlencode }}
                 {% if selected_lang %}&lang={{ selected_lang }}{% endif %}
-                {% if sort_by %}&sort={{ sort_by }}{% endif %}">
+                {% if sort_by %}&sort={{ sort_by }}{% endif %}
+                {% if search_mode %}&mode={{ search_mode }}{% endif %}">
         <strong>{{ term_suggestion }}</strong>
       </a>?
     </p>
   {% endif %}
 
   {# ── phrase suggestion ── #}
-  {% if phrase_suggestion and phrase_suggestion != query %}
+  {% if phrase_suggestion and phrase_suggestion != query and search_mode == 'keyword' %}
     <p class="did-you-mean">
       <strong>
         {% if selected_lang == "pl" %}
@@ -55,7 +63,8 @@
       </strong>
       <a href="?q={{ phrase_suggestion|urlencode }}
                 {% if selected_lang %}&lang={{ selected_lang }}{% endif %}
-                {% if sort_by %}&sort={{ sort_by }}{% endif %}">
+                {% if sort_by %}&sort={{ sort_by }}{% endif %}
+                {% if search_mode %}&mode={{ search_mode }}{% endif %}">
         <strong>{{ phrase_suggestion|safe }}</strong>
       </a>?
     </p>
@@ -68,8 +77,10 @@
       {% if selected_lang == "pl" %}
         {% if total == 0 %}wyników{% elif total == 1 %}wynik{% elif total < 5 %}wyniki{% else %}wyników{% endif %}
         dla zapytania „<em>{{ query }}</em>”
+        {% if search_mode == 'semantic' %}(wyszukiwanie semantyczne){% endif %}
       {% else %}
-        {% if total == 1 %}result{% else %}results{% endif %} for query “<em>{{ query }}</em>”
+        {% if total == 1 %}result{% else %}results{% endif %} for query "<em>{{ query }}</em>"
+        {% if search_mode == 'semantic' %}(semantic search){% endif %}
       {% endif %}
     </p>
   {% else %}
@@ -119,6 +130,7 @@
       {% if page > 1 %}
         <a href="?{% if query %}q={{ query|urlencode }}&{% endif %}
                   {% if selected_lang %}lang={{ selected_lang }}&{% endif %}
+                  {% if search_mode %}mode={{ search_mode }}&{% endif %}
                   sort={{ sort_by }}&page={{ page|add:'-1' }}">
           {% if selected_lang == "pl" %}Poprzednia{% else %}Previous{% endif %}
         </a>
@@ -127,6 +139,7 @@
       {% if page < total_pages %}
         <a href="?{% if query %}q={{ query|urlencode }}&{% endif %}
                   {% if selected_lang %}lang={{ selected_lang }}&{% endif %}
+                  {% if search_mode %}mode={{ search_mode }}&{% endif %}
                   sort={{ sort_by }}&page={{ page|add:'1' }}">
           {% if selected_lang == "pl" %}Następna{% else %}Next{% endif %}
         </a>

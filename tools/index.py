@@ -49,19 +49,23 @@ django.setup()
 DOCUMENT_INDEX_SETTINGS = {
     "mappings": {
         "dynamic_templates": [
-            {"pl_text": {"match_mapping_type": "string", "match": "*.pl", "mapping": {"type": "text", "analyzer": "polish"}}},
-            {"en_text": {"match_mapping_type": "string", "match": "*.en", "mapping": {"type": "text", "analyzer": "english"}}}
+            {"pl_text": {"match_mapping_type": "string", "match": "*.pl",
+                         "mapping": {"type": "text", "analyzer": "polish"}}},
+            {"en_text": {"match_mapping_type": "string", "match": "*.en",
+                         "mapping": {"type": "text", "analyzer": "english"}}}
         ],
         "properties": {
-            "id":           {"type": "keyword"},
-            "language":     {"type": "keyword"},
-            "version":      {"type": "keyword"},
+            "id": {"type": "keyword"},
+            "language": {"type": "keyword"},
+            "version": {"type": "keyword"},
             "release_date": {"type": "date"},
-            "path":         {"type": "keyword"},
-            "title.en":     {"type": "text", "analyzer": "english"},
-            "title.pl":     {"type": "text", "analyzer": "polish"},
-            "summary.en":   {"type": "text", "analyzer": "english"},
-            "summary.pl":   {"type": "text", "analyzer": "polish"}
+            "path": {"type": "keyword"},
+            "title.en": {"type": "text", "analyzer": "english"},
+            "title.pl": {"type": "text", "analyzer": "polish"},
+            "summary.en": {"type": "text", "analyzer": "english"},
+            "summary.pl": {"type": "text", "analyzer": "polish"},
+            "embedding": {"type": "knn_vector", "dimension": 384,
+                          "method": {"name": "hnsw", "space_type": "cosinesimil", "engine": "nmslib"}}
         }
     }
 }
@@ -69,25 +73,29 @@ DOCUMENT_INDEX_SETTINGS = {
 SECTION_INDEX_SETTINGS = {
     "mappings": {
         "dynamic_templates": [
-            {"pl_text": {"match_mapping_type": "string", "match": "*.pl", "mapping": {"type": "text", "analyzer": "polish"}}},
-            {"en_text": {"match_mapping_type": "string", "match": "*.en", "mapping": {"type": "text", "analyzer": "english"}}}
+            {"pl_text": {"match_mapping_type": "string", "match": "*.pl",
+                         "mapping": {"type": "text", "analyzer": "polish"}}},
+            {"en_text": {"match_mapping_type": "string", "match": "*.en",
+                         "mapping": {"type": "text", "analyzer": "english"}}}
         ],
         "properties": {
-            "doc_id":       {"type": "keyword"},
-            "section_id":   {"type": "keyword"},
+            "doc_id": {"type": "keyword"},
+            "section_id": {"type": "keyword"},
             "section_name": {"type": "keyword"},
-            "language":     {"type": "keyword"},
-            "version":      {"type": "keyword"},
+            "language": {"type": "keyword"},
+            "version": {"type": "keyword"},
             "release_date": {"type": "date"},
-            "path":         {"type": "keyword"},
+            "path": {"type": "keyword"},
             "doc_title.en": {"type": "text", "analyzer": "english"},
             "doc_title.pl": {"type": "text", "analyzer": "polish"},
-            "title.en":     {"type": "text", "analyzer": "english"},
-            "title.pl":     {"type": "text", "analyzer": "polish"},
-            "content.en":   {"type": "text", "analyzer": "english"},
-            "content.pl":   {"type": "text", "analyzer": "polish"},
-            "level":        {"type": "integer"},
-            "order":        {"type": "integer"}
+            "title.en": {"type": "text", "analyzer": "english"},
+            "title.pl": {"type": "text", "analyzer": "polish"},
+            "content.en": {"type": "text", "analyzer": "english"},
+            "content.pl": {"type": "text", "analyzer": "polish"},
+            "level": {"type": "integer"},
+            "order": {"type": "integer"},
+            "embedding": {"type": "knn_vector", "dimension": 384,
+                          "method": {"name": "hnsw", "space_type": "cosinesimil", "engine": "nmslib"}}
         }
     }
 }
@@ -109,13 +117,15 @@ def ensure_indices(client: OpenSearch, doc_index: str, section_index: str) -> No
 
 
 def index_catalog(
-    json_path: Path,
-    input_dir: Path,
-    client: OpenSearch,
-    doc_index: str,
-    section_index: str
+        json_path: Path,
+        input_dir: Path,
+        client: OpenSearch,
+        doc_index: str,
+        section_index: str
 ) -> None:
     """Load JSON catalog and bulk-index documents into both OpenSearch indices, overwriting existing docs."""
+    from .embedding import get_embedding  # Import here to avoid circular imports
+
     catalog = json.loads(json_path.read_text(encoding="utf-8"))
     doc_actions: list[dict] = []
     section_actions: list[dict] = []
@@ -139,6 +149,11 @@ def index_catalog(
                 continue
 
             suffix = ".pl" if lang == "pl" else ".en"
+
+            # Generate embedding for document
+            doc_text = f"{title} {summary or ''}"
+            embedding = get_embedding(doc_text)
+
             # Use index op_type to fully overwrite existing document
             doc_actions.append({
                 "_op_type": "index",
@@ -151,7 +166,8 @@ def index_catalog(
                     "release_date": release_date,
                     "path": path,
                     f"title{suffix}": title,
-                    f"summary{suffix}": summary or ""
+                    f"summary{suffix}": summary or "",
+                    "embedding": embedding
                 }
             })
 
@@ -180,40 +196,45 @@ def index_catalog(
 
 
 def process_sections(
-    doc_id: str,
-    lang: str,
-    doc_title: str,
-    path: str,
-    version: str,
-    release_date: str,
-    chapters: List[Dict[str, Any]],
-    section_actions: List[Dict],
-    index_name: str,
-    suffix: str,
-    input_dir: Path,
-    parent_path: str = "",
-    level: int = 1
+        doc_id: str,
+        lang: str,
+        doc_title: str,
+        path: str,
+        version: str,
+        release_date: str,
+        chapters: List[Dict[str, Any]],
+        section_actions: List[Dict],
+        index_name: str,
+        suffix: str,
+        input_dir: Path,
+        parent_path: str = "",
+        level: int = 1
 ) -> None:
     """Recursively process document sections and add them to the section index, reading content from text files."""
+    from .embedding import get_embedding  # Import here to avoid circular imports
+
     text_root = input_dir / doc_id / lang / "_text"
 
     for i, chapter in enumerate(chapters):
-        section_name = chapter.get("name", "_")
-        section_id   = section_name.split(".")[0]
-        title        = chapter.get("title", {}).get(lang) or next((v for v in chapter.get("title", {}).values() if v), "")
+        section_id = chapter.get("id")
+        title = chapter.get("title", {}).get(lang)
+        content_path = chapter.get("content")
 
-        # Read content from file
-        file_path = text_root / f"{section_id}.txt"
-        try:
-            content = file_path.read_text(encoding="utf-8")
-        except FileNotFoundError:
-            logger.warning("Content file not found: %s", file_path)
-            content = ""
-
-        if not title and not content:
+        if not title or not content_path:
             continue
 
-        # Use index op_type to fully overwrite existing section doc
+        # Read content from file
+        content_file = text_root / content_path
+        if not content_file.exists():
+            continue
+
+        content = content_file.read_text(encoding="utf-8")
+
+        # Generate embedding for section
+        section_text = f"{title} {content}"
+        embedding = get_embedding(section_text)
+
+        # Add section to actions
         section_actions.append({
             "_op_type": "index",
             "_index": index_name,
@@ -221,25 +242,26 @@ def process_sections(
             "_source": {
                 "doc_id": doc_id,
                 "section_id": section_id,
-                "section_name": section_name,
+                "section_name": content_path,
                 "language": lang,
                 "version": version,
                 "release_date": release_date,
-                "path": f"{doc_id}/{lang}/{section_name}",
+                "path": path,
                 f"doc_title{suffix}": doc_title,
                 f"title{suffix}": title,
                 f"content{suffix}": content,
                 "level": level,
-                "order": i
+                "order": i,
+                "embedding": embedding
             }
         })
 
-        # Recurse into sub-chapters if present
-        if chapter.get("chapters"):
+        # Process subsections recursively
+        if "chapters" in chapter:
             process_sections(
                 doc_id, lang, doc_title, path, version, release_date,
                 chapter["chapters"], section_actions, index_name, suffix,
-                input_dir, section_id, level + 1
+                input_dir, content_path, level + 1
             )
 
 
@@ -248,7 +270,7 @@ def main() -> None:
     parser.add_argument("json_file", type=Path, help="Path to catalogue.json")
     parser.add_argument("input_dir", type=Path, help="Root directory of text files")
     parser.add_argument(
-        "-v", "--verbosity", type=int, choices=[0,1,2,3], default=2,
+        "-v", "--verbosity", type=int, choices=[0, 1, 2, 3], default=2,
         help="Logging level: 0=ERR,1=WRN,2=INF,3=DBG"
     )
     parser.add_argument(

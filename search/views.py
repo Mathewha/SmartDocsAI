@@ -5,16 +5,19 @@ from typing import Any, Dict, List
 
 from django.shortcuts import render
 from django.http import HttpRequest, HttpResponse
+from django.conf import settings
 from opensearchpy import OpenSearch
 
 from ndoc.opensearch import get_client  # helper
+from tools.embedding import semantic_search
 
 logger = logging.getLogger(__name__)
 
-INDEX_DOCS = "ndoc_documents"
-INDEX_SECTIONS = "ndoc_sections"
-MAX_HITS = 5  # liczba wyników na stronę
-SNIPPET_LENGTH = 500  # maksymalna długość snippetów
+# Use index names from settings
+INDEX_DOCS = settings.OPENSEARCH["DOC_INDEX"]
+INDEX_SECTIONS = settings.OPENSEARCH["SECTION_INDEX"]
+MAX_HITS = settings.MAX_HITS
+SNIPPET_LENGTH = settings.SNIPPET_LENGTH
 
 
 def _get_snippet(
@@ -137,7 +140,8 @@ def _format_hit(
         eff_lang: str,
         query_str: str,
         query_present: bool,
-        is_section: bool = False
+        is_section: bool = False,
+        is_semantic: bool = False
 ) -> Dict[str, Any]:
     src = hit.get("_source", {})
     highlight = hit.get("highlight", {})
@@ -153,7 +157,22 @@ def _format_hit(
         href = f"/docs/{src.get('path')}/{src.get('language')}/index.html"
         icon = """<i class="bi bi-files"></i>"""
 
-    snippet = _get_snippet(src, highlight, eff_lang, query_present, is_section)
+    # For semantic search, use the full summary without highlighting
+    if is_semantic:
+        field_base = 'content' if is_section else 'summary'
+        text = (
+            src.get(f"{field_base}.{eff_lang}") or
+            src.get(f"{field_base}.en") or
+            src.get(f"{field_base}.pl") or
+            ""
+        )
+        snippet = f"{text[:SNIPPET_LENGTH]}…" if text else ""
+        # Add similarity score to meta
+        similarity = hit.get("_score", 0)
+        similarity_percent = int(similarity * 100)
+    else:
+        snippet = _get_snippet(src, highlight, eff_lang, query_present, is_section)
+        similarity_percent = None
 
     version = src.get("version", '')
     langs = src.get("languages") or [src.get("language")]
@@ -167,6 +186,8 @@ def _format_hit(
         meta_parts.append(f"Released: {src['release_date']}")
     if langs_str:
         meta_parts.append(f"Language: {langs_str}")
+    if similarity_percent is not None:
+        meta_parts.append(f"Similarity: {similarity_percent}%")
     meta = " | ".join(meta_parts)
 
     return {"title": title, "meta": meta, "snippet": snippet, "href": href, "icon": icon}
@@ -340,10 +361,46 @@ def _fallback_search(client: OpenSearch, query: str, lang: str | None, is_sectio
     return client.search(index=index_name, body=fallback_body)
 
 
+def _perform_keyword_search(
+    client: OpenSearch,
+    query: str | None,
+    lang: str | None,
+    is_section: bool,
+    sort_by: str,
+    offset: int
+) -> Dict[str, Any]:
+    """Perform traditional keyword-based search."""
+    body = _build_body(query or None, lang, is_section)
+    if query:
+        body["highlight"] = _highlight_block(True, is_section)
+        body["suggest"] = _create_suggestion_config(query, lang)
+
+    if sort_by == "date":
+        body["sort"] = [{"release_date": "desc"}]
+
+    body["track_total_hits"] = True
+    body["from"] = offset
+    body["size"] = MAX_HITS
+
+    index_name = INDEX_SECTIONS if is_section else INDEX_DOCS
+    return client.search(index=index_name, body=body)
+
+
+def _perform_semantic_search(
+    client: OpenSearch,
+    query: str,
+    lang: str | None,
+    is_section: bool
+) -> Dict[str, Any]:
+    """Perform semantic search using vector similarity."""
+    return semantic_search(client, query, lang, is_section)
+
+
 def search_documents(request: HttpRequest) -> HttpResponse:
     query = request.GET.get("q", "").strip()
     lang = request.GET.get("lang") or None
     sort_by = request.GET.get("sort", "relevance")
+    search_mode = request.GET.get("mode", "keyword")  # Default to keyword search
 
     page = 1
     try:
@@ -354,27 +411,17 @@ def search_documents(request: HttpRequest) -> HttpResponse:
 
     client = get_client()
     is_section = bool(query)
-    index_name = INDEX_SECTIONS if is_section else INDEX_DOCS
 
-    body = _build_body(query or None, lang, is_section)
-    if query:
-        body["highlight"] = _highlight_block(True, is_section)
-        # Add improved suggestion configuration
-        body["suggest"] = _create_suggestion_config(query, lang)
+    # Choose search method based on mode
+    if search_mode == "semantic" and query:
+        resp = _perform_semantic_search(client, query, lang, is_section)
+    else:
+        resp = _perform_keyword_search(client, query, lang, is_section, sort_by, offset)
 
-    if sort_by == "date":
-        body["sort"] = [{"release_date": "desc"}]
-
-    body["track_total_hits"] = True
-    body["from"] = offset
-    body["size"] = MAX_HITS
-
-    # Execute primary search
-    resp = client.search(index=index_name, body=body)
     total = resp["hits"]["total"]["value"]
 
-    # If no results and we have a query, try fallback search
-    if total == 0 and query:
+    # If no results and we have a query, try fallback search (only for keyword mode)
+    if total == 0 and query and search_mode == "keyword":
         logger.info(f"No results for query '{query}', trying fallback search")
         try:
             fallback_resp = _fallback_search(client, query, lang, is_section)
@@ -387,8 +434,8 @@ def search_documents(request: HttpRequest) -> HttpResponse:
 
     total_pages = max((total + MAX_HITS - 1) // MAX_HITS, 1)
 
-    # Extract suggestions using the improved helper function
-    suggestions = _extract_suggestions(resp, lang)
+    # Extract suggestions using the improved helper function (only for keyword mode)
+    suggestions = _extract_suggestions(resp, lang) if search_mode == "keyword" else {"term": None, "phrase": None}
 
     # Format hits
     eff_lang = lang or "en"
@@ -396,7 +443,7 @@ def search_documents(request: HttpRequest) -> HttpResponse:
     raw_hits = resp["hits"]["hits"]
     results = []
     for i, hit in enumerate(raw_hits, start=offset + 1):
-        fmt = _format_hit(hit, eff_lang, query, query_present, is_section)
+        fmt = _format_hit(hit, eff_lang, query, query_present, is_section, search_mode == "semantic")
         fmt["number"] = i
         results.append(fmt)
 
@@ -408,12 +455,13 @@ def search_documents(request: HttpRequest) -> HttpResponse:
         "query": query,
         "selected_lang": lang,
         "sort_by": sort_by,
+        "search_mode": search_mode,  # Add search mode to template context
         "page": page,
         "total": total,
         "total_pages": total_pages,
         "start_index": offset + 1,
-        "index_used": index_name,
-        "suggestion": best_suggestion,  # Use the best available suggestion
+        "index_used": INDEX_SECTIONS if is_section else INDEX_DOCS,
+        "suggestion": best_suggestion,
         "term_suggestion": suggestions["term"],
         "phrase_suggestion": suggestions["phrase"],
     })

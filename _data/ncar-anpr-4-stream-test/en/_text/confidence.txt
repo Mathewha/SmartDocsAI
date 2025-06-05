@@ -1,0 +1,15 @@
+ Random variable
+The result of each of the described tasks of the system, i.e. automatic detection, identification, classification, maker recognition – realized for a single vehicle – can be defined as success (correct result) or failure (incorrect result). The result is therefore a random variable with a binominal distribution with a parameter denoting the probability of success.
+Thus, depending on the task, success is correct vehicle detection, correct license plate reading, correct type recognition, correct brand recognition. In each task, the count of vehicles must be taken into account, except that in the case of detection quality analysis it will be the number of all vehicles , and in the case of the other parameters , , the designated counts of vehicles , and must be taken into account.
+ Confidence interval
+The parameters tested (detection level, identification level, classification level, maker recognition efficiency) are the expressed percentage probabilities of .
+In order to verify the requirements defined earlier, it is necessary:
+ Adopt a specific confidence level for the assessment – most often:
+ Calculate the estimate of of the given parameter under test.
+ Calculate the lower value of the symmetric confidence interval calculated using Wilson’s [2] method:
+  – gdzie wartość wynika z przyjętego poziomu ufności, a rzeczywista wartość testowanego parametru jest z prawdopodobieństwem 95% wyższa od wartości .
+  – due to the fact that the requirement is for the value of in the calculation of is taken double the value of the assumed confidence level, which in this case is 90%.
+ Verify that the value of is greater than the threshold value given in the requirements section.Verify that the value of is greater than the threshold value given in the requirements section.
+ Minimum sample sizes
+Based on [1] , it is known that at least the following numbers of vehicles must be included in the test when evaluating the indicated quality factor, for the selected confidence level:
+  Expected quality Maximum error Number of vehicles Number of vehicles

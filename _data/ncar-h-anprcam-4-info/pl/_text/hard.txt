@@ -1,0 +1,39 @@
+  Wariant A B
+  Oznaczenie NCAR-H-ANPRCAM-4A NCAR-H-ANPRCAM-4B
+  Rozmiar obrazu 3.2M px 5M px
+  Przetwornik CMOS
+  Global shutter tak
+  Sensor SONY IMX265LQR SONY IMX264LQR
+  Rozmiar sensora 1/1.8” 2/3”
+  Rozdzielczość (maks.) 2048×1536 2448×2048
+  Częstotliwość (maks.) 25 fps 15 fps
+  Funkcja dzień-noc tak (mechanicznie przełączany filtr IR)
+  Obiektyw wbudowany
+  Ogniskowa obiektywu 11÷40 mm (zdalnie sterowana)
+  Przysłona obiektywu F/1.4 ÷ F/16 (zdalnie sterowana)
+  Ostrość obiektywu zdanie sterowana
+  Korekcja IR tak
+  Promiennik IR wbudowany, błysk 850nm, 6 diod LED, 20° lub 40°
+  Procesor Intel® ATOM™ E3845, 64-bit quad-core x86, 1.91GHz
+  Pamięć RAM 4G-Byte DDR3L-1333
+  Pamięć główna 64G-Byte eMMC
+  Pamięć pomocnicza Karta SDHC/SDXC, do 128GB (wymienialna)
+  Szyfrowanie sprzętowe opcja (TPM 1.2)
+  Interfejs Ethernet 1×100M/1000M RJ45 port by Intel® I210 controller
+  Interfejs szeregowy 1×RS232, 1×RS485
+  Interfejs GPIO 2×programowalny port IO, dostępny jako wejście lub wyjście (5V-TTL)
+  Interfejs IR 1×wejście, 1×wyjście do sterowania promiennikiem IR lub przekaźnikiem,
+obciążenie dla 100mA/50V
+  Zegar wbudowany, kontrolowany przez NTP i/lub GPS
+  Watchdog wbudowany, od 1 do 256 s
+  GPS opcja (z PPS)
+  WiFi opcja (wymienne z modułem 3G/LTE)
+  3G, 4G, LTE modem opcja (wymienne z modułem WiFi)
+  Zasilanie 24VDC ±10%
+  Zużycie energii (maks.) 50 W
+  Wymiary (S×W×D) 194×117×360 mm
+  Waga 3 kg
+  Temperatura pracy -40°C ÷ +65°C
+  Ochrona przed wodą
+i pyłem IP66 (opcja IP67 - wymagane dodatkowe uszczelnienie)
+  Zgodność CE

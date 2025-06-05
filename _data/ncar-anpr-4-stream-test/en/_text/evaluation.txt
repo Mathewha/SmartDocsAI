@@ -1,0 +1,34 @@
+ Quality parameters
+The following indicates the typical values of quality parameters that the tested system should achieve under optimal conditions:
+ for vehicles observed from the front:
+  - Parameter Label Level detection ≥97% identification ≥95% classification ≥90% maker ≥80%
+ the required value of these parameters should be agreed with the Customer,
+ for vehicles observed from the rear – quality parameters will be lower than for vehicles observed from the front.
+ Attention
+ Each of the above parameters should be determined at the confidence level = 95% .
+ Character sizes
+It is expected that the test will be conducted for a video stream in which license plates will be observed, in which the height of the characters expressed in pixels (conventional optical resolution ) will be 16 pixels (for a normalized uppercase X ). If the indicated requirement, in the case of a particular vehicle, is not met, such case should be removed from the test.
+ Character shapes
+When assessing the correctness of license plate recognition, ambiguities may arise due to the quality of the image being verified, such as the problem in determining the correct sign for couples:
+ 0 ↔ O
+ I ↔ 1
+ S ↔ 5
+ 2 ↔ Z
+ 6 ↔ G
+In such cases, the correctness of the recognition should be indicated in an irrefutable manner, for example, by verification in an official database where the data of the analyzed vehicle can be found. If it is not possible to determine the correct recognition of a given sign, such a case should be excluded from the evaluation.
+ Classification ambiguities
+If, on the basis of the photo, the expert is unable to unambiguously assess the type of vehicle in accordance with the accepted taxonomy, such a case should be excluded from the assessment.
+ Maker ambiguities
+  Visibility
+ It is assumed that vehicle maker recognition is possible when the camera image contains a visible silhouette of the entire front of the vehicle. In particular, it is assumed that in addition to the license plate, fully visible should be:
+  the right and left headlights of the vehicle,
+  the area from the license plate to the lower edge of the windshield (horizontally, upward),
+  the area from the license plate to the road surface (horizontally, downward).
+ Below is an image from the ANPR camera, in which a red box marks the section necessary for correct maker recognition.
+ If the front of the vehicles is not visible as in the example above, for example, it is partially obscured by other vehicles or infrastructure elements then such a case should be excluded from the evaluation.
+  Night
+ It is also assumed that all night shots, such as the example below (here the measurement field is illuminated only by an IR illuminator), will be excluded from the evaluation of maker recognition quality:
+  Manufacturer name
+ In some situations, the manufacturer’s name needs to be disambiguated. This situation occurs when:
+  the same manufacturer uses a different brand name in different regions (for example, “Opel” is used interchangeably with “Vauxhall”),
+  the same manufacturer has transformed itself and changed its name over time (for example, “Citroen” has been producing cars under the name “DS” since June 1, 2016).

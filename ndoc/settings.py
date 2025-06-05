@@ -137,6 +137,7 @@ LOGGING = {
     }
 }
 
+# OpenSearch settings
 OPENSEARCH = {
     "HOST": "localhost",
     "PORT": 9200,
@@ -147,3 +148,7 @@ OPENSEARCH = {
     "DOC_INDEX": "ndoc_documents",
     "SECTION_INDEX": "ndoc_sections",
 }
+
+# Search settings
+MAX_HITS = 5  # Number of results per page
+SNIPPET_LENGTH = 500  # Maximum length of snippets

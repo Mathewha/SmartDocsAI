@@ -1,0 +1,36 @@
+Version EN 4.4.1 released on Feb 14, 2024.
+Description of the quality verification procedure for the system implementing detection, classification and identification of vehicles from the video stream – license plate recognition (ANPR), vehicle type recognition and make and model recognition (MMR). The procedure is prepared for the free flow mode of operation, in which the input video stream is analyzed, and the result is a sequence – one data record for each vehicle passing in the field of view of the camera.
+ Table of contents
+  - 1.1. Detection area
+  - 1.2. Detection quality
+  - 1.3. Identification quality
+  - 1.4. Classification quality
+  - 1.5. Maker recognition quality
+  - 2.1. Random variable
+  - 2.2. Confidence interval
+  - 2.3. Minimum sample sizes
+  - 3.1. Quality parameters
+  - 3.2. Character sizes
+  - 3.3. Character shapes
+  - 3.4. Classification ambiguities
+  - 3.5.1. Visibility
+  - 3.5.2. Night
+  - 3.5.3. Manufacturer name
+  - 4.1. Conditions
+  - 4.2. Sample
+  - 4.3. Video recording
+  - 4.4. Source data
+  - 4.5. Procedure
+  - 4.6. Processed data
+  - 4.7. Results
+  - 4.8. Report
+  - 5.1. Formal verification
+  - 5.2. Substantive verification
+  - 5.3. Test acceptance
+  - 5.4. Test repetition
+ Extras
+  - Appendix A
+  - References
+  - Changelog
+  - License
+  - See also

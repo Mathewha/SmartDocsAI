@@ -1,0 +1,57 @@
+W tym rozdziale opisano podstawowe typy rekordów danych generowanych przez urządzenia pomiarowe i przechowywanych w systemie. Informacje te mogą posłużyć np. do szacunków rozmiaru danych, które mają być docelowo przechowywane na nośnikach w systemie centralnym.
+Szczegółowy opis każdego z przedstawionych rekordów danych można znaleźć w dokumentacji on-line dostępnej bezpłatnie pod adresem:
+  https://gitlab.com/ncar-tools/04/api
+ VehicleTrace
+Dla każdego zarejestrowanego pojazdu system generuje rekord danych typu VehicleTrace . Rekord ten składa się z elementu głównego jakim jest szczegółowy wynik rozpoznawania zapisany w formie JSON-a .
+  Właściwość Wartość
+  Typ VehicleTrace
+  Format TAR → JSON + JPEG’s
+  Rozmiar 100 kB (szacunkowy)
+  Transfer up terminal → chmura
+  Częstość dla każdego zarejestrowanego pojazdu
+Przykład metadanych:
+  {     "type": "VehicleTrace",     "version": "4.3",     "id": "VehicleTrace-20220629-122101-903-pl-wrokarkonoska-bie-l1",     "time": "2022-06-29T12:21:01.903Z",     "vehicle": {         "class": 7,         "color": "silver",         "confidence": 96,         "country": "PL",         "direction": 1,         "maker": "bmw",         "model": "4",         "number": "DW 6C448",         "speed": 31.649284569475775     }, ... }
+Oprócz metadanych rekord VehicleTrace zawiera także zdjęcia:
+ full - zdjęcie pojazdu (z przodu lub z tyłu) w pełnej rozdzielczości / wymiarach dostarczonych przez kamerę ANPR,
+ thumb - zmniejszone zdjęcie pojazdu (z przodu lub z tyłu) - kilkukrotne pomniejszenie zdjęcia full ,
+ front - zbliżenie / zdjęcie „wycinek” pojazdu, na postawie którego wykonano rozpoznawanie kategorii, producenta oraz wersji modelowej
+ plate - zdjęcie wyciętej tablicy rejestracyjnej,
+ adr - (opcjonalnie) zdjęcie wyciętej tablicy ADR dla pojazdów przewożących towary niebezpieczne.
+Metadane (JSON) zawierają w szczególności:
+ informację o pozycji i wymiarach (x,y),(s,w) przodu pojazdu w obrazie – wizerunek przodu pojazdu pozwala np. na określenie klasy, producenta oraz wersji modelowej,
+ informację o pozycji i wymiarach (x,y),(s,w) tablicy rejestracyjnej – oraz tablicy jest następnie użyty do rozpoznawania jej zawartości,
+ informację o pozycji i wymiarach (x,y),(s,w) każdego znaku,
+ wszystkie rozpoznane warianty tablicy rejestracyjnej wraz z wskazanym poziomem poprawności danego wariantu,
+ wynik rozpoznawania każdego znaku wraz z poziomem poprawności tego rozpoznawania,
+ wynik rozpoznawania pozostałych cech tablicy rejestracyjnej wraz z poziomem poprawności rozpoznawania.
+ Uwaga
+ W zależności od konfiguracji systemu zawartość rekordu danych może być zredukowana np. wyłącznie do metadanych ew. może nie zawierać niektórych zdjęć. Podobnie, w zależności od konfiguracji oraz właściwości kamery rozmiar obrazu może odbiegać od wartości podanych powyżej.
+ CameraViews
+Rekord pomiarowy CameraViews zawiera obraz z kamery, wykonany w określonym momencie, który przesyłany jest z kamery do systemu centralnego dla celów poglądowych. Rozmiar i jakość przesyłanego obrazu można regulować; standardowo przyjęto następujace parametry:
+  Właściwość Wartość
+  Typ CameraViews
+  Format TAR → JPEG (kolor) + JSON
+  Wymiary 1280 × 720 px  (dla kamery HD)
+  Jakość 70%
+  Rozmiar 120 kB (szacunkowy)
+  Transfer up kamera → chmura
+ CameraRecording
+Rekord pomiarowy CameraRecording zawiera nagranie wideo z danej kamery, w postaci pliku MP4 skompresowanego kompresją H.264 . Parametry strumienia wideo można konfigurować w zależności od potrzeb.
+  Właściwość Wartość
+  Typ CameraRecording
+  Format TAR → MPEG4 (kolor) + JSON
+  Wymiary 640 × 360 px
+  Jakość 2 fps, H.264 MPEG-4 AVC
+  Rozmiar 2.0 MB / 2 min (szacunkowy)
+  Transfer up kamera → chmura (opcjonalnie)
+  Częstość co 2 min
+ Uwaga
+ Tworzenie rekordów pomiarowych typu CameraRecording jest standardowo nieaktywne.
+ Status
+Rekord pomiarowy Status zawiera szczegółową informację na temat stanu terminala (kamery) w danym momencie, zapisaną jako metadane JSON.
+  Właściwość Wartość
+  Typ Status
+  Format TAR → JSON
+  Rozmiar 10 kB
+  Transfer up kamera → chmura
+  Częstość co 5 min

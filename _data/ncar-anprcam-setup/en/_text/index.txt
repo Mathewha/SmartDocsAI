@@ -1,0 +1,23 @@
+Version EN 4.0.3 released on Feb 16, 2025.
+A procedure for installing and optimally setting up an ANPR camera to ensure that the results of ANPR and MMR algorithms are of the highest quality.
+ Table of contents
+  - 1.1. Height
+  - 1.2. Distance
+  - 1.3. Angle
+  - 1.4. Tilt
+  - 2.1. 1 lane
+  - 2.2. 2 lanes
+  - 2.3. 3 lanes
+  - 3.1. Detection line
+  - 3.2. FoV width
+  - 3.3. FoV height
+  - 3.4. Character size
+  - 4.1. LPR mode
+  - 4.2. Frames per second
+  - 4.3. Exposure time
+  - 4.4. Illumination
+ Appendices
+  - References
+  - Changelog
+  - License
+  - See also

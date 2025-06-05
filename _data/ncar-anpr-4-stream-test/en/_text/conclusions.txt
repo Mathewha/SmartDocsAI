@@ -1,0 +1,18 @@
+ Formal verification
+Formal verification is carried out by the Customer upon receipt of the report, and consists of:
+ Verification of data completeness (video + raw data),
+ Verification of data compliance with the procedure – evaluation of sample selection,
+ Verification of data submission deadlines.
+If at the stage of formal verification the Customer discovers inaccuracies, they should be clarified by the Provider in writing.
+Finally, the Customer informs the Provider that the submitted materials were accepted / rejected for formal reasons.
+ Substantive verification
+Substantive verification consists in the Customer’s evaluation of the materials provided by the Provider in terms of:
+ Completeness of vehicle detection – based on video provided raw + tabular data,
+ the correctness of assessing the attributes of individual vehicle traces,
+ the correctness of the evaluation of the calculated quality measures,
+ compliance of the determined quality measures with the established requirements.
+The Customer may ask the Provider to clarify or supplement or correct the processed data provided.
+ Test acceptance
+The Customer accepts the test on the basis of the results of formal verification and substantive verification – acceptance means that the Provider has met all formal and substantive criteria contained in the requirements. Acceptance is required in writing.
+ Test repetition
+If, for formal or substantive reasons, the test is not accepted, the Provider has the right to repeat the test once again. Re-testing should be agreed upon with the Customer.

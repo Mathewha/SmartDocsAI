@@ -1,0 +1,16 @@
+ Zmienna losowa
+Wynik każdego z opisanych zadań systemu, tj. automatycznej detekcji, identyfikacji, klasyfikacji, rozpoznawania marki – zrealizowanych w odniesieniu do pojedynczego pojazdu – można określić jako sukces (wynik poprawny) lub porażkę (wynik niepoprawny). Wynik jest zatem zmienną losową o rozkładzie zero-jedynkowym o parametrze oznaczającym prawdopodobieństwo sukcesu.
+W zależności od zadania sukcesem jest zatem poprawne wykrycie pojazdu, poprawne odczytanie tablicy rejestracyjnej, poprawne rozpoznanie typu, poprawne rozpoznanie marki. W każdym zadaniu pod uwagę musi być brana liczność pojazdów , z tym, że w przypadku analizy jakości detekcji będzie to liczba wszystkich pojazdów , a w przypadku pozostałych parametrów , , należy uwzględnić wyznaczone liczy pojazdów , oraz .
+ Przedział ufności
+Testowane parametry (poziom detekcji, poziom identyfikacji, poziom klasyfikacji, skuteczność rozpoznawania marki) to wyrażone procentowo
+prawdopodobieństwa .
+W celu weryfikacji wymagań zdefiniowanych wcześniej należy:
+ Przyjąć określony poziom ufności dla oceny – najczęściej:
+ Obliczyć oszacowanie (estymatę) danego testowanego parametru.
+ Obliczyć dolną wartość symetrycznego przedziału ufności wyliczoną metodą Wilsona [2] :
+  – gdzie wartość wynika z przyjętego poziomu ufności, a rzeczywista wartość testowanego parametru jest z prawdopodobieństwem 95% wyższa od wartości .
+  – ze względu na to, że wymaganie jest za wartość w wyliczaniu brana jest podwojona wartość zakładanego poziomu ufności, czyli w tym wypadku 90%.
+ Sprawdzić, czy wartość jest większa od wartości progowej podanej w punkcie wymaganiach.
+ Minimalne wielkości próby
+Na podstawie [1] wiadomo, że przy ocenie wskazanego współczynnika jakościowego, dla wybranego poziomu ufności, w trakcie testu muszą być uwzględnione co najmniej następujące ilości pojazdów:
+  Oczekiwana jakość Maksymalny błąd Liczba pojazdów Liczba pojazdów
