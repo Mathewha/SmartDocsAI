@@ -18,33 +18,29 @@ def create_semantic_search_body(query: str, lang: str | None, is_section: bool =
     # Get the embedding for the query
     query_embedding = get_embedding(query)
 
-    # Create the k-NN query
-    knn_query = {
+    # Create the k-NN query body using the syntax supported by OpenSearch 2.x.
+    # The query uses the classic "embedding" object with a vector array rather
+    # than the newer ``field``/``query_vector`` structure to avoid parsing
+    # errors on older clusters.
+    knn_query: Dict[str, Any] = {
         "size": settings.MAX_HITS,
         "query": {
             "knn": {
                 "embedding": {
                     "vector": query_embedding,
-                    "k": settings.MAX_HITS
+                    "k": settings.MAX_HITS,
+                    "num_candidates": settings.MAX_HITS * 10,
                 }
             }
         },
-        "_source": {"excludes": ["embedding"]}  # Exclude the embedding field from results
+        "_source": {"excludes": ["embedding"]},  # Exclude raw vectors from results
     }
 
     # Add language filter if specified
     if lang in {"pl", "en"}:
         knn_query["query"] = {
             "bool": {
-                "must": [
-                    {"knn": {
-                        "embedding": {
-                            "vector": query_embedding,
-                            "k": settings.MAX_HITS
-                        }
-                    }},
-                    {"term": {"language": lang}}
-                ]
+                "must": [knn_query["query"], {"term": {"language": lang}}]
             }
         }
 
