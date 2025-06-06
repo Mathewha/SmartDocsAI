@@ -47,6 +47,9 @@ django.setup()
 
 # ────────── Index Settings with Language-Specific Analyzers ──────────
 DOCUMENT_INDEX_SETTINGS = {
+    "settings": {
+        "index": {"knn": True}
+    },
     "mappings": {
         "dynamic_templates": [
             {"pl_text": {"match_mapping_type": "string", "match": "*.pl",
@@ -71,6 +74,9 @@ DOCUMENT_INDEX_SETTINGS = {
 }
 
 SECTION_INDEX_SETTINGS = {
+    "settings": {
+        "index": {"knn": True}
+    },
     "mappings": {
         "dynamic_templates": [
             {"pl_text": {"match_mapping_type": "string", "match": "*.pl",
