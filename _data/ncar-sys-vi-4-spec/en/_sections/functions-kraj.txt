@@ -1,0 +1,16 @@
+Country
+EXTENDED
+The country of origin of the vehicle is determined based on geometric features and the contents of the license plate. The system is adapted to simultaneously recognize numbers from multiple countries, but the user must select one of the following regions – recognition is limited to countries from that region only:
+  Code Meaning
+  AFRI Africa 1
+  AMEC Central America 1
+  AMEN North America 2 (United States, Canada)
+  AMES South America 1
+  ASIA Asia 2
+  AUOC Australia and Oceania 3
+  EURO Europe
+  MIDE Middle East 1
+The country of origin is indicated using a two-letter country code according to ISO 3166-1 alpha-2 - for example, PL means Poland .
+  only some countries
+  in preparation
+  currently unavailable

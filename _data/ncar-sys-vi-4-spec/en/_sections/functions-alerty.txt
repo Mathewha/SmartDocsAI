@@ -1,0 +1,4 @@
+Alerts
+AUXILIARY
+Based on the data on registered vehicles, it is possible to define alerts on the passage of a vehicle with the indicated characteristics, such as a wanted vehicle (indicated registration number) or a prohibited vehicle (i.e. vehicle of the “truck” class). Alerts can be generated on the terminal or in the central system.
+The alert can be sent asynchronously to the host system as a notification immediately after being created. The form of the alert is configurable.

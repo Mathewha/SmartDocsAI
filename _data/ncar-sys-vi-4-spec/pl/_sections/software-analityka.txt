@@ -1,0 +1,2 @@
+Analityka
+Aplikacja Analytics służy do rozszerzonych analiz danych wykorzystująca pakiet JupyterLab . Aplikacja udostępniona jest przez GUI i pozwala na uruchamianie skryptów przygotowanych przez NeuroCar do pobrania z adresu https://gitlab.com/ncar-tools/04

@@ -1,0 +1,2 @@
+Illumination
+The recommended illumination settings depend on how far the camera is from the vehicle . If the is relatively small, it may be necessary to reduce the intensity level to prevent overexposure of the license plate at night.

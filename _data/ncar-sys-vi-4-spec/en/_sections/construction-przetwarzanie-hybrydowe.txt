@@ -1,0 +1,2 @@
+Hybrid computing
+In such a configuration, cloud computing, local computing and smart cameras can be used within a single system. The user receives at his disposal – from the central system – a unified, complete set of measurement data from all devices.

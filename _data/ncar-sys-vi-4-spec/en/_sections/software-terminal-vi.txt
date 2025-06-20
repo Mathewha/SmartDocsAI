@@ -1,0 +1,4 @@
+Terminal VI
+This is a dedicated firmware for devices performing terminal functions – the software controls all functions of the device ensuring continuous 24/7 operation. In particular, it controls camera parameters, controls the status of storage media, controls time synchronization, manages communication modules and controls data transmission to the host system.
+The firmware has a built-in graphical interface (GUI) accessible through any web browser supporting HTML-5. Using it, the operator can monitor the status of the device, can view measurement data (registered vehicles) in real time. The GUI also allows managing access privileges.
+The firmware also has RestAPI implemented, allowing the device to be accessed and controlled by an automated higher-level system.

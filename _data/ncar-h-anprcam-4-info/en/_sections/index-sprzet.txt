@@ -1,0 +1,38 @@
+Hardware
+  Option A B
+  Reference NCAR-H-ANPRCAM-4A NCAR-H-ANPRCAM-4B
+  Image size 3.2M px 5M px
+  Sensor CMOS
+  Global shutter yes
+  Sensor SONY IMX265LQR SONY IMX264LQR
+  Sensor size 1/1.8” 2/3”
+  Resolution (max.) 2048×1536 2448×2048
+  Frequency (max.) 25 fps 15 fps
+  Day-night function yes (mechanically switching IR filter)
+  Lens embedded
+  Focal length 11÷40 mm (remote control)
+  Aperture F/1.4 ÷ F/16 (remote control)
+  Lens sharpness remote control
+  IR correction yes
+  IR illuminator built-in, 850nm flash, 6 LEDs, 20° or 40°
+  Processor Intel® ATOM™ E3845, 64-bit quad-core x86, 1.91GHz
+  RAM 4G-Byte DDR3L-1333
+  Main storage 64G-Byte eMMC
+  Auxiliary storage SDHC/SDXC card, up to 128GB (exchangeable)
+  Hardware encryption option (TPM 1.2)
+  Ethernet interface 1×100M/1000M RJ45 port by Intel® I210 controller
+  Serial interface 1×RS232, 1×RS485
+  GPIO interface 2×programmable IO port, available as input or output (5V-TTL)
+  IR Interface 1×input, 1×output to control IR illuminator or relay, load for 100mA/50V
+  Clock built-in, controlled by NTP and/or GPS
+  Watchdog built-in, 1 to 256 s
+  GPS option (with PPS)
+  WiFi option (interchangeable with 3G/LTE module)
+  3G, 4G, LTE modem optional (interchangeable with the WiFi module)
+  Power supply 24VDC ±10%
+  Energy consumption (max.) 50 W
+  Dimensions (W×H×L) 194×117×360 mm
+  Weight 3 kg
+  Operating temperature -40°C ÷ +65°C
+  Protection against water and dust IP66 (option IP67 - additional sealing required)
+  Compatibility CE

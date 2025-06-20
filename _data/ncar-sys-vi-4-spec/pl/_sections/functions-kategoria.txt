@@ -1,0 +1,11 @@
+Kategoria
+EXTENDED
+Polega na automatycznym rozpoznaniu kategorii pojazdu wyłącznie na podstawie zdjęcia. System potrafi rozróżniać następujące kategorie:
+  Kod Znaczenie
+  0 nieznany (wykrycie kategorii nie było możliwe)
+  3 ciężarowy
+  5 autobus
+  7 osobowy
+  10 motocykl (tylko, gdy aktywny VLOOP )
+  11 dostawczy do 3.5 t
+Określenie kategorii pojazdu na podstawie obrazu wymaga, aby w obrazie była widoczna sylwetka przodu (lub tyłu) pojazdu. Problemem mogę być warunki nocne, gdzie kamera dostarcza zdjęcie tablicy wykonane w podczerwieni – poza tablicą nic nie jest widoczne. Jeżeli warunkiem koniecznym jest rozpoznawanie kategorii również w nocy niezbędne jest zastosowanie dodatkowego, specjalnego doświetlenia.

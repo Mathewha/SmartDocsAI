@@ -1,0 +1,10 @@
+Kontroler CPU
+Kontroler CPU to komputer przemysłowy, montowany w szafie teletechnicznej, którego zadaniem jest przetwarzanie strumienia wideo z kamer ANPR, buforowanie danych, a następnie przesyłanie ich do systemu centralnego BackOffice. Komputer ten ma następujące cechy:
+ wykonanie przemysłowe, bez elementów ruchomych – brak wentylatorów, konwekcyjne odprowadzanie ciepła,
+ przygotowanie do pracy w rozszerzonym zakresie temperatur,
+ odporność na wibracje,
+ odpowiednia wydajność (procesor klasy Intel i5 lub i7, odpowiedni rozmiar RAM),
+ wbudowana pamięć masowa - dysk (SSD)
+ szereg interfejsów komunikacyjnych (ETH, RS-232/485, GPIO, USB2, USB3, HDMI/DVI),
+ możliwość rozszerzenia o modem komunikacyjny (miniPCIe) ew. dedykowaną kartę rozszerzeń PCIe,
+ zasilanie napięciem stałym w zakresie 12÷24V DC.

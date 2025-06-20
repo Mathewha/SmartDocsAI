@@ -1,0 +1,9 @@
+CameraViews
+Rekord pomiarowy CameraViews zawiera obraz z kamery, wykonany w określonym momencie, który przesyłany jest z kamery do systemu centralnego dla celów poglądowych. Rozmiar i jakość przesyłanego obrazu można regulować; standardowo przyjęto następujace parametry:
+  Właściwość Wartość
+  Typ CameraViews
+  Format TAR → JPEG (kolor) + JSON
+  Wymiary 1280 × 720 px  (dla kamery HD)
+  Jakość 70%
+  Rozmiar 120 kB (szacunkowy)
+  Transfer up kamera → chmura

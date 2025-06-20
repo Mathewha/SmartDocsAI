@@ -1,0 +1,24 @@
+Processed data
+After collecting all samples ( DAM500 , DPPM00 , N200 ), the contractor shall prepare a tabular summary of all source data. Such a summary should be placed in a table saved as a spreadsheet (Microsoft Excel / LibreOffice Calc), where each recorded vehicle passage should be placed in a separate row. The table with processed data should contain at least such columns:
+  Name Format Example Description
+  counter number 1 sequential number of the vehicle in the list, numbered from 1
+  terminal text ncar-h-cpu-06c00103 serial number / unique identifier of the data generating device
+  date date 2022-10-27 date based on timestamp, local time, displayed in YYYY-MM-DD format
+  time date 09:00:00 time based on timestamp, local time, displayed in HH:MM:SS format
+  ms number 960 millisecond based on the timestamp
+  place text pl-wrozyczliwa-wja-l1 the unique identifier of the location where the vehicle was registered
+  class number 7 recognized vehicle type, according to the taxonomy under test (e.g., TLS 5+1)
+  number text DW6C448 recognized, normalized registration number
+  maker text BMW maker’s name recognized
+  model text 4 recognized model version (if available)
+  det_ok number +1 whether the detection of a particular vehicle is correct ?
+  class_ok number +1 is the vehicle class recognized correctly ?
+  maker_ok number +1 is the maker recognized correctly ?
+  anpr_ok number +1 is the vehicle registration number recognized correctly ?
+  notice text comments (if any)
+In the det_ok , class_ok , maker_ok and anpr_ok columns, the entered numeric values are interpreted as follows:
+  Value Meaning
+  +1 indicated value is correct, vehicle takes part in the evaluation
+  -1 indicated value is incorrect, vehicle takes part in the evaluation
+  0 the measurement record in question is excluded from the evaluation
+A template for such a table is included as Appendix A to this document.

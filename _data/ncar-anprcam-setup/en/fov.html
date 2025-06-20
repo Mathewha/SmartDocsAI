@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Field of view &mdash; ncar-anprcam-setup 4.0.3 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.pl/pro/ncar-anprcam-setup/fov.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. Parameters" href="parameters.html" />
+    <link rel="prev" title="2. Lanes" href="lanes.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-anprcam-setup
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.0.3
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="position.html">1. Position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lanes.html">2. Lanes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Field of view</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#linia-detekcji">3.1. Detection line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#szerokosc-kadru">3.2. FoV width</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wysokosc-kadru">3.3. FoV height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rozmiar-znakow">3.4. Character size</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="parameters.html">4. Parameters</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">See also</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Downloads</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anprcam-setup.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anprcam-setup.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anprcam-setup.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">User</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ncar-anprcam-setup</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-anprcam-setup</a></li>
+  
+
+  <li>&gt; <span class="section-number">3. </span>Field of view</li>
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <div class="nrs-lang-active">en</div>
+      
+    
+      
+        <a href=".//../../pl/fov.html" class="nrs-lang">pl</a>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="kadr">
+<span id="fov"></span><h1><span class="section-number">3. </span>Field of view<a class="headerlink" href="#kadr" title="Permalink to this headline">¶</a></h1>
+<p>When adjusting the Field-of-View (FoV) of an ANPR camera - that is, changing the lens focal length and focus - follow the following recommendations:</p>
+<div class="section" id="linia-detekcji">
+<span id="fov-detection-line"></span><h2><span class="section-number">3.1. </span>Detection line<a class="headerlink" href="#linia-detekcji" title="Permalink to this headline">¶</a></h2>
+<p>A detection line is a virtual horizontal line in the field of view (FoV) that indicates where the expected license plate detection should occur. Most often it is the line in the middle of the height of the FoV:</p>
+<a class="reference internal image-reference" href="_images/pict-d.svg"><img alt="_images/pict-d.svg" class="align-center" src="_images/pict-d.svg" width="100%" /></a>
+<p>The requirements listed in the following subsections apply to the parameters of the license plate located on the detection line.</p>
+</div>
+<div class="section" id="szerokosc-kadru">
+<span id="fov-width"></span><h2><span class="section-number">3.2. </span>FoV width<a class="headerlink" href="#szerokosc-kadru" title="Permalink to this headline">¶</a></h2>
+<p>The FoV width setting depends on the number of covered lanes (see section <a class="reference internal" href="lanes.html#lanes"><span class="std std-ref">Lanes</span></a>). Most often, the optimal width is 6 m at the height of the detection line.</p>
+<p>For one lane, the width of the FOV should overlap about 25% with adjacent lanes:</p>
+<a class="reference internal image-reference" href="_images/pict-d.svg"><img alt="_images/pict-d.svg" class="align-center" src="_images/pict-d.svg" width="100%" /></a>
+<p>For two lanes, the width of the FOV will cover exactly two lanes:</p>
+<a class="reference internal image-reference" href="_images/pict-i.svg"><img alt="_images/pict-i.svg" class="align-center" src="_images/pict-i.svg" width="100%" /></a>
+</div>
+<div class="section" id="wysokosc-kadru">
+<span id="fov-height"></span><h2><span class="section-number">3.3. </span>FoV height<a class="headerlink" href="#wysokosc-kadru" title="Permalink to this headline">¶</a></h2>
+<p>Setting the height of the FoV depends on two factors:</p>
+<ul class="simple">
+<li><p>minimum character height (described in the next section),</p></li>
+<li><p>maximum vehicle speed (combined with the number of frames per second - FPS).</p></li>
+</ul>
+<p>The ANPR engine requires that for a given vehicle passage in the field of view, the license plate must be visible (recognized) at least twice. This means that the FoV at altitude must cover a sufficiently large stretch of road for the license plate to be visible (legible) twice at maximum speed. At the same time, other requirements should be met.</p>
+<p>In this case, the user can modify the zoom, angle <img class="math" src="_images/math/35a186774db10ec42b3d6977b743b326f9bab159.svg" alt="(\alpha)" style="vertical-align: -4px"/> and FPS of the camera.</p>
+</div>
+<div class="section" id="rozmiar-znakow">
+<span id="fov-char-size"></span><h2><span class="section-number">3.4. </span>Character size<a class="headerlink" href="#rozmiar-znakow" title="Permalink to this headline">¶</a></h2>
+<p>The recommended height of the license plate characters on the detection line is <img class="math" src="_images/math/22cc215db015f7d6318323e30f544f14bae5f6a3.svg" alt="S = 16" style="vertical-align: 0px"/> pixels.</p>
+<a class="reference internal image-reference" href="_images/pict-j.svg"><img alt="_images/pict-j.svg" class="align-center" src="_images/pict-j.svg" width="100%" /></a>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The height requirement refers to the image processed by the ANPR engine, not the native camera image. Currently, the image is resampled to 1024x576 pixels, even if the camera’s native resolution is 8 megapixels.</p>
+</div>
+<p>A character height of 16 pixels in the processed image is considered the optimal pixel density. The engine can still recognize arrays with smaller character heights (up to 10-12 pixels per character). However, the engine will not reject results based solely on the pixel size of the character.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="parameters.html" class="btn btn-neutral float-right" title="4. Parameters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lanes.html" class="btn btn-neutral float-left" title="2. Lanes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2025, NeuroCar Sp. z o.o., All rights reserved (https://neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+Manufacturer name
+In some situations, the manufacturer’s name needs to be disambiguated. This situation occurs when:
+ the same manufacturer uses a different brand name in different regions (for example, “Opel” is used interchangeably with “Vauxhall”),
+ the same manufacturer has transformed itself and changed its name over time (for example, “Citroen” has been producing cars under the name “DS” since June 1, 2016).

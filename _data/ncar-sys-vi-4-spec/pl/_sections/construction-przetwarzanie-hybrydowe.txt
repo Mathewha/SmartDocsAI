@@ -1,0 +1,2 @@
+Przetwarzanie hybrydowe
+W takiej konfiguracji, w ramach jednego systemu może byc wykorzystywane przetwarzanie w chmurze, przetwarzanie lokalne oraz inteligentne kamery. Użytkownik otrzymuje do dyspozycji – z poziomu systemu centralnego – zunifikowany, kompletny zestaw danych pomiarowych ze wszystkich urządzeń.

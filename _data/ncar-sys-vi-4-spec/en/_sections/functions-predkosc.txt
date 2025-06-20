@@ -1,0 +1,4 @@
+Speed
+EXTENDED
+The speed of the vehicle is calculated on the basis of analysis of displacements of the position of the center of the license plate in successive frames of the video stream. The system has a mechanism for automatically determining, necessary for recalculation, parameters of the measurement system (camera position relative to, viewing angle, magnification, etc.) so that the user does not need to provide such data during installation.
+The speed calculation accuracy in this way depends on many factors and is generally used for statistical purposes – it cannot be used, for example, for the purpose of violations enforcement.

@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pl" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pl" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>7. Integracja &mdash; ncar-sys-vi-4-spec 4.0.5 - dokumentacja</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.pl/pro/ncar-sys-vi-4-spec/integration.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="Odesłania" href="zextern.html" />
+    <link rel="prev" title="6. Dane" href="data.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-sys-vi-4-spec
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.0.5
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Spis treści</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="operation.html">1. Zasada działania</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">2. Funkcje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="construction.html">3. Budowa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">4. Urządzenia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">5. Oprogramowanie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">6. Dane</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Integracja</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#api">7.1. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notyfikacje">7.2. Notyfikacje</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dane">7.2.1. Dane</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#powiadomienia">7.2.2. Powiadomienia</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#import">7.3. Import</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Dodatki</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">Odesłania</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Zmiany</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Licencja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">Zobacz także</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Do pobrania</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">Użytkownik</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ncar-sys-vi-4-spec</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-sys-vi-4-spec</a></li>
+  
+
+  <li>&gt; <span class="section-number">7. </span>Integracja</li>
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <div class="nrs-lang-active">pl</div>
+      
+    
+      
+        <a href=".//../../en/integration.html" class="nrs-lang">en</a>
+      
+    
+      
+        <a href=".//../../de/integration.html" class="nrs-lang">de</a>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="integracja">
+<span id="integration"></span><h1><span class="section-number">7. </span>Integracja<a class="headerlink" href="#integracja" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<div class="section" id="api">
+<span id="integration-api"></span><h2><span class="section-number">7.1. </span>API<a class="headerlink" href="#api" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Skorzystanie z funkcji terminala (kamery) jak i z funkcji systemu centralnego możliwe poprzez interfejs <a class="reference external" href="https://pl.wikipedia.org/wiki/WebAPI">RestAPI</a>, dla którego pełna specyfikacja – <em>NeuroCar API</em> – dostępna jest bezpłatnie pod adresem:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ncar</span><span class="o">-</span><span class="n">tools</span><span class="o">/</span><span class="mi">04</span><span class="o">/</span><span class="n">api</span>
+</pre></div>
+</div>
+<p>Poszczególne funkcje systemu (np. dostęp do danych, format rekordów pomiarowych, zarządzanie użytkownikami) opisane zostały przy użyciu standardu <a class="reference external" href="https://en.wikipedia.org/wiki/OpenAPI_Specification">OpenAPI 3</a>.</p>
+</div>
+<div class="section" id="notyfikacje">
+<span id="integration-notifications"></span><h2><span class="section-number">7.2. </span>Notyfikacje<a class="headerlink" href="#notyfikacje" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Zarówno terminal (kamera) jak i system centralny może aktywnie przekazywać informacje do systemów nadrzędnych wykorzystując mechanizm notyfikacji (ang. <em>push technology</em>) w trybie asynchronicznym.</p>
+<div class="section" id="dane">
+<span id="integration-notifications-data"></span><h3><span class="section-number">7.2.1. </span>Dane<a class="headerlink" href="#dane" title="Stały odnośnik do tego nagłówka">¶</a></h3>
+<p>Wszystkie rekordy danych (pomiary, zdjęcia z kamer, status) mogą być przesyłane za pomocą protokołu <a class="reference external" href="https://pl.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP(s)</a> przy użyciu komend <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT</span></code> lub <code class="docutils literal notranslate"><span class="pre">POST</span></code>. Treść rekordu danych dołączana jest do komunikatu w formie pliku <a class="reference external" href="https://pl.wikipedia.org/wiki/Tar_(informatyka)">TAR</a>, który zawiera w sobie wszystkie elementy np. metadane wraz z obrazami.</p>
+</div>
+<div class="section" id="powiadomienia">
+<span id="integration-notifications-alerts"></span><h3><span class="section-number">7.2.2. </span>Powiadomienia<a class="headerlink" href="#powiadomienia" title="Stały odnośnik do tego nagłówka">¶</a></h3>
+<p>W systemie można skonfigurować przesyłanie powiadomień (np. informacji o zdarzeniach takich jak poszukiwany pojazd) przy pomocy:</p>
+<ul class="simple">
+<li><p>e-mail (musi być dostępny serwer poczty elektronicznej SMTP),</p></li>
+<li><p>SMS (musi być dostępna bramka SMS).</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="import">
+<span id="integration-import"></span><h2><span class="section-number">7.3. </span>Import<a class="headerlink" href="#import" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>System centralny BackOffice posiada możliwość podłączenia zewnętrznych źródeł danych (np. danych z kamer ANPR firm trzecich) poprzez moduły <strong>Importer</strong> (ang. <em>pulling</em>) lub moduł <strong>Receiver</strong> (ang. <em>pushing</em>). Zadaniem tych modułów jest przekształcenie danych do zunifikowanej postaci zgodnej ze specyfikacją <a class="reference internal" href="#integration-api"><span class="std std-ref">API</span></a> .</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="zextern.html" class="btn btn-neutral float-right" title="Odesłania" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="data.html" class="btn btn-neutral float-left" title="6. Dane" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, NeuroCar Sp. z o.o., All rights reserved (www.neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

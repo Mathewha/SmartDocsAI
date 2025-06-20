@@ -1,0 +1,5 @@
+Wysokość
+Pozycja kamery powinna być wybrana w taki sposób, aby można było obserwować ruch tablicy rejestracyjnej podczas przejazdu pojazdu. Dlatego zaleca się, aby kamera była zamontowana na wysokości nieco powyżej dachu pojazdu:
+Wysokość montażu zależy od dostępności konstrukcji montażowych, a w praktyce oznacza to:
+ Ostrzeżenie
+ Zamontowanie kamery zbyt nisko (np. na poziomie dachu pojazdu) spowoduje, że kamera może być oślepiana w nocy przez reflektory samochodu, a także uniemożliwi analizę ruchu pojazdu (np. wykrywanie kierunku lub określanie prędkości).

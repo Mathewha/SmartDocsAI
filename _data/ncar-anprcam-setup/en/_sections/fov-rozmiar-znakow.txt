@@ -1,0 +1,5 @@
+Character size
+The recommended height of the license plate characters on the detection line is pixels.
+ Warning
+ The height requirement refers to the image processed by the ANPR engine, not the native camera image. Currently, the image is resampled to 1024x576 pixels, even if the camera’s native resolution is 8 megapixels.
+A character height of 16 pixels in the processed image is considered the optimal pixel density. The engine can still recognize arrays with smaller character heights (up to 10-12 pixels per character). However, the engine will not reject results based solely on the pixel size of the character.

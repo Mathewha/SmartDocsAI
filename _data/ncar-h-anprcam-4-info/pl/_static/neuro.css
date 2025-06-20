@@ -1,0 +1,116 @@
+/* Neurosoft specific CSS extenssion of the RTD theme */
+
+/* Fonts --------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap&subset=greek,latin-ext');
+
+
+body {
+   font-family: "Ubuntu","proxima-nova","Helvetica Neue",Arial,sans-serif;
+   font-weight: 400;
+}
+
+h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend {
+   font-family: "Ubuntu","ff-tisa-web-pro","Georgia",Arial,sans-serif;
+}
+
+.btn {
+   font-family: "Ubuntu","proxima-nova","Helvetica Neue",Arial,sans-serif;
+}
+
+
+/* Colors --------------------------------------------------------------- */
+
+
+a {
+   color: #1fa7d8;
+   text-decoration: none;
+   cursor: pointer
+}
+
+.wy-nav-side {
+   background: #003349;
+}
+
+.wy-side-nav-search {
+   background-color: #5BC2E7;
+}
+
+.wy-side-nav-search input[type=text] {
+   border-color: #5BC2E7;
+}
+
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+   color: #5BC2E7;
+}
+
+.wy-nav-top {
+   background: #003349;
+}
+
+
+.wy-side-nav-search>div.version {
+   margin-top: -.4045em;
+   margin-bottom: .809em;
+   font-weight: normal;
+   color: rgba(255,255,255,0.7);
+}
+
+.rst-content .note {
+   background: #ebf8fd;
+}
+
+.rst-content .note .admonition-title {
+   background: #5BC2E7;
+}
+
+/* override table width restrictions -- bug*/
+
+.wy-table-responsive table td {
+   /* !important prevents the common CSS stylesheets from overriding
+      this as on RTD they are loaded after this stylesheet */
+   white-space: normal !important;
+   vertical-align: top !important;
+}
+
+.wy-table-responsive {
+   overflow: visible !important;
+}
+
+.wy-table td p, .rst-content table.docutils td p, .rst-content table.field-list td p {
+   line-height: 24px;
+}
+
+/* Bredcrumb --------------------------------------------------------------- */
+
+.nrs-lang {
+   position: relative;
+   display: inline-block;
+   height: 18px;
+   width: 24px;
+   cursor: pointer;
+   color: #404040 !important;
+   border: 1px solid #404040;
+   border-radius: 2px;
+   margin: 6px 2px 2px 2px;
+   padding: 0px !important;
+   text-align: center;
+   text-transform: uppercase;
+   font-size: small;
+}
+
+.nrs-lang-active {
+   position: relative;
+   display: inline-block;
+   height: 18px;
+   width: 24px;
+   cursor: default;
+   color: #C0C0C0;
+   border: 1px solid #C0C0C0;
+   border-radius: 2px;
+   margin: 6px 2px 2px 2px;
+   padding: 0px;
+   text-align: center;
+   text-transform: uppercase;
+   font-size: small;
+}

@@ -1,0 +1,4 @@
+Dangerous goods
+EXTENDED
+Vehicles carrying dangerous goods are identified based on detection and recognition of the contents of an ADR plate , which should be mounted on the front or rear of the vehicle. Such a placard is placed on vehicles in countries that are signatories to the International Convention on the Carriage of Dangerous Goods and Cargoes by Road (fr. L’Accord européen relatif au transport international des marchandises Dangereuses par Route ).
+The ADR plate contains two codes (recognized by the system), which specify the hazard identification number and the material identification number. In addition, the system detects the presence of so-called “blank ADR plates”, as well as plates indicating the carriage of waste (the texts Odpady and A ).

@@ -1,0 +1,9 @@
+License
+*******
+
+Note:
+
+  Copyright © 2022 NeuroCar Sp. z o.o. - All rights reserved.
+
+The above copyright notice and this permission notice should be
+included in all copies or relevant parts of the document.

@@ -1,0 +1,2 @@
+Noc
+Zakłada się również, że z oceny jakości rozpoznawania marki będą wykluczone wszystkie ujęcia nocne, takie jak na przykładzie poniżej (tu pole pomiarowe oświetlone jest wyłącznie oświetlaczem IR):

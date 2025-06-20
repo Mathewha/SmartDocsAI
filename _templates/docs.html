@@ -1,0 +1,71 @@
+{% extends "index.html" %}
+{% block title %}NeuroDoc · Catalog{% endblock %}
+
+{% block content %}
+<h1>Catalog</h1>
+
+<!-- Global language switcher -->
+{% if available_langs %}
+<nav class="lang-switch" style="margin-bottom:1rem;">
+    {% for code in available_langs %}
+    <a href="?lang={{ code }}{% if page_obj.number|default:1 != 1 %}&page={{ page_obj.number }}{% endif %}" class="{% if code == lang %}active{% endif %}">
+        {{ code|upper }}
+    </a>{% if not forloop.last %} · {% endif %}
+    {% endfor %}
+</nav>
+{% endif %}
+
+<ol class="search-results">
+    {% for doc in docs %}
+    <li value="{{ forloop.counter0|add:global_index_start|add:1 }}">
+        <div class="result-title"><a href="{{ doc.href }}">{{ doc.name }}</a></div>
+        <div class="result-meta">
+            {% if doc.version %}
+            <span class="doc-ver">Version: {{ doc.version }}</span>
+            {% endif %}
+            {% if doc.date %}
+            {% if doc.version %} | {% endif %}
+            <span class="doc-date">Released: {{ doc.date|date:"Y‑m‑d" }}</span>
+            {% endif %}
+            {% if doc.lang_links %}
+            {% if doc.version or doc.date %} | {% endif %}
+            <span class="doc-langs">Languages:
+                {% for code, url in doc.lang_links %}
+                <a href="{{ url }}">{{ code }}</a>{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            </span>
+            {% endif %}
+        </div>
+
+        {% if doc.summary %}
+        <p class="snippet">{{ doc.summary }}</p>
+        {% endif %}
+    </li>
+    {% empty %}
+    <li>No documents available.</li>
+    {% endfor %}
+</ol>
+
+<!-- Pagination navigation -->
+{% if page_obj.has_other_pages %}
+<nav class="pagination" style="margin-top:1rem;">
+    {% if page_obj.has_previous %}
+    <a href="?page={{ page_obj.previous_page_number }}&lang={{ lang }}">« Prev</a>
+    {% endif %}
+
+    {% for num in paginator.page_range %}
+    {% if num == page_obj.number %}
+    <strong>{{ num }}</strong>
+    {% elif num <= 3 or num > paginator.num_pages|add:"-3" or num == page_obj.number|add:"-1" or num == page_obj.number|add:"1" %}
+    <a href="?page={{ num }}&lang={{ lang }}">{{ num }}</a>
+    {% elif num == 4 or num == paginator.num_pages|add:"-3" %}
+    …
+    {% endif %}
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}&lang={{ lang }}">Next »</a>
+    {% endif %}
+</nav>
+{% endif %}
+{% endblock %}

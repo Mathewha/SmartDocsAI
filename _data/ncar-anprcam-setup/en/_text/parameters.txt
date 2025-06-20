@@ -1,0 +1,16 @@
+Internal camera settings also affect the quality of recognition - in particular, consider:
+ LPR mode
+It is recommended that the cameras operate in LPR mode 24 hours a day:
+ Frames per second
+It is recommended to use the following settings:
+ 25 fps - HDR X - For access control and parking lot applications,
+ 30 fps - HDR X - For monitoring urban traffic.
+For vehicle detection on highways, it may be advisable to live 50 fps settings, however - this depends on the geometry of the measurement point and may cause problems due to the camera’s limited ability to compensate for different lighting conditions.
+ Exposure time
+It is recommended that the exposure time meet the following requirements:
+ < 1000 ms – for access control systems and parking lot applications,
+ < 600 ms – for other applications.
+ Warning
+ It is recommended that the ANPR camera automatically adjust the exposure time according to the lighting conditions.
+ Illumination
+The recommended illumination settings depend on how far the camera is from the vehicle . If the is relatively small, it may be necessary to reduce the intensity level to prevent overexposure of the license plate at night.

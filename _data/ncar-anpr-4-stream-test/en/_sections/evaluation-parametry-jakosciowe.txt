@@ -1,0 +1,8 @@
+Quality parameters
+The following indicates the typical values of quality parameters that the tested system should achieve under optimal conditions:
+ for vehicles observed from the front:
+  - Parameter Label Level detection ≥97% identification ≥95% classification ≥90% maker ≥80%
+ the required value of these parameters should be agreed with the Customer,
+ for vehicles observed from the rear – quality parameters will be lower than for vehicles observed from the front.
+ Attention
+ Each of the above parameters should be determined at the confidence level = 95% .

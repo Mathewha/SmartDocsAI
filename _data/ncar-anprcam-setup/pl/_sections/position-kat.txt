@@ -1,0 +1,5 @@
+Kąt
+Kamera ANPR może być zamontowana w pasie ruchu lub na jego krawędzi:
+Ważne jest, aby kąt poziomy pomiędzy osią optyczną kamery a osią drogi nie był większy niż :
+ Ostrzeżenie
+ Jeśli znajduje się poza wskazanym zakresem, zniekształcenie obrazu może powodować pogorszenie jakości detekcji (znaki na tablicy rejestracyjnej będą zbyt wąskie), a oświetlenie IR nie będzie odpowiednie (zbyt mała ilość odbitego światła).

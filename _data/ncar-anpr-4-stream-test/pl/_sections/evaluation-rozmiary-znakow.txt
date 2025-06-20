@@ -1,0 +1,3 @@
+Rozmiary znaków
+Przewiduje się, że test przeprowadzony zostanie dla strumienia wideo, w którym obserwowane będą tablice rejestracyjne, w których wysokość
+znaków wyrażona w pikselach (umowna rozdzielczość optyczna ) będzie wynosić 16 pikseli (dla znormalizowanej, dużej litery X ). Jeżeli wskazane wymaganie, w przypadku określonego pojazdu, nie będzie spełnione przejazd taki powinien być usunięty z testu.

@@ -1,0 +1,4 @@
+Alerty
+AUXILIARY
+Na podstawie danych o zarejestrowanych pojazdach możliwe jest zdefiniowanie powiadomień – alertów – o przejeździe pojazdu posiadającego wskazane cechy, np. pojazdu poszukiwanego (wskazany numer rejestracyjny) czy pojazdu niedozwolonego (pojazd klasy „ciężarowy”). Alerty generowane mogą być na terminalu bądź w systemie centralnym.
+Alert może być natychmiast po utworzeniu przesłany asynchronicznie do systemu nadrzędnego w postaci powiadomienia. Forma powiadomienia jest konfigurowalna.

@@ -1,0 +1,14 @@
+Jakość klasyfikacji
+Skuteczność klasyfikacji, czyli skuteczność rozpoznawania typu to miara określająca ilościowo (procentowo) stosunek liczby prawidłowo rozpoznanych typów pojazdów do liczby wszystkich pojazdów dających się sklasyfikować , które przejechały przez punkt pomiarowy (obszar detekcji) w określonym czasie, z właściwą prędkością i w kierunku zgodnym z konfiguracją systemu (system w szczególności może być przystosowany do rozpoznawania w danym obszarze detekcji typów pojazdów nadjeżdżających z jednego, określonego kierunku):
+Liczbę pojazdów, które da się sklasyfikować w określonym szeregu pojazdów wyznacza ekspert podczas testu. Pod uwagę nie są brane pojazdy:
+ rowery,
+ motorowery,
+ lekkie pojazdy drewniane (np. furmanka),
+ maszyny drogowe typu walce, frezarki, itp.,
+ pojazdy, których ekspert nie jest w stanie przyporządkować do żadnej z rozpoznawanych przez system klas.
+System musi umożliwiać rozpoznawanie następujących klas pojazdów:
+ osobowe
+ dostawcze
+ ciężarowe (pojazdy o DMC >3.5 tony oraz ciągniki siodłowe),
+ autobusy
+ inne

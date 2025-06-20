@@ -1,0 +1,10 @@
+Raport
+Podsumowaniem testu jest opracowanie przez wykonawcę raportu (w formacie PDF), który zawiera:
+ informacje o inwestycji / projekcie, w ramach którego przeprowadzono test,
+ informację o testowanym urządzeniu,
+ informację o testowanych lokalizacjach,
+ informację o wybranych momentach, w których pozyskano dane ( DR500 , DP500 , N200 ),
+ zestawienie wyników zgodnie z punktem 4.7,
+ analizę wyników - stwierdzenie, czy test zakończył się pozytywnie w każdym testowanym zakresie.
+ Uwaga
+ Raport powinien zostać przygotowany i dostarczony do zamawiającego nie później niż 5 dni roboczych od dnia przekazania danych źródłowych.

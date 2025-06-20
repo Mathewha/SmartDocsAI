@@ -1,0 +1,4 @@
+API
+Skorzystanie z funkcji terminala (kamery) jak i z funkcji systemu centralnego możliwe poprzez interfejs RestAPI , dla którego pełna specyfikacja – NeuroCar API – dostępna jest bezpłatnie pod adresem:
+  https://gitlab.com/ncar-tools/04/api
+Poszczególne funkcje systemu (np. dostęp do danych, format rekordów pomiarowych, zarządzanie użytkownikami) opisane zostały przy użyciu standardu OpenAPI 3 .

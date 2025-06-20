@@ -1,0 +1,5 @@
+Frames per second
+It is recommended to use the following settings:
+ 25 fps - HDR X - For access control and parking lot applications,
+ 30 fps - HDR X - For monitoring urban traffic.
+For vehicle detection on highways, it may be advisable to live 50 fps settings, however - this depends on the geometry of the measurement point and may cause problems due to the camera’s limited ability to compensate for different lighting conditions.

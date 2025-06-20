@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pl" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pl" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Wiarygodność &mdash; ncar-anpr-4-stream-test 4.4.1 - dokumentacja</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.plconfidence.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="3. Kryteria oceny" href="evaluation.html" />
+    <link rel="prev" title="1. Definicje" href="defs.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-anpr-4-stream-test
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.4.1
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Spis treści</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="defs.html">1. Definicje</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Wiarygodność</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#zmienna-losowa">2.1. Zmienna losowa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#przedzial-ufnosci">2.2. Przedział ufności</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#minimalne-wielkosci-proby">2.3. Minimalne wielkości próby</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="evaluation.html">3. Kryteria oceny</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">4. Przebieg testu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conclusions.html">5. Wnioski</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dodatki</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="appendix_a.html">Załącznik A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">Odesłania</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Zmiany</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Licencja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">Zobacz także</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Do pobrania</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anpr-4-stream-test.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anpr-4-stream-test.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anpr-4-stream-test.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">Użytkownik</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ncar-anpr-4-stream-test</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-anpr-4-stream-test</a></li>
+  
+
+  <li>&gt; <span class="section-number">2. </span>Wiarygodność</li>
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <a href=".//../../en/confidence.html" class="nrs-lang">en</a>
+      
+    
+      
+        <div class="nrs-lang-active">pl</div>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="wiarygodnosc">
+<span id="confidence"></span><h1><span class="section-number">2. </span>Wiarygodność<a class="headerlink" href="#wiarygodnosc" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<div class="section" id="zmienna-losowa">
+<span id="confidence-random-variable"></span><h2><span class="section-number">2.1. </span>Zmienna losowa<a class="headerlink" href="#zmienna-losowa" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Wynik każdego z opisanych zadań systemu, tj. automatycznej detekcji, identyfikacji, klasyfikacji, rozpoznawania marki – zrealizowanych w odniesieniu do pojedynczego pojazdu – można określić jako sukces (wynik poprawny) lub porażkę (wynik niepoprawny). Wynik jest zatem zmienną losową o <a class="reference external" href="https://pl.wikipedia.org/wiki/Rozk%C5%82ad_zero-jedynkowy">rozkładzie zero-jedynkowym</a> o parametrze <img class="math" src="_images/math/393424208c035926e563f1310fb9b9dfc7052fd1.svg" style="vertical-align: -4px"/> oznaczającym prawdopodobieństwo sukcesu.</p>
+<p>W zależności od zadania sukcesem jest zatem poprawne wykrycie pojazdu, poprawne odczytanie tablicy rejestracyjnej, poprawne rozpoznanie typu, poprawne rozpoznanie marki. W każdym zadaniu pod uwagę musi być brana liczność pojazdów <img class="math" src="_images/math/696e4a984ba3f82a7cd270230ace110ef751b52a.svg" style="vertical-align: 0px"/>, z tym, że w przypadku analizy jakości detekcji <img class="math" src="_images/math/10c4a4654f8643bced15e25ee32fe837bd78977b.svg" style="vertical-align: -3px"/> będzie to liczba wszystkich pojazdów <img class="math" src="_images/math/696e4a984ba3f82a7cd270230ace110ef751b52a.svg" style="vertical-align: 0px"/>, a w przypadku pozostałych parametrów <img class="math" src="_images/math/6c3a91b5601504cf71f25853b6ba4f0b1b99f3c4.svg" style="vertical-align: -6px"/> , <img class="math" src="_images/math/250647ff40d7e8175e6d859bc163cda447b7a49d.svg" style="vertical-align: -3px"/> , <img class="math" src="_images/math/bd48e0e1176054fdba97474228505be334ca767b.svg" style="vertical-align: -3px"/> należy uwzględnić wyznaczone liczy pojazdów <img class="math" src="_images/math/0f3d21cd23830d61b1a7078982827c146d4722fc.svg" style="vertical-align: -3px"/>, <img class="math" src="_images/math/eb59c37f1648d6cea2ca5cd4068e0f666e203a46.svg" style="vertical-align: -3px"/> oraz <img class="math" src="_images/math/af9234b8c7246d8e22245b33af951024da065d50.svg" style="vertical-align: -3px"/>.</p>
+</div>
+<div class="section" id="przedzial-ufnosci">
+<span id="confidence-interval"></span><h2><span class="section-number">2.2. </span>Przedział ufności<a class="headerlink" href="#przedzial-ufnosci" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Testowane parametry (poziom detekcji, poziom identyfikacji, poziom klasyfikacji, skuteczność rozpoznawania marki) to wyrażone procentowo
+prawdopodobieństwa <img class="math" src="_images/math/393424208c035926e563f1310fb9b9dfc7052fd1.svg" style="vertical-align: -4px"/>.</p>
+<p>W celu weryfikacji wymagań zdefiniowanych wcześniej należy:</p>
+<ul>
+<li><p>Przyjąć określony <a class="reference external" href="https://pl.wikipedia.org/wiki/Poziom_ufno%C5%9Bci">poziom ufności</a> dla oceny – najczęściej:</p>
+<div class="math" id="equation-eq-5">
+<p><span class="eqno">(5)<a class="headerlink" href="#equation-eq-5" title="Stały odnośnik do tego równania">¶</a></span><img src="_images/math/4e81928b6f0d04ec08177e86985a3bc14ed0bc99.svg"/></p>
+</div></li>
+<li><p>Obliczyć oszacowanie (estymatę) <img class="math" src="_images/math/b5201d8d07bdf905c1be736764a3040b825730fc.svg" style="vertical-align: -4px"/> danego testowanego parametru.</p></li>
+<li><p>Obliczyć dolną wartość <img class="math" src="_images/math/96aabf830208be837acef89868c4945899e96c34.svg" style="vertical-align: -4px"/> symetrycznego przedziału ufności wyliczoną metodą Wilsona <a class="bibtex reference internal" href="zextern.html#wallis" id="id1">[2]</a> :</p>
+<div class="math" id="equation-eq-6">
+<p><span class="eqno">(6)<a class="headerlink" href="#equation-eq-6" title="Stały odnośnik do tego równania">¶</a></span><img src="_images/math/10b462c8e36d8163d9b70a797813fdbfe1ce54b7.svg"/></p>
+</div></li>
+</ul>
+<blockquote>
+<div><p>– gdzie wartość <img class="math" src="_images/math/06df938f8c708a1b93484f83fabd1c926623cafc.svg" style="vertical-align: 0px"/> wynika z przyjętego poziomu ufności, a rzeczywista wartość testowanego parametru <img class="math" src="_images/math/393424208c035926e563f1310fb9b9dfc7052fd1.svg" style="vertical-align: -4px"/> jest z prawdopodobieństwem 95% wyższa od wartości <img class="math" src="_images/math/96aabf830208be837acef89868c4945899e96c34.svg" style="vertical-align: -4px"/>.</p>
+<p>– ze względu na to, że wymaganie jest <img class="math" src="_images/math/a8f9464b41b4f3d7ff36b01ba69aeb2936d44b91.svg" style="vertical-align: -4px"/> za wartość <img class="math" src="_images/math/f44106de799d75127a4047976f76a0e7ca2fb563.svg" style="vertical-align: 0px"/> w wyliczaniu <img class="math" src="_images/math/d93687235e01b6af5f08c7e171aa81c58be0c62b.svg" style="vertical-align: 0px"/> brana jest podwojona wartość zakładanego poziomu ufności, czyli w tym wypadku 90%.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Sprawdzić, czy wartość <img class="math" src="_images/math/96aabf830208be837acef89868c4945899e96c34.svg" style="vertical-align: -4px"/> jest większa od wartości progowej podanej w punkcie wymaganiach.</p></li>
+</ul>
+</div>
+<div class="section" id="minimalne-wielkosci-proby">
+<span id="confidence-trial-size"></span><h2><span class="section-number">2.3. </span>Minimalne wielkości próby<a class="headerlink" href="#minimalne-wielkosci-proby" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Na podstawie <a class="bibtex reference internal" href="zextern.html#tls2012" id="id2">[1]</a> wiadomo, że przy ocenie wskazanego współczynnika jakościowego, dla wybranego poziomu ufności, w trakcie testu muszą być uwzględnione co najmniej następujące ilości pojazdów:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 30%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Oczekiwana <BR/>
+jakość</p></th>
+<th class="head"><p>Maksymalny <BR/>
+błąd</p></th>
+<th class="head"><p>Liczba pojazdów <BR/>
+<img class="math" src="_images/math/d9e4b8655c094e52016cf2fe02ddbebd74309590.svg" style="vertical-align: -2px"/></p></th>
+<th class="head"><p>Liczba pojazdów <BR/>
+<img class="math" src="_images/math/de3b14e0ed66b3d7b1a05289425865655cdbf6c8.svg" style="vertical-align: -2px"/></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>80%</p></td>
+<td><p>20%</p></td>
+<td><p>62</p></td>
+<td><p>107</p></td>
+</tr>
+<tr class="row-odd"><td><p>85%</p></td>
+<td><p>15%</p></td>
+<td><p>88</p></td>
+<td><p>151</p></td>
+</tr>
+<tr class="row-even"><td><p>90%</p></td>
+<td><p>10%</p></td>
+<td><p>139</p></td>
+<td><p>239</p></td>
+</tr>
+<tr class="row-odd"><td><p>95%</p></td>
+<td><p>5%</p></td>
+<td><p>292</p></td>
+<td><p>505</p></td>
+</tr>
+<tr class="row-even"><td><p>97%</p></td>
+<td><p>3%</p></td>
+<td><p>497</p></td>
+<td><p>859</p></td>
+</tr>
+<tr class="row-odd"><td><p>98%</p></td>
+<td><p>2%</p></td>
+<td><p>753</p></td>
+<td><p>1301</p></td>
+</tr>
+<tr class="row-even"><td><p>99%</p></td>
+<td><p>1%</p></td>
+<td><p>1522</p></td>
+<td><p>2628</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="evaluation.html" class="btn btn-neutral float-right" title="3. Kryteria oceny" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="defs.html" class="btn btn-neutral float-left" title="1. Definicje" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2024, NeuroCar Sp. z o.o., All rights reserved (www.neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

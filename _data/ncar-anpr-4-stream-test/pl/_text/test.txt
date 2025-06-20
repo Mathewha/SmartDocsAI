@@ -1,0 +1,79 @@
+ Warunki
+Zakłada się, że system powinien identyfikować pojazdy na oczekiwanym poziomie jakości o dowolnej porze dnia i nocy (z wyjątkiem rozpoznawania marki, gdzie dopuszczalne jest działanie jedynie w dzień) w dowolnych warunkach atmosferycznych. Wyjątkiem są jednak sytuacje, gdy nastąpi jeden z czynników:
+ znacząca liczba pojazdów porusza się z prędkością spoza dopuszczalnego zakresu (np. przejazd z korku),
+ występuje opad śniegu,
+ temperatura powietrza w otoczeniu spada poniżej 0° C, co może doprowadzić do oblodzenia tablic i redukcji ich czytelności,
+ występuje silna anomalia atmosferyczna w postaci burzy z gradobiciem,
+ występuje silna anomalia atmosferyczna w postaci burzy piaskowej.
+Jeżeli w trakcie testu wystąpi dowolny z powyższych czynników test powinien być zawieszony i przesunięty na kolejny dogodny termin.
+ Próba
+Aby uzyskać statystycznie wiarygodny wynik dla wartości testowanych przewiduje się, że wstępnie wygenerowany rozmiar próbki testowej nie może być mniejszy niż 1200 pojazdów.
+Próbka ta podzielona powinna być na trzy testy cząstkowe:
+ DR500 – 500 pojazdów zarejestrowanych w dzień, przed południem,
+ DP500 – 500 pojazdów zarejestrowanych w dzień, po południu,
+ N200 – 200 pojazdów zarejestrowanych w nocy.
+Za dzień należy rozumieć okres od początku astronomicznego dnia (astronomiczny wschód słońca) +1 godzina, do końca astronomicznego dnia (astronomiczny zachód słońca) –1 godzina. Za noc należy rozumieć okres 2 godzin po astronomicznym zachodzie słońca oraz do 2 godzin przed astronomicznym wschodem słońca.
+Sformułowanie przed południem oznacza co najmniej 1 godzinę przed astronomicznym południem natomiast sformułowanie po południu oznacza co najmniej 1 godzinę po astronomicznym południu. Wyznaczenie astronomicznego wschodu, zachodu słońca oraz południa odbywa się na podstawie informacji o lokalizacji pomiarowej i właściwych tablic astronomicznych. Wyliczone wartości wpisywane są do protokołu testów.
+ Zapis wideo
+Wymaga się, aby w trakcie prowadzenia testu zapisywany był materiał wideo obejmujący co najmniej całe pole widzenia kamery ANPR. Wideo powinno być zapisywane w postaci cyfrowej, w formie skompresowanej (H.264), w rozdzielczości co najmniej 640 × 360, 25 klatek na sekundę). Referencyjny zapis wideo może pochodzi bezpośrednio z kamery ANPR ew. z kamery umieszczonej w pobliżu, skierowanej na pole pomiarowe.
+Zakłada się, że zapis wideo powinien być ciągły w całym okresie testu cząstkowego. Dopuszcza się, że w materiale wideo wystąpią luki jednak nie mogą one przekraczać więcej niż 1% wymaganego czasu nagrania, z długość jednej luki nie może przekraczać 0.5 s.
+ Dane źródłowe
+Wymaga się, aby w trakcie testu zbierane były dane źródłowe generowane przez testowany system. Dla każdego zarejestrowanego przejazdu pojazdu dane te powinny zawierać:
+ Metadane :
+    sygnaturę czasową, z dokładnością co najmniej do 0.1 s,
+    unikatowy identyfikator miejsca wykonania pomiaru,
+    wynik rozpoznawania ANPR w formie testowej,
+    wynik rozpoznawania typu w formie testowej,
+    wynik rozpoznawania marki w firmie testowej.
+ Zdjęcia :
+    zdjęcie całego pola detekcji – cały kard z kamery ANPR,
+    wycinek zdjęcia zawierający przód pojazdu - pozwalający na ocenę poprawności rozpoznawania marki,
+    wycinek zdjęcia zawierający całą tablicę rejestracyjną (wraz z jej otoczeniem/ramką) – znaki w tym wycinku powinny mieć co najmniej 16 px.
+ Procedura
+Test przeprowadzony zostanie w trzech etapach, oddzielnie dla próbek DP500 , DR500 oraz N200 .
+W pierwszym kroku określona musi być pora dla wykonania testu dla każdej z próbek. Następnie, o zadanym czasie, zarejestrowanych powinno być kolejno co najmniej tyle pojazdów ile przewidziano w każdej próbce z tym, że jeżeli podczas rejestrowania pojawi się pojazd nieidentyfikowalny (w którymkolwiek z ocenianych kryteriów) to próbka zostanie powiększona o jeden.
+Wszystkie pojazdy wykluczone z testu muszą zostać umieszczone w raporcie z przebiegu testu (w postaci zdjęcia), a ponadto dla każdego takiego przypadku koniecznym jest komentarz na jakiej podstawie zdecydowano o wykluczeniu.
+Każdy pojazd w próbce musi mieć swój unikatowy numer kolejny, a wszystkie pojazdy w danej próbce muszą być ponumerowane w sposób monotoniczne rosnący względem czasu.
+Tuż po zebraniu danej próbki dane źródłowe oraz zapis wideo powinny zostać podpisane cyfrowo (ważna jest tu sygnatura czasowa podpisu) i przekazanie do komisji weryfikacyjnej, przy czym czas od momentu zakończenia rejestracji próbki do momentu przekazania wydrukowanej dokumentacji nie powinien być dłuższy niż trzy godziny, pod sankcją zakwalifikowania próbki jako „w całości źle rozpoznanej”.
+ Dane przetworzone
+Po zgromadzeniu wszystkich próbek ( DR500 , DP500 , N200 ) wykonawca opracowuje tabelaryczne zestawienie wszystkich danych źródłowych. Zestawienie takie powinno być umieszczone w tabelce zapisanej jako arkusz kalkulacyjny (Microsoft Excel / LibreOffice Calc), gdzie każdy zarejestrowany przejazd umieszczony powinien być w oddzielnym wierszu. Tabela z danymi przetworzonymi powinna zawierać co najmniej takie kolumny:
+  Nazwa Format Przykład Opis
+  counter liczba 1 numer kolejny pojazdu na liście, numerowane od 1
+  terminal tekst ncar-h-cpu-06c00103 numer seryjny / unikatowy identyfikator urządzenia generującego dane
+  date data 2022-10-27 data na podstawie znacznika czasowego, czas lokalny, wyświetlana w formacie YYYY-MM-DD
+  time data 09:00:00 godzina na podstawie znacznika czasowego, czas lokalny, wyświetlana w formacie HH:MM:SS
+  ms liczba 960 milisekunda na podstawie znacznika czasowego
+  place tekst pl-wrozyczliwa-wja-l1 unikatowy identyfikator lokalizacji, gdzie zarejestrowano pojazd
+  class liczba 7 rozpoznany typ pojazdu, zgodnie z testowaną taksonomią (np. TLS 5+1)
+  number text DW6C448 rozpoznany, znormalizowany numer rejestracyjny
+  maker text BMW rozpoznana nazwa producenta
+  model text 4 rozpoznana wersja modelowa (jeżeli dostępna)
+  det_ok liczba +1 czy detekcja danego pojazdu jest poprawna ?
+  class_ok liczba +1 czy typ danego pojazdu został określony poprawnie ?
+  maker_ok liczba +1 czy producent danego pojazdu został określony poprawnie ?
+  anpr_ok liczba +1 czy numer rejestracyjny danego pojazdu został rozpoznany poprawnie ?
+  notice tekst uwagi (jeżeli dotyczą)
+W kolumnach det_ok , class_ok , maker_ok oraz anpr_ok wpisane wartości liczbowe są interpretowane następująco:
+  Wartość Znaczenie
+  +1 wskazana wartość jest poprawna, bierze udział w ocenie
+  -1 wskazana wartość jest niepoprawna, bierze udział w ocenie
+  0 dany rekord pomiarowy jest wykluczony z oceny
+Wzorzec takiej tabelki umieszczony jest jako Załącznik A do niniejszego dokumentu.
+ Wyniki
+Jakość detekcji, identyfikacji i skuteczność rozpoznawania typu wyznaczona zostanie dla wszystkich pomiarów łącznie. W przypadku oceny skuteczności rozpoznawania marki należy wziąć próbkę 1000-elementową powstałą przez złączenie próbek DR500 i DP500 .
+Wyniki powinny zostać zestawione tabelarycznie wraz ze wskazaniem:
+ ile pojazdów z danej próby objęto oceną
+ ile pojazdów ma poprawnie określone oceniane parametry,
+ jaka jest wartość średnia danego współczynnika jakościowego,
+ jaka jest wartość uwiarygodniona statystycznie danego współczynnika jakościowego.
+Poniżej pokazano przykład końcowego zestawienia:
+ Raport
+Podsumowaniem testu jest opracowanie przez wykonawcę raportu (w formacie PDF), który zawiera:
+ informacje o inwestycji / projekcie, w ramach którego przeprowadzono test,
+ informację o testowanym urządzeniu,
+ informację o testowanych lokalizacjach,
+ informację o wybranych momentach, w których pozyskano dane ( DR500 , DP500 , N200 ),
+ zestawienie wyników zgodnie z punktem 4.7,
+ analizę wyników - stwierdzenie, czy test zakończył się pozytywnie w każdym testowanym zakresie.
+ Uwaga
+ Raport powinien zostać przygotowany i dostarczony do zamawiającego nie później niż 5 dni roboczych od dnia przekazania danych źródłowych.

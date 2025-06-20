@@ -1,0 +1,6 @@
+Wysokość kadru
+Ustawienie wysokości FoV zależy od dwóch czynników:
+ minimalna wysokość znaków (opisana w następnej sekcji),
+ maksymalna prędkość pojazdu (w połączeniu z liczbą klatek na sekundę - FPS).
+Silnik ANPR wymaga, aby dla danego przejazdu pojazdu w polu widzenia tablica rejestracyjna była widoczna (rozpoznana) co najmniej dwa razy. Oznacza to, że pole widzenia na wysokość musi obejmować wystarczająco duży odcinek drogi, aby tablica rejestracyjna była widoczna (czytelna) dwa razy przy maksymalnej prędkości. Jednocześnie powinny być spełnione inne wymagania.
+W tym przypadku użytkownik może modyfikować powiększenie, kąt i FPS kamery.

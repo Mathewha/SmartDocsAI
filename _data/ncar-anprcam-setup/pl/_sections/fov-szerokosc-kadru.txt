@@ -1,0 +1,4 @@
+Szerokość kadru
+Ustawienie szerokości FoV zależy od liczby obserwowanych pasów ruchu (patrz punkt Pasy ruchu ). Najczęściej optymalna szerokość wynosi 6 m na wysokości linii detekcji.
+Dla jednego pasa ruchu szerokość kadru powinna zachodzić na ok. 25% na przyległe pasy:
+Dla dwóch pasów ruchu szerokość kadru będzie dokładnie obejmować dwa pasy:

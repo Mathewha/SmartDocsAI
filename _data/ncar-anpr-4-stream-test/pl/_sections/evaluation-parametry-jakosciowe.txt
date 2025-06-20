@@ -1,0 +1,8 @@
+Parametry jakościowe
+Poniżej wskazano typowe wartości parametrów jakościowych, jakie powinien osiągnąć testowany system w optymalnych warunkach:
+ dla pojazdów obserwowanych z przodu:
+  - Parametr Oznaczenie Poziom detekcja ≥97% identyfikacja ≥95% klasyfikacja ≥90% marka ≥80%
+ wymagana wartość tych parametrów powinna być ustalona z końcowym odbiorcą systemu,
+ dla pojazdów obserwowanych z tyłu – parametry jakościowe będą niższe, niż dla pojazdów obserwowanych z przodu.
+ Uwaga
+ Każdy z powyższych parametrów powinien być wyznaczony na poziomie ufności = 95% .

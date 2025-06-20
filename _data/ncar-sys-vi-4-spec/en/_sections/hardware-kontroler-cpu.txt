@@ -1,0 +1,10 @@
+CPU
+The CPU controller is an industrial computer, mounted in a telecommunications cabinet, whose task is to process the video stream from ANPR cameras, buffer the data, and then send it to the central BackOffice system. This computer has the following features:
+ industrial design, without moving parts – no fans, convection heat dissipation,
+ is ready to work in an extended temperature range,
+ is resistant to vibration,
+ is sufficiently powerful (Intel i5 or i7 class processor, appropriate RAM size),
+ has built-in storage - disk (SSD)
+ has a number of communication interfaces (ETH, RS-232/485, GPIO, USB2, USB3, HDMI/DVI),
+ has the ability to extend with a communication modem (miniPCIe) or a dedicated PCIe expansion card,
+ is powered by DC voltage in the range of 12÷24V DC.

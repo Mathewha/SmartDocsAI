@@ -1,0 +1,6 @@
+Obszar detekcji
+Obszar detekcji to miejsce gdzie następuje detekcja i identyfikacja pojazdu. Z założenia obszar detekcji obejmuje pełny przekrój drogi, czyli wszystkie pasy ruchu, na których zamontowano testowane urządzenia wraz z pasem awaryjnym (jeżeli występuje). System powinien być tak skonstruowany, by zapewnić detekcję wszystkich pojazdów poruszających się w danym kierunku.
+W lokalizacjach, w których istnieje pas awaryjny obszar detekcji zawiera także tenże pas – pojazdy poruszające się częściowo lub całkowicie po pasie awaryjnym powinny być zaliczone jako pojazdy przejeżdżające po pasie wolnym chyba, że konstrukcja systemu przewiduje oddzielny odczyt dla pasa awaryjnego.
+Na drodze z ruchem dwukierunkowym przewiduje się, że wykrywane powinny być wszystkie pojazdy jadące wskazanym pasem ruchu, w określonym
+kierunku, nawet wówczas, gdy przejeżdżają po nim tylko częściowo. Zakłada się, że pojazd powinien być wykryty gdy co najmniej jedno koło z każdej osi pojazdu w całości przejedzie po wskazanym pasie ruchu (w obrębie wyznaczonym przez oznakowanie poziome). W takim układzie
+pomiarowym przyjmuje się, że pojazd jest poza obszarem detekcji gdy w całości wyjechał wszystkimi kołami na przeciwny pas ruchu.

@@ -1,0 +1,23 @@
+Wersja PL 4.0.3 wydana dnia 16 lut 2025.
+Procedura instalacji i optymalnego ustawiania kamery ANPR, dzięki której wyniki działania algorytmów ANPR i MMR będą najwyższej jakości.
+ Spis treści
+  - 1.1. Wysokość
+  - 1.2. Odległość
+  - 1.3. Kąt
+  - 1.4. Pochylenie
+  - 2.1. 1 pas
+  - 2.2. 2 pasy
+  - 2.3. 3 pasy
+  - 3.1. Linia detekcji
+  - 3.2. Szerokość kadru
+  - 3.3. Wysokość kadru
+  - 3.4. Rozmiar znaków
+  - 4.1. Tryb LPR
+  - 4.2. Klatki na sekundę
+  - 4.3. Czas ekspozycji
+  - 4.4. Oświetlenie
+ Dodatki
+  - Odesłania
+  - Zmiany
+  - Licencja
+  - Zobacz także

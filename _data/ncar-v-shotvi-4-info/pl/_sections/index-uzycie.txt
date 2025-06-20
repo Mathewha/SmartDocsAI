@@ -1,0 +1,5 @@
+Użycie
+Moduł shot-vi nie posiada domyślnie żadnego graficznego interfejsu użytkownika. Wywołanie funkcji modułu odbywa się przez wywołanie odpowiedniej metody RestAPI z argumentem w postaci zdjęcia w formacie JPEG lub PNG :
+Użytkownik może dodać do wywołania dedykowany zestaw parametrów (np. właściwy dla danego zdjęcia). Takie parametry są umieszczane wówczas jako argument w URL-u do metody HTTP post .
+Kompletny opis struktur danych oraz interfejsu RestAPI dla aplikacji można znaleźć pod publicznie dostępnym adresem:
+  https://gitlab.com/ncar-tools/04/shot-vi/-/blob/main/openapi.json

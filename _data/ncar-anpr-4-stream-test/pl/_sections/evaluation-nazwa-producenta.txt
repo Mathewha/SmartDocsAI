@@ -1,0 +1,4 @@
+Nazwa producenta
+W niektórych sytuacjach ujednoznacznienia wymaga nazwa producenta. Sytuacja taka ma miejsce, gdy:
+ ten sam producent używa innej nazwy firmowej w różnych regionach (np. „Opel” jest zamiennie stosowany z „Vauxhall”),
+ ten sam producent przekształcił się i z czasem zmienił nazwę (np. „Citroen” od dnia 1 czerwca 2016 r. produkuje samochody pod nazwą „DS”).

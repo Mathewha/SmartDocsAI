@@ -1,0 +1,3 @@
+Minimum sample sizes
+Based on [1] , it is known that at least the following numbers of vehicles must be included in the test when evaluating the indicated quality factor, for the selected confidence level:
+  Expected quality Maximum error Number of vehicles Number of vehicles

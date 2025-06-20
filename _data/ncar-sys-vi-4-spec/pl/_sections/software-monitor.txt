@@ -1,0 +1,2 @@
+Monitor
+Aplikacja Monitor służy do pro-aktywnego nadzoru infrastruktury pomiarowej wykorzystujące pakiet Icinga . Aplikacja kontroluje stan wszystkich urządzeń pomiarowych oraz stan usług krytycznych działających w systemie centralnym. W razie wystąpienia awarii aplikacja umożliwia wysłanie powiadomień (np. e-mail) do wskazanej grupy operatorów.

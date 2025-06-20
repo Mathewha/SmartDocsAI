@@ -1,0 +1,38 @@
+Zmiany
+******
+
+
+4.0.5 "2022-11-11"
+^^^^^^^^^^^^^^^^^^
+
+* dodana wersja językowa "EN"
+
+* dodana wersja językowa "DE"
+
+
+4.0.4 "2022-10-11"
+^^^^^^^^^^^^^^^^^^
+
+* konwersja na format "RST"
+
+
+4.0.3 "2022-09-06"
+^^^^^^^^^^^^^^^^^^
+
+* korekty
+
+
+4.0.1 "2022-07-10"
+^^^^^^^^^^^^^^^^^^
+
+* dodanie informacji o oprogramowaniu
+
+* dodanie informacji o strukturach danych
+
+* dodanie informacji o integracji (API)
+
+
+4.0.0 "2022-03-15"
+^^^^^^^^^^^^^^^^^^
+
+* inicjacja dokumentu

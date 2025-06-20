@@ -1,0 +1,2 @@
+Tryb LPR
+Zaleca się, aby kamery działały w trybie LPR 24 godziny na dobę:

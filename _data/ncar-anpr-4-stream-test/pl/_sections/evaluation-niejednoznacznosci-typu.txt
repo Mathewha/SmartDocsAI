@@ -1,0 +1,2 @@
+Niejednoznaczności typu
+Jeżeli na podstawie zdjęcia ekspert nie jest stanie jednoznacznie ocenić typu pojazdu zgodnie z przyjętą taksonomią przejazd taki powinien zostać wykluczony z oceny.

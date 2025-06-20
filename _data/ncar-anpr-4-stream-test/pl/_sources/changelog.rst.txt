@@ -1,0 +1,35 @@
+.. _changelog:
+
+======
+Zmiany
+======
+
+.. topic:: 4.4.1 ``2024-02-12``
+
+    * przygotowanie dokumentu w formacie Sphinx
+    * przygotowanie wersji językowej ``EN``
+
+.. topic:: 4.4.0 ``2022-11-27``
+
+    * zmodyfikowano założenia dla poprawnych warunków pomiaru (prędkości),
+    * zmodyfikowano rozdział “Ocena”
+    * zmodyfikowano rozdział “Test”
+    * dodano rozdział “Wnioski”
+    * dodano przykład tabeli z podsumowaniem wyników
+
+.. topic:: 4.3.0 ``2022-02-13``
+
+    * uszczegółowienie zakresu -> ocena jakości dla systemu przetwarzającego strumień wideo z kamery
+
+.. topic:: 4.2.0 ``2022-02-06``
+
+    * wprowadzenie numeracji wersji powiązanej gałęzią 4
+    * korekta testu wiarygodności przy użyciu przedziału ufności Wilsona
+
+.. topic:: 4.1.0 ``2020-08-28``
+
+    * Wprowadzenie testu wiarygodności przy użyciu przedziału ufności Wilsona
+
+.. topic:: 4.0.0 ``2020-05-23``
+
+    * Inicjacja dokumentu

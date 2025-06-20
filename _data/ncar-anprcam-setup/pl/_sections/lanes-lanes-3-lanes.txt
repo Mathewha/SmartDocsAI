@@ -1,0 +1,4 @@
+3 pasy
+Dla trzech pasów, kamera ANPR powinna być zainstalowana nad środkowym pasem:
+ Ostrzeżenie
+ Dla trzech pasów ruchu należy pamiętać o ograniczeniach dotyczących minimalnej wysokości znaków na tablicy rejestracyjnej. W takim przypadku istnieje ryzyko, że taki wymóg nie zostanie spełniony, przez co poziom wykrywania pojazdów i jakość rozpoznawania tablic rejestracyjnych będą niższe niż oczekiwano.

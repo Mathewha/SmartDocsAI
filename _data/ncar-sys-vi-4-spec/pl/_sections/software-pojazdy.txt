@@ -1,0 +1,2 @@
+Pojazdy
+Aplikacja Vehicles jest dedykowanym modułem pozwalającym użytkownikowi na przeglądanie danych dotyczących zarejestrowanych pojazdów. Aplikacja działa jako aplikacja internetowa . Użytkownik ma dostęp do danych o lokalizacji punktów pomiarowych, może wyszukiwać zarejestrowane pojazdy wykorzystując rozbudowany mechanizm filtrów, może dotrzeć do pełnej listy informacji o pojeździe (zdjęcia, metadane). Dostępna jest także możliwość pobierania danych o przejazdach w formacie tabelarycznym.

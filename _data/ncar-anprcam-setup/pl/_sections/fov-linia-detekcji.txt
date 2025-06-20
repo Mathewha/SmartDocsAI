@@ -1,0 +1,3 @@
+Linia detekcji
+Linia detekcji to wirtualna pozioma linia w polu widzenia (FoV), która wskazuje, gdzie powinna nastąpić oczekiwana detekcja tablicy rejestracyjnej. Najczęściej jest to linia w środku wysokości pola widzenia:
+Wymagania wymienione w poniższych podsekcjach dotyczą parametrów tablicy rejestracyjnej zlokalizowanej na linii detekcji.

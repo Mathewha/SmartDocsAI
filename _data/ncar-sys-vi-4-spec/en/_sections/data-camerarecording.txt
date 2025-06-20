@@ -1,0 +1,12 @@
+CameraRecording
+The CameraRecording measurement record contains the video recording from a given camera, in the form of a MP4 file compressed with H.264 compression. The parameters of the video stream can be configured according to your needs.
+  Property Value
+  Type CameraRecording
+  Format TAR → MPEG4 (color) + JSON
+  Dimensions 640 × 360 px
+  Quality 2 fps, H.264 MPEG-4 AVC
+  Size 2.0 MB / 2 min (estimated)
+  Transfer up camera → cloud (optional)
+  Frequency every 2 min
+ Attention
+ Creation of CameraRecording measurement records is disabled by default.

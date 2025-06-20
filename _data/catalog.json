@@ -1,0 +1,355 @@
+[
+    {
+        "id": "ncar-anpr-4-stream-test",
+        "version": "4.4.1",
+        "release_date": "2024-02-14",
+        "languages": [
+            "en",
+            "pl"
+        ],
+        "title": {
+            "en": "ANPR/MMR quality verification for video stream processing",
+            "pl": "Ocena jakości ANPR/MMR dla przetwarzania strumienia wideo"
+        },
+        "summary": {
+            "en": "Description of the quality verification procedure for the system implementing detection, classification and identification of vehicles from the video stream - license plate recognition (ANPR), vehicle type recognition and make and model recognition (MMR). The procedure is prepared for the free flow mode of operation, in which the input video stream is analyzed, and the result is a sequence - one data record for each vehicle passing in the field of view of the camera.",
+            "pl": "Opis procedury weryfikacji jakości dla systemu realizującego detekcję, klasyfikację i identyfikację pojazdów ze strumienia wideo - rozpoznawanie tablic rejestracyjnych (ANPR), rozpoznawanie typu pojazdu oraz rozpoznawanie marki i modelu (MMR). Procedura przygotowana jest dla trybu pracy free flow, w którym analizowany jest wejściowy strumień wideo, a wynikiem jest sekwencja - jeden rekord danych dla każdego pojazdu przejeżdżającego w polu widzenia kamery."
+        },
+        "chapters": [
+            {
+                "name": "index.html",
+                "title": {
+                    "en": "Content",
+                    "pl": "Treść"
+                },
+                "words": 273,
+                "chars": 3292
+            },
+            {
+                "name": "defs.html",
+                "title": {
+                    "en": "1. Definitions",
+                    "pl": "1. Definicje"
+                },
+                "words": 1551,
+                "chars": 11523
+            },
+            {
+                "name": "confidence.html",
+                "title": {
+                    "en": "2. Confidence",
+                    "pl": "2. Wiarygodność"
+                },
+                "words": 455,
+                "chars": 4395
+            },
+            {
+                "name": "evaluation.html",
+                "title": {
+                    "en": "3. Evaluation criteria",
+                    "pl": "3. Kryteria oceny"
+                },
+                "words": 645,
+                "chars": 5601
+            },
+            {
+                "name": "test.html",
+                "title": {
+                    "en": "4. Running the test",
+                    "pl": "4. Przebieg testu"
+                },
+                "words": 1377,
+                "chars": 10637
+            },
+            {
+                "name": "conclusions.html",
+                "title": {
+                    "en": "5. Conclusions",
+                    "pl": "5. Wnioski"
+                },
+                "words": 332,
+                "chars": 3580
+            },
+            {
+                "name": "appendix_a.html",
+                "title": {
+                    "en": "Appendix A",
+                    "pl": "Załącznik A"
+                },
+                "words": 90,
+                "chars": 1846
+            }
+        ],
+        "path": "ncar-anpr-4-stream-test"
+    },
+    {
+        "id": "ncar-anprcam-setup",
+        "version": "4.0.3",
+        "release_date": "2025-02-16",
+        "languages": [
+            "en",
+            "pl"
+        ],
+        "title": {
+            "en": "ANPR camera configuration",
+            "pl": "Konfiguracja kamery ANPR"
+        },
+        "summary": {
+            "en": "A procedure for installing and optimally setting up an ANPR camera to ensure that the results of ANPR and MMR algorithms are of the highest quality.",
+            "pl": "Procedura instalacji i optymalnego ustawiania kamery ANPR, dzięki której wyniki działania algorytmów ANPR i MMR będą najwyższej jakości."
+        },
+        "chapters": [
+            {
+                "name": "index.html",
+                "title": {
+                    "en": "Content",
+                    "pl": "Treść"
+                },
+                "words": 168,
+                "chars": 2351
+            },
+            {
+                "name": "position.html",
+                "title": {
+                    "en": "1. Position",
+                    "pl": "1. Pozycja"
+                },
+                "words": 826,
+                "chars": 6161
+            },
+            {
+                "name": "lanes.html",
+                "title": {
+                    "en": "2. Lanes",
+                    "pl": "2. Pasy ruchu"
+                },
+                "words": 314,
+                "chars": 3088
+            },
+            {
+                "name": "fov.html",
+                "title": {
+                    "en": "3. Field of view",
+                    "pl": "3. Kadr"
+                },
+                "words": 455,
+                "chars": 4106
+            },
+            {
+                "name": "parameters.html",
+                "title": {
+                    "en": "4. Parameters",
+                    "pl": "4. Parametry"
+                },
+                "words": 289,
+                "chars": 3140
+            }
+        ],
+        "path": "ncar-anprcam-setup"
+    },
+    {
+        "id": "ncar-h-anprcam-4-info",
+        "version": null,
+        "release_date": null,
+        "languages": [
+            "en",
+            "pl"
+        ],
+        "title": {
+            "en": "ANPR Camera 4 - Datasheet",
+            "pl": "Kamera ANPR 4 - Karta katalogowa"
+        },
+        "summary": {
+            "en": "NeuroCar ANPR Camera - Model 4 is a universal system designed to detect and identify vehicles based on video analysis. The camera processes the video stream, automatically detects each vehicle and identifies it by license plate recognition (ANPR). Additionally, the vehicle class, manufacturer, model version and colour are also recognized. The camera can operate indoors and outdoors, 24/7 (day-night), in extreme weather conditions without external light sources. Thanks to its low power consumption and low power supply voltage, the device can operate on batteries.",
+            "pl": "NeuroCar Kamera ANPR - Model 4 to uniwersalny system przeznaczony do detekcji i identyfikacji pojazdów na podstawie analizy wideo. Kamera przetwarza strumień wideo, automatycznie wykrywa każdy pojazd i identyfikuje go poprzez rozpoznawanie numeru rejestracyjnego (ANPR). Dodatkowo rozpoznawane są także: klasa pojazdu, producent i wersja modelowa oraz kolor. Kamera może pracować w przestrzeni zamkniętej i na zewnątrz, 24/7 (dzień-noc), w ekstremalnych warunkach pogodowych bez zewnętrznych źródeł światła. Dzięki niskiemu poborowi mocy i niskiemu napięciu zasilania urządzenie może pracować na bateriach."
+        },
+        "chapters": [
+            {
+                "name": "index.html",
+                "title": {
+                    "en": "Content",
+                    "pl": "Treść"
+                },
+                "words": 815,
+                "chars": 8022
+            },
+            {
+                "name": "acc.html",
+                "title": {
+                    "en": "Accessories",
+                    "pl": "Akcesoria"
+                },
+                "words": 101,
+                "chars": 1985
+            },
+            {
+                "name": "dim.html",
+                "title": {
+                    "en": "Dimensions",
+                    "pl": "Wymiary"
+                },
+                "words": 68,
+                "chars": 1698
+            },
+            {
+                "name": "func.html",
+                "title": {
+                    "en": "Functions",
+                    "pl": "Funkcje"
+                },
+                "words": 350,
+                "chars": 3910
+            },
+            {
+                "name": "hard.html",
+                "title": {
+                    "en": "Hardware",
+                    "pl": "Sprzęt"
+                },
+                "words": 276,
+                "chars": 3633
+            },
+            {
+                "name": "soft.html",
+                "title": {
+                    "en": "Software",
+                    "pl": "Oprogramowanie"
+                },
+                "words": 123,
+                "chars": 2205
+            }
+        ],
+        "path": "ncar-h-anprcam-4-info"
+    },
+    {
+        "id": "ncar-sys-vi-4-spec",
+        "version": "4.0.5",
+        "release_date": "2022-11-12",
+        "languages": [
+            "en",
+            "pl"
+        ],
+        "title": {
+            "en": "NeuroCar System VI - Technical specification",
+            "pl": "NeuroCar System VI - Specyfikacja techniczna"
+        },
+        "summary": {
+            "en": "Design and operation of a system for vehicle detection and identification based on license plate recognition (ANPR) and vehicle manufacturer and model version recognition (MMR). For operation, the system uses only the video stream from a camera looking at the front or rear of the vehicle.",
+            "pl": "Budowa i działanie systemu do detekcji i identyfikacji pojazdów na bazie rozpoznawania tablic rejestracyjnych (ANPR) oraz rozpoznawania producenta i wersji modelowej pojazdu (MMR). Do działania system wykorzystuje wyłącznie strumień wideo z kamery patrzącej na przód lub tył pojazdu."
+        },
+        "chapters": [
+            {
+                "name": "index.html",
+                "title": {
+                    "en": "Content",
+                    "pl": "Treść"
+                },
+                "words": 248,
+                "chars": 3178
+            },
+            {
+                "name": "operation.html",
+                "title": {
+                    "en": "1. Operating principle",
+                    "pl": "1. Zasada działania"
+                },
+                "words": 299,
+                "chars": 3124
+            },
+            {
+                "name": "functions.html",
+                "title": {
+                    "en": "2. Functions",
+                    "pl": "2. Funkcje"
+                },
+                "words": 1562,
+                "chars": 11863
+            },
+            {
+                "name": "construction.html",
+                "title": {
+                    "en": "3. Design",
+                    "pl": "3. Budowa"
+                },
+                "words": 917,
+                "chars": 7337
+            },
+            {
+                "name": "hardware.html",
+                "title": {
+                    "en": "4. Devices",
+                    "pl": "4. Urządzenia"
+                },
+                "words": 544,
+                "chars": 5330
+            },
+            {
+                "name": "software.html",
+                "title": {
+                    "en": "5. Software",
+                    "pl": "5. Oprogramowanie"
+                },
+                "words": 559,
+                "chars": 5394
+            },
+            {
+                "name": "data.html",
+                "title": {
+                    "en": "6. Data",
+                    "pl": "6. Dane"
+                },
+                "words": 763,
+                "chars": 6941
+            },
+            {
+                "name": "integration.html",
+                "title": {
+                    "en": "7. Integration",
+                    "pl": "7. Integracja"
+                },
+                "words": 327,
+                "chars": 3529
+            }
+        ],
+        "path": "ncar-sys-vi-4-spec"
+    },
+    {
+        "id": "ncar-v-shotvi-4-info",
+        "version": null,
+        "release_date": null,
+        "languages": [
+            "en",
+            "pl"
+        ],
+        "title": {
+            "en": "Shot VI - Data sheet",
+            "pl": "Shot VI - Karta katalogowa"
+        },
+        "summary": {
+            "en": "NeuroCar Shot VI (Vehicle Identification) is an application used to detect and identify vehicles visible in a single photo. Vehicle identification is based on the recognition of its registration number, country of origin, category, manufacturer and model version. The application works like an external module, with which communication takes place through a REST interface, and can be attached as a component of a host application.",
+            "pl": "NeuroCar Shot VI (ang. Vehicle Identification) to aplikacja służąca do detekcji i identyfikacji pojazdów widocznych na pojedynczym zdjęciu. Identyfikacja pojazdu polega na rozpoznaniu jego numer rejestracyjnego, kraju pochodzenia, kategorii, producenta oraz wersji modelowej. Aplikacja pracuje jak zewnętrzny moduł, z którym komunikacja odbywa się przez interfejs REST, i może być dołączony jako komponent aplikacji nadrzędnej."
+        },
+        "chapters": [
+            {
+                "name": "index.html",
+                "title": {
+                    "en": "Content",
+                    "pl": "Treść"
+                },
+                "words": 1778,
+                "chars": 12977
+            }
+        ],
+        "path": "ncar-v-shotvi-4-info"
+    },
+    {
+        "id": "semantic_chunks",
+        "version": null,
+        "release_date": null,
+        "languages": [],
+        "title": {},
+        "summary": {},
+        "chapters": [],
+        "path": "semantic_chunks"
+    }
+]

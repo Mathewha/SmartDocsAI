@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.2" width="132.6mm" height="66.4mm" viewBox="0 0 13260 6640" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xml:space="preserve">
+ <defs class="ClipPathGroup">
+  <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
+   <rect x="0" y="0" width="13260" height="6640"/>
+  </clipPath>
+  <clipPath id="presentation_clip_path_shrink" clipPathUnits="userSpaceOnUse">
+   <rect x="13" y="6" width="13234" height="6627"/>
+  </clipPath>
+ </defs>
+ <defs class="TextShapeIndex">
+  <g ooo:slide="id1" ooo:id-list="id3 id4 id5 id6 id7 id8 id9 id10 id11 id12 id13 id14 id15 id16 id17 id18 id19 id20"/>
+ </defs>
+ <defs class="EmbeddedBulletChars">
+  <g id="bullet-char-template-57356" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 580,1141 L 1163,571 580,0 -4,571 580,1141 Z"/>
+  </g>
+  <g id="bullet-char-template-57354" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 8,1128 L 1137,1128 1137,0 8,0 8,1128 Z"/>
+  </g>
+  <g id="bullet-char-template-10146" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 174,0 L 602,739 174,1481 1456,739 174,0 Z M 1358,739 L 309,1346 659,739 1358,739 Z"/>
+  </g>
+  <g id="bullet-char-template-10132" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 2015,739 L 1276,0 717,0 1260,543 174,543 174,936 1260,936 717,1481 1274,1481 2015,739 Z"/>
+  </g>
+  <g id="bullet-char-template-10007" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 0,-2 C -7,14 -16,27 -25,37 L 356,567 C 262,823 215,952 215,954 215,979 228,992 255,992 264,992 276,990 289,987 310,991 331,999 354,1012 L 381,999 492,748 772,1049 836,1024 860,1049 C 881,1039 901,1025 922,1006 886,937 835,863 770,784 769,783 710,716 594,584 L 774,223 C 774,196 753,168 711,139 L 727,119 C 717,90 699,76 672,76 641,76 570,178 457,381 L 164,-76 C 142,-110 111,-127 72,-127 30,-127 9,-110 8,-76 1,-67 -2,-52 -2,-32 -2,-23 -1,-13 0,-2 Z"/>
+  </g>
+  <g id="bullet-char-template-10004" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 285,-33 C 182,-33 111,30 74,156 52,228 41,333 41,471 41,549 55,616 82,672 116,743 169,778 240,778 293,778 328,747 346,684 L 369,508 C 377,444 397,411 428,410 L 1163,1116 C 1174,1127 1196,1133 1229,1133 1271,1133 1292,1118 1292,1087 L 1292,965 C 1292,929 1282,901 1262,881 L 442,47 C 390,-6 338,-33 285,-33 Z"/>
+  </g>
+  <g id="bullet-char-template-9679" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 813,0 C 632,0 489,54 383,161 276,268 223,411 223,592 223,773 276,916 383,1023 489,1130 632,1184 813,1184 992,1184 1136,1130 1245,1023 1353,916 1407,772 1407,592 1407,412 1353,268 1245,161 1136,54 992,0 813,0 Z"/>
+  </g>
+  <g id="bullet-char-template-8226" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 346,457 C 273,457 209,483 155,535 101,586 74,649 74,723 74,796 101,859 155,911 209,963 273,989 346,989 419,989 480,963 531,910 582,859 608,796 608,723 608,648 583,586 532,535 482,483 420,457 346,457 Z"/>
+  </g>
+  <g id="bullet-char-template-8211" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M -4,459 L 1135,459 1135,606 -4,606 -4,459 Z"/>
+  </g>
+  <g id="bullet-char-template-61548" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 173,740 C 173,903 231,1043 346,1159 462,1274 601,1332 765,1332 928,1332 1067,1274 1183,1159 1299,1043 1357,903 1357,740 1357,577 1299,437 1183,322 1067,206 928,148 765,148 601,148 462,206 346,322 231,437 173,577 173,740 Z"/>
+  </g>
+ </defs>
+ <g>
+  <g id="id2" class="Master_Slide">
+   <g id="bg-id2" class="Background"/>
+   <g id="bo-id2" class="BackgroundObjects"/>
+  </g>
+ </g>
+ <g class="SlideGroup">
+  <g>
+   <g id="container-id1">
+    <g id="id1" class="Slide" clip-path="url(#presentation_clip_path)">
+     <g class="Page">
+      <g class="com.sun.star.drawing.PolyPolygonShape">
+       <g id="id3">
+        <rect class="BoundingBox" stroke="none" fill="none" x="18" y="5673" width="13242" height="736"/>
+        <defs>
+         <clipPath id="clip_path_1" clipPathUnits="userSpaceOnUse">
+          <path d="M 19,5673 L 13258,5673 13258,6407 19,6407 19,5673 Z"/>
+         </clipPath>
+        </defs>
+        <g clip-path="url(#clip_path_1)">
+         <image x="19" y="5673" width="13239" height="734" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfUAAAAcCAYAAAB4dCbvAAAACXBIWXMAAAsTAAALEgEZga1ZAAABY0lEQVR4nO3cQWpUQRQF0Pt/v4bMHLgFZzqJYDQg9DqEJjjOwE06kSY7caomLf2rHLiED/lUOGcFd/aoqndrur//9nlX8/cAAEOr0+m0u739+GfrIADAOvXw8OPnzaebx62DAADrVJLH3vp56yAAwDqVZOm9/9o6CACwTiW5ar09bR0EAFinklzSuqEOAIOrJE89sf0OAIOrJJXeDXUAGFwlmdrUVdoAYHCV5KzSBgDjqyRLmkobAIyukuyX3ly/A8Dg6u319askKm0AMLh6/+7D794vTuoAMLia5/Pf1vXUAWB0U5LXd3dfv2wdBABYp5Jceldpg2czbx0AeKkqydImlTZ4Nn3rAMBLVUl2U5ssygHA4P5/PqPSBgDDqyRL74Y6AIyuDodDX5bmTR0ABjcluToej2+2DgIArFNJlmVZVNoAYHCVpM3z7PodAAZXSdJ7tygHAIOrJG2/3+upA8Dg/gGzLWYUQrGqDgAAAABJRU5ErkJggg=="/>
+        </g>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.PolyPolygonShape">
+       <g id="id4">
+        <rect class="BoundingBox" stroke="none" fill="none" x="1839" y="4326" width="11421" height="1349"/>
+        <defs>
+         <clipPath id="clip_path_2" clipPathUnits="userSpaceOnUse">
+          <path d="M 2072,5673 L 1840,5668 13258,4326 13258,5673 2072,5673 Z"/>
+         </clipPath>
+        </defs>
+        <g clip-path="url(#clip_path_2)">
+         <image x="1840" y="4326" width="11418" height="1347" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+        </g>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.ClosedBezierShape">
+       <g id="id5">
+        <rect class="BoundingBox" stroke="none" fill="none" x="1795" y="4298" width="11465" height="1402"/>
+        <path fill="rgb(89,194,232)" stroke="none" d="M 1824,5698 C 1810,5698 1798,5687 1796,5673 1793,5659 1804,5645 1821,5643 L 13258,4299 13258,4354 1826,5698 1824,5698 Z"/>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.ClosedBezierShape">
+       <g id="id6">
+        <rect class="BoundingBox" stroke="none" fill="none" x="11548" y="4692" width="74" height="933"/>
+        <path fill="rgb(89,194,232)" stroke="none" d="M 11548,4692 C 11578,4878 11592,5065 11592,5255 11592,5445 11584,5500 11573,5623 L 11601,5623 C 11615,5500 11620,5375 11620,5255 11620,5065 11606,4878 11575,4692 L 11548,4692 Z"/>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.ClosedBezierShape">
+       <g id="id7">
+        <rect class="BoundingBox" stroke="none" fill="none" x="11402" y="4088" width="145" height="436"/>
+        <path fill="rgb(89,194,232)" stroke="none" d="M 11517,4522 L 11545,4522 C 11514,4379 11478,4237 11430,4098 11430,4098 11428,4084 11411,4089 11400,4095 11403,4106 11403,4106 11450,4243 11486,4382 11517,4522 Z"/>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.PolyPolygonShape">
+       <g id="id8">
+        <rect class="BoundingBox" stroke="none" fill="none" x="4801" y="3442" width="1601" height="588"/>
+        <path fill="rgb(35,31,32)" stroke="none" d="M 4802,3623 L 4850,4028 6401,3847 6353,3442 4802,3623 Z M 4900,3967 L 4867,3674 6306,3504 6339,3796 4900,3967 Z"/>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.PolyPolygonShape">
+       <g id="id9">
+        <rect class="BoundingBox" stroke="none" fill="none" x="3797" y="1667" width="3315" height="1131"/>
+        <path fill="rgb(35,31,32)" stroke="none" d="M 7110,2407 L 6817,1882 6593,1668 5441,1765 5277,1785 4133,1958 3963,2214 3798,2797 5450,2563 7110,2407 Z M 3837,2764 L 3988,2228 4150,1983 5279,1813 5441,1793 6579,1698 6792,1899 7063,2384 5444,2538 3837,2764 Z"/>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.PolyPolygonShape">
+       <g id="id10">
+        <rect class="BoundingBox" stroke="none" fill="none" x="3454" y="3139" width="1154" height="523"/>
+        <path fill="rgb(35,31,32)" stroke="none" d="M 4465,3163 L 4387,3140 3561,3227 3455,3322 3483,3559 3531,3651 3659,3660 4607,3512 4529,3269 4465,3163 Z M 3656,3632 L 3545,3623 3505,3554 3480,3333 3570,3255 4381,3171 4445,3188 4501,3280 4568,3490 3656,3632 Z"/>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.ClosedBezierShape">
+       <g id="id11">
+        <rect class="BoundingBox" stroke="none" fill="none" x="3061" y="1566" width="4971" height="3903"/>
+        <path fill="rgb(35,31,32)" stroke="none" d="M 7947,3668 L 7947,3434 C 7944,3434 7857,2914 7857,2914 L 7489,2571 7746,2541 7857,2449 7838,2276 7749,2186 7380,2186 7269,2292 7015,1888 6653,1567 5413,1659 5277,1676 4049,1874 3776,2265 3620,2722 3486,2647 3126,2727 3062,2836 3082,3009 3210,3073 3466,3043 3188,3459 3224,3983 3274,4215 3363,4979 3486,5442 3570,5467 4077,5408 4147,5355 4164,5096 4130,4812 5689,4627 7247,4443 7280,4725 7355,4976 7436,5012 7944,4954 8019,4909 8030,4432 7947,3668 Z M 7403,2245 L 7724,2239 7782,2298 7796,2421 7721,2482 7433,2516 7375,2460 7297,2337 7403,2245 Z M 3224,3015 L 3137,2970 3123,2847 3165,2778 3480,2708 3603,2778 3556,2914 3511,2981 3224,3015 Z M 3578,5408 L 3536,5394 3422,4968 3386,4653 3567,4870 3941,4825 4016,5255 4069,5339 4061,5344 3578,5408 Z M 4114,5093 L 4100,5322 4091,5327 4044,5252 3971,4825 4083,4812 4114,5093 Z M 3592,4814 L 3422,4611 3333,4206 3327,4167 3327,4167 3285,3975 3249,3473 3606,2939 3826,2292 4083,1927 5285,1735 5419,1718 6633,1626 6968,1922 7333,2496 7807,2939 7888,3434 7888,3632 C 7891,3632 7888,3632 7888,3632 L 7894,3671 7902,4086 7785,4323 3595,4814 3592,4814 Z M 7339,4714 L 7305,4435 7417,4421 7445,4853 7417,4937 7406,4931 7339,4714 Z M 7969,4873 L 7930,4895 7447,4951 7439,4951 C 7439,4948 7470,4856 7470,4856 L 7442,4418 7816,4374 7941,4120 7977,4435 7969,4873 Z"/>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.PolyPolygonShape">
+       <g id="id12">
+        <rect class="BoundingBox" stroke="none" fill="none" x="6495" y="2768" width="1105" height="527"/>
+        <path fill="rgb(35,31,32)" stroke="none" d="M 7445,2769 L 6627,2878 6551,2920 6515,3034 6496,3294 7447,3216 7573,3176 7598,3079 7570,2839 7445,2769 Z M 7548,3154 L 7442,3188 6523,3263 6540,3043 6574,2939 6630,2906 7439,2800 7545,2859 7570,3079 7548,3154 Z"/>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.ClosedBezierShape">
+       <g id="id13">
+        <rect class="BoundingBox" stroke="none" fill="none" x="10543" y="3248" width="1590" height="754"/>
+        <path fill="rgb(255,255,255)" stroke="none" d="M 12013,4000 L 10661,4000 C 10596,4000 10543,3947 10543,3883 L 10543,3364 C 10543,3302 10596,3249 10661,3249 L 12013,3249 C 12078,3249 12131,3302 12131,3364 L 12131,3883 C 12128,3947 12078,4000 12013,4000 Z"/>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.ClosedBezierShape">
+       <g id="id14">
+        <rect class="BoundingBox" stroke="none" fill="none" x="10700" y="3540" width="261" height="367"/>
+        <path fill="rgb(83,168,211)" stroke="none" d="M 10959,3548 L 10959,3559 C 10945,3559 10940,3559 10934,3565 10926,3571 10917,3579 10909,3593 L 10800,3746 10811,3805 C 10814,3822 10814,3838 10811,3849 10806,3869 10800,3880 10789,3888 10778,3900 10758,3905 10736,3905 10714,3905 10714,3900 10708,3888 10702,3880 10702,3869 10708,3855 10711,3847 10714,3841 10719,3833 L 10761,3771 10733,3587 C 10730,3571 10725,3559 10716,3557 10714,3557 10708,3557 10700,3551 L 10700,3540 10817,3540 10817,3551 10806,3551 C 10783,3551 10775,3565 10778,3593 L 10797,3718 10887,3587 C 10895,3576 10898,3571 10900,3565 L 10900,3559 C 10898,3554 10889,3551 10875,3551 L 10875,3540 10959,3540 10959,3548 Z M 10769,3844 L 10764,3802 10733,3844 C 10730,3849 10728,3855 10725,3861 10722,3869 10722,3874 10728,3880 10733,3886 10736,3888 10744,3888 10758,3888 10767,3880 10769,3863 L 10769,3844 Z"/>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.PolyPolygonShape">
+       <g id="id15">
+        <rect class="BoundingBox" stroke="none" fill="none" x="11111" y="3715" width="239" height="126"/>
+        <path fill="rgb(83,168,211)" stroke="none" d="M 11111,3746 L 11124,3715 11348,3808 11335,3839 11111,3746 Z"/>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.PolyPolygonShape">
+       <g id="id16">
+        <rect class="BoundingBox" stroke="none" fill="none" x="11110" y="3492" width="255" height="253"/>
+        <path fill="rgb(83,168,211)" stroke="none" d="M 11165,3621 L 11363,3702 11350,3743 11110,3640 11110,3596 11350,3492 11363,3534 11165,3621 Z"/>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.ClosedBezierShape">
+       <g id="id17">
+        <rect class="BoundingBox" stroke="none" fill="none" x="11556" y="3409" width="239" height="389"/>
+        <path fill="rgb(83,168,211)" stroke="none" d="M 11631,3551 C 11687,3551 11729,3565 11754,3587 11779,3610 11793,3640 11793,3679 11793,3718 11790,3713 11785,3727 11779,3741 11771,3755 11760,3763 11748,3774 11734,3782 11715,3788 11695,3794 11676,3796 11651,3796 11626,3796 11631,3796 11620,3794 11609,3791 11601,3791 11592,3788 11584,3785 11575,3782 11570,3782 11564,3782 11559,3780 11556,3777 L 11567,3732 C 11573,3735 11584,3738 11598,3743 11612,3749 11628,3752 11651,3752 11673,3752 11681,3749 11693,3746 11704,3743 11712,3738 11721,3732 11729,3727 11732,3718 11734,3710 11737,3702 11740,3693 11740,3685 11740,3671 11737,3657 11732,3649 11726,3637 11718,3629 11707,3621 11695,3612 11679,3607 11656,3604 11637,3601 11609,3598 11578,3598 11581,3579 11581,3562 11584,3548 11584,3531 11587,3518 11587,3501 11587,3484 11589,3470 11589,3456 11589,3442 11592,3425 11592,3409 L 11779,3409 11779,3453 11637,3453 C 11637,3459 11637,3467 11634,3476 11634,3484 11631,3495 11631,3506 11631,3518 11628,3526 11628,3537 11634,3537 11628,3545 11628,3551 L 11631,3551 Z"/>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.ClosedBezierShape">
+       <g id="id18">
+        <rect class="BoundingBox" stroke="none" fill="none" x="11854" y="3431" width="159" height="175"/>
+        <path fill="rgb(83,168,211)" stroke="none" d="M 12011,3518 C 12011,3531 12008,3543 12005,3554 12002,3565 11997,3573 11988,3582 11980,3590 11972,3596 11963,3598 11955,3604 11944,3604 11933,3604 11921,3604 11910,3601 11902,3598 11893,3593 11882,3587 11877,3582 11871,3576 11866,3565 11860,3554 11854,3543 11854,3531 11854,3518 11854,3504 11857,3492 11860,3481 11863,3470 11868,3462 11877,3453 11885,3445 11893,3439 11902,3437 11910,3431 11921,3431 11933,3431 11944,3431 11955,3431 11963,3437 11972,3442 11983,3448 11988,3453 11994,3459 11999,3470 12005,3481 12011,3492 12011,3504 12011,3518 Z M 11977,3518 C 11977,3498 11972,3484 11963,3473 11955,3462 11944,3456 11927,3456 11910,3456 11902,3462 11891,3473 11880,3484 11877,3498 11877,3518 11877,3537 11882,3551 11891,3562 11899,3573 11910,3579 11927,3579 11944,3579 11952,3573 11963,3562 11974,3551 11977,3537 11977,3518 Z"/>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.PolyPolygonShape">
+       <g id="id19">
+        <rect class="BoundingBox" stroke="none" fill="none" x="11483" y="5369" width="248" height="315"/>
+        <path fill="rgb(83,168,211)" stroke="none" d="M 11575,5682 L 11483,5369 11601,5453 11729,5394 11575,5682 Z"/>
+       </g>
+      </g>
+      <g class="com.sun.star.drawing.PolyPolygonShape">
+       <g id="id20">
+        <rect class="BoundingBox" stroke="none" fill="none" x="11464" y="4533" width="245" height="320"/>
+        <path fill="rgb(83,168,211)" stroke="none" d="M 11531,4533 L 11707,4806 11573,4759 11464,4851 11531,4533 Z"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

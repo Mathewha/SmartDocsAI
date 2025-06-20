@@ -1,0 +1,15 @@
+Jakość rozpoznawania marki
+Zakłada się, że system rozpoznaje markę pojazdów na podstawie zdjęcia przodu. Rozpoznawanie marki pojazdu na zdjęciach z tyłu nie podlega ocenie i jest z zasady istotnie gorsze niż w przypadku przodów. W dużej liczbie przypadków (np. pojazdy ciężarowe) jest całkowicie niemożliwe.
+Skuteczność rozpoznawania marki to miara określająca ilościowo (procentowo) stosunek liczby prawidłowo rozpoznanych marek pojazdów do liczby wszystkich pojazdów dających się rozpoznać , które przejechały przez punkt pomiarowy (obszar detekcji) w określonym czasie, z właściwą prędkości i w kierunku zgodnym z konfiguracją systemu (system w szczególności może być przystosowany do rozpoznawania w danym obszarze detekcji marek pojazdów nadjeżdżających z jednego, określonego kierunku):
+Liczbę pojazdów, które da się rozpoznać w określonym szeregu pojazdów wyznacza ekspert podczas testu. Pod uwagę nie są brane pojazdy:
+ rowery,
+ motorowery,
+ motocykle,
+ maszyny drogowe typu walce, frezarki, itp.,
+ ciągniki i inne maszyny rolnicze,
+ pojazdy nie produkowane seryjnie,
+ pojazdy specjalne i wojskowe,
+ pojazdy, dla których przez producenta nie została określona marka,
+ pojazdy, dla których ekspert nie jest w stanie określić marki.
+ Uwaga
+ System nie musi umożliwiać rozpoznawania marek pojazdów w nocy chyba, że został do tego specjalnie przygotowany np. przez dołączenie specjalnego oświetlenia IR o dużej mocy.

@@ -1,0 +1,5 @@
+Registration number
+BASIC
+It consists of automatic detection of the location of the license plate in the processed image and reading its content. The result of recognition is a string of alphanumeric characters, including special diacritics found in some countries – e.g. Ä, Ë, Ö, etc. The recognized string of characters also includes a space, which represents each separator. The result of the recognition is also information about the position and size of the array in the source image.
+EXTENDED
+In addition to the sequence of characters, the system can also determine the type of plate based on its syntax. This makes it possible to additionally mark the vehicle, for example, as a privileged vehicle (in Poland this is the appropriate prefix), or place of registration (city code). Individual plates are also recognized.

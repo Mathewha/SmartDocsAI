@@ -1,0 +1,2 @@
+Night
+It is also assumed that all night shots, such as the example below (here the measurement field is illuminated only by an IR illuminator), will be excluded from the evaluation of maker recognition quality:

@@ -1,0 +1,6 @@
+Instalacja
+Moduł shot-vi dostarczany jest w postaci jednego pliku instalacyjnego, który zawiera w swojej nazwie informacje opisujące wariant w jakim został przygotowany, tzn. numer wersji, oznaczenie pakietu regionalnego oraz platformę systemową – przykładowo:
+  shot-vi-euro-4.3.3-linux-x86_64-Debian-buster.deb
+to plik zawierający instalator wariantu do rozpoznawania tablic europejskich, w wersji 4.3.3 , dla 64-bitowego procesora kompatybilnego z Intel x86, pracującego pod systemem operacyjnym Linux Debian build 10.12 („buster”).
+ Uwaga
+ Odpowiedni plik instalacyjny jest dostarczany przez twórcę po ustaleniu z klientem szczegółów co do platformy sprzętowej i systemowej.

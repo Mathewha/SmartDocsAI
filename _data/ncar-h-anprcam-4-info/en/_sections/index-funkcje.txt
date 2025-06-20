@@ -1,0 +1,17 @@
+ Functions
+  Function name Availability Description
+  Vehicle detection standard > 98%, for vehicle speed in the range 0÷250 km/h, based on the video stream ( free flow ), the licence plate must be visible and legible
+  Vehicle detection without plate option > 99%, for vehicle speed in the range of 0÷250 km/h, based on the video stream
+  Detection of dangerous goods option > 90%, ADR plates, “Odpady”, “A”
+  Detection of direction standard > 99%, vehicle reverses = -1, vehicle approaches = 1, unknown direction = 0
+  Stop detection standard yes, multiple recognition filter ( stop-and-go )
+  Number of lanes standard 1÷3 - recognition for 3 lanes only if the camera is placed above the centre lane
+  Lane detection standard yes
+  Number plate recognition standard > 97% for all detected vehicles with a human-readable registration number, region selection: EU , LA , NE .
+  Country of origin recognition option > 97% for all vehicles with a recognised registration number, 48 countries simultaneously (including entire Europe)
+  Vehicle classification (AVC) option > 92%, classes: car (7), van (11), truck (3), bus (5), motorcycle (10); for front view only, additional IR illuminator required in case of insufficient lighting (e.g. at night)
+  Maker recognition option > 90%, recognition of makers such as “bmw”, “audi”, etc.; only for frontal detection; additional IR illuminator required at night
+  Model recognition option > 80%, recognition of make and models such as “bmw 5”, “audi Q5”; only for frontal detection; additional IR illuminator required at night
+  Speed measurement option ±10% accuracy for all vehicles with recognised number plates, after automatic calibration
+ Attention
+ All quality parameters are given as maximum values and are determined for optimum location and configuration of the unit (see Mounting instructions ).

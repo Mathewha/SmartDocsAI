@@ -1,0 +1,22 @@
+Identification quality
+In the simplest case, by identification of a vehicle is meant its detection and subsequent recognition of the license plate number. By the term identification quality is meant the percentage value that is the ratio of the number of correctly recognized vehicle plates to the number of all identifiable vehicles that passed through the detection area, in the specified direction, at the specified time, at the correct speed:
+The number of vehicles that can be identified in a certain number of vehicles is determined by an expert during the test. Vehicles are not taken into account:
+ motorcycles, for measurements from the front,
+ agricultural machinery without a license plate marking,
+ vehicles without a license plate,
+ vehicles with an illegible license plate, about which the expert has doubts, in determining the registration number.
+ Attention
+ If the ANPR camera does not cover the entire detection area, as a result of which, for a vehicle detected by detection, the plate is not visible, or visible only partially, such a vehicle should be classified as unidentified (without plate recognition) but identifiable, i.e. included in the group.
+It is assumed that the registration number is:
+ a string of uppercase letters and numbers – if there is a lowercase letter in the plate, it should be converted to uppercase,
+ no longer than 10 characters,
+ without separators and other special characters,
+ all characters written together – characters other than a letter or number should be omitted.
+To avoid ambiguity, the license plate number should be encoded in the output in UTF-8 encoding. For some countries, recognition of the corresponding national characters is required (e.g. umlaut in German plates). For license plates from countries where the Latin alphabet is not used, it is allowed to recognize letters and numbers in the alphabet appropriate for the country (e.g. Cyrillic), but it is also allowed to convert characters from non-Latin to Latin alphabet, for example, such conversion can be used for Russian plates, plates of Middle Eastern countries (Arabic script) or Chinese plates.
+Number plate recognition should not be affected:
+ letter color and background color,
+ reflectivity (at night, the plates must be illuminated with at least infrared light),
+ arrangement of characters (single-row, double-row).
+If there is more than one vehicle in the image to be analyzed then the detection system should detect each vehicle independently, and the identification system should recognize the license plate of each vehicle separately.
+If the ANPR board recognition system provides recognition results in the form of variants (different alternatives), the first variant, i.e. the variant with the highest confidence level (if the manufacturer has marked such a level), is taken as the result, and the other results are discarded.
+The license plate is considered to be recognized correctly if the selected variant from the automatic recognition agrees verbatim as to the number of characters and their values with the result indicated by the expert – when comparing any characters other than letters and numbers are ignored. In the comparison, country codes are not taken into account (for example, the so-called eurolabel from European tables). In the comparison, letters are capitalized.

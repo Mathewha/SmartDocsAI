@@ -1,0 +1,2 @@
+Notifications
+Both the terminal (camera) and the central system can actively transmit information to master systems using the notification mechanism ( push technology ) in asynchronous mode.

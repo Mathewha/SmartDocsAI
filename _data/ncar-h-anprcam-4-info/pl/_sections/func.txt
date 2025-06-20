@@ -1,0 +1,28 @@
+  Nazwa funkcji Dostępność Opis
+  Wykrywanie pojazdu standard > 98%, dla prędkości pojazdu w zakresie 0÷250 km/h, na podstawie
+strumienia wideo ( free flow ), tablica rejestracyjna musi być widoczna
+i czytelna
+  Wykrywanie pojazdu także bez tablicy opcja > 99%, dla prędkości pojazdu w zakresie 0÷250 km/h, na podstawie
+strumienia wideo
+  Wykrywanie towarów niebezpiecznych opcja > 90%, tablice ADR, „Odpady”, „A”
+  Wykrywanie kierunku standard > 99%, pojazd cofa = -1, pojazd się zbliża = 1, nieznany kierunek = 0
+  Wykrywanie zatrzymania standard tak, filtracja wielokrotnych rozpoznań ( stop-and-go )
+  Liczba pasów ruchu standard 1÷3 – rozpoznawanie dla 3 pasów tylko przy umieszczeniu kamery nad
+pasem środkowym
+  Wykrywanie pasa ruchu standard tak
+  Rozpoznawanie numeru rejestracyjnego standard > 97% dla wszystkich wykrytych pojazdów, posiadających numer rejestracyjny
+czytelny ludzkim okiem, wybór regionu: EU , LA , NE .
+  Rozpoznawanie kraju pochodzenia opcja > 97% dla wszystkich pojazdów z rozpoznanym numerem rejestracyjnym,
+48 krajów jednocześnie (w tym cała Europa)
+  Rozpoznawanie klasy pojazdu (AVC) opcja > 92%, klasy: osobowy (7), dostawczy (11), ciężarowy (3), autobus (5),
+motocykl (10); tylko dla widoku z przodu, wymagany dodatkowy oświetlacz
+IR w przypadku niewystarczającego oświetlenia (np. w nocy)
+  Rozpoznawanie marki opcja > 90%, rozpoznanie takich marek jak „bmw”, „audi”, itd.; tylko dla
+detekcji z przodu; w nocy konieczny dodatkowy oświetlacz IR
+  Rozpoznawanie modelu opcja > 80%, rozpoznanie takich marek i modeli jak „bmw 5”, „audi Q5”; tylko
+dla detekcji z przodu; w nocy konieczny dodatkowy oświetlacz IR
+  Pomiar prędkości pojazdu opcja dokładność ±10% dla wszystkich pojazdów z rozpoznanymi tablicami
+rejestracyjnymi, po automatycznej kalibracji
+ Uwaga
+ Wszystkie parametry jakościowe podane są jako wartości maksymalne i określone
+są zostały dla optymalnej lokalizacji i konfiguracji urządzenia (patrz Instrukcja montażu ).

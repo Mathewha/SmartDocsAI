@@ -1,0 +1,8 @@
+Conditions
+It is assumed that the system should identify vehicles at the expected level of quality at any time of day or night (except for brand recognition, where only daytime operation is allowed) in any weather conditions. However, the exception is when one of the factors occurs:
+ a significant number of vehicles travel at speeds outside the permissible range (e.g., passing out of traffic jams),
+ snowfall occurs,
+ the ambient air temperature drops below 0° C, which can lead to icing on the number plates and reduce their readability,
+ there is a strong atmospheric anomaly in the form of a thunderstorm with hail,
+ there is a strong atmospheric anomaly in the form of a dust storm.
+If any of the above factors occur during the test, the test should be suspended and rescheduled for another convenient date.

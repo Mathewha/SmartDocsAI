@@ -1,0 +1,24 @@
+Dane przetworzone
+Po zgromadzeniu wszystkich próbek ( DR500 , DP500 , N200 ) wykonawca opracowuje tabelaryczne zestawienie wszystkich danych źródłowych. Zestawienie takie powinno być umieszczone w tabelce zapisanej jako arkusz kalkulacyjny (Microsoft Excel / LibreOffice Calc), gdzie każdy zarejestrowany przejazd umieszczony powinien być w oddzielnym wierszu. Tabela z danymi przetworzonymi powinna zawierać co najmniej takie kolumny:
+  Nazwa Format Przykład Opis
+  counter liczba 1 numer kolejny pojazdu na liście, numerowane od 1
+  terminal tekst ncar-h-cpu-06c00103 numer seryjny / unikatowy identyfikator urządzenia generującego dane
+  date data 2022-10-27 data na podstawie znacznika czasowego, czas lokalny, wyświetlana w formacie YYYY-MM-DD
+  time data 09:00:00 godzina na podstawie znacznika czasowego, czas lokalny, wyświetlana w formacie HH:MM:SS
+  ms liczba 960 milisekunda na podstawie znacznika czasowego
+  place tekst pl-wrozyczliwa-wja-l1 unikatowy identyfikator lokalizacji, gdzie zarejestrowano pojazd
+  class liczba 7 rozpoznany typ pojazdu, zgodnie z testowaną taksonomią (np. TLS 5+1)
+  number text DW6C448 rozpoznany, znormalizowany numer rejestracyjny
+  maker text BMW rozpoznana nazwa producenta
+  model text 4 rozpoznana wersja modelowa (jeżeli dostępna)
+  det_ok liczba +1 czy detekcja danego pojazdu jest poprawna ?
+  class_ok liczba +1 czy typ danego pojazdu został określony poprawnie ?
+  maker_ok liczba +1 czy producent danego pojazdu został określony poprawnie ?
+  anpr_ok liczba +1 czy numer rejestracyjny danego pojazdu został rozpoznany poprawnie ?
+  notice tekst uwagi (jeżeli dotyczą)
+W kolumnach det_ok , class_ok , maker_ok oraz anpr_ok wpisane wartości liczbowe są interpretowane następująco:
+  Wartość Znaczenie
+  +1 wskazana wartość jest poprawna, bierze udział w ocenie
+  -1 wskazana wartość jest niepoprawna, bierze udział w ocenie
+  0 dany rekord pomiarowy jest wykluczony z oceny
+Wzorzec takiej tabelki umieszczony jest jako Załącznik A do niniejszego dokumentu.

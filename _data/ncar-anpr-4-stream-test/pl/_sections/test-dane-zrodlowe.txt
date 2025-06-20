@@ -1,0 +1,12 @@
+Dane źródłowe
+Wymaga się, aby w trakcie testu zbierane były dane źródłowe generowane przez testowany system. Dla każdego zarejestrowanego przejazdu pojazdu dane te powinny zawierać:
+ Metadane :
+    sygnaturę czasową, z dokładnością co najmniej do 0.1 s,
+    unikatowy identyfikator miejsca wykonania pomiaru,
+    wynik rozpoznawania ANPR w formie testowej,
+    wynik rozpoznawania typu w formie testowej,
+    wynik rozpoznawania marki w firmie testowej.
+ Zdjęcia :
+    zdjęcie całego pola detekcji – cały kard z kamery ANPR,
+    wycinek zdjęcia zawierający przód pojazdu - pozwalający na ocenę poprawności rozpoznawania marki,
+    wycinek zdjęcia zawierający całą tablicę rejestracyjną (wraz z jej otoczeniem/ramką) – znaki w tym wycinku powinny mieć co najmniej 16 px.

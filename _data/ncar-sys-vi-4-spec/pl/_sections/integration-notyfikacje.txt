@@ -1,0 +1,2 @@
+Notyfikacje
+Zarówno terminal (kamera) jak i system centralny może aktywnie przekazywać informacje do systemów nadrzędnych wykorzystując mechanizm notyfikacji (ang. push technology ) w trybie asynchronicznym.

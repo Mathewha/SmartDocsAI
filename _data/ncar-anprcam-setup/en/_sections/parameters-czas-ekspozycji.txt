@@ -1,0 +1,6 @@
+Exposure time
+It is recommended that the exposure time meet the following requirements:
+ < 1000 ms – for access control systems and parking lot applications,
+ < 600 ms – for other applications.
+ Warning
+ It is recommended that the ANPR camera automatically adjust the exposure time according to the lighting conditions.

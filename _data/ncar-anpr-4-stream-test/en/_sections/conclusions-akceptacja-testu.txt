@@ -1,0 +1,2 @@
+Test acceptance
+The Customer accepts the test on the basis of the results of formal verification and substantive verification – acceptance means that the Provider has met all formal and substantive criteria contained in the requirements. Acceptance is required in writing.

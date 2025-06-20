@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. Devices &mdash; ncar-sys-vi-4-spec 4.0.5 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.pl/pro/ncar-sys-vi-4-spec/hardware.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5. Software" href="software.html" />
+    <link rel="prev" title="3. Design" href="construction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-sys-vi-4-spec
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.0.5
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="operation.html">1. Operating principle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">2. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="construction.html">3. Design</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Devices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#kamera-anpr">4.1. ANPR camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#smartcamera">4.2. Smartcamera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#smartphone">4.3. Smartphone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kontroler-cpu">4.4. CPU</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">5. Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">6. Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">7. Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">See also</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Downloads</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">User</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ncar-sys-vi-4-spec</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-sys-vi-4-spec</a></li>
+  
+
+  <li>&gt; <span class="section-number">4. </span>Devices</li>
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <a href=".//../../pl/hardware.html" class="nrs-lang">pl</a>
+      
+    
+      
+        <div class="nrs-lang-active">en</div>
+      
+    
+      
+        <a href=".//../../de/hardware.html" class="nrs-lang">de</a>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="urzadzenia">
+<span id="hardware"></span><h1><span class="section-number">4. </span>Devices<a class="headerlink" href="#urzadzenia" title="Permalink to this headline">¶</a></h1>
+<p>This chapter describes the key/specific devices for the vehicle identification system.</p>
+<div class="section" id="kamera-anpr">
+<span id="hardware-anpr-camera"></span><h2><span class="section-number">4.1. </span>ANPR camera<a class="headerlink" href="#kamera-anpr" title="Permalink to this headline">¶</a></h2>
+<img alt="anpr camera" src="_images/anprcamera.jpg" />
+<p>The ANPR camera is a digital camera that provides a video stream suitable for license plate detection and license plate recognition. This camera has specific features:</p>
+<ul class="simple">
+<li><p>image resolution of at least HD (1280×720p)</p></li>
+<li><p>high sensitivity of the CMOS sensor allowing good (bright) images at shutter speed ≤1 millisecond,</p></li>
+<li><p>the ability to provide both color (day) and monochrome (night) images,</p></li>
+<li><p>switchable “day / night” modes – switchable, mechanical infrared filter,</p></li>
+<li><p>motorized lens or a motorized CMOS sensor position control system that allows remote focusing without physical access to the camera,</p></li>
+<li><p>a good-quality infrared-corrected lens with a focal length that allows the field of view to be set to 1÷3 lanes, with automatic iris control,</p></li>
+<li><p>built-in infrared illuminator that allows proper operation at night (invisible light in the range of 850÷940 nm),</p></li>
+<li><p>encryption of the connection to the client software, using SSL/TLS and X.509 certificates,</p></li>
+<li><p>the ability to enforce authentication ( <code class="docutils literal notranslate"><span class="pre">user</span></code> | <code class="docutils literal notranslate"><span class="pre">pass</span></code>) by which it is protected from unauthorized use,</p></li>
+<li><p>H.264 video streaming with adjustable stream quality,</p></li>
+<li><p>built-in interface for diagnostics (SNMP),</p></li>
+<li><p>time synchronization capability, e.g. via NTP,</p></li>
+<li><p>specialized housing that reduces fogging of the windshield and has a shield against direct contact with sunlight,</p></li>
+<li><p>a suitable mounting bracket with precise adjustment of the camera position in at least 2 axes.</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The ANPR camera does not process the video stream, i.e. it has no built-in processor for data analysis.</p>
+</div>
+</div>
+<div class="section" id="smartcamera">
+<span id="hardware-smartcamera"></span><h2><span class="section-number">4.2. </span>Smartcamera<a class="headerlink" href="#smartcamera" title="Permalink to this headline">¶</a></h2>
+<img alt="smartcamera" src="_images/smartcamera.jpg" />
+<p>The smart camera has all the features of an ANPR camera, plus:</p>
+<ul class="simple">
+<li><p>has a built-in CPU on which the video stream is processed,</p></li>
+<li><p>has terminal functions, i.e. generates highly processed data (information on captured vehicles),</p></li>
+<li><p>has a local storage drive (SSD) on which it can collect and buffer data,</p></li>
+<li><p>is equipped with dedicated software (firmware)</p></li>
+</ul>
+</div>
+<div class="section" id="smartphone">
+<span id="hardware-smartphone"></span><h2><span class="section-number">4.3. </span>Smartphone<a class="headerlink" href="#smartphone" title="Permalink to this headline">¶</a></h2>
+<img alt="smartphone" src="_images/smartphone.jpg" />
+<p>A standard smartphone equipped with <em>NeuroCar Stream VI</em> software running on the Android operating system can also be a data source.</p>
+</div>
+<div class="section" id="kontroler-cpu">
+<span id="hardware-cpu"></span><h2><span class="section-number">4.4. </span>CPU<a class="headerlink" href="#kontroler-cpu" title="Permalink to this headline">¶</a></h2>
+<img alt="cpu" src="_images/cpu.jpg" />
+<p>The CPU controller is an industrial computer, mounted in a telecommunications cabinet, whose task is to process the video stream from ANPR cameras, buffer the data, and then send it to the central BackOffice system. This computer has the following features:</p>
+<ul class="simple">
+<li><p>industrial design, without moving parts – no fans, convection heat dissipation,</p></li>
+<li><p>is ready to work in an extended temperature range,</p></li>
+<li><p>is resistant to vibration,</p></li>
+<li><p>is sufficiently powerful (Intel i5 or i7 class processor, appropriate RAM size),</p></li>
+<li><p>has built-in storage - disk (SSD)</p></li>
+<li><p>has a number of communication interfaces (ETH, RS-232/485, GPIO, USB2, USB3, HDMI/DVI),</p></li>
+<li><p>has the ability to extend with a communication modem (miniPCIe) or a dedicated PCIe expansion card,</p></li>
+<li><p>is powered by DC voltage in the range of 12÷24V DC.</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="software.html" class="btn btn-neutral float-right" title="5. Software" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="construction.html" class="btn btn-neutral float-left" title="3. Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, NeuroCar Sp. z o.o., All rights reserved (www.neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+Sample
+In order to obtain a statistically reliable result for the test values, it is expected that the test sample size must be no smaller than 1,200 vehicles.
+This sample should be divided into three sub-sets:
+ DAM500 – 500 vehicles registered during the day, before noon,
+ DPM500 – 500 vehicles registered during the day, in the afternoon,
+ N200 – 200 vehicles registered at night.
+Day should be understood as the period from the beginning of the astronomical day (astronomical sunrise) +1 hour, to the end of the astronomical day (astronomical sunset) -1 hour. Night should be understood as the period of 2 hours after astronomical sunset and up to 2 hours before astronomical sunrise.
+The phrase before noon means at least 1 hour before astronomical noon while the phrase after noon means at least 1 hour after astronomical noon. The determination of astronomical sunrise, sunset and noon is made on the basis of information about the measurement location and the relevant astronomical tables. The calculated values are entered into the test protocol.

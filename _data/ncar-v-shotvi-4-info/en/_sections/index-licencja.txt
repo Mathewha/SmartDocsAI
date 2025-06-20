@@ -1,0 +1,4 @@
+License
+The shot-vi module is licensed per instance, i.e. a separate license is required for each running process. The exception may be that additional provisions in the license agreement state otherwise.
+Each copy of the module (license) is associated with a unique serial number and a corresponding digital certificate generated for it in accordance with the X.509 standard. The serial number is added to the results of the module and has, for example, the form:
+  ncar-v-shotvi-04a00001

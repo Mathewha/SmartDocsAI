@@ -1,0 +1,38 @@
+.. image:: _static/img/ncar-logo-mono.svg
+   :align: right
+
+=============================================
+NeuroCar System VI - Specyfikacja techniczna
+=============================================
+
+Wersja ``PL`` |version| wydana dnia |today|.
+
+
+.. figure:: _static/img/vi-logo.png
+   :width: 100%
+
+.. include:: summary.rst
+
+------------------
+
+.. toctree::
+   :caption: Spis treści
+   :numbered:
+   :maxdepth: 3
+
+   operation
+   functions
+   construction
+   hardware
+   software
+   data
+   integration
+
+.. toctree::
+   :caption: Dodatki
+   :maxdepth: 3
+
+   zextern
+   changelog
+   license
+   seealso

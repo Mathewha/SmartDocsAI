@@ -1,0 +1,4 @@
+Notifications
+The system can be configured to send notifications (e.g., information about events such as a wanted vehicle) using:
+ e-mail (SMTP e-mail server must be available),
+ SMS (an SMS gateway must be available).

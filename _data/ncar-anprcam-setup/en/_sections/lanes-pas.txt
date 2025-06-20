@@ -1,0 +1,3 @@
+1 lane
+An ANPR camera covering a single lane can be installed either within the lane or at its edge:
+Make sure that the front of the vehicle is visible long enough in the field of view of the cameras - this means that the FoV should be mainly wider than the lane (about 2 times).

@@ -1,0 +1,12 @@
+CameraRecording
+Rekord pomiarowy CameraRecording zawiera nagranie wideo z danej kamery, w postaci pliku MP4 skompresowanego kompresją H.264 . Parametry strumienia wideo można konfigurować w zależności od potrzeb.
+  Właściwość Wartość
+  Typ CameraRecording
+  Format TAR → MPEG4 (kolor) + JSON
+  Wymiary 640 × 360 px
+  Jakość 2 fps, H.264 MPEG-4 AVC
+  Rozmiar 2.0 MB / 2 min (szacunkowy)
+  Transfer up kamera → chmura (opcjonalnie)
+  Częstość co 2 min
+ Uwaga
+ Tworzenie rekordów pomiarowych typu CameraRecording jest standardowo nieaktywne.

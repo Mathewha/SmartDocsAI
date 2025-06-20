@@ -1,0 +1,24 @@
+Variants
+Variants of the shot-vi module include:
+ processor,
+ The maximum number of threads – simultaneously processed images,
+ system platform,
+ country of origin of the vehicle.
+By system and processor, the breakdown is as follows:
+  Var. Processor Threads Instr. set System Prefix
+  A0 x86 64-bit ∞ SSE 4.2 Linux ncar-v-shotvi-4a0
+  A4 x86 64-bit ≤4 SSE 4.2 Linux ncar-v-shotvi-4a4
+  B0 x86 64-bit ∞ SSE 4.2 Windows 64-bit ncar-v-shotvi-4b0
+  B4 x86 64-bit ≤4 SSE 4.2 Windows 64-bit ncar-v-shotvi-4b4
+  C4 ARM 64-bit ≤4 neon Linux ncar-v-shotvi-4c4
+ Attention
+ The module uses special commands of the type SIMD specific to the type of processors. Using a processor that does not have the above-mentioned types of commands implemented will result in the module not working.
+Variants specifying acceptable countries of origin are denoted by an additional suffix. The country of origin of the vehicle is determined based on geometric features and the contents of the license plate. The system is adapted for simultaneous recognition of numbers from multiple countries, but the user must select one of the following regions – recognition is limited to countries from this region only:
+  Suffix Meaning
+  AFRI Africa (some countries)
+  AMEC Central America (some countries – MX )
+  AMEN North America (USA and Canada – in preparation)
+  AMES South America (some countries)
+  ASIA Asia (some countries – in preparation)
+  EURO Europe
+  MIDE Middle East (some countries)

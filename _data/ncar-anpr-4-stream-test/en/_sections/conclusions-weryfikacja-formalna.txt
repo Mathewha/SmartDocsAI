@@ -1,0 +1,7 @@
+Formal verification
+Formal verification is carried out by the Customer upon receipt of the report, and consists of:
+ Verification of data completeness (video + raw data),
+ Verification of data compliance with the procedure – evaluation of sample selection,
+ Verification of data submission deadlines.
+If at the stage of formal verification the Customer discovers inaccuracies, they should be clarified by the Provider in writing.
+Finally, the Customer informs the Provider that the submitted materials were accepted / rejected for formal reasons.

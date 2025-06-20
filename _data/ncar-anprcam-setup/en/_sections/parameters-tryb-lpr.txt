@@ -1,0 +1,2 @@
+LPR mode
+It is recommended that the cameras operate in LPR mode 24 hours a day:

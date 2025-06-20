@@ -1,0 +1,7 @@
+.. _appendix_a:
+
+=============
+Załącznik A
+=============
+
+Przykładowa tabela z zestawieniem wyników pomiarowych `ncar-stream-test.xlsx <_static/data/ncar-stream-test.xlsx>`_.

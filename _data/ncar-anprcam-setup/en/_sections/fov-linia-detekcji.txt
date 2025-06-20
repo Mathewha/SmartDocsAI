@@ -1,0 +1,3 @@
+Detection line
+A detection line is a virtual horizontal line in the field of view (FoV) that indicates where the expected license plate detection should occur. Most often it is the line in the middle of the height of the FoV:
+The requirements listed in the following subsections apply to the parameters of the license plate located on the detection line.

@@ -1,0 +1,4 @@
+Tilt
+When setting up the ANPR camera, pay attention to proper leveling - the longer edge of the license plate should be parallel to the horizontal edge of the camera’s field of view:
+It is recommended that the angle of the be within the range of , but it must be within the range:
+To achieve this, you may need to use special camera mounting brackets or camera leveling pads.

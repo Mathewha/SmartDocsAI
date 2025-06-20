@@ -1,0 +1,3 @@
+Marka i model
+EXTENDED
+Polega na automatycznym rozpoznaniu producenta oraz jego wersji modelowej wyłącznie na podstawie zdjęcia pojazdu. Algorytm działa dla zdjęć wykonanych z przodu oraz z tyłu pojazdu – tak, aby była widoczna tablica rejestracyjne. Wynik rozpoznawania to dwie etykiety tekstowe: nazwa producenta + nazwa modelu , przykładowo audi + q5 . System rozpoznaje ~140 różnych producentów oraz niemal 1900 różnych modeli.

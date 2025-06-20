@@ -1,0 +1,9 @@
+CameraViews
+The CameraViews measurement record contains a camera image taken at a specific time, which is transmitted from the camera to the central system for preview purposes. The size and quality of the transmitted image can be adjusted; the following parameters were adopted as standard:
+  Property Value
+  Type CameraViews
+  Format TAR → JPEG (color) + JSON
+  Dimensions 1280 × 720 px (for HD camera)
+  Quality 70%
+  Size 120 kB (estimated)
+  Transfer up camera → cloud

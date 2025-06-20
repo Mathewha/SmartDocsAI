@@ -1,0 +1,8 @@
+Warunki
+Zakłada się, że system powinien identyfikować pojazdy na oczekiwanym poziomie jakości o dowolnej porze dnia i nocy (z wyjątkiem rozpoznawania marki, gdzie dopuszczalne jest działanie jedynie w dzień) w dowolnych warunkach atmosferycznych. Wyjątkiem są jednak sytuacje, gdy nastąpi jeden z czynników:
+ znacząca liczba pojazdów porusza się z prędkością spoza dopuszczalnego zakresu (np. przejazd z korku),
+ występuje opad śniegu,
+ temperatura powietrza w otoczeniu spada poniżej 0° C, co może doprowadzić do oblodzenia tablic i redukcji ich czytelności,
+ występuje silna anomalia atmosferyczna w postaci burzy z gradobiciem,
+ występuje silna anomalia atmosferyczna w postaci burzy piaskowej.
+Jeżeli w trakcie testu wystąpi dowolny z powyższych czynników test powinien być zawieszony i przesunięty na kolejny dogodny termin.

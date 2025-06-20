@@ -1,0 +1,3 @@
+Zapis wideo
+Wymaga się, aby w trakcie prowadzenia testu zapisywany był materiał wideo obejmujący co najmniej całe pole widzenia kamery ANPR. Wideo powinno być zapisywane w postaci cyfrowej, w formie skompresowanej (H.264), w rozdzielczości co najmniej 640 × 360, 25 klatek na sekundę). Referencyjny zapis wideo może pochodzi bezpośrednio z kamery ANPR ew. z kamery umieszczonej w pobliżu, skierowanej na pole pomiarowe.
+Zakłada się, że zapis wideo powinien być ciągły w całym okresie testu cząstkowego. Dopuszcza się, że w materiale wideo wystąpią luki jednak nie mogą one przekraczać więcej niż 1% wymaganego czasu nagrania, z długość jednej luki nie może przekraczać 0.5 s.

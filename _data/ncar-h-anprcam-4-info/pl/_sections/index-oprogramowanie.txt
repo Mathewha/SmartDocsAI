@@ -1,0 +1,11 @@
+Oprogramowanie
+  Element Opis
+  Firmware NeuroCar Terminal VI ( Vehicle Identification ) [2]
+  Wersja 4.0
+  GUI tak, przeglądarka WEB (HTML5)
+  API tak, REST
+  Szyfrowanie tak, SSL (HTTPs)
+  Uwierzytelnianie HTTP: basic, digest, token
+  Formaty danych JSON, JPG, TAR
+  Alerty tak, pojazdy wybrane na podstawie ich cech
+  Powiadomienia notyfikacja HTTP post , każdy pojazd lub / i alert

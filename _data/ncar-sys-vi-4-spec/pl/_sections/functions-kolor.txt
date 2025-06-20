@@ -1,0 +1,11 @@
+Kolor
+EXTENDED
+Polega na automatycznym oszacowaniu koloru pojazdu na podstawie obrazu przodu. Wyznaczanie koloru działa wyłącznie dla zdjęć dziennych, w momencie gdy kamera pracuje w trybie kolorowym. Rozpoznawanie koloru może być zaburzone przez mechanizm „równoważenia beli” i jest zależne od użytego typu kamery. Wynik działania rozpoznawania to nazwa koloru podstawowego:
+  Kod Znaczenie
+  yellow żółty
+  red czerwony
+  green zielony
+  blue niebieski
+  black czarny
+  grey szary
+Dodatkowo, do koloru podstawowego są dodawane modyfikacje dark → „ciemny”, oraz light → „jasny”.

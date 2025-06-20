@@ -1,0 +1,2 @@
+Import
+System centralny BackOffice posiada możliwość podłączenia zewnętrznych źródeł danych (np. danych z kamer ANPR firm trzecich) poprzez moduły Importer (ang. pulling ) lub moduł Receiver (ang. pushing ). Zadaniem tych modułów jest przekształcenie danych do zunifikowanej postaci zgodnej ze specyfikacją API .

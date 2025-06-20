@@ -1,0 +1,2 @@
+BackOffice
+Oprogramowanie dla systemu centralnego działa w chmurze pod kontrolą środowiska Kubernetes . Oprogramowanie ma konstrukcje modułową, która pozwala na elastyczne dopasowanie architektury do potrzeb użytkownika. W poniższych punktach wymieniono najważniejsze aplikacje.

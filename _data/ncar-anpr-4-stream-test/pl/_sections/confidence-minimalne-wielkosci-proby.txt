@@ -1,0 +1,3 @@
+Minimalne wielkości próby
+Na podstawie [1] wiadomo, że przy ocenie wskazanego współczynnika jakościowego, dla wybranego poziomu ufności, w trakcie testu muszą być uwzględnione co najmniej następujące ilości pojazdów:
+  Oczekiwana jakość Maksymalny błąd Liczba pojazdów Liczba pojazdów

@@ -1,0 +1,6 @@
+Procedure
+The test will be conducted in three stages, separately for the DAM500 , DPM500 and N200 sub-sets.
+In the first step, the time for performing the test for each sample must be specified. Then, at the specified time, at least as many vehicles as provided for each sample should be registered consecutively, with the proviso that if an unidentifiable vehicle appears during registration (in any of the evaluated criteria) then the sample will be increased by one.
+All vehicles excluded from the test must be included in the test report (in the form of a photo), and in addition, for each such case it is necessary to comment on what basis the exclusion was decided.
+Each vehicle in the sample must have its own unique sequence number, and all vehicles in the sample must be numbered monotonically increasing with respect to time.
+Shortly after the collection of a given sample, the source data and video recording should be digitally signed (the time signature of the signature is important here) and forwarded to the verification committee, with the time from the completion of the sample recording to the handover of the printed documentation not to exceed three hours, under the sanction of classifying the sample as “wholly misrecognized”.

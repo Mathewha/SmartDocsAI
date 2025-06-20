@@ -1,0 +1,3 @@
+Make and model
+EXTENDED
+It consists of automatically recognizing the manufacturer and its model version based solely on a photo of the vehicle. The algorithm works for photos taken from the front and rear of the vehicle - so that the license plate is visible. The recognition result is two text labels: manufacturer name + model name , for example audi + q5 . The system recognizes ~140 different manufacturers and nearly 1,900 different models.

@@ -1,0 +1,9 @@
+Lane
+BASIC
+Traffic lanes are determined by indicating the line of separation between lanes in the camera frame. At the configuration stage, you can define the number of lanes the camera observes (1÷4). A label is also attached to each lane: L0 , L1 , L2 …, which is then used in the measurement metadata. The following convention is applied:
+  Code Meaning
+  L0 shoulder (mostly non-existent)
+  L1 slow lane, in Europe the rightmost (always present)
+  L2 “overtaking” lane, in Europe to the left of the L1 lane (may not be present)
+  L3 “overtaking” lane, in Europe to the left of the L2 lane (may not be present)
+For countries with left-hand traffic, the convention is similar except that the L1 lane is the leftmost lane.

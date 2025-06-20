@@ -1,0 +1,8 @@
+Results
+The detection, identification and classification quality will be determined for all measurements combined. In the case of evaluating maker recognition performance, a 1000-element sample formed by concatenating DAM500 and DPM500 samples should be taken.
+The results should be tabulated with an indication:
+ how many vehicles from a given sample were included in the evaluation
+ how many vehicles have correctly recognized parameters,
+ what is the average value of a given quality factor,
+ what is the statistically reliable value of a given quality factor.
+An example of the final statement is shown below:

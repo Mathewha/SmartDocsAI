@@ -1,0 +1,5 @@
+Detection
+BASIC
+It consists of automatic detection of the vehicle passing within the camera’s field of view ( free-flow ). The camera should be positioned in such a way that the license plate number can be read. Detection works for vehicles observed from both the front and rear, regardless of the driving direction. The detector selects from the video stream one shot (snapshot) in which the detected vehicle is most clearly visible → it has a legible license plate and the image of the driver can be seen.
+EXTENDED
+In the extended configuration, it is possible to detect vehicles without a license plate, or whose plate is unrecognizable - such a mechanism is called VLOOP → virtual loop .

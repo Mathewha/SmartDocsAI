@@ -1,0 +1,14 @@
+Classification quality
+Classification quality, or vehicle type recognition quality , is a measure quantifying (in percentage terms) the ratio of the number of correctly recognized vehicle types to the number of all classifiable vehicles that passed through the detection area within a specified time, at the correct speed and in the direction according to the system’s configuration (in particular, the system can be adapted to recognize in a given detection area vehicle types coming from one specific direction):
+The number of vehicles that can be classified in a specific series of vehicles is determined by an expert during the test. Vehicles are not taken into account:
+ bicycles,
+ mopeds,
+ light wooden vehicles (such as a carriage),
+ road machinery like rollers, milling machines, etc.,
+ vehicles that the expert is unable to assign to any of the classes recognized by the system.
+The system must be able to recognize the following classes of vehicles:
+ personal car
+ LCV (light commercial vehicle)
+ trucks (vehicles with GVW >3.5 tons and truck tractors),
+ buses
+ other

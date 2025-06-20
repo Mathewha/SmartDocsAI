@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pl" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pl" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Budowa &mdash; ncar-sys-vi-4-spec 4.0.5 - dokumentacja</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.pl/pro/ncar-sys-vi-4-spec/construction.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="4. Urządzenia" href="hardware.html" />
+    <link rel="prev" title="2. Funkcje" href="functions.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-sys-vi-4-spec
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.0.5
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Spis treści</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="operation.html">1. Zasada działania</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">2. Funkcje</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Budowa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#przetwarzanie-w-chmurze">3.1. Przetwarzanie w chmurze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#przetwarzanie-lokalne">3.2. Przetwarzanie lokalne</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#przetwarzanie-w-kamerze">3.3. Przetwarzanie w kamerze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#przetwarzanie-hybrydowe">3.4. Przetwarzanie hybrydowe</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">4. Urządzenia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">5. Oprogramowanie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">6. Dane</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">7. Integracja</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dodatki</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">Odesłania</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Zmiany</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Licencja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">Zobacz także</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Do pobrania</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">Użytkownik</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ncar-sys-vi-4-spec</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-sys-vi-4-spec</a></li>
+  
+
+  <li>&gt; <span class="section-number">3. </span>Budowa</li>
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <div class="nrs-lang-active">pl</div>
+      
+    
+      
+        <a href=".//../../en/construction.html" class="nrs-lang">en</a>
+      
+    
+      
+        <a href=".//../../de/construction.html" class="nrs-lang">de</a>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="budowa">
+<span id="construction"></span><h1><span class="section-number">3. </span>Budowa<a class="headerlink" href="#budowa" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<p>System może pracować w różnych konfiguracjach, w których kluczowy element przetwarzania – analiza strumienia wideo – realizowane jest w różnych miejscach. Użytkownik może wybrać najbardziej dogodną dla siebie konfigurację spośród opisanych w następnych punktach.</p>
+<div class="section" id="przetwarzanie-w-chmurze">
+<span id="construction-cloud-computing"></span><h2><span class="section-number">3.1. </span>Przetwarzanie w chmurze<a class="headerlink" href="#przetwarzanie-w-chmurze" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<img alt="cloud computing" src="_images/ncar-sys-arch-1.svg" /><p>W takiej konfiguracji w miejscu detekcji (na drodze) montowane są kamery dostarczające strumień wideo do systemu centralnego. Kamery te przystosowane są do detekcji i identyfikacji pojazdów (typ: <em>kamera ANPR</em>) jednak ze względu na to, że nie analizują wideo muszą być podłączone do systemu centralnego relatywnie dobrym i szerokim łączem komunikacyjnym – o przepustowości rzędu kilku Mb/s.</p>
+<p>Strumień z kamery trafia do aplikacji działającej w chmurze <em>NeuroCar Stream VI</em> – dla każdej kamery uruchomiona jest oddzielna instancja silnika <em>stream</em>, który analizuje strumień i przesyła dalej (do <em>BackOffice</em>) wyłącznie informacje o wykrytych pojazdach (rekord danych <em>VehicleTrace</em>). Dostęp do danych pomiarowych możliwy jest wyłącznie poprzez <em>BackOffice</em>; albo poprzez odpowiednią aplikację GUI albo poprzez rozsyłanie powiadomień.</p>
+<p>Dzięki wykorzystaniu technologii <a class="reference external" href="https://pl.wikipedia.org/wiki/Kubernetes">Kubernetes</a> rozwiązanie takie można uruchomić praktycznie w każdej chmurze (albo w prywatnej → <em>on premise</em>, albo u zewnętrznego dostawcy usług chmurowych). Ponadto bardzo łatwo jest skalowanie – zwiększenie liczby kamer realizuje się wyłącznie przez dodanie węzłów roboczych w klastrze.</p>
+</div>
+<div class="section" id="przetwarzanie-lokalne">
+<span id="construction-fog-computing"></span><h2><span class="section-number">3.2. </span>Przetwarzanie lokalne<a class="headerlink" href="#przetwarzanie-lokalne" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<img alt="fog computing" src="_images/ncar-sys-arch-2.svg" /><p>W takiej konfiguracji w miejscu detekcji (na drodze) montowane są kamery dostarczające strumień wideo, a także jednostki obliczeniowe - <em>Terminale</em> - dokonujące przetworzenia strumienia wideo „na miejscu”. Terminal wyposażony jest w przemysłowy komputer obliczeniowy CPU o odpowiedniej mocy, lokalny nośnik danych (np. dysk SSD) pozwalający na buforowanie danych oraz urządzenia komunikacyjne (np. modem) pozwalające na skomunikowanie się z systemem centralnym. Terminal może także zbierać inne dane takie jak informacje środowiskowe np. temperatura, napięcie zasilania itp. Komputer CPU, sprzęt sieciowy oraz układ zasilania umieszczane są w szafie teletechnicznej montowanej w pobliżu miejsca detekcji. Sygnał kamer doprowadzany jest do szafy połączeniem cyfrowym (kabel UTP, światłowód).</p>
+<p>Przetwarzanie lokalne pozwala na znaczące zredukowanie rozmiaru danych, które wysyłane są za pośrednictwem sieci WAN. Terminal wysyła do systemu BackOffice wyłącznie wyselekcjonowane informacje o wykrytych pojazdach oraz dane statusowe. Tak skonfigurowany system jest odporny na zaburzenia w sieci transmisji danych – przerwa w transmisji nie powoduje utraty informacji o pojazdach. Zbuforowane dane mogą czekać na dostarczenie do centrali nawet wiele dni.</p>
+<p>Dodatkową zaletą przetwarzania lokalnego jest możliwość efektywnej fuzji danych z wielu sensorów, np. przetwarzanie strumienia z wielu kamer oraz detekcji ze sterownika pętli indukcyjnych. W takiej sytuacji właśnie Terminal odpowiedzialny jest za właściwe podłączenie danych z sensorów i uformowanie rekordu pomiarowego reprezentującego pojedynczy pojazd.</p>
+<p>Ważną cechą przetwarzania lokalnego jest możliwość bezpośredniej pracy użytkownika na terminalu, bez pośrednictwa systemu centralnego. Przez to użytkownik na dostęp do danych natychmiast – bez potencjalnego opóźnienia generowanego przez łącza transmisji danych. Do pracy z terminalem użytkownik musi wykorzystać dodatkowy komputer i przeglądarkę internetową.</p>
+<p>Wszystkie dane generowane przez wiele terminali trafiają ostatecznie do systemu centralnego BackOffice. Z poziomu tego systemu użytkownik (ew. system zewnętrzny) ma dostęp do kompletu danych, zarówno bieżących jak i archiwalnych.</p>
+</div>
+<div class="section" id="przetwarzanie-w-kamerze">
+<span id="construction-edge-computing"></span><h2><span class="section-number">3.3. </span>Przetwarzanie w kamerze<a class="headerlink" href="#przetwarzanie-w-kamerze" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<img alt="edge computing" src="_images/ncar-sys-arch-3.svg" /><p>W takiej konfiguracji w miejscu detekcji (na drodze) montowane są inteligentne kamery, wyposażone w zmotoryzowany obiektyw oraz wbudowany promiennik podczerwieni, zaopatrzone we wbudowany komputer jednoukładowy przetwarzający strumień wideo. Dodatkowo, inteligentna kamera ma wbudowany nośnik danych (dysk SSD) pozwalający na buforowanie pomiarów, oraz modem – wszystko w jednej zwartej obudowie.</p>
+<p>Inteligentna kamera funkcjonalnie odpowiada konfiguracji terminala jest jednak bardziej zwarta i mniejsza, przez to łatwiejsza w instalacji, uruchomieniu i konserwacji. Wadą inteligentnej kamery jest bardzo ograniczona możliwość tworzenia wielosensorycznych układów pomiarowych co powoduje, że najczęściej wykorzystywana jest wówczas, gdy użytkownik potrzebuje wyłącznie funkcjonalności identyfikacji pojazdów „z jednego ujęcia”. Zaletą inteligentnej kamery jest możliwość przetwarzania obrazów bez zniekształceń (np. bez kompresji) co wynika z faktu, że wbudowany w kamerze procesor CPU jest fizycznie zintegrowany z torem wizyjnym.</p>
+<p>Innym urządzeniem realizującym koncepcję natychmiastowego przetwarzania jest smartphone będący jednocześnie kamerą oraz jednostką przetwarzania. Telefon taki, podobnie jak inteligentna kamera, analizuje strumień video, wykrywa pojazdy, identyfikuje je i przesyła wynik od razu do systemu centralnego.</p>
+</div>
+<div class="section" id="przetwarzanie-hybrydowe">
+<span id="construction-hybrid-computing"></span><h2><span class="section-number">3.4. </span>Przetwarzanie hybrydowe<a class="headerlink" href="#przetwarzanie-hybrydowe" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>W takiej konfiguracji, w ramach jednego systemu może byc wykorzystywane przetwarzanie w chmurze, przetwarzanie lokalne oraz inteligentne kamery. Użytkownik otrzymuje do dyspozycji – z poziomu systemu centralnego – zunifikowany, kompletny zestaw danych pomiarowych ze wszystkich urządzeń.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="hardware.html" class="btn btn-neutral float-right" title="4. Urządzenia" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="functions.html" class="btn btn-neutral float-left" title="2. Funkcje" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, NeuroCar Sp. z o.o., All rights reserved (www.neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

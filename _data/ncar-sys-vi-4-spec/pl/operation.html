@@ -1,0 +1,257 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pl" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pl" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Zasada działania &mdash; ncar-sys-vi-4-spec 4.0.5 - dokumentacja</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.pl/pro/ncar-sys-vi-4-spec/operation.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="2. Funkcje" href="functions.html" />
+    <link rel="prev" title="NeuroCar System VI - Specyfikacja techniczna" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-sys-vi-4-spec
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.0.5
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Spis treści</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Zasada działania</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">2. Funkcje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="construction.html">3. Budowa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">4. Urządzenia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">5. Oprogramowanie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">6. Dane</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">7. Integracja</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dodatki</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">Odesłania</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Zmiany</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Licencja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">Zobacz także</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Do pobrania</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">Użytkownik</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ncar-sys-vi-4-spec</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-sys-vi-4-spec</a></li>
+  
+
+  <li>&gt; <span class="section-number">1. </span>Zasada działania</li>
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <div class="nrs-lang-active">pl</div>
+      
+    
+      
+        <a href=".//../../en/operation.html" class="nrs-lang">en</a>
+      
+    
+      
+        <a href=".//../../de/operation.html" class="nrs-lang">de</a>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="zasada-dzialania">
+<span id="operation"></span><h1><span class="section-number">1. </span>Zasada działania<a class="headerlink" href="#zasada-dzialania" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<p>System <strong>NeuroCar – Vehicle Identification</strong> (<em>NeuroCar VI</em>) służy automatycznej detekcji i identyfikacji pojazdów poprzez analizę strumienia wideo dostarczanego przez kamerę. Podstawowym sposobem identyfikacji jest rozpoznanie tablicy rejestracyjnej – w wersji rozszerzonej możliwe jest także automatyczne rozpoznanie kategorii pojazdu, jego marki (wersji modelowej), prędkości oraz kraju pochodzenia.</p>
+<img alt="system" src="_images/ncar-vi-sys.png" />
+<p>Pojazd przejeżdżający w polu widzenia kamery jest automatycznie wykrywany, a następnie w różnych momentach (ujęciach) wykrywana i odczytywana jest tablica rejestracyjna. W rezultacie do pamięci systemu trafia rekord pomiarowych zawierający zdjęcie pojazdu oraz różnego typu dane pozyskane z analizy obrazu.</p>
+<p>Dane zebrane przez urządzenia pomiarowe przechowywane są w systemie centralnym (<em>BackOffice</em>) zainstalowanym w chmurze, przy pomocy którego użytkownicy mogą te dane wygodnie przeszukiwać i analizować. System centralny posiada także funkcje diagnostyczne usprawniające kontrolowanie poprawności działania infrastruktury pomiarowej.</p>
+<p>Dzięki modułowej budowie oraz wykorzystaniu otwartych protokołów możliwa jest łatwa integracja – użytkownicy mogą dodawać własne źródła danych lub mogą przyłączać do systemu własne procesy wykorzystujące informacje zbierane w systemie centralnym – poprzez <a class="reference external" href="https://pl.wikipedia.org/wiki/WebAPI">WEB API</a>.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="functions.html" class="btn btn-neutral float-right" title="2. Funkcje" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="NeuroCar System VI - Specyfikacja techniczna" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, NeuroCar Sp. z o.o., All rights reserved (www.neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

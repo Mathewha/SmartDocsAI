@@ -1,0 +1,24 @@
+Warianty
+Warianty modułu shot-vi uwzględniają:
+ procesor,
+ maksymalną liczbę wątków – równocześnie przetwarzanych obrazów,
+ platformę systemową,
+ kraj pochodzenia pojazdu.
+Ze względu na system i procesor podział jest następujący:
+  War. Procesor Wątki Rozkazy System Prefiks
+  A0 x86 64-bit ∞ SSE 4.2 Linux ncar-v-shotvi-4a0
+  A4 x86 64-bit ≤4 SSE 4.2 Linux ncar-v-shotvi-4a4
+  B0 x86 64-bit ∞ SSE 4.2 Windows 64-bit ncar-v-shotvi-4b0
+  B4 x86 64-bit ≤4 SSE 4.2 Windows 64-bit ncar-v-shotvi-4b4
+  C4 ARM 64-bit ≤4 neon Linux ncar-v-shotvi-4c4
+ Uwaga
+ Moduł wykorzystuje specjalne rozkazy typu SIMD specyficzne dla danego typu procesorów. Zastosowanie procesora, który nie posiada zaimplementowanych, wskazanych powyżej typów rozkazów powoduje, że moduł nie będzie działać.
+Warianty określające dopuszczalne kraje pochodzenia są oznaczane dodatkowym sufiksem. Kraj pochodzenia pojazdu określany jest na podstawie cech geometrycznych oraz zawartości tablicy rejestracyjnej. System przystosowany jest do jednoczesnego rozpoznawania numerów z wielu krajów, jednak użytkownik musi wybrać jeden z poniższych regionów – rozpoznawanie jest ograniczone do krajów tylko z tego regionu:
+  Sufiks Znaczenie
+  AFRI Afryka (niektóre kraje)
+  AMEC Ameryka Środkowa (niektóre kraje – MX )
+  AMEN Ameryka Północna (USA i Kanada – w przygotowaniu)
+  AMES Ameryka Południowa (niektóre kraje)
+  ASIA Azja (niektóre kraje – w przygotowaniu)
+  EURO Europa
+  MIDE Bliski Wschód (niektóre kraje)

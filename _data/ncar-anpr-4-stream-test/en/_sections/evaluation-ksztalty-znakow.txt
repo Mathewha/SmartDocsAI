@@ -1,0 +1,8 @@
+Character shapes
+When assessing the correctness of license plate recognition, ambiguities may arise due to the quality of the image being verified, such as the problem in determining the correct sign for couples:
+ 0 ↔ O
+ I ↔ 1
+ S ↔ 5
+ 2 ↔ Z
+ 6 ↔ G
+In such cases, the correctness of the recognition should be indicated in an irrefutable manner, for example, by verification in an official database where the data of the analyzed vehicle can be found. If it is not possible to determine the correct recognition of a given sign, such a case should be excluded from the evaluation.

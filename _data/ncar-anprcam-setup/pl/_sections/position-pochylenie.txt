@@ -1,0 +1,4 @@
+Pochylenie
+Podczas konfigurowania kamery ANPR zwracaj uwagę na prawidłowe wypoziomowanie - dłuższa krawędź tablicy rejestracyjnej powinna być równoległa do poziomej krawędzi pola widzenia kamery:
+Zaleca się, aby kąt nachylenia mieścił się w zakresie , ale musi być w zakresie:
+Aby to osiągnąć, może być konieczne użycie specjalnych uchwytów montażowych do kamer lub podkładek poziomujących kamery.

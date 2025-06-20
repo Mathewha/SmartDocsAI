@@ -1,0 +1,7 @@
+Weryfikacja formalna
+Weryfikacja formalna realizowana jest przez Zamawiającego po otrzymaniu raportu, i polega na:
+ Weryfikacji kompletności danych (wideo + dane surowe),
+ Weryfikacji zgodności danych z procedurą – ocena wyboru prób,
+ Weryfikacji terminów przekazania danych.
+Jeżeli na etapie weryfikacji formalnej Zamawiający odkryje nieścisłości powinny one zostać wyjaśnione przez Wykonawcę w formie pisemnej.
+Ostatecznie Zamawiający informuje Wykonawcę, że przedstawione materiały zostały zaakceptowane / odrzucone z powodów formalnych.

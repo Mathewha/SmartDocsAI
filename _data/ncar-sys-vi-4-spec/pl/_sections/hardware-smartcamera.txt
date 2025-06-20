@@ -1,0 +1,6 @@
+Smartcamera
+Kamera inteligentna posiada wszystkie własności kamery ANPR, a ponadto:
+ posiada wbudowaną jednostkę obliczeniową CPU, na której przetwarzany jest strumień wideo,
+ posiada funkcje terminala, tzn. generuje wysokoprzetworzone dane (informacje o zarejestrowanym pojazdach),
+ posiada lokalny dysk (SSD), na którym może gromadzić i buforować dane,
+ wyposażona jest w dedykowane oprogramowanie (firmware)

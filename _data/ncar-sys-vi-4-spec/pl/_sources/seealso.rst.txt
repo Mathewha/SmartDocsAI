@@ -1,0 +1,9 @@
+.. _seealso:
+
+=============
+Zobacz także
+=============
+
+Niniejszy dokument jest dostępny on-line pod adresem https://docs.neurocar.pl/prod/ncar-sys-vi-4-spec/.
+
+.. image:: _static/img/qr-code.svg

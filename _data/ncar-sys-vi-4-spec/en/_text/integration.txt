@@ -1,0 +1,14 @@
+ API
+Use of terminal (camera) as well as central system functions possible through the RestAPI interface, for which the full specification – NeuroCar API – is available free of charge at:
+  https://gitlab.com/ncar-tools/04/api
+The various functions of the system (e.g., data access, measurement record format, user management) are described using the OpenAPI 3 standard.
+ Notifications
+Both the terminal (camera) and the central system can actively transmit information to master systems using the notification mechanism ( push technology ) in asynchronous mode.
+  Data
+ All data records (measurements, camera images, status) can be sent via the HTTP(s) protocol using GET , PUT or POST commands. The content of the data record is appended to the message in the form of a TAR file, which includes all elements such as metadata along with images.
+  Notifications
+ The system can be configured to send notifications (e.g., information about events such as a wanted vehicle) using:
+  e-mail (SMTP e-mail server must be available),
+  SMS (an SMS gateway must be available).
+ Import
+The BackOffice central system has the ability to connect external data sources (e.g., data from third-party ANPR cameras) via Importer ( pulling ) or Receiver ( pushing ) modules. The task of these modules is to transform the data into a unified form compliant with the API specification.

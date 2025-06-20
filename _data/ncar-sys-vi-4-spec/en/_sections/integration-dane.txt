@@ -1,0 +1,2 @@
+Data
+All data records (measurements, camera images, status) can be sent via the HTTP(s) protocol using GET , PUT or POST commands. The content of the data record is appended to the message in the form of a TAR file, which includes all elements such as metadata along with images.

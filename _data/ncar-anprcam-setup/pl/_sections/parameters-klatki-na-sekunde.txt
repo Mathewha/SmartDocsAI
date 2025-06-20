@@ -1,0 +1,5 @@
+Klatki na sekundę
+Zaleca się użycie następujących ustawień:
+ 25 kl./s - HDR X - Dla kontroli dostępu i aplikacji na parkingach,
+ 30 kl./s - HDR X - Do monitorowania ruchu miejskiego.
+Dla detekcji pojazdów na drogach szybkiego ruchu może być wskazane życie 50 kl./s ustawienia, jednakże – zależy to od geometrii punktu pomiarowego i może powodować problemy z powodu ograniczonej zdolności kamery do kompensowania różnych warunków oświetleniowych.

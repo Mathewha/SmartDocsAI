@@ -1,0 +1,4 @@
+2 lanes
+To detect two lanes, the ANPR camera should be installed on the line separating the lanes:
+ Warning
+ It is not recommended to install the camera at the edge of the road due to the high probability of shadowing vehicles (no visibility of the license plate). If technically there is no other possibility, it is better to install the camera at the edge of the faster lane, where fewer trucks drive.

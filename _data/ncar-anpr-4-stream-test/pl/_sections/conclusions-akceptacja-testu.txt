@@ -1,0 +1,2 @@
+Akceptacja testu
+Zamawiający akceptuje test na postawie wyników weryfikacji formalnej oraz weryfikacji merytorycznej – akceptacja oznacza, że Wykonawca spełnił wszystkie kryteria formalne i merytoryczne zawarte w wymaganiach. Akceptacja wymagana jest w formie pisemnej.

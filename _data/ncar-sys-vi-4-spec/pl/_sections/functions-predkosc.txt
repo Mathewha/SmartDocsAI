@@ -1,0 +1,4 @@
+Prędkość
+EXTENDED
+Prędkość poruszania się pojazdu wyliczana jest na podstawie analizy przesunięć pozycji środka tablicy rejestracyjnej w kolejnych klatkach strumienia wideo. System posiada mechanizm automatycznego wyznaczania, niezbędnych do przeliczeń, parametrów układu pomiarowego (pozycja kamery względem, kąt patrzenia, powiększenie, itp.) przez co użytkownik nie musi takich danych podawać podczas instalacji.
+Dokładność wyliczania prędkości w taki sposób zależy od wielu czynników i ogólnie służy do celów statystycznych – nie może być używana np. do celów wykrywania wykroczeń.

@@ -1,0 +1,8 @@
+Wyniki
+Jakość detekcji, identyfikacji i skuteczność rozpoznawania typu wyznaczona zostanie dla wszystkich pomiarów łącznie. W przypadku oceny skuteczności rozpoznawania marki należy wziąć próbkę 1000-elementową powstałą przez złączenie próbek DR500 i DP500 .
+Wyniki powinny zostać zestawione tabelarycznie wraz ze wskazaniem:
+ ile pojazdów z danej próby objęto oceną
+ ile pojazdów ma poprawnie określone oceniane parametry,
+ jaka jest wartość średnia danego współczynnika jakościowego,
+ jaka jest wartość uwiarygodniona statystycznie danego współczynnika jakościowego.
+Poniżej pokazano przykład końcowego zestawienia:

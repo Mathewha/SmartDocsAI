@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ANPR camera configuration &mdash; ncar-anprcam-setup 4.0.3 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.pl/pro/ncar-anprcam-setup/index.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Position" href="position.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-anprcam-setup
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.0.3
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Table of contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="position.html">1. Position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lanes.html">2. Lanes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fov.html">3. Field of view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameters.html">4. Parameters</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">See also</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Downloads</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anprcam-setup.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anprcam-setup.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anprcam-setup.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">User</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">ncar-anprcam-setup</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-anprcam-setup</a></li>
+  
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <div class="nrs-lang-active">en</div>
+      
+    
+      
+        <a href=".//../../pl/index.html" class="nrs-lang">pl</a>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <img alt="_images/ncar-logo-mono.svg" class="align-right" src="_images/ncar-logo-mono.svg" /><div class="section" id="konfiguracja-kamery-anpr">
+<h1>ANPR camera configuration<a class="headerlink" href="#konfiguracja-kamery-anpr" title="Permalink to this headline">¶</a></h1>
+<p>Version <code class="docutils literal notranslate"><span class="pre">EN</span></code> 4.0.3 released on Feb 16, 2025.</p>
+<div class="figure align-default">
+<img alt="picture" src="_images/pict.svg" /></div>
+<p>A procedure for installing and optimally setting up an ANPR camera to ensure that the results of ANPR and MMR algorithms are of the highest quality.</p>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Table of contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="position.html">1. Position</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="position.html#wysokosc">1.1. Height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="position.html#odleglosc">1.2. Distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="position.html#kat">1.3. Angle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="position.html#pochylenie">1.4. Tilt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lanes.html">2. Lanes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lanes.html#pas">2.1. 1 lane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lanes.html#pasy">2.2. 2 lanes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lanes.html#lanes-3-lanes">2.3. 3 lanes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fov.html">3. Field of view</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fov.html#linia-detekcji">3.1. Detection line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fov.html#szerokosc-kadru">3.2. FoV width</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fov.html#wysokosc-kadru">3.3. FoV height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fov.html#rozmiar-znakow">3.4. Character size</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="parameters.html">4. Parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="parameters.html#tryb-lpr">4.1. LPR mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameters.html#klatki-na-sekunde">4.2. Frames per second</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameters.html#czas-ekspozycji">4.3. Exposure time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameters.html#oswietlenie">4.4. Illumination</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">See also</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="position.html" class="btn btn-neutral float-right" title="1. Position" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2025, NeuroCar Sp. z o.o., All rights reserved (https://neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

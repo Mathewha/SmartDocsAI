@@ -1,0 +1,2 @@
+Monitor
+The Monitor application is used for pro-active supervision of measurement infrastructure using the Icinga package. The application controls the status of all measurement devices and the status of critical services running in the central system. In case of failure, the application provides the ability to send notifications (e.g. e-mail) to a designated group of operators.

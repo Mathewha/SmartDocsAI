@@ -1,0 +1,538 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pl" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pl" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Funkcje &mdash; ncar-sys-vi-4-spec 4.0.5 - dokumentacja</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.pl/pro/ncar-sys-vi-4-spec/functions.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="3. Budowa" href="construction.html" />
+    <link rel="prev" title="1. Zasada działania" href="operation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-sys-vi-4-spec
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.0.5
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Spis treści</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="operation.html">1. Zasada działania</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Funkcje</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#detekcja">2.1. Detekcja</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#numer-rejestracyjny">2.2. Numer rejestracyjny</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kategoria">2.3. Kategoria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#marka-i-model">2.4. Marka i model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kolor">2.5. Kolor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kierunek">2.6. Kierunek</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pas-ruchu">2.7. Pas ruchu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kraj">2.8. Kraj</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#predkosc">2.9. Prędkość</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#towary-niebezpieczne">2.10. Towary niebezpieczne</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wiele-kamer">2.11. Wiele kamer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#alerty">2.12. Alerty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#monitorowanie">2.13. Monitorowanie</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="construction.html">3. Budowa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">4. Urządzenia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">5. Oprogramowanie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">6. Dane</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">7. Integracja</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dodatki</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">Odesłania</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Zmiany</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Licencja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">Zobacz także</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Do pobrania</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">Użytkownik</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ncar-sys-vi-4-spec</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-sys-vi-4-spec</a></li>
+  
+
+  <li>&gt; <span class="section-number">2. </span>Funkcje</li>
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <div class="nrs-lang-active">pl</div>
+      
+    
+      
+        <a href=".//../../en/functions.html" class="nrs-lang">en</a>
+      
+    
+      
+        <a href=".//../../de/functions.html" class="nrs-lang">de</a>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="funkcje">
+<span id="functions"></span><h1><span class="section-number">2. </span>Funkcje<a class="headerlink" href="#funkcje" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<p>Funkcje realizowane przez system można podzielić na trzy grupy:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 10%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Etykieta</p></th>
+<th class="head"><p>Funkcja</p></th>
+<th class="head"><p>Opis</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">BASIC</span></code></p></td>
+<td><p><strong>podstawowa</strong></p></td>
+<td><p>funkcje główne, dla których system został skonstruowany (<em>funkcje kluczowe</em>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">EXTENDED</span></code></p></td>
+<td><p><strong>rozszerzenie</strong></p></td>
+<td><p>funkcje dodatkowe, rozszerzające działanie funkcji podstawowych; funkcje te mogą być aktywowane opcjonalnie</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AUXILIARY</span></code></p></td>
+<td><p><strong>pomocnicze</strong></p></td>
+<td><p>funkcje pomocnicze, wykorzystujące w sposób pośredni funkcje główne bądź dodatkowe, usprawniające działanie systemu; funkcje te mogą być aktywowane opcjonalnie</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="detekcja">
+<span id="functions-detection"></span><h2><span class="section-number">2.1. </span>Detekcja<a class="headerlink" href="#detekcja" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">BASIC</span></code></p>
+<p>Polega na automatycznym wykryciu przejazdu pojazdu w polu widzenia kamery (ang. <em>free-flow</em>). Kamera powinna być ustawiona w taki sposób, by możliwe było odczytanie numeru rejestracyjnego. Detekcja działa dla pojazdów obserwowanych zarówno z przodu jak i z tyłu, bez względu na kierunek poruszania się. Detektor wybiera ze strumienia wideo jedno ujęcie (zdjęcie), w którym wykryty pojazd jest najlepiej widoczny → posiada czytelną tablicę rejestracyjną oraz widać na nim wizerunek kierującego.</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXTENDED</span></code></p>
+<p>W konfiguracji rozszerzonej możliwe jest wykrywanie pojazdów nie posiadających tablicy rejestracyjnej, ew. których tablica jest nieczytelna – taki mechanizm zwany jest <cite>VLOOP</cite> → <em>wirtualna pętla</em>.</p>
+</div>
+<div class="section" id="numer-rejestracyjny">
+<span id="functions-anpr"></span><h2><span class="section-number">2.2. </span>Numer rejestracyjny<a class="headerlink" href="#numer-rejestracyjny" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">BASIC</span></code></p>
+<p>Polega na automatycznym wykryciu lokalizacji tablicy rejestracyjnej w przetwarzanym obrazie oraz odczytaniu jej treści. Wynik rozpoznawania to ciąg znaków alfanumerycznych, w tym także specjalnych znaków diakrytycznych występujących w niektórych krajach – np. Ä, Ë, Ö itp. Rozpoznany ciąg znaków zawiera także spację, która reprezentuje każdy separator. Wynikiem rozpoznawania jest także informacja o pozycji i rozmiarze tablicy w obrazie źródłowym.</p>
+<p><code class="docutils literal notranslate"><span class="pre">EXTENDED</span></code></p>
+<p>Oprócz sekwencji znaków system potrafi także określić typ tablicy na podstawie jej składni. Dzięki temu możliwe jest dodatkowo oznaczenie pojazdu np. jako pojazdu uprzywilejowanego (w Polsce to odpowiedni prefiks), ew. miejsca rejestracji (kod miejscowości). Rozpoznawane są także tablice indywidualne.</p>
+</div>
+<div class="section" id="kategoria">
+<span id="functions-class"></span><h2><span class="section-number">2.3. </span>Kategoria<a class="headerlink" href="#kategoria" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">EXTENDED</span></code></p>
+<p>Polega na automatycznym rozpoznaniu kategorii pojazdu wyłącznie na podstawie zdjęcia. System potrafi rozróżniać następujące kategorie:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 86%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Kod</p></th>
+<th class="head"><p>Znaczenie</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>0</strong></p></td>
+<td><p>nieznany (wykrycie kategorii nie było możliwe)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3</strong></p></td>
+<td><p>ciężarowy</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>5</strong></p></td>
+<td><p>autobus</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>7</strong></p></td>
+<td><p>osobowy</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>10</strong></p></td>
+<td><p>motocykl (tylko, gdy aktywny <cite>VLOOP</cite>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>11</strong></p></td>
+<td><p>dostawczy do 3.5 t</p></td>
+</tr>
+</tbody>
+</table>
+<p>Określenie kategorii pojazdu na podstawie obrazu wymaga, aby w obrazie była widoczna sylwetka przodu (lub tyłu) pojazdu. Problemem mogę być warunki nocne, gdzie kamera dostarcza zdjęcie tablicy wykonane w podczerwieni – poza tablicą nic nie jest widoczne. Jeżeli warunkiem koniecznym jest rozpoznawanie kategorii również w nocy niezbędne jest zastosowanie dodatkowego, specjalnego doświetlenia.</p>
+</div>
+<div class="section" id="marka-i-model">
+<span id="functions-mmr"></span><h2><span class="section-number">2.4. </span>Marka i model<a class="headerlink" href="#marka-i-model" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">EXTENDED</span></code></p>
+<p>Polega na automatycznym rozpoznaniu producenta oraz jego wersji modelowej wyłącznie na podstawie zdjęcia pojazdu. Algorytm działa dla zdjęć wykonanych z przodu oraz z tyłu pojazdu – tak, aby była widoczna tablica rejestracyjne. Wynik rozpoznawania to dwie etykiety tekstowe: <em>nazwa producenta</em> + <em>nazwa modelu</em>, przykładowo <em>audi</em> + <em>q5</em>. System rozpoznaje ~140 różnych producentów oraz niemal 1900 różnych modeli.</p>
+</div>
+<div class="section" id="kolor">
+<span id="functions-color"></span><h2><span class="section-number">2.5. </span>Kolor<a class="headerlink" href="#kolor" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">EXTENDED</span></code></p>
+<p>Polega na automatycznym oszacowaniu koloru pojazdu na podstawie obrazu przodu. Wyznaczanie koloru działa wyłącznie dla zdjęć dziennych, w momencie gdy kamera pracuje w trybie kolorowym. Rozpoznawanie koloru może być zaburzone przez mechanizm „równoważenia beli” i jest zależne od użytego typu kamery. Wynik działania rozpoznawania to nazwa koloru podstawowego:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Kod</p></th>
+<th class="head"><p>Znaczenie</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>yellow</cite></p></td>
+<td><p>żółty</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>red</cite></p></td>
+<td><p>czerwony</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>green</cite></p></td>
+<td><p>zielony</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>blue</cite></p></td>
+<td><p>niebieski</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>black</cite></p></td>
+<td><p>czarny</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>grey</cite></p></td>
+<td><p>szary</p></td>
+</tr>
+</tbody>
+</table>
+<p>Dodatkowo, do koloru podstawowego są dodawane modyfikacje <code class="docutils literal notranslate"><span class="pre">dark</span></code> → „ciemny”, oraz <code class="docutils literal notranslate"><span class="pre">light</span></code> → „jasny”.</p>
+</div>
+<div class="section" id="kierunek">
+<span id="functions-direction"></span><h2><span class="section-number">2.6. </span>Kierunek<a class="headerlink" href="#kierunek" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">BASIC</span></code></p>
+<p>Poprzez analizę wielu sekwencji zdjęć określony może być kierunek poruszania się pojazdu – system wyznacza wartość kierunek generując następujące wartości:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 93%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Kod</p></th>
+<th class="head"><p>Znaczenie</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>+1</p></td>
+<td><p>Zgodny z oczekiwanym kierunkiem ruchu na tym pasie ruchu</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>Nieokreślony, ew. pojazd stoi</p></td>
+</tr>
+<tr class="row-even"><td><p>-1</p></td>
+<td><p>Przeciwny do oczekiwanego kierunku ruchu na tym pasie - pojazd jedzie pod prąd</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="pas-ruchu">
+<span id="functions-lane"></span><h2><span class="section-number">2.7. </span>Pas ruchu<a class="headerlink" href="#pas-ruchu" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">BASIC</span></code></p>
+<p>Pars ruchu określany jest poprzez wskazanie w kadrze z kamery linii rozdziału między pasami. Na etapie konfiguracji można zdefiniować liczbę pasów ruchu jakie obserwuje kamera (1÷4). Do każdego pasa ruchu dowiązuje się także oznaczenie w postaci etykiety: <code class="docutils literal notranslate"><span class="pre">L0</span></code>, <code class="docutils literal notranslate"><span class="pre">L1</span></code>, <code class="docutils literal notranslate"><span class="pre">L2</span></code> …, która używana jest następnie w metadanych pomiarowych. Przyjmuje się przy następującą konwencję:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Kod</p></th>
+<th class="head"><p>Znaczenie</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">L0</span></code></p></td>
+<td><p>pobocze (najczęściej nie występuje)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">L1</span></code></p></td>
+<td><p>pas wolny, w Europie najbardziej wysunięty na prawo (zawsze występuje)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">L2</span></code></p></td>
+<td><p>pas „do wyprzedzania”, w Europie na lewo od pasa <code class="docutils literal notranslate"><span class="pre">L1</span></code> (może nie występować)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">L3</span></code></p></td>
+<td><p>pas „do wyprzedzania”, w Europie na lewo od pasa <code class="docutils literal notranslate"><span class="pre">L2</span></code> (może nie występować)</p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Dla karów z ruchem lewostronnym konwencja jest podobna z tym, że pas <code class="docutils literal notranslate"><span class="pre">L1</span></code> jest pasem najbardziej wysuniętym na lewo.</p>
+</div>
+<div class="section" id="kraj">
+<span id="functions-country"></span><h2><span class="section-number">2.8. </span>Kraj<a class="headerlink" href="#kraj" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">EXTENDED</span></code></p>
+<p>Kraj pochodzenia pojazdu określany jest na podstawie cech geometrycznych oraz zawartości tablicy rejestracyjnej. System przystosowany jest do jednoczesnego rozpoznawania numerów z wielu krajów, jednak użytkownik musi wybrać jeden z poniższych regionów – rozpoznawanie jest ograniczone do krajów tylko z tego regionu:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 89%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Kod</p></th>
+<th class="head"><p>Znaczenie</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>AFRI</cite></p></td>
+<td><p>Afryka <a class="footnote-reference brackets" href="#footnote-1" id="id1">1</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>AMEC</cite></p></td>
+<td><p>Ameryka Centralna <a class="footnote-reference brackets" href="#footnote-1" id="id2">1</a></p></td>
+</tr>
+<tr class="row-even"><td><p><cite>AMEN</cite></p></td>
+<td><p>Ameryka Północna <a class="footnote-reference brackets" href="#footnote-2" id="id3">2</a> (Stany Zjednoczone, Kanada)</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>AMES</cite></p></td>
+<td><p>Ameryka Południowa <a class="footnote-reference brackets" href="#footnote-1" id="id4">1</a></p></td>
+</tr>
+<tr class="row-even"><td><p><cite>ASIA</cite></p></td>
+<td><p>Azja <a class="footnote-reference brackets" href="#footnote-2" id="id5">2</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>AUOC</cite></p></td>
+<td><p>Australia i Oceania <a class="footnote-reference brackets" href="#footnote-3" id="id6">3</a></p></td>
+</tr>
+<tr class="row-even"><td><p><cite>EURO</cite></p></td>
+<td><p>Europa</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>MIDE</cite></p></td>
+<td><p>Bliski Wschód <a class="footnote-reference brackets" href="#footnote-1" id="id7">1</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Kraj pochodzenia oznaczany jest przy użyciu dwuliterowego kodu kraju zgodnie z <a class="reference external" href="https://pl.wikipedia.org/wiki/ISO_3166-1_alfa-2">ISO 3166-1 alfa-2</a> – np. <cite>PL</cite> oznacza <em>Polska</em>.</p>
+<dl class="footnote brackets">
+<dt class="label" id="footnote-1"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id4">3</a>,<a href="#id7">4</a>)</span></dt>
+<dd><p>tylko niektóre kraje</p>
+</dd>
+<dt class="label" id="footnote-2"><span class="brackets">2</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id5">2</a>)</span></dt>
+<dd><p>w przygotowaniu</p>
+</dd>
+<dt class="label" id="footnote-3"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
+<dd><p>aktualnie niedostępne</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="predkosc">
+<span id="functions-speed"></span><h2><span class="section-number">2.9. </span>Prędkość<a class="headerlink" href="#predkosc" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">EXTENDED</span></code></p>
+<p>Prędkość poruszania się pojazdu wyliczana jest na podstawie analizy przesunięć pozycji środka tablicy rejestracyjnej w kolejnych klatkach strumienia wideo. System posiada mechanizm automatycznego wyznaczania, niezbędnych do przeliczeń, parametrów układu pomiarowego (pozycja kamery względem, kąt patrzenia, powiększenie, itp.) przez co użytkownik nie musi takich danych podawać podczas instalacji.</p>
+<p>Dokładność wyliczania prędkości w taki sposób zależy od wielu czynników i ogólnie służy do celów statystycznych – nie może być używana np. do celów wykrywania wykroczeń.</p>
+</div>
+<div class="section" id="towary-niebezpieczne">
+<span id="functions-dangerous-goods"></span><h2><span class="section-number">2.10. </span>Towary niebezpieczne<a class="headerlink" href="#towary-niebezpieczne" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">EXTENDED</span></code></p>
+<p>Pojazdy przewożące towary niebezpieczne rozpoznawane są w oparciu o detekcję i rozpoznawanie zawartości <a class="reference external" href="https://pl.wikipedia.org/wiki/Tablica_ADR">tablicy ADR</a>, która powinna być zamontowana na przodzie ew. na tyle pojazdu. Tablica taka umieszczana jest na pojazdach w krajach, które są sygnatariuszami międzynarodowej konwencja dotyczącej drogowego przewozu towarów i ładunków niebezpiecznych (fr. <a class="reference external" href="https://en.wikipedia.org/wiki/ADR_(treaty)">L’Accord européen relatif au transport international des marchandises Dangereuses par Route</a>).</p>
+<p>Tablica ADR zawiera dwa kody (rozpoznawane przez system), które określają numer rozpoznawczy niebezpieczeństwa oraz numer rozpoznawczy materiału. Dodatkowo system wykrywa obecność tzw. „pustych tablic ADR”, a także tablic oznaczających przewóz odpadków (teksty <code class="docutils literal notranslate"><span class="pre">Odpady</span></code> oraz <code class="docutils literal notranslate"><span class="pre">A</span></code>).</p>
+</div>
+<div class="section" id="wiele-kamer">
+<span id="functions-multivision"></span><h2><span class="section-number">2.11. </span>Wiele kamer<a class="headerlink" href="#wiele-kamer" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">EXTENDED</span></code></p>
+<p>System może uwzględniać konfiguracje pomiarowe, w których wiele kamer obserwuje jedno miejsce detekcji. Wówczas może się zdarzyć, że ten sam pojazd zostanie wykryty i zidentyfikowany przez kilka kamer równocześnie. Dotyczy to konfiguracji, w których np. dwie kamery obserwują dokładnie ten sam punkt, ew. dwie kamery obserwują zarówno przód jak i tył tego samego pojazdu.</p>
+<img alt="multivision" src="_images/ncar-vi-sys-0304.jpg" />
+<p>W obu przypadkach system potrafi powiązać pomiary z poszczególnych kamer i ostatecznie generuje informację o detekcji i identyfikacji tylko jednego pojazdu.</p>
+</div>
+<div class="section" id="alerty">
+<span id="functions-alerts"></span><h2><span class="section-number">2.12. </span>Alerty<a class="headerlink" href="#alerty" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">AUXILIARY</span></code></p>
+<p>Na podstawie danych o zarejestrowanych pojazdach możliwe jest zdefiniowanie powiadomień – alertów – o przejeździe pojazdu posiadającego wskazane cechy, np. pojazdu poszukiwanego (wskazany numer rejestracyjny) czy pojazdu niedozwolonego (pojazd klasy „ciężarowy”). Alerty generowane mogą być na terminalu bądź w systemie centralnym.</p>
+<p>Alert może być natychmiast po utworzeniu przesłany asynchronicznie do systemu nadrzędnego w postaci powiadomienia. Forma powiadomienia jest konfigurowalna.</p>
+</div>
+<div class="section" id="monitorowanie">
+<span id="functions-monitoring"></span><h2><span class="section-number">2.13. </span>Monitorowanie<a class="headerlink" href="#monitorowanie" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">AUXILIARY</span></code></p>
+<p>Nadzór nad sprawnością elementów infrastruktury pomiarowej jest kluczowym zdaniem z perspektywy wiarygodności danych. W systemie zaimplementowano dwukierunkowy mechanizm kontroli sprawności:</p>
+<ul class="simple">
+<li><p><strong>push</strong> - regularne przesyłanie przez wybrane urządzenia (terminale) informacji o swoim stanie, do centrali → <code class="docutils literal notranslate"><span class="pre">status</span></code>,</p></li>
+<li><p><strong>pull</strong> - regularne odpytywanie przez centralę o stan wszystkich urządzeń mających wpływ na kondycję infrastruktury pomiarowej.</p></li>
+</ul>
+<p>Powyższa, dualna metodologia pozwala na szybkie reagowanie na usterki ale także umożliwia przeglądanie zapisów z historii działania systemu i wykrywanie zaburzeń wywołanych chwilową niesprawnością urządzeń pomiarowych.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="construction.html" class="btn btn-neutral float-right" title="3. Budowa" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="operation.html" class="btn btn-neutral float-left" title="1. Zasada działania" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, NeuroCar Sp. z o.o., All rights reserved (www.neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

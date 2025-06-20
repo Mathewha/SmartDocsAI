@@ -1,0 +1,153 @@
+{% extends "index.html" %}
+{% block title %}NeuroDoc · Search{% endblock %}
+
+{% block content %}
+  <h1>Search</h1>
+
+  <div class="form">
+    <form method="get" action="{% url 'search_documents' %}">
+      <input type="text" name="q" value="{{ query }}" placeholder="Wpisz słowo kluczowe…">
+      <select name="lang">
+        <option value="">All languages</option>
+        <option value="en" {% if selected_lang == 'en' %}selected{% endif %}>English</option>
+        <option value="pl" {% if selected_lang == 'pl' %}selected{% endif %}>Polski</option>
+      </select>
+             <select name="mode">
+         <option value="keyword" {% if search_mode == 'keyword' %}selected{% endif %}>
+           {% if selected_lang == "pl" %}Wyszukiwanie słów kluczowych{% else %}Keyword Search{% endif %}
+         </option>
+         <option value="semantic" {% if search_mode == 'semantic' %}selected{% endif %}>
+           {% if selected_lang == "pl" %}Wyszukiwanie semantyczne{% else %}Semantic Search{% endif %}
+         </option>
+         <option value="hybrid" {% if search_mode == 'hybrid' %}selected{% endif %}>
+           {% if selected_lang == "pl" %}Wyszukiwanie hybrydowe{% else %}Hybrid Search{% endif %}
+         </option>
+       </select>
+      <select name="sort">
+        <option value="relevance" {% if sort_by == 'relevance' %}selected{% endif %}>Relevance</option>
+        <option value="date" {% if sort_by == 'date' %}selected{% endif %}>Release date</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  {# ── term suggestion ── #}
+  {% if term_suggestion and term_suggestion != query and search_mode == 'keyword' %}
+    <p class="did-you-mean">
+      <strong>
+        {% if selected_lang == "pl" %}
+          Czy chodziło o:
+        {% elif selected_lang == "en" %}
+          Did you mean:
+        {% else %}
+          Did you mean / Czy chodziło o:
+        {% endif %}
+      </strong>
+      <a href="?q={{ term_suggestion|urlencode }}
+                {% if selected_lang %}&lang={{ selected_lang }}{% endif %}
+                {% if sort_by %}&sort={{ sort_by }}{% endif %}
+                {% if search_mode %}&mode={{ search_mode }}{% endif %}">
+        <strong>{{ term_suggestion }}</strong>
+      </a>?
+    </p>
+  {% endif %}
+
+  {# ── phrase suggestion ── #}
+  {% if phrase_suggestion and phrase_suggestion != query and search_mode == 'keyword' %}
+    <p class="did-you-mean">
+      <strong>
+        {% if selected_lang == "pl" %}
+          Czy chodziło o zdanie:
+        {% elif selected_lang == "en" %}
+          Did you mean the phrase:
+        {% else %}
+          Did you mean / Czy chodziło o zdanie:
+        {% endif %}
+      </strong>
+      <a href="?q={{ phrase_suggestion|urlencode }}
+                {% if selected_lang %}&lang={{ selected_lang }}{% endif %}
+                {% if sort_by %}&sort={{ sort_by }}{% endif %}
+                {% if search_mode %}&mode={{ search_mode }}{% endif %}">
+        <strong>{{ phrase_suggestion|safe }}</strong>
+      </a>?
+    </p>
+  {% endif %}
+
+  {# ── result summary ── #}
+  {% if query %}
+    <p>
+      <strong>{{ total }}</strong>
+      {% if selected_lang == "pl" %}
+        {% if total == 0 %}wyników{% elif total == 1 %}wynik{% elif total < 5 %}wyniki{% else %}wyników{% endif %}
+        dla zapytania „<em>{{ query }}</em>”
+        {% if search_mode == 'semantic' %}(wyszukiwanie semantyczne){% elif search_mode == 'hybrid' %}(wyszukiwanie hybrydowe){% endif %}
+      {% else %}
+        {% if total == 1 %}result{% else %}results{% endif %} for query "<em>{{ query }}</em>"
+        {% if search_mode == 'semantic' %}(semantic search){% elif search_mode == 'hybrid' %}(hybrid search){% endif %}
+      {% endif %}
+    </p>
+  {% else %}
+    <p>
+      <strong>{{ total }}</strong>
+      {% if selected_lang == "pl" %}
+        {% if total == 0 %}dokumentów{% elif total == 1 %}dokument{% elif total < 5 %}dokumenty{% else %}dokumentów{% endif %}
+      {% else %}
+        {% if total == 1 %}document{% else %}documents{% endif %}
+      {% endif %}
+    </p>
+  {% endif %}
+
+  {# ── results list ── #}
+  <ol class="search-results" start="{{ start_index }}">
+    {% for doc in results %}
+      <li>
+        <div class="result-title">
+          {{ doc.icon|safe }}
+          <a href="{{ doc.href }}" target="_blank">{{ doc.title }}</a>
+        </div>
+        {% if doc.meta %}
+          <div class="result-meta">{{ doc.meta }}</div>
+        {% endif %}
+        {% if doc.snippet %}
+          <div class="snippet">{{ doc.snippet|safe }}</div>
+        {% else %}
+          <div class="text-muted">
+            {% if selected_lang == "pl" %}(brak streszczenia){% else %}(no summary available){% endif %}
+          </div>
+        {% endif %}
+      </li>
+    {% empty %}
+      <li>
+        {% if selected_lang == "pl" %}
+          Brak wyników dla zapytania.
+        {% else %}
+          No results found for your query.
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+
+  {# ── pagination ── #}
+  {% if total_pages > 1 %}
+    <nav class="pagination">
+      {% if page > 1 %}
+        <a href="?{% if query %}q={{ query|urlencode }}&{% endif %}
+                  {% if selected_lang %}lang={{ selected_lang }}&{% endif %}
+                  {% if search_mode %}mode={{ search_mode }}&{% endif %}
+                  sort={{ sort_by }}&page={{ page|add:'-1' }}">
+          {% if selected_lang == "pl" %}Poprzednia{% else %}Previous{% endif %}
+        </a>
+      {% endif %}
+      <span>{{ page }} {% if selected_lang == "pl" %}z{% else %}of{% endif %} {{ total_pages }}</span>
+      {% if page < total_pages %}
+        <a href="?{% if query %}q={{ query|urlencode }}&{% endif %}
+                  {% if selected_lang %}lang={{ selected_lang }}&{% endif %}
+                  {% if search_mode %}mode={{ search_mode }}&{% endif %}
+                  sort={{ sort_by }}&page={{ page|add:'1' }}">
+          {% if selected_lang == "pl" %}Następna{% else %}Next{% endif %}
+        </a>
+      {% endif %}
+    </nav>
+  {% endif %}
+
+{% endblock %}

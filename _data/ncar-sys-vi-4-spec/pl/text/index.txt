@@ -1,0 +1,117 @@
+[obraz]
+
+
+NeuroCar System VI - Specyfikacja techniczna
+********************************************
+
+Wersja "PL" 4.0.5 wydana dnia 12 lis 2022.
+
+   [obraz]
+
+Budowa i działanie systemu do detekcji i identyfikacji pojazdów na
+bazie  rozpoznawania tablic rejestracyjnych (ANPR) oraz rozpoznawania
+producenta i wersji modelowej pojazdu (MMR). Do działania system
+wykorzystuje wyłącznie strumień wideo z kamery patrzącej na przód lub
+tył pojazdu.
+
+======================================================================
+
+Spis treści
+
+* 1. Zasada działania
+
+* 2. Funkcje
+
+  * 2.1. Detekcja
+
+  * 2.2. Numer rejestracyjny
+
+  * 2.3. Kategoria
+
+  * 2.4. Marka i model
+
+  * 2.5. Kolor
+
+  * 2.6. Kierunek
+
+  * 2.7. Pas ruchu
+
+  * 2.8. Kraj
+
+  * 2.9. Prędkość
+
+  * 2.10. Towary niebezpieczne
+
+  * 2.11. Wiele kamer
+
+  * 2.12. Alerty
+
+  * 2.13. Monitorowanie
+
+* 3. Budowa
+
+  * 3.1. Przetwarzanie w chmurze
+
+  * 3.2. Przetwarzanie lokalne
+
+  * 3.3. Przetwarzanie w kamerze
+
+  * 3.4. Przetwarzanie hybrydowe
+
+* 4. Urządzenia
+
+  * 4.1. Kamera ANPR
+
+  * 4.2. Smartcamera
+
+  * 4.3. Smartphone
+
+  * 4.4. Kontroler CPU
+
+* 5. Oprogramowanie
+
+  * 5.1. Terminal VI
+
+  * 5.2. BackOffice
+
+    * 5.2.1. Baza
+
+    * 5.2.2. Pojazdy
+
+    * 5.2.3. Monitor
+
+    * 5.2.4. Analityka
+
+    * 5.2.5. Support
+
+* 6. Dane
+
+  * 6.1. VehicleTrace
+
+  * 6.2. CameraViews
+
+  * 6.3. CameraRecording
+
+  * 6.4. Status
+
+* 7. Integracja
+
+  * 7.1. API
+
+  * 7.2. Notyfikacje
+
+    * 7.2.1. Dane
+
+    * 7.2.2. Powiadomienia
+
+  * 7.3. Import
+
+Dodatki
+
+* Odesłania
+
+* Zmiany
+
+* Licencja
+
+* Zobacz także

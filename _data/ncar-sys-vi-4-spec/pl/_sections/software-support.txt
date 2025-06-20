@@ -1,0 +1,2 @@
+Support
+Aplikacja Support działa w chmurze i przeznaczona jest do zarządzania procesem naprawy usterek (ang. Ticket tracking ).

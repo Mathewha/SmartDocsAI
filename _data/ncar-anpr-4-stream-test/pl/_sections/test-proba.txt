@@ -1,0 +1,8 @@
+Próba
+Aby uzyskać statystycznie wiarygodny wynik dla wartości testowanych przewiduje się, że wstępnie wygenerowany rozmiar próbki testowej nie może być mniejszy niż 1200 pojazdów.
+Próbka ta podzielona powinna być na trzy testy cząstkowe:
+ DR500 – 500 pojazdów zarejestrowanych w dzień, przed południem,
+ DP500 – 500 pojazdów zarejestrowanych w dzień, po południu,
+ N200 – 200 pojazdów zarejestrowanych w nocy.
+Za dzień należy rozumieć okres od początku astronomicznego dnia (astronomiczny wschód słońca) +1 godzina, do końca astronomicznego dnia (astronomiczny zachód słońca) –1 godzina. Za noc należy rozumieć okres 2 godzin po astronomicznym zachodzie słońca oraz do 2 godzin przed astronomicznym wschodem słońca.
+Sformułowanie przed południem oznacza co najmniej 1 godzinę przed astronomicznym południem natomiast sformułowanie po południu oznacza co najmniej 1 godzinę po astronomicznym południu. Wyznaczenie astronomicznego wschodu, zachodu słońca oraz południa odbywa się na podstawie informacji o lokalizacji pomiarowej i właściwych tablic astronomicznych. Wyliczone wartości wpisywane są do protokołu testów.

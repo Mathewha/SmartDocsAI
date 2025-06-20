@@ -1,0 +1,6 @@
+Procedura
+Test przeprowadzony zostanie w trzech etapach, oddzielnie dla próbek DP500 , DR500 oraz N200 .
+W pierwszym kroku określona musi być pora dla wykonania testu dla każdej z próbek. Następnie, o zadanym czasie, zarejestrowanych powinno być kolejno co najmniej tyle pojazdów ile przewidziano w każdej próbce z tym, że jeżeli podczas rejestrowania pojawi się pojazd nieidentyfikowalny (w którymkolwiek z ocenianych kryteriów) to próbka zostanie powiększona o jeden.
+Wszystkie pojazdy wykluczone z testu muszą zostać umieszczone w raporcie z przebiegu testu (w postaci zdjęcia), a ponadto dla każdego takiego przypadku koniecznym jest komentarz na jakiej podstawie zdecydowano o wykluczeniu.
+Każdy pojazd w próbce musi mieć swój unikatowy numer kolejny, a wszystkie pojazdy w danej próbce muszą być ponumerowane w sposób monotoniczne rosnący względem czasu.
+Tuż po zebraniu danej próbki dane źródłowe oraz zapis wideo powinny zostać podpisane cyfrowo (ważna jest tu sygnatura czasowa podpisu) i przekazanie do komisji weryfikacyjnej, przy czym czas od momentu zakończenia rejestracji próbki do momentu przekazania wydrukowanej dokumentacji nie powinien być dłuższy niż trzy godziny, pod sankcją zakwalifikowania próbki jako „w całości źle rozpoznanej”.

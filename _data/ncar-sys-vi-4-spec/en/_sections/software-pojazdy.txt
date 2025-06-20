@@ -1,0 +1,2 @@
+Vehicles
+The Vehicles application is a dedicated module that allows the user to view data on registered vehicles. The application works as a WEB application . The user has access to data on the location of measurement points, can search for registered vehicles using an extensive filter mechanism, can reach a full list of vehicle information (pictures, metadata). There is also an option to download data in tabular format.

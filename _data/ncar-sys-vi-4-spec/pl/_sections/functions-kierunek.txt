@@ -1,0 +1,7 @@
+Kierunek
+BASIC
+Poprzez analizę wielu sekwencji zdjęć określony może być kierunek poruszania się pojazdu – system wyznacza wartość kierunek generując następujące wartości:
+  Kod Znaczenie
+  +1 Zgodny z oczekiwanym kierunkiem ruchu na tym pasie ruchu
+  0 Nieokreślony, ew. pojazd stoi
+  -1 Przeciwny do oczekiwanego kierunku ruchu na tym pasie - pojazd jedzie pod prąd

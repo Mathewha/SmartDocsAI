@@ -1,0 +1,16 @@
+Kraj
+EXTENDED
+Kraj pochodzenia pojazdu określany jest na podstawie cech geometrycznych oraz zawartości tablicy rejestracyjnej. System przystosowany jest do jednoczesnego rozpoznawania numerów z wielu krajów, jednak użytkownik musi wybrać jeden z poniższych regionów – rozpoznawanie jest ograniczone do krajów tylko z tego regionu:
+  Kod Znaczenie
+  AFRI Afryka 1
+  AMEC Ameryka Centralna 1
+  AMEN Ameryka Północna 2 (Stany Zjednoczone, Kanada)
+  AMES Ameryka Południowa 1
+  ASIA Azja 2
+  AUOC Australia i Oceania 3
+  EURO Europa
+  MIDE Bliski Wschód 1
+Kraj pochodzenia oznaczany jest przy użyciu dwuliterowego kodu kraju zgodnie z ISO 3166-1 alfa-2 – np. PL oznacza Polska .
+  tylko niektóre kraje
+  w przygotowaniu
+  aktualnie niedostępne

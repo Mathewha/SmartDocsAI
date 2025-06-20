@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Design &mdash; ncar-sys-vi-4-spec 4.0.5 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.pl/pro/ncar-sys-vi-4-spec/construction.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. Devices" href="hardware.html" />
+    <link rel="prev" title="2. Functions" href="functions.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-sys-vi-4-spec
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.0.5
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="operation.html">1. Operating principle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">2. Functions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Design</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#przetwarzanie-w-chmurze">3.1. Cloud computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#przetwarzanie-lokalne">3.2. Fog computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#przetwarzanie-w-kamerze">3.3. Edge computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#przetwarzanie-hybrydowe">3.4. Hybrid computing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">4. Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">5. Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">6. Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">7. Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">See also</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Downloads</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">User</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ncar-sys-vi-4-spec</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-sys-vi-4-spec</a></li>
+  
+
+  <li>&gt; <span class="section-number">3. </span>Design</li>
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <a href=".//../../pl/construction.html" class="nrs-lang">pl</a>
+      
+    
+      
+        <div class="nrs-lang-active">en</div>
+      
+    
+      
+        <a href=".//../../de/construction.html" class="nrs-lang">de</a>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="budowa">
+<span id="construction"></span><h1><span class="section-number">3. </span>Design<a class="headerlink" href="#budowa" title="Permalink to this headline">¶</a></h1>
+<p>The system can operate in various configurations, in which the key processing element - video stream analysis - is implemented in different locations. The user can choose the most convenient configuration from those described in the following sections.</p>
+<div class="section" id="przetwarzanie-w-chmurze">
+<span id="construction-cloud-computing"></span><h2><span class="section-number">3.1. </span>Cloud computing<a class="headerlink" href="#przetwarzanie-w-chmurze" title="Permalink to this headline">¶</a></h2>
+<img alt="cloud computing" src="_images/ncar-sys-arch-1.svg" /><p>In such a configuration, cameras are mounted at the point of detection (on the road) to provide a video stream to the central system. These cameras are adapted for vehicle detection and identification (type: <em>ANPR camera</em>), however, since they do not analyze video, they must be connected to the central system with a relatively good and wide communication link – with a bandwidth of several Mbps.</p>
+<p>The video stream is fed to a cloud-based application <em>NeuroCar Stream VI</em> – a separate instance of the <em>stream</em> engine is launched for each camera, which analyzes the stream and forwards (to <em>BackOffice</em>) only information about detected vehicles (<em>VehicleTrace</em> data record). The measurement data can only be accessed via <em>BackOffice</em>; either through the corresponding GUI application or by sending out notifications.</p>
+<p>Thanks to the use of <a class="reference external" href="https://en.wikipedia.org/wiki/Kubernetes">Kubernetes</a> technology, such a solution can be run in virtually any cloud (either in a private → <em>on premise</em>, or with a third-party cloud provider). In addition, scaling is very easy – increasing the number of cameras is implemented only by adding working nodes in the cluster.</p>
+</div>
+<div class="section" id="przetwarzanie-lokalne">
+<span id="construction-fog-computing"></span><h2><span class="section-number">3.2. </span>Fog computing<a class="headerlink" href="#przetwarzanie-lokalne" title="Permalink to this headline">¶</a></h2>
+<img alt="fog computing" src="_images/ncar-sys-arch-2.svg" /><p>In such a configuration, cameras delivering the video stream are mounted at the point of detection (on the road), and computing units - <em>Terminals</em> - perform processing of the video stream “on the spot”. The terminal is equipped with an industrial CPU computing computer of sufficient power, a local storage medium (e.g. SSD) allowing data buffering, and communication devices (e.g. modem) allowing communication with the central system. The terminal can also collect other data such as environmental information such as temperature, power voltage, etc. The CPU computer, network equipment and power supply system are placed in a telecommunications cabinet mounted near the detection site. The camera signal is fed to the cabinet via a digital connection (UTP cable, fiber optic).</p>
+<p>Fog processing allows a significant reduction in the size of the data that is sent over the WAN. The terminal sends only selected information about detected vehicles and status data to the BackOffice system. The system configured in this way is immune to disturbances in the data transmission network - a break in transmission does not cause loss of vehicle information. Buffered data can wait for delivery to the headquarters even many days.</p>
+<p>An additional advantage of local processing is the ability to efficiently fuse data from multiple sensors, such as processing the stream from multiple cameras and detection from the induction loop controller. In this situation, it is the Terminal that is responsible for properly merging sensor data and forming a measurement record representing a single vehicle.</p>
+<p>An important feature of fog processing is the ability of the user to work directly on the terminal, without the intermediation of the central system. Through this, the user on access to data immediately - without the potential delay generated by data transmission connections. To work with the terminal, the user must use an additional computer and a WEB browser.</p>
+<p>All data generated by multiple terminals ultimately goes to the BackOffice central system. From this system, the user (or an external system) has access to the complete set of data, both current and archive.</p>
+</div>
+<div class="section" id="przetwarzanie-w-kamerze">
+<span id="construction-edge-computing"></span><h2><span class="section-number">3.3. </span>Edge computing<a class="headerlink" href="#przetwarzanie-w-kamerze" title="Permalink to this headline">¶</a></h2>
+<img alt="edge computing" src="_images/ncar-sys-arch-3.svg" /><p>In such a configuration, smart cameras are mounted at the point of detection (on the road), equipped with a motorized lens and a built-in infrared illuminator, provided with a built-in single-chip computer that processes the video stream. In addition, the smart camera has a built-in data storage device (SSD drive) for buffering measurements, and a modem - all in one compact enclosure.</p>
+<p>The smart camera functionally corresponds to the terminal configuration, but it is more compact and smaller, and therefore easier to install, deploy and maintain. The disadvantage of a smart camera is the very limited possibility of creating multi-sensor measurement systems, which means that it is most often used when the user only needs the functionality of identifying vehicles “from a single shot”. The advantage of a smart camera is the ability to process images without distortion (e.g., without compression) which is due to the fact that the camera’s built-in CPU is physically integrated into the video path.</p>
+<p>Another device that implements the instant processing concept is a smartphone that is both a camera and a processing unit. Such a phone, like a smart camera, analyzes the video stream, detects vehicles, identifies them and sends the result immediately to the central system.</p>
+</div>
+<div class="section" id="przetwarzanie-hybrydowe">
+<span id="construction-hybrid-computing"></span><h2><span class="section-number">3.4. </span>Hybrid computing<a class="headerlink" href="#przetwarzanie-hybrydowe" title="Permalink to this headline">¶</a></h2>
+<p>In such a configuration, cloud computing, local computing and smart cameras can be used within a single system. The user receives at his disposal – from the central system – a unified, complete set of measurement data from all devices.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="hardware.html" class="btn btn-neutral float-right" title="4. Devices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="functions.html" class="btn btn-neutral float-left" title="2. Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, NeuroCar Sp. z o.o., All rights reserved (www.neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

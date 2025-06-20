@@ -1,0 +1,5 @@
+Design and operation of a system for vehicle detection and
+identification based on license plate recognition (ANPR) and vehicle
+manufacturer and model version recognition (MMR). For operation, the
+system uses only the video stream from a camera looking at the front
+or rear of the vehicle.

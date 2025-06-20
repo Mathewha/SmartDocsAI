@@ -1,0 +1,7 @@
+Visibility
+It is assumed that vehicle maker recognition is possible when the camera image contains a visible silhouette of the entire front of the vehicle. In particular, it is assumed that in addition to the license plate, fully visible should be:
+ the right and left headlights of the vehicle,
+ the area from the license plate to the lower edge of the windshield (horizontally, upward),
+ the area from the license plate to the road surface (horizontally, downward).
+Below is an image from the ANPR camera, in which a red box marks the section necessary for correct maker recognition.
+If the front of the vehicles is not visible as in the example above, for example, it is partially obscured by other vehicles or infrastructure elements then such a case should be excluded from the evaluation.

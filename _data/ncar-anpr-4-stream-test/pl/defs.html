@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pl" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pl" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Definicje &mdash; ncar-anpr-4-stream-test 4.4.1 - dokumentacja</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.pldefs.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="2. Wiarygodność" href="confidence.html" />
+    <link rel="prev" title="Ocena jakości ANPR/MMR dla przetwarzania strumienia wideo" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-anpr-4-stream-test
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.4.1
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Spis treści</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Definicje</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#obszar-detekcji">1.1. Obszar detekcji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jakosc-detekcji">1.2. Jakość detekcji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jakosc-identyfikacji">1.3. Jakość identyfikacji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jakosc-klasyfikacji">1.4. Jakość klasyfikacji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jakosc-rozpoznawania-marki">1.5. Jakość rozpoznawania marki</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="confidence.html">2. Wiarygodność</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaluation.html">3. Kryteria oceny</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">4. Przebieg testu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conclusions.html">5. Wnioski</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dodatki</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="appendix_a.html">Załącznik A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">Odesłania</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Zmiany</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Licencja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">Zobacz także</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Do pobrania</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anpr-4-stream-test.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anpr-4-stream-test.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-anpr-4-stream-test.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">Użytkownik</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ncar-anpr-4-stream-test</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-anpr-4-stream-test</a></li>
+  
+
+  <li>&gt; <span class="section-number">1. </span>Definicje</li>
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <a href=".//../../en/defs.html" class="nrs-lang">en</a>
+      
+    
+      
+        <div class="nrs-lang-active">pl</div>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="definicje">
+<span id="defs"></span><h1><span class="section-number">1. </span>Definicje<a class="headerlink" href="#definicje" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<div class="section" id="obszar-detekcji">
+<span id="defs-detection-area"></span><h2><span class="section-number">1.1. </span>Obszar detekcji<a class="headerlink" href="#obszar-detekcji" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Obszar detekcji to miejsce gdzie następuje detekcja i identyfikacja pojazdu. Z założenia obszar detekcji obejmuje pełny przekrój drogi, czyli wszystkie pasy ruchu, na których zamontowano testowane urządzenia wraz z pasem awaryjnym (jeżeli występuje). System powinien być tak skonstruowany, by zapewnić detekcję wszystkich pojazdów poruszających się w danym kierunku.</p>
+<p>W lokalizacjach, w których istnieje pas awaryjny obszar detekcji zawiera także tenże pas – pojazdy poruszające się częściowo lub całkowicie po pasie awaryjnym powinny być zaliczone jako pojazdy przejeżdżające po pasie wolnym chyba, że konstrukcja systemu przewiduje oddzielny odczyt dla pasa awaryjnego.</p>
+<p>Na drodze z ruchem dwukierunkowym przewiduje się, że wykrywane powinny być wszystkie pojazdy jadące wskazanym pasem ruchu, w określonym
+kierunku, nawet wówczas, gdy przejeżdżają po nim tylko częściowo. Zakłada się, że pojazd powinien być wykryty gdy co najmniej jedno koło z każdej osi pojazdu w całości przejedzie po wskazanym pasie ruchu (w obrębie wyznaczonym przez oznakowanie poziome). W takim układzie
+pomiarowym przyjmuje się, że pojazd jest poza obszarem detekcji gdy w całości wyjechał wszystkimi kołami na przeciwny pas ruchu.</p>
+</div>
+<div class="section" id="jakosc-detekcji">
+<span id="defs-detection-quality"></span><h2><span class="section-number">1.2. </span>Jakość detekcji<a class="headerlink" href="#jakosc-detekcji" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Poziom detekcji <img class="math" src="_images/math/10c4a4654f8643bced15e25ee32fe837bd78977b.svg" style="vertical-align: -3px"/> to miara określająca ilościowo (procentowo) stosunek liczby wykrytych przez badany system pojazdów do liczby wszystkich pojazdów przejeżdżających przez dany obszar detekcji, w zadanym czasie, w zadanym kierunku, na wskazanym pasie ruchu, z prędkością umożliwiającą skuteczny pomiar. Poziom detekcji można określić dla pojazdów poruszających się w dowolnym kierunku lub w ściśle określonym, odrzucając pojazdy poruszające się np. pod prąd.</p>
+<p>Zakłada się, że system wykrywa wyłącznie pojazdy w ruchu – skuteczny pomiar jest możliwy wówczas, gdy pojazd porusza się z prędkością:</p>
+<ul class="simple">
+<li><p>co najmniej ≥ <strong>3.6</strong> km/h (≥1 m/s),</p></li>
+<li><p>co najwyżej ≤ <strong>252</strong> km/h (≤70 m/s).</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Uwaga</p>
+<p>Wymaganie co do prędkości pojazdu można rozszerzyć np. dopuszczając ruch typu <em>stop&amp;go</em> jednak zalecane jest traktowanie takich przypadków jako szczególne, testowane w odrębnej procedurze.</p>
+</div>
+<p>Przy wyznaczaniu poziomu detekcji brane są pod uwagę dwa źródła błędów:</p>
+<ul class="simple">
+<li><p><img class="math" src="_images/math/ab35f060a482411e24d0bb53d3ff7ba24ea3e458.svg" style="vertical-align: -3px"/> – pominięcie pojazdu przez system (liczba pojazdów pominiętych),</p></li>
+<li><p><img class="math" src="_images/math/c65d4a5b408679cd5613cd440f21ba1972f2166f.svg" style="vertical-align: -6px"/> – wykrycie nieistniejącego pojazdu przez system (liczba fałszywie wykrytych pojazdów).</p></li>
+</ul>
+<p>Jeżeli <img class="math" src="_images/math/696e4a984ba3f82a7cd270230ace110ef751b52a.svg" style="vertical-align: 0px"/> to liczba pojazdów, które faktycznie przejechały przez punkt pomiarowy to poziom detekcji <img class="math" src="_images/math/10c4a4654f8643bced15e25ee32fe837bd78977b.svg" style="vertical-align: -3px"/> określamy ze wzoru:</p>
+<div class="math" id="equation-eq-1">
+<p><span class="eqno">(1)<a class="headerlink" href="#equation-eq-1" title="Stały odnośnik do tego równania">¶</a></span><img src="_images/math/de23daceb7beaa2d1af7a0cf7e3edafc6558f4de.svg"/></p>
+</div><p>Z założenia system powinien wykryć przejazd dowolnego pojazdu, takiego jak:</p>
+<ul class="simple">
+<li><p>motocykle i motorowery,</p></li>
+<li><p>samochody osobowe, także z przyczepami,</p></li>
+<li><p>samochody dostawcze, także z przyczepami,</p></li>
+<li><p>ciągniki i inne maszyny rolnicze, także wieloczłonowe,</p></li>
+<li><p>samochody ciężarowe, także z przyczepami,</p></li>
+<li><p>ciągniki siodłowe, samodzielne oraz z naczepą,</p></li>
+<li><p>autobusy, także z przyczepami,</p></li>
+<li><p>pojazdy specjalne, wieloosiowe do transportu ponadgabarytowego,</p></li>
+<li><p>pojazdy wojskowe, w tym transportery i czołgi.</p></li>
+</ul>
+<p>Podczas wyliczania poziomu detekcji nie bierze się pod uwagę pojazdów, których system może nie wykryć:</p>
+<ul class="simple">
+<li><p>rowerów,</p></li>
+<li><p>motorowerów,</p></li>
+<li><p>lekkich pojazdów drewnianych (np. furmanka),</p></li>
+<li><p>maszyn drogowych, typu walce, frezarki, itp.</p></li>
+</ul>
+<p>Jeżeli przez pole detekcji przejedzie wiele pojazdów jednocześnie każdy z nich powinien być wykryty niezależnie.</p>
+</div>
+<div class="section" id="jakosc-identyfikacji">
+<span id="defs-identification-quality"></span><h2><span class="section-number">1.3. </span>Jakość identyfikacji<a class="headerlink" href="#jakosc-identyfikacji" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>W najprostszym przypadku przez identyfikację pojazdu rozumie się jego detekcję, a następnie rozpoznanie numeru tablicy rejestracyjnej. Przez pojęcie <em>jakość identyfikacji</em> <img class="math" src="_images/math/6c3a91b5601504cf71f25853b6ba4f0b1b99f3c4.svg" style="vertical-align: -6px"/> rozumie się wartość procentową będącą stosunkiem liczby poprawnie rozpoznanych tablic pojazdów <img class="math" src="_images/math/170b69ca9fbf0b54a80755b299087cf270a81db5.svg" style="vertical-align: -3px"/> do liczby wszystkich pojazdów dających się zidentyfikować <img class="math" src="_images/math/0f3d21cd23830d61b1a7078982827c146d4722fc.svg" style="vertical-align: -3px"/>, które przejechały przez punkt pomiarowy (obszar detekcji), w określonym kierunku, w określonym czasie, z właściwą prędkością:</p>
+<div class="math" id="equation-eq-2">
+<p><span class="eqno">(2)<a class="headerlink" href="#equation-eq-2" title="Stały odnośnik do tego równania">¶</a></span><img src="_images/math/48c5d63566e8ec9d0d4402e819ec34e34eb361dd.svg"/></p>
+</div><p>Liczbę pojazdów, które da się zidentyfikować w określonym szeregu pojazdów <img class="math" src="_images/math/0f3d21cd23830d61b1a7078982827c146d4722fc.svg" style="vertical-align: -3px"/> wyznacza ekspert podczas testu. Pod uwagę nie są brane pojazdy:</p>
+<ul class="simple">
+<li><p>motocykle, dla pomiarów od przodu,</p></li>
+<li><p>maszyny rolnicze bez oznakowania tablicą rejestracyjną,</p></li>
+<li><p>pojazdy nieposiadające tablicy rejestracyjnej,</p></li>
+<li><p>pojazdy z tablicą rejestracyjną nieczytelną, co do których ekspert ma wątpliwości, w określeniu numeru rejestracyjnego.</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Uwaga</p>
+<p>Jeżeli kamera ANPR nie obejmuje całego obszaru detekcji w wyniku czego dla wykrytego przez detekcję pojazdu tablica jest niewidoczna, bądź widoczna tylko częściowo pojazd taki należy zakwalifikować jako pojazd niezidentyfikowany (bez rozpoznania tablicy) ale dający się zidentyfikować, czyli zaliczony do grupy <img class="math" src="_images/math/0f3d21cd23830d61b1a7078982827c146d4722fc.svg" style="vertical-align: -3px"/>.</p>
+</div>
+<p>Przyjmuje się, że numer rejestracyjny to:</p>
+<ul class="simple">
+<li><p>ciąg dużych liter i cyfr – jeżeli w treści tablicy jest mała litera to powinna być ona zamieniona na dużą,</p></li>
+<li><p>nie dłuższy niż 10 znaków,</p></li>
+<li><p>bez separatorów oraz innych znaków specjalnych,</p></li>
+<li><p>wszystkie znaki pisane łącznie – znaki inne niż litera lub cyfra powinny być pominięte.</p></li>
+</ul>
+<p>W celu uniknięcia niejednoznaczności numer rejestracyjny powinien być zakodowany w danych wyjściowych w kodowaniu UTF-8. W przypadku niektórych krajów wymagane jest rozpoznawanie odpowiednich znaków narodowych (np. umlaut w tablicach niemieckich). W przypadku tablic rejestracyjnych z krajów, gdzie nie stosuje się alfabetu łacińskiego dopuszcza się rozpoznawanie liter i cyfr w odpowiednim dla danego kraju alfabecie (np. cyrylica) ale także dopuszcza się konwersję znaków z alfabetu niełacińskiego na łaciński, przykładowo konwersję taką można stosować dla tablic rosyjskich, tablic krajów bliskowschodnich (pismo arabskie) czy też tablic chińskich.</p>
+<p>Na rozpoznawanie tablic nie powinny mieć wpływu:</p>
+<ul class="simple">
+<li><p>kolor liter i kolor tła,</p></li>
+<li><p>odblaskowość (w nocy tablica musi być oświetlona co najmniej światłem podczerwonym),</p></li>
+<li><p>ułożenie znaków (jednorzędowa, dwurzędowa).</p></li>
+</ul>
+<p>Jeżeli w obrazie poddanym analizie znajduje się więcej niż jeden pojazd to układ detekcji powinien wykryć każdy pojazd niezależnie, a układ identyfikacji powinien rozpoznać tablice rejestracyjne każdego z pojazdów z osobna.</p>
+<p>Jeżeli system rozpoznawania tablic ANPR dostarcza wyniki rozpoznawania w postaci wariantów (różnych alternatyw), to jako wynik brany jest wariant pierwszy tzn. wariant o najwyższym poziomie ufności (jeżeli producent oznaczył taki poziom), a pozostałe wyniki są odrzucane.</p>
+<p>Tablica rejestracyjna jest uznawana za rozpoznaną poprawnie, jeżeli wybrany wariant z automatycznego rozpoznawania zgadza się literalnie co do liczby znaków oraz ich wartości z wynikiem wskazanym przez eksperta – przy porównaniu wszelkie znaki inne od liter i cyfr są pomijane. W porównywaniu nie są brane pod uwagę kody kraju (np. tzw. europlakietki z tablic europejskich). W porównywaniu litery są kapitalizowane.</p>
+</div>
+<div class="section" id="jakosc-klasyfikacji">
+<span id="defs-classification-quality"></span><h2><span class="section-number">1.4. </span>Jakość klasyfikacji<a class="headerlink" href="#jakosc-klasyfikacji" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Skuteczność klasyfikacji, czyli skuteczność rozpoznawania typu <img class="math" src="_images/math/250647ff40d7e8175e6d859bc163cda447b7a49d.svg" style="vertical-align: -3px"/> to miara określająca ilościowo (procentowo) stosunek liczby prawidłowo rozpoznanych typów pojazdów <img class="math" src="_images/math/0c337c084a3d2bd1f227190c6324df7ac4c9c369.svg" style="vertical-align: -3px"/> do liczby wszystkich pojazdów dających się sklasyfikować <img class="math" src="_images/math/eb59c37f1648d6cea2ca5cd4068e0f666e203a46.svg" style="vertical-align: -3px"/>, które przejechały przez punkt pomiarowy (obszar detekcji) w określonym czasie, z właściwą prędkością i w kierunku zgodnym z konfiguracją systemu (system w szczególności może być przystosowany do rozpoznawania w danym obszarze detekcji typów pojazdów nadjeżdżających z jednego, określonego kierunku):</p>
+<div class="math" id="equation-eq-3">
+<p><span class="eqno">(3)<a class="headerlink" href="#equation-eq-3" title="Stały odnośnik do tego równania">¶</a></span><img src="_images/math/a28e5431d0ff19cd9b21cab1784891dbcf6d3ea1.svg"/></p>
+</div><p>Liczbę pojazdów, które da się sklasyfikować w określonym szeregu pojazdów wyznacza ekspert podczas testu. Pod uwagę nie są brane pojazdy:</p>
+<ul class="simple">
+<li><p>rowery,</p></li>
+<li><p>motorowery,</p></li>
+<li><p>lekkie pojazdy drewniane (np. furmanka),</p></li>
+<li><p>maszyny drogowe typu walce, frezarki, itp.,</p></li>
+<li><p>pojazdy, których ekspert nie jest w stanie przyporządkować do żadnej z rozpoznawanych przez system klas.</p></li>
+</ul>
+<p>System musi umożliwiać rozpoznawanie następujących klas pojazdów:</p>
+<ul class="simple">
+<li><p>osobowe</p></li>
+<li><p>dostawcze</p></li>
+<li><p>ciężarowe (pojazdy o DMC &gt;3.5 tony oraz ciągniki siodłowe),</p></li>
+<li><p>autobusy</p></li>
+<li><p>inne</p></li>
+</ul>
+</div>
+<div class="section" id="jakosc-rozpoznawania-marki">
+<span id="defs-maker-quality"></span><h2><span class="section-number">1.5. </span>Jakość rozpoznawania marki<a class="headerlink" href="#jakosc-rozpoznawania-marki" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Zakłada się, że system rozpoznaje markę pojazdów na podstawie zdjęcia przodu. Rozpoznawanie marki pojazdu na zdjęciach z tyłu nie podlega ocenie i jest z zasady istotnie gorsze niż w przypadku przodów. W dużej liczbie przypadków (np. pojazdy ciężarowe) jest całkowicie niemożliwe.</p>
+<p>Skuteczność rozpoznawania marki <img class="math" src="_images/math/bd48e0e1176054fdba97474228505be334ca767b.svg" style="vertical-align: -3px"/> to miara określająca ilościowo (procentowo) stosunek liczby prawidłowo rozpoznanych marek pojazdów <img class="math" src="_images/math/a60b75767c05789e36829bdd1c7af8619aa1b2ec.svg" style="vertical-align: -3px"/> do liczby wszystkich pojazdów dających się rozpoznać <img class="math" src="_images/math/af9234b8c7246d8e22245b33af951024da065d50.svg" style="vertical-align: -3px"/>, które przejechały przez punkt pomiarowy (obszar detekcji) w określonym czasie, z właściwą prędkości i w kierunku zgodnym z konfiguracją systemu (system w szczególności może być przystosowany do rozpoznawania w danym obszarze detekcji marek pojazdów nadjeżdżających z jednego, określonego kierunku):</p>
+<div class="math" id="equation-eq-4">
+<p><span class="eqno">(4)<a class="headerlink" href="#equation-eq-4" title="Stały odnośnik do tego równania">¶</a></span><img src="_images/math/65bf88053d6b2de3c78bbf1c851f20f1880fda3c.svg"/></p>
+</div><p>Liczbę pojazdów, które da się rozpoznać w określonym szeregu pojazdów wyznacza ekspert podczas testu. Pod uwagę nie są brane pojazdy:</p>
+<ul class="simple">
+<li><p>rowery,</p></li>
+<li><p>motorowery,</p></li>
+<li><p>motocykle,</p></li>
+<li><p>maszyny drogowe typu walce, frezarki, itp.,</p></li>
+<li><p>ciągniki i inne maszyny rolnicze,</p></li>
+<li><p>pojazdy nie produkowane seryjnie,</p></li>
+<li><p>pojazdy specjalne i wojskowe,</p></li>
+<li><p>pojazdy, dla których przez producenta nie została określona marka,</p></li>
+<li><p>pojazdy, dla których ekspert nie jest w stanie określić marki.</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Uwaga</p>
+<p>System nie musi umożliwiać rozpoznawania marek pojazdów w nocy chyba, że został do tego specjalnie przygotowany np. przez dołączenie specjalnego oświetlenia IR o dużej mocy.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="confidence.html" class="btn btn-neutral float-right" title="2. Wiarygodność" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Ocena jakości ANPR/MMR dla przetwarzania strumienia wideo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2024, NeuroCar Sp. z o.o., All rights reserved (www.neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

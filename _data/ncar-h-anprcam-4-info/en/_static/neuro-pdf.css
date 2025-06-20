@@ -1,0 +1,32 @@
+/* Neurosoft specific CSS extension of the RTD theme - PDF generation */
+
+@import "neuro.css";
+
+
+/* Redefine some previous definitions */
+ 
+.wy-breadcrumbs {
+   display: none;
+}
+
+.wy-nav-top {
+  display: none !important;
+}
+
+
+.wy-nav-side {
+   display: none !important;
+ }
+
+.wy-nav-content-wrap {
+   margin: 0px;
+   background: white;
+}
+
+.wy-nav-content {
+   background: white;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   max-width: none;
+}

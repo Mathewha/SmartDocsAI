@@ -1,0 +1,11 @@
+Color
+EXTENDED
+It involves automatically estimating the color of a vehicle based on the front image. Color determination works only for daytime images when the camera is in color mode. Color recognition can be affected by the “white balance” mechanism and depends on the type of camera used. The result of the recognition operation is the name of the primary color:
+  Code Meaning
+  yellow yellow
+  red red
+  green green
+  blue blue
+  black black
+  grey grey
+In addition, modifications dark and light are added to the base color.

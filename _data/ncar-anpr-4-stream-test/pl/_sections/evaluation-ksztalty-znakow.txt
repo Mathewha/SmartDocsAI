@@ -1,0 +1,8 @@
+Kształty znaków
+W trakcie oceny poprawności rozpoznawania numerów rejestracyjnych mogą pojawić się niejednoznaczności wynikające z jakości obrazu poddawanego weryfikacji, np. problemu w ustaleniu właściwego znaku dla par:
+ 0 ↔ O
+ I ↔ 1
+ S ↔ 5
+ 2 ↔ Z
+ 6 ↔ G
+W takich przypadkach poprawność znaku powinna zostać wskazana w sposób niepodważalny, np. przez weryfikację w urzędowej bazie danych, w której można odnaleźć dane analizowanego pojazdu (np. baza pojazdów Ubezpieczeniowego Funduszu Gwarancyjnego). Jeżeli określenie poprawnego rozpoznania danego znaku nie jest możliwe przejazd taki powinien zostać wykluczony z oceny.

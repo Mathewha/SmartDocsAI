@@ -1,0 +1,36 @@
+.. image:: _static/img/ncar-logo-mono.svg
+   :align: right
+
+==========================================================
+Ocena jakości ANPR/MMR dla przetwarzania strumienia wideo
+==========================================================
+
+Wersja ``PL`` |version| wydana dnia |today|.
+
+.. figure:: _static/img/anpr-logo.jpg
+   :width: 100%
+
+.. include:: summary.rst
+
+------------------
+
+.. toctree::
+   :caption: Spis treści
+   :numbered:
+   :maxdepth: 3
+
+   defs
+   confidence
+   evaluation
+   test
+   conclusions
+
+.. toctree::
+   :caption: Dodatki
+   :maxdepth: 3
+
+   appendix_a
+   zextern
+   changelog
+   license
+   seealso

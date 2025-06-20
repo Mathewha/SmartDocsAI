@@ -1,0 +1,25 @@
+VehicleTrace
+For each registered vehicle, the system generates a data record of type VehicleTrace . This record consists of a main element which is a detailed recognition result stored in the form of JSON .
+  Property Value
+  Type VehicleTrace
+  Format TAR → JSON + JPEG’s
+  Size 100 kB (estimated)
+  Transfer up terminal → cloud
+  Frequency for each detected vehicle
+Example of metadata:
+  {     "type": "VehicleTrace",     "version": "4.3",     "id": "VehicleTrace-20220629-122101-903-pl-wrokarkonoska-bie-l1",     "time": "2022-06-29T12:21:01.903Z",     "vehicle": {         "class": 7,         "color": "silver",         "confidence": 96,         "country": "PL",         "direction": 1,         "maker": "bmw",         "model": "4",         "number": "DW 6C448",         "speed": 31.649284569475775     }, ... }
+In addition to metadata, the VehicleTrace record also contains images:
+ full - a photo of the vehicle (front or rear) in full resolution / dimensions provided by the ANPR camera,
+ thumb - reduced photo of the vehicle (front or rear) - multiple reduction of the photo full ,
+ front - close-up / photo “cutout” of the vehicle on the basis of which recognition of category, manufacturer and model version was made
+ plate - photo of a cut-out license plate,
+ adr - (optional) picture of a cut-out ADR plate for vehicles transporting dangerous goods.
+The metadata (JSON) includes, in particular:
+ information about the position and dimensions (x,y),(s,w) of the front of the vehicle in the image - the image of the front of the vehicle allows, for example, to identify the class, manufacturer and model version,
+ information about the position and dimensions (x,y),(s,w) of the license plate - and the plate is then used to recognize its contents,
+ information about the position and dimensions (x,y),(s,w) of each character,
+ all recognized variants of the license plate, along with the indicated confidence level of a given variant,
+ the result of recognizing each character together with the confidence level of this recognition,
+ the result of recognizing the other features of the license plate, along with the confidence level such recognition.
+ Attention
+ Depending on the system configuration, the content of the data record may be reduced, for example, only to metadata or may not include some images. Similarly, depending on the configuration and properties of the camera, the image size may differ from the values given above.

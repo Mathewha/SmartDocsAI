@@ -1,0 +1,2 @@
+Classification ambiguities
+If, on the basis of the photo, the expert is unable to unambiguously assess the type of vehicle in accordance with the accepted taxonomy, such a case should be excluded from the assessment.

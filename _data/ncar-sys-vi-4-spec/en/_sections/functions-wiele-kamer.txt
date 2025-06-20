@@ -1,0 +1,4 @@
+Multivision
+EXTENDED
+The system can consider measurement configurations in which multiple cameras observe a same detection location. It can then happen that the same vehicle is detected and identified by several cameras simultaneously. This applies to configurations in which, for example, two cameras observe exactly the same point, or two cameras observe both the front and rear of the same vehicle.
+In both cases, the system is able to combine measurements from individual cameras and ultimately generates detection and identification information for only one vehicle.

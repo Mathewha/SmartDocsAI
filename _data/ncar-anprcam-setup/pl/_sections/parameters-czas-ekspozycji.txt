@@ -1,0 +1,6 @@
+Czas ekspozycji
+Zaleca się, aby czas ekspozycji spełniał następujące wymagania:
+ < 1000 ms – dla systemów kontroli dostępu i zastosowań na parkingach,
+ < 600 ms – dla innych aplikacji.
+ Ostrzeżenie
+ Zaleca się, aby kamera ANPR automatycznie dostosowywała czas ekspozycji do warunków oświetleniowych.

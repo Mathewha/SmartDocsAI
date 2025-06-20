@@ -1,0 +1,2 @@
+Support
+The Support application runs in the cloud and is dedicated for the management of the ticket tracking process ( Ticket tracking ).

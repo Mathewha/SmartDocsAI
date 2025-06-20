@@ -1,0 +1,15 @@
+# -------- synonyms_pl.txt (IT & Automotive, ~200 linii) --------
+# Format: przecinki = synonimy dwukierunkowe | 'A, B => C' = mapowanie jednokierunkowe
+# -----------------------------------------------------------------
+
+# ------- Grupy równoważnych (dwukierunkowych) -------
+
+"adres ip", ip, "internet protocol"
+"aktualizacja oprogramowania", update, "software update"
+chmura, cloud, "cloud computing"
+cpu, procesor, "jednostka centralna"
+csv, "comma separated values", "csv format"
+ev, "pojazd elektryczny", elektryk
+ftp, "file transfer protocol", "ftp protokół"
+gpu, "karta graficzna", "graphics card"
+

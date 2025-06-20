@@ -1,0 +1,15 @@
+Wynik
+Poniższy rysunek zawiera ideowy diagram opisujący wynik, który przedstawia w formacie JSON zawartości obrazu wejściowego:
+Moduł shot-vi generuje dla każdego wykrytego pojazdu oddzielny opis zawierający:
+ informację o pozycji (x,y),(s,w) przodu pojazdu w obrazie – wizerunek przodu pojazdu pozwala np. na określenie klasy, producenta oraz wersji modelowej,
+ informację o pozycji (x,y),(s,w) tablicy rejestracyjnej – oraz tablicy jest następnie użyty do rozpoznawania jej zawartości,
+ informację o pozycji (x,y),(s,w) każdego znaku ,
+ wszystkie rozpoznane warianty tablicy rejestracyjnej wraz z wskazanym poziomem poprawności danego wariantu,
+ wynik rozpoznawania każdego znaku wraz z poziomem poprawności tego rozpoznawania,
+ wynik rozpoznawania pozostałych cech tablicy rejestracyjnej wraz z poziomem poprawności rozpoznawania, w tym:
+  kod kraju pochodzenia,
+  kategoria pojazdu,
+  marka,
+  model,
+  pas ruchu.
+Jeżeli podany wynik zawiera warianty są one uporządkowane wg poziomu poprawności, od największego do najmniejszego.

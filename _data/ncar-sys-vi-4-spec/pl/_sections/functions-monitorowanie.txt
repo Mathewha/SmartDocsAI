@@ -1,0 +1,6 @@
+Monitorowanie
+AUXILIARY
+Nadzór nad sprawnością elementów infrastruktury pomiarowej jest kluczowym zdaniem z perspektywy wiarygodności danych. W systemie zaimplementowano dwukierunkowy mechanizm kontroli sprawności:
+ push - regularne przesyłanie przez wybrane urządzenia (terminale) informacji o swoim stanie, do centrali → status ,
+ pull - regularne odpytywanie przez centralę o stan wszystkich urządzeń mających wpływ na kondycję infrastruktury pomiarowej.
+Powyższa, dualna metodologia pozwala na szybkie reagowanie na usterki ale także umożliwia przeglądanie zapisów z historii działania systemu i wykrywanie zaburzeń wywołanych chwilową niesprawnością urządzeń pomiarowych.

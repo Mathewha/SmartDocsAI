@@ -1,0 +1,15 @@
+Maker recognition quality
+It is assumed that the system recognizes the maker of vehicles based on a photo of the front. Recognition of the vehicle maker in rear photos is not evaluated and is, as a rule, significantly worse than for the front. In a large number of cases (e.g., trucks) it is completely impossible.
+Maker recognition quality is a measure that quantifies (in percentage terms) the ratio of the number of correctly recognized makers of vehicles to the number of all recognizable vehicles that passed through the detection area) in a specified time, at the correct speed and in the direction according to the system configuration (the system in particular can be adapted to recognize in a given detection area the maker of vehicles coming from one specific direction):
+The number of vehicles that can be recognized in a specific series of vehicles is determined by an expert during the test. Vehicles are not taken into account:
+ bicycles,
+ mopeds,
+ motorcycles,
+ road machinery like rollers, milling machines, etc.,
+ tractors and other agricultural machinery,
+ vehicles not produced in series,
+ special and military vehicles,
+ vehicles for which no maker was specified by the manufacturer,
+ vehicles for which the expert is unable to determine the brand.
+ Attention
+ The system does not need to be able to recognize vehicle maker at night unless it has been specially prepared for this, e.g. by attaching special high-powered IR lighting.

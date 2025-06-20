@@ -1,0 +1,1 @@
+Przykładowa tabela z zestawieniem wyników pomiarowych ncar-stream-test.xlsx .

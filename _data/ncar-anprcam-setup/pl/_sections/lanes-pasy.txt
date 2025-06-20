@@ -1,0 +1,4 @@
+2 pasy
+Aby wykrywać dwa pasy, kamera ANPR powinna być zainstalowana na linii oddzielającej pasy:
+ Ostrzeżenie
+ Nie zaleca się instalowania kamery na skraju drogi ze względu na wysokie prawdopodobieństwo zacienienia pojazdów (brak widoczności tablicy rejestracyjnej). Jeśli technicznie nie ma innej możliwości, lepiej zainstalować kamerę na skraju szybszego pasa, gdzie jeździ mniej ciężarówek.

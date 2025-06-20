@@ -1,0 +1,12 @@
+Base
+The Base application is the basis for the operation of the entire central system and consists of modules implementing the main functionalities:
+ authentication
+ providing API and GUI
+ user/group management
+ data storage and search management
+ configuration management ( configuration ), including management of the list of measurement devices ( terminals ) and the list of measurement points ( locations )
+ management of data / statuses collection ( receivers )
+ managing the flow of data between system components ( message routing )
+ notification management – sending data to higher-level systems
+ providing maps for other applications (in vector and raster form)
+A component of the Base application is also the main system startup screen.

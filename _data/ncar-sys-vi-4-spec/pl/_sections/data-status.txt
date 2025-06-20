@@ -1,0 +1,8 @@
+Status
+Rekord pomiarowy Status zawiera szczegółową informację na temat stanu terminala (kamery) w danym momencie, zapisaną jako metadane JSON.
+  Właściwość Wartość
+  Typ Status
+  Format TAR → JSON
+  Rozmiar 10 kB
+  Transfer up kamera → chmura
+  Częstość co 5 min

@@ -1,0 +1,10 @@
+  Element Description
+  Firmware NeuroCar Terminal VI ( Vehicle Identification ) [2]
+  Version 4.0
+  GUI yes, WEB browser (HTML5)
+  API yes, REST
+  Encryption yes, SSL (HTTPs)
+  Authentication HTTP: basic, digest, token
+  Data formats JSON, JPG, TAR
+  Alerts yes, vehicles selected on the basis of their characteristics
+  Notifications HTTP post notification for each vehicle or / and alert

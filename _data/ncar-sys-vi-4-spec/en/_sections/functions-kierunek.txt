@@ -1,0 +1,7 @@
+Direction
+BASIC
+By analyzing image sequence, the direction of vehicle movement can be determined – the system determines the direction value by generating the following values:
+  Code Meaning
+  +1 Conforms to the expected direction of traffic in that lane
+  0 Unspecified, possibly vehicle is standing
+  -1 Opposite of the expected direction of traffic in this lane - the vehicle is driving upstream

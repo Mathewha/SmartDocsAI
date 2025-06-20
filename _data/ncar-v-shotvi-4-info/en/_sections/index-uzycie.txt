@@ -1,0 +1,5 @@
+Usage
+The shot-vi module does not have any graphical user interface by default. The module’s functions are invoked by calling the corresponding RestAPI method with an argument in the form of a photo in JPEG or PNG format:
+The user can add a dedicated set of parameters (e.g., specific to a given image) to the call. Such parameters are then placed as an argument in the URL to the HTTP post method.
+A complete description of the data structures and RestAPI interface for the application can be found at the publicly available link:
+  https://gitlab.com/ncar-tools/04/shot-vi/-/blob/main/openapi.json

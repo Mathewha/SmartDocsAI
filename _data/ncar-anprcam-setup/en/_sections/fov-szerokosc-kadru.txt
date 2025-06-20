@@ -1,0 +1,4 @@
+FoV width
+The FoV width setting depends on the number of covered lanes (see section Lanes ). Most often, the optimal width is 6 m at the height of the detection line.
+For one lane, the width of the FOV should overlap about 25% with adjacent lanes:
+For two lanes, the width of the FOV will cover exactly two lanes:

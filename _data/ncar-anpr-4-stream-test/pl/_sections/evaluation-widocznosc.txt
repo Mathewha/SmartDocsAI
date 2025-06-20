@@ -1,0 +1,7 @@
+Widoczność
+Przyjmuje się, że rozpoznawanie marki pojazdu jest możliwe wówczas, gdy obraz z kamery zawiera widoczną sylwetkę całego przodu pojazdu. W szczególności zakłada się, że oprócz tablicy rejestracyjnej w pełni widoczne powinny być:
+ prawy i lewy reflektor pojazdu,
+ obszar od tablicy rejestracyjnego do dolnej krawędzi przedniej szyby (w poziomie, w górę),
+ obszar od tablicy rejestracyjnej do powierzchni drogi (w poziomie, w dół).
+Poniżej przedstawiono zdjęcie z kamery ANPR, w którym czerwoną ramką oznaczono fragment niezbędny do poprawnego rozpoznania marki.
+Jeżeli przód pojazdy nie jest widoczny jak na powyższym przykładzie, np. jest częściowo przesłonięty przez inne pojazdy lub elementy infrastruktury to przejazd taki powinien zostać wykluczony z oceny.

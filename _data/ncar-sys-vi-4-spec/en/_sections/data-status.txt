@@ -1,0 +1,8 @@
+Status
+The Status measurement record contains detailed information about the status of the terminal (camera) at a given time, stored as JSON metadata.
+  Property Value
+  Type Status
+  Format TAR → JSON
+  Size 10 kB
+  Transfer up camera → cloud
+  Frequency every 5 min

@@ -1,0 +1,2 @@
+Smartphone
+A standard smartphone equipped with NeuroCar Stream VI software running on the Android operating system can also be a data source.

@@ -1,0 +1,2 @@
+Analytics
+The Analytics application is used for extended data analysis using the JupyterLab package. The application is provided via GUI and allows you to run scripts prepared by NeuroCar downloadable from https://gitlab.com/ncar-tools/04

@@ -1,0 +1,4 @@
+Wiele kamer
+EXTENDED
+System może uwzględniać konfiguracje pomiarowe, w których wiele kamer obserwuje jedno miejsce detekcji. Wówczas może się zdarzyć, że ten sam pojazd zostanie wykryty i zidentyfikowany przez kilka kamer równocześnie. Dotyczy to konfiguracji, w których np. dwie kamery obserwują dokładnie ten sam punkt, ew. dwie kamery obserwują zarówno przód jak i tył tego samego pojazdu.
+W obu przypadkach system potrafi powiązać pomiary z poszczególnych kamer i ostatecznie generuje informację o detekcji i identyfikacji tylko jednego pojazdu.

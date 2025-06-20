@@ -1,0 +1,6 @@
+Smartcamera
+The smart camera has all the features of an ANPR camera, plus:
+ has a built-in CPU on which the video stream is processed,
+ has terminal functions, i.e. generates highly processed data (information on captured vehicles),
+ has a local storage drive (SSD) on which it can collect and buffer data,
+ is equipped with dedicated software (firmware)

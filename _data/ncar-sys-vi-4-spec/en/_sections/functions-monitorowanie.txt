@@ -1,0 +1,6 @@
+Monitoring
+AUXILIARY
+Monitoring the health of elements of the measurement infrastructure is a key sentence from the perspective of data reliability. A two-way health control mechanism is implemented in the system:
+ push - periodic transmission by selected devices (terminals) of information about their status, to the central system → status ,
+ pull - periodic querying by the central system of the status of all devices impacting the health of the measurement infrastructure.
+The aforementioned dual methodology makes it possible to react quickly to faults but also to review records of the system’s operating history and detect disturbances caused by temporary malfunctions of measuring devices.

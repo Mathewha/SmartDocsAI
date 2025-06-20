@@ -1,0 +1,10 @@
+Report
+The summary of the test is the preparation of a report (in PDF format) by the provider, which includes:
+ Information about the business project under which the test was conducted,
+ information about the device under test,
+ information about the location,
+ information about the selected moments when the data were acquired ( DAM500 , DPM500 , N200 ),
+ summary of results in accordance with Section 4.7,
+ analysis of the results - determining whether the test was successful in each area tested.
+ Attention
+ The report should be prepared and delivered to the customer no later than 5 working days from the date of submission of source data.

@@ -1,0 +1,10 @@
+.. _seealso:
+
+=============
+Zobacz także
+=============
+
+Niniejszy dokument jest dostępny on-line pod adresem https://docs.neurocar.pl/pro/ncar-anprcam-setup/.
+
+.. image:: _static/img/qr-code.svg
+   :width: 200

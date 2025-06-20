@@ -1,0 +1,2 @@
+Dane
+Wszystkie rekordy danych (pomiary, zdjęcia z kamer, status) mogą być przesyłane za pomocą protokołu HTTP(s) przy użyciu komend GET , PUT lub POST . Treść rekordu danych dołączana jest do komunikatu w formie pliku TAR , który zawiera w sobie wszystkie elementy np. metadane wraz z obrazami.

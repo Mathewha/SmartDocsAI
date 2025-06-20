@@ -1,0 +1,5 @@
+Changelog
+  Enhancement of certain descriptions
+  Better PDF formatting of the document
+  Additional information on accessories
+  Document initiation

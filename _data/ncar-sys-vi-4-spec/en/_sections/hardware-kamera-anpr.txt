@@ -1,0 +1,18 @@
+ANPR camera
+The ANPR camera is a digital camera that provides a video stream suitable for license plate detection and license plate recognition. This camera has specific features:
+ image resolution of at least HD (1280×720p)
+ high sensitivity of the CMOS sensor allowing good (bright) images at shutter speed ≤1 millisecond,
+ the ability to provide both color (day) and monochrome (night) images,
+ switchable “day / night” modes – switchable, mechanical infrared filter,
+ motorized lens or a motorized CMOS sensor position control system that allows remote focusing without physical access to the camera,
+ a good-quality infrared-corrected lens with a focal length that allows the field of view to be set to 1÷3 lanes, with automatic iris control,
+ built-in infrared illuminator that allows proper operation at night (invisible light in the range of 850÷940 nm),
+ encryption of the connection to the client software, using SSL/TLS and X.509 certificates,
+ the ability to enforce authentication ( user | pass ) by which it is protected from unauthorized use,
+ H.264 video streaming with adjustable stream quality,
+ built-in interface for diagnostics (SNMP),
+ time synchronization capability, e.g. via NTP,
+ specialized housing that reduces fogging of the windshield and has a shield against direct contact with sunlight,
+ a suitable mounting bracket with precise adjustment of the camera position in at least 2 axes.
+ Attention
+ The ANPR camera does not process the video stream, i.e. it has no built-in processor for data analysis.

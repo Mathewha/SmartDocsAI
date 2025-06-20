@@ -1,0 +1,4 @@
+Towary niebezpieczne
+EXTENDED
+Pojazdy przewożące towary niebezpieczne rozpoznawane są w oparciu o detekcję i rozpoznawanie zawartości tablicy ADR , która powinna być zamontowana na przodzie ew. na tyle pojazdu. Tablica taka umieszczana jest na pojazdach w krajach, które są sygnatariuszami międzynarodowej konwencja dotyczącej drogowego przewozu towarów i ładunków niebezpiecznych (fr. L’Accord européen relatif au transport international des marchandises Dangereuses par Route ).
+Tablica ADR zawiera dwa kody (rozpoznawane przez system), które określają numer rozpoznawczy niebezpieczeństwa oraz numer rozpoznawczy materiału. Dodatkowo system wykrywa obecność tzw. „pustych tablic ADR”, a także tablic oznaczających przewóz odpadków (teksty Odpady oraz A ).

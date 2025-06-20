@@ -1,0 +1,5 @@
+Zmiany
+  Rozszerzenie niektórych opisów
+  Lepsze formatowanie dokumentu w formie PDF-a
+  Dodatkowe informacje o akcesoriach
+  Inicjacja dokumentu

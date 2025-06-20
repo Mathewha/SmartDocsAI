@@ -1,0 +1,6 @@
+Installation
+The shot-vi module is delivered in the form of a single installation file, which contains in its name information describing the variant in which it was prepared, i.e. version number, regional package designation and system platform – for example:
+  shot-vi-euro-4.3.3-linux-x86_64-Debian-buster.deb
+is a file containing the installer of a variant for the recognition of European arrays, version 4.3.3 , for a 64-bit Intel x86-compatible processor, running under the Linux operating system Debian build 10.12 (“buster”).
+ Attention
+ The corresponding installation file is provided by the developer after the details of the hardware and system platform are agreed with the customer.

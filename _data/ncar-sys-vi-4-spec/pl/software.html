@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pl" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pl" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5. Oprogramowanie &mdash; ncar-sys-vi-4-spec 4.0.5 - dokumentacja</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.pl/pro/ncar-sys-vi-4-spec/software.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="6. Dane" href="data.html" />
+    <link rel="prev" title="4. Urządzenia" href="hardware.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-sys-vi-4-spec
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.0.5
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Spis treści</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="operation.html">1. Zasada działania</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">2. Funkcje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="construction.html">3. Budowa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">4. Urządzenia</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Oprogramowanie</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#terminal-vi">5.1. Terminal VI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#backoffice">5.2. BackOffice</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#baza">5.2.1. Baza</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pojazdy">5.2.2. Pojazdy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#monitor">5.2.3. Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analityka">5.2.4. Analityka</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#support">5.2.5. Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">6. Dane</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">7. Integracja</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dodatki</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">Odesłania</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Zmiany</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Licencja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">Zobacz także</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Do pobrania</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">Użytkownik</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ncar-sys-vi-4-spec</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-sys-vi-4-spec</a></li>
+  
+
+  <li>&gt; <span class="section-number">5. </span>Oprogramowanie</li>
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <div class="nrs-lang-active">pl</div>
+      
+    
+      
+        <a href=".//../../en/software.html" class="nrs-lang">en</a>
+      
+    
+      
+        <a href=".//../../de/software.html" class="nrs-lang">de</a>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="oprogramowanie">
+<span id="software"></span><h1><span class="section-number">5. </span>Oprogramowanie<a class="headerlink" href="#oprogramowanie" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<div class="section" id="terminal-vi">
+<span id="software-terminal-vi"></span><h2><span class="section-number">5.1. </span>Terminal VI<a class="headerlink" href="#terminal-vi" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<img alt="Terminal GUI" src="_images/terminal-gui.png" />
+<p>Jest to dedykowany firmware dla urządzeń realizujących funkcje terminala – oprogramowanie kontroluje wszystkie funkcje urządzenia zapewniając ciągłą pracę w trybie 24/7. W szczególności steruje parametrami kamery, kontroluje stan nośników danych, kontroluje synchronizację czasu, zarządza modułami komunikacyjnymi i kontroluje przesyłanie danych do systemu nadrzędnego.</p>
+<p>Firmware posiada wbudowany interfejs graficzny (GUI) dostępny poprzez dowolną przeglądarkę internetową obsługującą HTML-5. Przy jego pomocy operator może monitorować stan urządzenia, może podglądać na bieżąco dane pomiarowe (zarejestrowane pojazdy). GUI pozwala także na zarządzanie uprawnieniami dostępu.</p>
+<p>Firmware zaimplementowane ma także RestAPI pozwalające na dostęp do danych i sterowanie urządzeniem przez zautomatyzowany system nadrzędny.</p>
+</div>
+<div class="section" id="backoffice">
+<span id="software-backoffice"></span><h2><span class="section-number">5.2. </span>BackOffice<a class="headerlink" href="#backoffice" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Oprogramowanie dla systemu centralnego działa w chmurze pod kontrolą środowiska <a class="reference external" href="https://pl.wikipedia.org/wiki/Kubernetes">Kubernetes</a>. Oprogramowanie ma konstrukcje modułową, która pozwala na elastyczne dopasowanie architektury do potrzeb użytkownika. W poniższych punktach wymieniono najważniejsze aplikacje.</p>
+<div class="section" id="baza">
+<span id="software-backoffice-base"></span><h3><span class="section-number">5.2.1. </span>Baza<a class="headerlink" href="#baza" title="Stały odnośnik do tego nagłówka">¶</a></h3>
+<img alt="Start GUI" src="_images/start-gui.png" />
+<p>Aplikacja <strong>Base</strong> stanowi podstawę działania całego systemu centralnego i składa się z modułów implementujących główne funkcjonalności:</p>
+<ul class="simple">
+<li><p>uwierzytelnianie (ang. <em>authentication</em>)</p></li>
+<li><p>udostępnianie API oraz GUI (ang. <em>ingress</em>)</p></li>
+<li><p>zarządzanie użytkownikami / grupami (ang. <em>user management</em>)</p></li>
+<li><p>zarządzanie przechowywaniem i przeszukiwaniem danych (ang. <em>storage</em>)</p></li>
+<li><p>zarządzanie konfiguracją (ang. <em>configuration</em>), w tym zarządzanie listą urządzeń pomiarowych (ang. <em>terminals</em>) oraz listą punktów pomiarowych (ang. <em>locations</em>)</p></li>
+<li><p>zarządzanie odbiorem danych pomiarowych / statusów (ang. <em>receivers</em>)</p></li>
+<li><p>zarządzanie przepływem danych między komponentami systemu (ang. <em>message routing</em>)</p></li>
+<li><p>zarządzanie powiadomieniami – wysyłanie danych do systemów nadrzędnych</p></li>
+<li><p>udostępnianie map dla innych aplikacji (w postaci wektorowej i rastrowej)</p></li>
+</ul>
+<p>Elementem aplikacji <strong>Base</strong> jest także główny ekran startowy systemu.</p>
+</div>
+<div class="section" id="pojazdy">
+<span id="software-backoffice-vehicles"></span><h3><span class="section-number">5.2.2. </span>Pojazdy<a class="headerlink" href="#pojazdy" title="Stały odnośnik do tego nagłówka">¶</a></h3>
+<img alt="Start GUI" src="_images/vehicles-gui.png" />
+<p>Aplikacja <strong>Vehicles</strong> jest dedykowanym modułem pozwalającym użytkownikowi na przeglądanie danych dotyczących zarejestrowanych pojazdów. Aplikacja działa jako <a class="reference external" href="https://pl.wikipedia.org/wiki/Aplikacja_internetowa">aplikacja internetowa</a>. Użytkownik ma dostęp do danych o lokalizacji punktów pomiarowych, może wyszukiwać zarejestrowane pojazdy wykorzystując rozbudowany mechanizm filtrów, może dotrzeć do pełnej listy informacji o pojeździe (zdjęcia, metadane). Dostępna jest także możliwość pobierania danych o przejazdach w formacie tabelarycznym.</p>
+</div>
+<div class="section" id="monitor">
+<span id="software-backoffice-monitor"></span><h3><span class="section-number">5.2.3. </span>Monitor<a class="headerlink" href="#monitor" title="Stały odnośnik do tego nagłówka">¶</a></h3>
+<img alt="Monitor GUI" src="_images/monitor-gui.png" />
+<p>Aplikacja <strong>Monitor</strong> służy do pro-aktywnego nadzoru infrastruktury pomiarowej wykorzystujące pakiet <a class="reference external" href="https://en.wikipedia.org/wiki/Icinga">Icinga</a>. Aplikacja kontroluje stan wszystkich urządzeń pomiarowych oraz stan usług krytycznych działających w systemie centralnym. W razie wystąpienia awarii aplikacja umożliwia wysłanie powiadomień (np. e-mail) do wskazanej grupy operatorów.</p>
+</div>
+<div class="section" id="analityka">
+<span id="software-backoffice-analytics"></span><h3><span class="section-number">5.2.4. </span>Analityka<a class="headerlink" href="#analityka" title="Stały odnośnik do tego nagłówka">¶</a></h3>
+<img alt="Analytics GUI" src="_images/analytics-gui.png" />
+<p>Aplikacja <strong>Analytics</strong> służy do rozszerzonych analiz danych wykorzystująca pakiet <a class="reference external" href="https://en.wikipedia.org/wiki/Project_Jupyter">JupyterLab</a>. Aplikacja udostępniona jest przez GUI i pozwala na uruchamianie skryptów przygotowanych przez NeuroCar do pobrania z adresu <a class="reference external" href="https://gitlab.com/ncar-tools/04">https://gitlab.com/ncar-tools/04</a></p>
+</div>
+<div class="section" id="support">
+<span id="software-backoffice-support"></span><h3><span class="section-number">5.2.5. </span>Support<a class="headerlink" href="#support" title="Stały odnośnik do tego nagłówka">¶</a></h3>
+<img alt="Support GUI" src="_images/support-gui.png" />
+<p>Aplikacja <strong>Support</strong> działa w chmurze i przeznaczona jest do zarządzania procesem naprawy usterek (ang. <a class="reference external" href="https://pl.wikipedia.org/wiki/Ticket_tracking">Ticket tracking</a>).</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="data.html" class="btn btn-neutral float-right" title="6. Dane" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="hardware.html" class="btn btn-neutral float-left" title="4. Urządzenia" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, NeuroCar Sp. z o.o., All rights reserved (www.neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

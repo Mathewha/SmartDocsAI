@@ -1,0 +1,4 @@
+Licencja
+Moduł shot-vi licencjonowany jest per instancja, tzn. dla każdego uruchomionego procesu wymagana jest oddzielna licencja. Wyjątkiem jest może być sytuacja, że dodatkowe zapisy w umowie licencyjnej stanowią inaczej.
+Z każdym egzemplarzem modułu (licencją) powiązany jest unikatowy numer seryjny i wygenerowany dla niego odpowiedni cyfrowy certyfikat zgodny ze standardem X.509 . Numer seryjny jest dodawany do wyników działania modułu i ma przykładowo postać:
+  ncar-v-shotvi-04a00001

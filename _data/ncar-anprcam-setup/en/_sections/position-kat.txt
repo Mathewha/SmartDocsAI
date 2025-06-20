@@ -1,0 +1,5 @@
+Angle
+The ANPR camera can be mounted in the lane or at the edge of the lane:
+It is important that the horizontal angle between the optical axis of the camera and the axis of the road is not greater than :
+ Warning
+ If the is outside the indicated range, the image distortion may result in poor detection quality (the characters on the license plate will be too narrow), and the IR illumination will not be adequate (too little reflected light).

@@ -1,0 +1,15 @@
+Result
+The following figure contains an ideational diagram describing the result, which represents in JSON format the contents of the input image:
+The shot-vi module generates for each detected vehicle a separate description containing:
+ Information about the position (x,y),(s,w) of the front of the vehicle in the image – the image of the front of the vehicle allows, for example, to identify the class, manufacturer and model version,
+ information about the position (x,y),(s,w) of the license plate – and the plate is then used to recognize its contents,
+ Information about the position of (x,y),(s,w) for each character ,
+ All recognized variants of the license plate, along with the indicated level of correctness of the variant,
+ the result of recognizing each character along with the level of correctness of this recognition,
+ the result of recognizing other features of the license plate, along with the level of correctness of recognition, including:
+  country of origin code,
+  vehicle category,
+  brand,
+  model,
+  lane.
+If the given result contains variants, they are ordered by level of correctness, from largest to smallest.

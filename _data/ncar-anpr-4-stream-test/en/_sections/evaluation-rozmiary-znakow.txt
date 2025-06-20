@@ -1,0 +1,2 @@
+Character sizes
+It is expected that the test will be conducted for a video stream in which license plates will be observed, in which the height of the characters expressed in pixels (conventional optical resolution ) will be 16 pixels (for a normalized uppercase X ). If the indicated requirement, in the case of a particular vehicle, is not met, such case should be removed from the test.

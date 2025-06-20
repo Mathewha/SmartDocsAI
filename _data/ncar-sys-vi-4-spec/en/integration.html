@@ -1,0 +1,288 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>7. Integration &mdash; ncar-sys-vi-4-spec 4.0.5 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://docs.neurocar.pl/pro/ncar-sys-vi-4-spec/integration.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/neuro.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="References" href="zextern.html" />
+    <link rel="prev" title="6. Data" href="data.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+
+  <a href="_static/../index.html" class="icon icon-book" alt="Document root"> ncar-sys-vi-4-spec
+
+
+
+</a>
+
+
+  
+  
+    <div class="version">
+      4.0.5
+    </div>
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  
+    
+  
+  
+    <p class="caption"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="operation.html">1. Operating principle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">2. Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="construction.html">3. Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">4. Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">5. Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">6. Data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#api">7.1. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notyfikacje">7.2. Notifications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dane">7.2.1. Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#powiadomienia">7.2.2. Notifications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#import">7.3. Import</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zextern.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seealso.html">See also</a></li>
+</ul>
+
+    <p class="caption">
+      <span class="caption-text">Downloads</span>
+    </p>
+    <ul>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.zip">HTML</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.pdf">PDF</a></li>
+      <li class="toctree-l1"><a class="reference internal" href="./ncar-sys-vi-4-spec.bib">BIBTEX</a></li>
+    </ul>
+    <p class="caption">
+      <span class="caption-text">User</span>
+    </p>
+    <ul>
+        <li class="toctree-l1"><a class="reference internal" href="/webauth/sign-out">Wyloguj</a></li>
+    </ul>
+  
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ncar-sys-vi-4-spec</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+<li><a href="/" class="icon icon-home"></a>&gt;</li>
+<li>pro &gt;</li>
+<li><a href="_static/../index.html">ncar-sys-vi-4-spec</a></li>
+  
+
+  <li>&gt; <span class="section-number">7. </span>Integration</li>
+
+
+    
+  <li class="wy-breadcrumbs-aside">
+    
+      
+        <a href=".//../../pl/integration.html" class="nrs-lang">pl</a>
+      
+    
+      
+        <div class="nrs-lang-active">en</div>
+      
+    
+      
+        <a href=".//../../de/integration.html" class="nrs-lang">de</a>
+      
+    
+  </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="integracja">
+<span id="integration"></span><h1><span class="section-number">7. </span>Integration<a class="headerlink" href="#integracja" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="api">
+<span id="integration-api"></span><h2><span class="section-number">7.1. </span>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<p>Use of terminal (camera) as well as central system functions possible through the <a class="reference external" href="https://en.wikipedia.org/wiki/WebAPI">RestAPI</a> interface, for which the full specification – <em>NeuroCar API</em> – is available free of charge at:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ncar</span><span class="o">-</span><span class="n">tools</span><span class="o">/</span><span class="mi">04</span><span class="o">/</span><span class="n">api</span>
+</pre></div>
+</div>
+<p>The various functions of the system (e.g., data access, measurement record format, user management) are described using the <a class="reference external" href="https://en.wikipedia.org/wiki/OpenAPI_Specification">OpenAPI 3</a> standard.</p>
+</div>
+<div class="section" id="notyfikacje">
+<span id="integration-notifications"></span><h2><span class="section-number">7.2. </span>Notifications<a class="headerlink" href="#notyfikacje" title="Permalink to this headline">¶</a></h2>
+<p>Both the terminal (camera) and the central system can actively transmit information to master systems using the notification mechanism (<em>push technology</em>) in asynchronous mode.</p>
+<div class="section" id="dane">
+<span id="integration-notifications-data"></span><h3><span class="section-number">7.2.1. </span>Data<a class="headerlink" href="#dane" title="Permalink to this headline">¶</a></h3>
+<p>All data records (measurements, camera images, status) can be sent via the <a class="reference external" href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP(s)</a> protocol using <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT</span></code> or <code class="docutils literal notranslate"><span class="pre">POST</span></code> commands. The content of the data record is appended to the message in the form of a <a class="reference external" href="https://en.wikipedia.org/wiki/Tar_(computing)">TAR</a> file, which includes all elements such as metadata along with images.</p>
+</div>
+<div class="section" id="powiadomienia">
+<span id="integration-notifications-alerts"></span><h3><span class="section-number">7.2.2. </span>Notifications<a class="headerlink" href="#powiadomienia" title="Permalink to this headline">¶</a></h3>
+<p>The system can be configured to send notifications (e.g., information about events such as a wanted vehicle) using:</p>
+<ul class="simple">
+<li><p>e-mail (SMTP e-mail server must be available),</p></li>
+<li><p>SMS (an SMS gateway must be available).</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="import">
+<span id="integration-import"></span><h2><span class="section-number">7.3. </span>Import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<p>The BackOffice central system has the ability to connect external data sources (e.g., data from third-party ANPR cameras) via <strong>Importer</strong> (<em>pulling</em>) or <strong>Receiver</strong> (<em>pushing</em>) modules. The task of these modules is to transform the data into a unified form compliant with the <a class="reference internal" href="#integration-api"><span class="std std-ref">API</span></a> specification.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="zextern.html" class="btn btn-neutral float-right" title="References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="data.html" class="btn btn-neutral float-left" title="6. Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, NeuroCar Sp. z o.o., All rights reserved (www.neurocar.pl)
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

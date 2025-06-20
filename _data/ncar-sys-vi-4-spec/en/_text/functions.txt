@@ -1,0 +1,94 @@
+The functions delivered by the system can be divided into three groups:
+  Label Function Description
+  BASIC basic the main functions for which the system is built ( key functions )
+  EXTENDED extension additional functions, which extend the operation of the basic functions; these functions may be activated optionally
+  AUXILIARY auxiliary auxiliary functions, using either the main functions or additional functions in an indirect way to improve the operation of the system; these functions can be activated optionally
+ Detection
+BASIC
+It consists of automatic detection of the vehicle passing within the camera’s field of view ( free-flow ). The camera should be positioned in such a way that the license plate number can be read. Detection works for vehicles observed from both the front and rear, regardless of the driving direction. The detector selects from the video stream one shot (snapshot) in which the detected vehicle is most clearly visible → it has a legible license plate and the image of the driver can be seen.
+EXTENDED
+In the extended configuration, it is possible to detect vehicles without a license plate, or whose plate is unrecognizable - such a mechanism is called VLOOP → virtual loop .
+ Registration number
+BASIC
+It consists of automatic detection of the location of the license plate in the processed image and reading its content. The result of recognition is a string of alphanumeric characters, including special diacritics found in some countries – e.g. Ä, Ë, Ö, etc. The recognized string of characters also includes a space, which represents each separator. The result of the recognition is also information about the position and size of the array in the source image.
+EXTENDED
+In addition to the sequence of characters, the system can also determine the type of plate based on its syntax. This makes it possible to additionally mark the vehicle, for example, as a privileged vehicle (in Poland this is the appropriate prefix), or place of registration (city code). Individual plates are also recognized.
+ Class
+EXTENDED
+It consists of automatic recognition of the vehicle class based solely on the photo. The system can distinguish the following classes:
+  Code Meaning
+  0 unknown ( category determination was not possible)
+  3 truck
+  5 bus
+  7 car
+  10 motorcycle (only when VLOOP is active)
+  11 delivery van up to 3.5 t
+Determining the vehicle class from the image requires that the silhouette of the front (or rear) of the vehicle is visible in the image. The problem can be night conditions, where the camera provides a picture of the plate taken in infrared - except the plate nothing is visible. If the prerequisite is to recognize the category also at night it is necessary to use additional special illumination.
+ Make and model
+EXTENDED
+It consists of automatically recognizing the manufacturer and its model version based solely on a photo of the vehicle. The algorithm works for photos taken from the front and rear of the vehicle - so that the license plate is visible. The recognition result is two text labels: manufacturer name + model name , for example audi + q5 . The system recognizes ~140 different manufacturers and nearly 1,900 different models.
+ Color
+EXTENDED
+It involves automatically estimating the color of a vehicle based on the front image. Color determination works only for daytime images when the camera is in color mode. Color recognition can be affected by the “white balance” mechanism and depends on the type of camera used. The result of the recognition operation is the name of the primary color:
+  Code Meaning
+  yellow yellow
+  red red
+  green green
+  blue blue
+  black black
+  grey grey
+In addition, modifications dark and light are added to the base color.
+ Direction
+BASIC
+By analyzing image sequence, the direction of vehicle movement can be determined – the system determines the direction value by generating the following values:
+  Code Meaning
+  +1 Conforms to the expected direction of traffic in that lane
+  0 Unspecified, possibly vehicle is standing
+  -1 Opposite of the expected direction of traffic in this lane - the vehicle is driving upstream
+ Lane
+BASIC
+Traffic lanes are determined by indicating the line of separation between lanes in the camera frame. At the configuration stage, you can define the number of lanes the camera observes (1÷4). A label is also attached to each lane: L0 , L1 , L2 …, which is then used in the measurement metadata. The following convention is applied:
+  Code Meaning
+  L0 shoulder (mostly non-existent)
+  L1 slow lane, in Europe the rightmost (always present)
+  L2 “overtaking” lane, in Europe to the left of the L1 lane (may not be present)
+  L3 “overtaking” lane, in Europe to the left of the L2 lane (may not be present)
+For countries with left-hand traffic, the convention is similar except that the L1 lane is the leftmost lane.
+ Country
+EXTENDED
+The country of origin of the vehicle is determined based on geometric features and the contents of the license plate. The system is adapted to simultaneously recognize numbers from multiple countries, but the user must select one of the following regions – recognition is limited to countries from that region only:
+  Code Meaning
+  AFRI Africa 1
+  AMEC Central America 1
+  AMEN North America 2 (United States, Canada)
+  AMES South America 1
+  ASIA Asia 2
+  AUOC Australia and Oceania 3
+  EURO Europe
+  MIDE Middle East 1
+The country of origin is indicated using a two-letter country code according to ISO 3166-1 alpha-2 - for example, PL means Poland .
+  only some countries
+  in preparation
+  currently unavailable
+ Speed
+EXTENDED
+The speed of the vehicle is calculated on the basis of analysis of displacements of the position of the center of the license plate in successive frames of the video stream. The system has a mechanism for automatically determining, necessary for recalculation, parameters of the measurement system (camera position relative to, viewing angle, magnification, etc.) so that the user does not need to provide such data during installation.
+The speed calculation accuracy in this way depends on many factors and is generally used for statistical purposes – it cannot be used, for example, for the purpose of violations enforcement.
+ Dangerous goods
+EXTENDED
+Vehicles carrying dangerous goods are identified based on detection and recognition of the contents of an ADR plate , which should be mounted on the front or rear of the vehicle. Such a placard is placed on vehicles in countries that are signatories to the International Convention on the Carriage of Dangerous Goods and Cargoes by Road (fr. L’Accord européen relatif au transport international des marchandises Dangereuses par Route ).
+The ADR plate contains two codes (recognized by the system), which specify the hazard identification number and the material identification number. In addition, the system detects the presence of so-called “blank ADR plates”, as well as plates indicating the carriage of waste (the texts Odpady and A ).
+ Multivision
+EXTENDED
+The system can consider measurement configurations in which multiple cameras observe a same detection location. It can then happen that the same vehicle is detected and identified by several cameras simultaneously. This applies to configurations in which, for example, two cameras observe exactly the same point, or two cameras observe both the front and rear of the same vehicle.
+In both cases, the system is able to combine measurements from individual cameras and ultimately generates detection and identification information for only one vehicle.
+ Alerts
+AUXILIARY
+Based on the data on registered vehicles, it is possible to define alerts on the passage of a vehicle with the indicated characteristics, such as a wanted vehicle (indicated registration number) or a prohibited vehicle (i.e. vehicle of the “truck” class). Alerts can be generated on the terminal or in the central system.
+The alert can be sent asynchronously to the host system as a notification immediately after being created. The form of the alert is configurable.
+ Monitoring
+AUXILIARY
+Monitoring the health of elements of the measurement infrastructure is a key sentence from the perspective of data reliability. A two-way health control mechanism is implemented in the system:
+ push - periodic transmission by selected devices (terminals) of information about their status, to the central system → status ,
+ pull - periodic querying by the central system of the status of all devices impacting the health of the measurement infrastructure.
+The aforementioned dual methodology makes it possible to react quickly to faults but also to review records of the system’s operating history and detect disturbances caused by temporary malfunctions of measuring devices.

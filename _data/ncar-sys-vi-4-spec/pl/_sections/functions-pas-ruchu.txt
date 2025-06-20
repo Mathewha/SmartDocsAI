@@ -1,0 +1,9 @@
+Pas ruchu
+BASIC
+Pars ruchu określany jest poprzez wskazanie w kadrze z kamery linii rozdziału między pasami. Na etapie konfiguracji można zdefiniować liczbę pasów ruchu jakie obserwuje kamera (1÷4). Do każdego pasa ruchu dowiązuje się także oznaczenie w postaci etykiety: L0 , L1 , L2 …, która używana jest następnie w metadanych pomiarowych. Przyjmuje się przy następującą konwencję:
+  Kod Znaczenie
+  L0 pobocze (najczęściej nie występuje)
+  L1 pas wolny, w Europie najbardziej wysunięty na prawo (zawsze występuje)
+  L2 pas „do wyprzedzania”, w Europie na lewo od pasa L1 (może nie występować)
+  L3 pas „do wyprzedzania”, w Europie na lewo od pasa L2 (może nie występować)
+Dla karów z ruchem lewostronnym konwencja jest podobna z tym, że pas L1 jest pasem najbardziej wysuniętym na lewo.

@@ -1,0 +1,2 @@
+Smartphone
+Źródłem danych może być także standardowy smartphone wyposażony w oprogramowanie NeuroCar Stream VI działające w systemie operacyjnym Android.

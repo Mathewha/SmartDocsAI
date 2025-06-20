@@ -1,0 +1,4 @@
+3 lanes
+For three lanes, the ANPR camera should be installed over the middle lane:
+ Warning
+ For three lanes, it is important to keep in mind the restrictions on the minimum height of license plate characters. In such a case, there is a risk that such a requirement will not be met, making the vehicle detection quality and the license plate recognition quality lower than expected.

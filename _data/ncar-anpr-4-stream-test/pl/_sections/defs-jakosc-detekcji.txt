@@ -1,0 +1,27 @@
+Jakość detekcji
+Poziom detekcji to miara określająca ilościowo (procentowo) stosunek liczby wykrytych przez badany system pojazdów do liczby wszystkich pojazdów przejeżdżających przez dany obszar detekcji, w zadanym czasie, w zadanym kierunku, na wskazanym pasie ruchu, z prędkością umożliwiającą skuteczny pomiar. Poziom detekcji można określić dla pojazdów poruszających się w dowolnym kierunku lub w ściśle określonym, odrzucając pojazdy poruszające się np. pod prąd.
+Zakłada się, że system wykrywa wyłącznie pojazdy w ruchu – skuteczny pomiar jest możliwy wówczas, gdy pojazd porusza się z prędkością:
+ co najmniej ≥ 3.6 km/h (≥1 m/s),
+ co najwyżej ≤ 252 km/h (≤70 m/s).
+ Uwaga
+ Wymaganie co do prędkości pojazdu można rozszerzyć np. dopuszczając ruch typu stop&go jednak zalecane jest traktowanie takich przypadków jako szczególne, testowane w odrębnej procedurze.
+Przy wyznaczaniu poziomu detekcji brane są pod uwagę dwa źródła błędów:
+ – pominięcie pojazdu przez system (liczba pojazdów pominiętych),
+ – wykrycie nieistniejącego pojazdu przez system (liczba fałszywie wykrytych pojazdów).
+Jeżeli to liczba pojazdów, które faktycznie przejechały przez punkt pomiarowy to poziom detekcji określamy ze wzoru:
+Z założenia system powinien wykryć przejazd dowolnego pojazdu, takiego jak:
+ motocykle i motorowery,
+ samochody osobowe, także z przyczepami,
+ samochody dostawcze, także z przyczepami,
+ ciągniki i inne maszyny rolnicze, także wieloczłonowe,
+ samochody ciężarowe, także z przyczepami,
+ ciągniki siodłowe, samodzielne oraz z naczepą,
+ autobusy, także z przyczepami,
+ pojazdy specjalne, wieloosiowe do transportu ponadgabarytowego,
+ pojazdy wojskowe, w tym transportery i czołgi.
+Podczas wyliczania poziomu detekcji nie bierze się pod uwagę pojazdów, których system może nie wykryć:
+ rowerów,
+ motorowerów,
+ lekkich pojazdów drewnianych (np. furmanka),
+ maszyn drogowych, typu walce, frezarki, itp.
+Jeżeli przez pole detekcji przejedzie wiele pojazdów jednocześnie każdy z nich powinien być wykryty niezależnie.

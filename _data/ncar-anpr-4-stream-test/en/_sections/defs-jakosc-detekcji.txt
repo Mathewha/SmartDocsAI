@@ -1,0 +1,27 @@
+Detection quality
+Detection level is a measure quantifying (in percentage terms) the ratio of the number of vehicles detected by the tested system to the number of all vehicles passing through a given detection area, at a given time, in a given direction, in a designated lane, at a speed that allows effective measurement. The detection level can be determined for vehicles moving in any direction or in a well-defined direction, rejecting vehicles moving against the flow, for example.
+It is assumed that the system detects only moving vehicles – effective measurement is possible when the vehicle is moving at speed:
+ at least ≥ 3.6 km/h (≥1 m/s),
+ at most ≤ 252 km/h (≤70 m/s).
+ Attention
+ The vehicle speed requirement can be extended, for example, by allowing stop&go traffic, but it is recommended to treat such cases as special, tested in a separate procedure.
+Two sources of error are taken into account in determining the detection level:
+ – omission of a vehicle by the system (number of vehicles omitted),
+ – detection of a non-existent vehicle by the system (number of falsely detected vehicles).
+If is the number of vehicles that actually passed through the measurement point then the detection level is determined from the formula:
+By design, the system should detect the passage of any vehicle, such as:
+ motorcycles and mopeds,
+ passenger cars, including those with trailers,
+ light commercial vehicles (LCV), including those with trailers,
+ tractors and other agricultural machinery, including multi-trailers,
+ trucks, including those with trailers,
+ tractor-trailers, stand-alone and with semi-trailer,
+ buses, including those with trailers,
+ special, multi-axle vehicles for oversize transport,
+ military vehicles, including transporters and tanks.
+When calculating the detection level, vehicles that the system may not detect are not taken into account:
+ bicycles,
+ mopeds,
+ light wooden vehicles (such as a carriage),
+ road machinery, such as rollers, milling machines, etc.
+If multiple vehicles pass through the detection field at the same time, each should be detected independently.

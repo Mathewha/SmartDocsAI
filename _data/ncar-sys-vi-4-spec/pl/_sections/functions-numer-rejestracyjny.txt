@@ -1,0 +1,5 @@
+Numer rejestracyjny
+BASIC
+Polega na automatycznym wykryciu lokalizacji tablicy rejestracyjnej w przetwarzanym obrazie oraz odczytaniu jej treści. Wynik rozpoznawania to ciąg znaków alfanumerycznych, w tym także specjalnych znaków diakrytycznych występujących w niektórych krajach – np. Ä, Ë, Ö itp. Rozpoznany ciąg znaków zawiera także spację, która reprezentuje każdy separator. Wynikiem rozpoznawania jest także informacja o pozycji i rozmiarze tablicy w obrazie źródłowym.
+EXTENDED
+Oprócz sekwencji znaków system potrafi także określić typ tablicy na podstawie jej składni. Dzięki temu możliwe jest dodatkowo oznaczenie pojazdu np. jako pojazdu uprzywilejowanego (w Polsce to odpowiedni prefiks), ew. miejsca rejestracji (kod miejscowości). Rozpoznawane są także tablice indywidualne.

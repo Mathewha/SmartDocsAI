@@ -1,0 +1,2 @@
+BackOffice
+The software for the central system runs in the cloud under the control of the Kubernetes environment. The software has a modular design that allows the architecture to be flexibly adapted to the user’s needs. The following sections list the most important applications.

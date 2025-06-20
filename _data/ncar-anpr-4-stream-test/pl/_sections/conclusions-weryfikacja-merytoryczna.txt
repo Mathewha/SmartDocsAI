@@ -1,0 +1,7 @@
+Weryfikacja merytoryczna
+Weryfikacja merytoryczna polega na ocenie przez Zamawiającego materiałów dostarczonych przez Wykonawcę w zakresie:
+ kompletności detekcji pojazdów – na podstawie wideo dostarczonych danych surowych + tabelarycznych,
+ poprawności oceny atrybutów poszczególnych przejazdów pojazdów,
+ poprawności oceny wyliczonych miar jakości,
+ zgodności wyznaczonych miar jakości z założonymi wymaganiami.
+Zamawiający może zwrócić się do Wykonawcy o wyjaśnienie ew. uzupełnienie lub korektę dostarczonych danych przetworzonych.

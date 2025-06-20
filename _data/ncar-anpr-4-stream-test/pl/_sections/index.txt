@@ -1,0 +1,36 @@
+Wersja PL 4.4.1 wydana dnia 14 lut 2024.
+Opis procedury weryfikacji jakości dla systemu realizującego detekcję, klasyfikację i identyfikację pojazdów ze strumienia wideo – rozpoznawanie tablic rejestracyjnych (ANPR), rozpoznawanie typu pojazdu oraz rozpoznawanie marki i modelu (MMR). Procedura przygotowana jest dla trybu pracy free flow , w którym analizowany jest wejściowy strumień wideo, a wynikiem jest sekwencja – jeden rekord danych dla każdego pojazdu przejeżdżającego w polu widzenia kamery.
+ Spis treści
+  - 1.1. Obszar detekcji
+  - 1.2. Jakość detekcji
+  - 1.3. Jakość identyfikacji
+  - 1.4. Jakość klasyfikacji
+  - 1.5. Jakość rozpoznawania marki
+  - 2.1. Zmienna losowa
+  - 2.2. Przedział ufności
+  - 2.3. Minimalne wielkości próby
+  - 3.1. Parametry jakościowe
+  - 3.2. Rozmiary znaków
+  - 3.3. Kształty znaków
+  - 3.4. Niejednoznaczności typu
+  - 3.5.1. Widoczność
+  - 3.5.2. Noc
+  - 3.5.3. Nazwa producenta
+  - 4.1. Warunki
+  - 4.2. Próba
+  - 4.3. Zapis wideo
+  - 4.4. Dane źródłowe
+  - 4.5. Procedura
+  - 4.6. Dane przetworzone
+  - 4.7. Wyniki
+  - 4.8. Raport
+  - 5.1. Weryfikacja formalna
+  - 5.2. Weryfikacja merytoryczna
+  - 5.3. Akceptacja testu
+  - 5.4. Powtórzenie testu
+ Dodatki
+  - Załącznik A
+  - Odesłania
+  - Zmiany
+  - Licencja
+  - Zobacz także

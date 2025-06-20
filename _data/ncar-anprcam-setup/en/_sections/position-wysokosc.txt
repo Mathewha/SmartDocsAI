@@ -1,0 +1,5 @@
+Height
+The position of the camera should be chosen so that the movement of the license plate can be observed as the vehicle passes by. Therefore, it is recommended that the camera be mounted at a height slightly above the roof of the vehicle:
+Mounting height depends on the availability of mounting structures, and in practice this means:
+ Warning
+ Mounting the camera too low (e.g., at the level of the vehicle’s roof) will cause the camera to be blinded at night by the car’s headlights, and will also make it impossible to analyze the vehicle’s movement (e.g., detecting direction or determining speed).

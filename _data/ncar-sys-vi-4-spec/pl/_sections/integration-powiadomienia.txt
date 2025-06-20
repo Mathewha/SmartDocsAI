@@ -1,0 +1,4 @@
+Powiadomienia
+W systemie można skonfigurować przesyłanie powiadomień (np. informacji o zdarzeniach takich jak poszukiwany pojazd) przy pomocy:
+ e-mail (musi być dostępny serwer poczty elektronicznej SMTP),
+ SMS (musi być dostępna bramka SMS).

@@ -1,0 +1,59 @@
+
+.. _params:
+
+Parametry
+=========
+
+Wewnętrzne ustawienia kamery również wpływają na jakość rozpoznawania - w szczególności należy wziąć pod uwagę:
+
+.. _params_lpr_mode:
+
+Tryb LPR
+---------
+
+Zaleca się, aby kamery działały w trybie LPR 24 godziny na dobę:
+
+.. figure:: _static/img/lpr_mode.png
+   :alt: lprmode
+
+.. _params_fps:
+
+Klatki na sekundę
+------------------
+
+Zaleca się użycie następujących ustawień:
+
+.. figure:: _static/img/fps.png
+   :alt: fps
+
+- **25 kl./s - HDR X**- Dla kontroli dostępu i aplikacji na parkingach,
+- **30 kl./s - HDR X**- Do monitorowania ruchu miejskiego.
+
+Dla detekcji pojazdów na drogach szybkiego ruchu może być wskazane życie **50 kl./s** ustawienia, jednakże – zależy to od geometrii punktu pomiarowego i może powodować problemy z powodu ograniczonej zdolności kamery do kompensowania różnych warunków oświetleniowych.
+
+.. _params_exposure:
+
+Czas ekspozycji
+----------------
+
+Zaleca się, aby czas ekspozycji spełniał następujące wymagania:
+
+-  **< 1000 ms** – dla systemów kontroli dostępu i zastosowań na parkingach,
+-  **< 600 ms** – dla innych aplikacji.
+
+.. figure:: _static/img/exposure.png
+   :alt: exposure
+
+.. warning::
+
+   Zaleca się, aby kamera ANPR automatycznie dostosowywała czas ekspozycji do warunków oświetleniowych.
+
+.. _params_illumination:
+
+Oświetlenie
+-----------
+
+Zalecane ustawienia oświetlenia zależą od tego, jak daleko kamera znajduje się od pojazdu :math:`L`. Jeśli :math:`L` jest stosunkowo małe, może być konieczne zmniejszenie poziomu intensywności, aby zapobiec nadmiernemu naświetleniu tablicy rejestracyjnej w nocy.
+
+.. figure:: _static/img/illumination.png
+   :alt: illumination

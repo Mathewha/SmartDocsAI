@@ -1,0 +1,2 @@
+Import
+The BackOffice central system has the ability to connect external data sources (e.g., data from third-party ANPR cameras) via Importer ( pulling ) or Receiver ( pushing ) modules. The task of these modules is to transform the data into a unified form compliant with the API specification.

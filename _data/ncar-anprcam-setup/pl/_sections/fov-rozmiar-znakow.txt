@@ -1,0 +1,5 @@
+Rozmiar znaków
+Zalecana wysokość znaków tablicy rejestracyjnej na linii detekcji wynosi pikseli.
+ Ostrzeżenie
+ Wymagana wysokość odnosi się do obrazu przetwarzanego przez silnik ANPR, a nie do natywnego obrazu z kamery. Obecnie obraz jest resamplowany do rozdzielczości 1024x576 pikseli, nawet jeśli natywna rozdzielczość kamery wynosi 8 megapikseli.
+Wysokość znaku wynosząca 16 pikseli w przetworzonym obrazie jest uważana za optymalną gęstość pikseli. Silnik może nadal rozpoznawać tablice z mniejszymi wysokościami znaków (nawet do 10-12 pikseli na znak w obrazach bez zakłóceń). Jednak silnik nie odrzuci wyników wyłącznie na podstawie wielkości piksela znaku.

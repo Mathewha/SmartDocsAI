@@ -1,0 +1,11 @@
+Class
+EXTENDED
+It consists of automatic recognition of the vehicle class based solely on the photo. The system can distinguish the following classes:
+  Code Meaning
+  0 unknown ( category determination was not possible)
+  3 truck
+  5 bus
+  7 car
+  10 motorcycle (only when VLOOP is active)
+  11 delivery van up to 3.5 t
+Determining the vehicle class from the image requires that the silhouette of the front (or rear) of the vehicle is visible in the image. The problem can be night conditions, where the camera provides a picture of the plate taken in infrared - except the plate nothing is visible. If the prerequisite is to recognize the category also at night it is necessary to use additional special illumination.

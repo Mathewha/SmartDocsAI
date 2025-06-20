@@ -1,0 +1,81 @@
+Wersja PL 4.3.3, udostępniona dnia 22 lip 2022.
+NeuroCar Shot VI (ang. Vehicle Identification) to aplikacja służąca do detekcji i identyfikacji pojazdów widocznych na pojedynczym zdjęciu. Identyfikacja pojazdu polega na rozpoznaniu jego numer rejestracyjnego, kraju pochodzenia, kategorii, producenta oraz wersji modelowej. Aplikacja pracuje jak zewnętrzny moduł, z którym komunikacja odbywa się przez interfejs REST, i może być dołączony jako komponent aplikacji nadrzędnej.
+  Funkcje
+   Funkcja Opis Jakość 1
+   Detekcja Wykrywanie pojazdu na zdjęciu – widoczny musi być cały przód (albo tył) pojazdu z czytelną, całą tablicą rejestracją. Wymagane jest także aby kąt pochylenia tablicy, tzn. kąt między podstawą tablicy a poziomą krawędzią obrazu, nie był większy niż ±25°. Wykrywane jest do 32 pojazdów na pojedynczym zdjęciu. ≥ 95%
+   Numer rejestracyjny Rozpoznanie numeru rejestracyjnego dla wszystkich wykrytych pojazdów – numer musi być czytelny dla człowieka, wysokość każdego znaku w tablicy musi być w zakresie 16÷96 pikseli, tablica musi pochodzić z jednego ze znanych krajów 2 . Wynik rozpoznawania to ciąg liter i cyfr (kodowanie UTF-8), separatory (oprócz spacji) i inne znaki specjalne są pomijane. ≥ 95%
+   Kraj Rozpoznanie kraju pochodzenia pojazdu na postawie kształtu i zawartości tablicy rejestracyjnej – dla wszystkich pojazdów z rozpoznanym numerem rejestracyjnym. Kraj pochodzenia określany jest w postaci odpowiedniego, dwuliterowego kodu ISO 3166-1 alfa-2 . Tablica musi pochodzić z jednego ze znanych krajów 2 . ≥ 95%
+   Kategoria Dowiązanie do każdego pojazdu z rozpoznaną tablicą rejestracyjną jednej z następujacych kategorii: 3 - ciężarowy, 5 - autobus, 7 - osobowy, 10 - motocykl 4 , 11 - dostawczy (< 3.5t). Ocena jakości kategoryzacji dotyczy pojazdów, dla których możliwe jest rozpoznanie klasy manualnie (dla widoku z przodu). Jakość dla widoku pojazdu z tyłu może być niższa od wskazanej. ≥ 95%
+   Marka Rozpoznawanie marki pojazdu polega na dowiązaniu do każdego pojazdu z rozpoznaną tablicą rejestracyjną etykiety tekstowej z nazwą producenta (np. „bmw”). Rozpoznawanie marki możliwe jest dla pojazdów, dla których możliwe jest rozpoznanie manualne (dla widoku z przodu, w warunkach dziennych ew. w nocy, ale z odpowiednim oświetleniem). Przypisana etykieta jest jedną z ok. 140 wartości z dołączonej bazy danych. ≥ 95%
+   Model Rozpoznawanie modelu pojazdu polega na dowiązaniu do każdego pojazdu z rozpoznaną marką dodatkowej etykiety tekstowej z oznaczeniem wersji modelowej. Rozpoznawanie modelu możliwe jest dla pojazdów, dla których możliwe jest rozpoznanie manualnie (dla widoku z przodu, w warunkach dziennych ew. w nocy, ale z odpowiednim oświetleniem). W przypadku pojazdów, dla który rozpoznanie modelu nie jest jednoznaczne etykieta może zawierać nazwy wielu wersji modelowych oddzielonych znakiem | . Przypisana etykieta jest jedną z ok. 1900 wartości z dołączonej bazy danych. ≥ 70%
+   Pas ruchu Dowiązanie pojazdu do pasa ruchu jest funkcjonalnością opcjonalna i następuje wówczas, gdy użytkownik doda do analizy informacje o położeniu pasów ruchu w analizowanym obrazie – przez wskazanie linii podziału. Użytkownik może wskazać nie więcej niż 3 linie podziału (4 pasy ruchu). –
+   Obraz Oprogramowanie interpretuje obraz wejściowy podany w formacie JPEG lub PNG - 24 bit/piksel (RGB) lub 8 bit/piksel (gray). Maksymalne wymiary obrazu, który może być przesłany do analizy to 2432×2048 pikseli. –
+   Fotoradary Oprogramowanie posiada specjalny mechanizm obsługujący rozpoznawanie zdjęć z fotoradarów, w przypadku których zastosowano lampę błyskową i pryzmat. W takich zdjęciach tablica rejestracyjna jest prześwietlona (nieczytelna w swojej pierwotnej lokalizacji), a rozpoznawanie zawartości tablicy możliwe jest ze zdjęcia przesuniętego o zadany dystans. –
+   Wartość testowana na odpowiednio dużej próbce wybranych losowo zdjęć, na poziomie ufności 0.95, wg dedykowanej procedury oceny jakości. W teście każdy pojazd traktowany jest jak oddzielne zdarzenie w próbie losowej.
+   Jednocześnie rozpoznawane są tablice ze wskazanych krajów z danego regionu - poprzez aktywacje odpowiedniego pakietu regionalnego, np. pakiet EURO zawiera 48 krajów, z których pojazdy poruszają się na terenie Europy. Patrz także - warianty.
+   Lista dostępnych w danym momencie etykiet dla marki i modelu jest udostępniana przez twórcę programu. Lista ta zmienia się wraz z kolejnymi aktualizacjami.
+   Motocykl może być wykryty w obrazie jednak nie będzie posiadać rozpoznanej tablicy rejestracyjnej, kraju pochodzenia, producenta i wersji modelowej. Z tego powodu motocykle nie są brane pod uwagę przy ocenie parametrów jakościowych.
+ Aplikacja
+  Instalacja
+ Moduł shot-vi dostarczany jest w postaci jednego pliku instalacyjnego, który zawiera w swojej nazwie informacje opisujące wariant w jakim został przygotowany, tzn. numer wersji, oznaczenie pakietu regionalnego oraz platformę systemową – przykładowo:
+   shot-vi-euro-4.3.3-linux-x86_64-Debian-buster.deb
+ to plik zawierający instalator wariantu do rozpoznawania tablic europejskich, w wersji 4.3.3 , dla 64-bitowego procesora kompatybilnego z Intel x86, pracującego pod systemem operacyjnym Linux Debian build 10.12 („buster”).
+  Uwaga
+  Odpowiedni plik instalacyjny jest dostarczany przez twórcę po ustaleniu z klientem szczegółów co do platformy sprzętowej i systemowej.
+  Użycie
+ Moduł shot-vi nie posiada domyślnie żadnego graficznego interfejsu użytkownika. Wywołanie funkcji modułu odbywa się przez wywołanie odpowiedniej metody RestAPI z argumentem w postaci zdjęcia w formacie JPEG lub PNG :
+ Użytkownik może dodać do wywołania dedykowany zestaw parametrów (np. właściwy dla danego zdjęcia). Takie parametry są umieszczane wówczas jako argument w URL-u do metody HTTP post .
+ Kompletny opis struktur danych oraz interfejsu RestAPI dla aplikacji można znaleźć pod publicznie dostępnym adresem:
+   https://gitlab.com/ncar-tools/04/shot-vi/-/blob/main/openapi.json
+  Przetwarzanie
+ Moduł shot-vi może przetwarzać jednocześnie wiele obrazów wejściowych podawanych przez odrębne wywołania API. Każdy obraz przetwarzany jest w oddzielnym wątku. Możliwe jest przez to przetwarzanie równoległe – w tym samym czasie przetwarzanie wielu zdjęć jednocześnie. Ograniczeniem w takim przypadku jest liczba wątków dostępnych na danym komputerze ew. ograniczenia wynikające z licencji.
+ Średni czas przetwarzania jednego zdjęcia istotnie zależy od jego zawartości. Dla prostych przypadków (jeden pojazd z czytelną tablicą) jest to około 200 milisekund . Dla zdjęć z fotoradarów, gdzie znajduje się wiele pojazdów oraz występuje konieczność rozpoznawania z odbicia średni czas to 2 sekundy jednak w szczególnych warunkach czas ten może ulec wydłużeniu nawet do 10 sekund (większa liczba pojazdów w obrazie, większy). Pomiary czasu wykonano dla procesora klasy Intel(R) Xeon(R) CPU E5-2660 taktowanego częstotliwością podstawową 2.2 GHz. Dla wariantów działających na procesorach plasy ARM czasy przetwarzania są dłuższe.
+  Wynik
+ Poniższy rysunek zawiera ideowy diagram opisujący wynik, który przedstawia w formacie JSON zawartości obrazu wejściowego:
+ Moduł shot-vi generuje dla każdego wykrytego pojazdu oddzielny opis zawierający:
+  informację o pozycji (x,y),(s,w) przodu pojazdu w obrazie – wizerunek przodu pojazdu pozwala np. na określenie klasy, producenta oraz wersji modelowej,
+  informację o pozycji (x,y),(s,w) tablicy rejestracyjnej – oraz tablicy jest następnie użyty do rozpoznawania jej zawartości,
+  informację o pozycji (x,y),(s,w) każdego znaku ,
+  wszystkie rozpoznane warianty tablicy rejestracyjnej wraz z wskazanym poziomem poprawności danego wariantu,
+  wynik rozpoznawania każdego znaku wraz z poziomem poprawności tego rozpoznawania,
+  wynik rozpoznawania pozostałych cech tablicy rejestracyjnej wraz z poziomem poprawności rozpoznawania, w tym:
+   kod kraju pochodzenia,
+   kategoria pojazdu,
+   marka,
+   model,
+   pas ruchu.
+ Jeżeli podany wynik zawiera warianty są one uporządkowane wg poziomu poprawności, od największego do najmniejszego.
+ Warianty
+Warianty modułu shot-vi uwzględniają:
+ procesor,
+ maksymalną liczbę wątków – równocześnie przetwarzanych obrazów,
+ platformę systemową,
+ kraj pochodzenia pojazdu.
+Ze względu na system i procesor podział jest następujący:
+  War. Procesor Wątki Rozkazy System Prefiks
+  A0 x86 64-bit ∞ SSE 4.2 Linux ncar-v-shotvi-4a0
+  A4 x86 64-bit ≤4 SSE 4.2 Linux ncar-v-shotvi-4a4
+  B0 x86 64-bit ∞ SSE 4.2 Windows 64-bit ncar-v-shotvi-4b0
+  B4 x86 64-bit ≤4 SSE 4.2 Windows 64-bit ncar-v-shotvi-4b4
+  C4 ARM 64-bit ≤4 neon Linux ncar-v-shotvi-4c4
+ Uwaga
+ Moduł wykorzystuje specjalne rozkazy typu SIMD specyficzne dla danego typu procesorów. Zastosowanie procesora, który nie posiada zaimplementowanych, wskazanych powyżej typów rozkazów powoduje, że moduł nie będzie działać.
+Warianty określające dopuszczalne kraje pochodzenia są oznaczane dodatkowym sufiksem. Kraj pochodzenia pojazdu określany jest na podstawie cech geometrycznych oraz zawartości tablicy rejestracyjnej. System przystosowany jest do jednoczesnego rozpoznawania numerów z wielu krajów, jednak użytkownik musi wybrać jeden z poniższych regionów – rozpoznawanie jest ograniczone do krajów tylko z tego regionu:
+  Sufiks Znaczenie
+  AFRI Afryka (niektóre kraje)
+  AMEC Ameryka Środkowa (niektóre kraje – MX )
+  AMEN Ameryka Północna (USA i Kanada – w przygotowaniu)
+  AMES Ameryka Południowa (niektóre kraje)
+  ASIA Azja (niektóre kraje – w przygotowaniu)
+  EURO Europa
+  MIDE Bliski Wschód (niektóre kraje)
+ Licencja
+Moduł shot-vi licencjonowany jest per instancja, tzn. dla każdego uruchomionego procesu wymagana jest oddzielna licencja. Wyjątkiem jest może być sytuacja, że dodatkowe zapisy w umowie licencyjnej stanowią inaczej.
+Z każdym egzemplarzem modułu (licencją) powiązany jest unikatowy numer seryjny i wygenerowany dla niego odpowiedni cyfrowy certyfikat zgodny ze standardem X.509 . Numer seryjny jest dodawany do wyników działania modułu i ma przykładowo postać:
+  ncar-v-shotvi-04a00001
+ Odesłania
+ Zmiany
+  Inicjacja dokumentu
+ Zobacz także
+Więcej informacji o produktach NeuroCar można znaleźć na stronie https://www.neurocar.pl .
+Niniejszy dokument jest dostępny on-line pod adresem https://docs.neurocar.pl/ncar-v-shotvi-4-info/ .

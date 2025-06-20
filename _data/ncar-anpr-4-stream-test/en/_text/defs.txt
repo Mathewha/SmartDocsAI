@@ -1,0 +1,82 @@
+ Detection area
+The detection area is the place where vehicle detection and identification takes place. By design, the detection area covers the full cross-section of the road, i.e. all lanes where the tested devices are mounted, along with the emergency lane (if any). The system should be designed to ensure detection of all vehicles moving in a given direction.
+In locations where there is an emergency lane, the detection area also includes the lane – vehicles moving partially or completely in the emergency lane should be counted as vehicles passing in the slow lane unless the system design provides for a separate detection for the emergency lane.
+On a road with two-way traffic, it is stipulated that all vehicles traveling in the indicated lane, in the specified direction, should be detected, even if they only partially pass over it. It is assumed that a vehicle should be detected when at least one wheel from each axle of the vehicle passes entirely in the indicated lane (within the area designated by horizontal markings). In such a measurement system, a vehicle is assumed to be outside the detection area when it has fully moved with all wheels into the opposite lane.
+ Detection quality
+Detection level is a measure quantifying (in percentage terms) the ratio of the number of vehicles detected by the tested system to the number of all vehicles passing through a given detection area, at a given time, in a given direction, in a designated lane, at a speed that allows effective measurement. The detection level can be determined for vehicles moving in any direction or in a well-defined direction, rejecting vehicles moving against the flow, for example.
+It is assumed that the system detects only moving vehicles – effective measurement is possible when the vehicle is moving at speed:
+ at least ≥ 3.6 km/h (≥1 m/s),
+ at most ≤ 252 km/h (≤70 m/s).
+ Attention
+ The vehicle speed requirement can be extended, for example, by allowing stop&go traffic, but it is recommended to treat such cases as special, tested in a separate procedure.
+Two sources of error are taken into account in determining the detection level:
+ – omission of a vehicle by the system (number of vehicles omitted),
+ – detection of a non-existent vehicle by the system (number of falsely detected vehicles).
+If is the number of vehicles that actually passed through the measurement point then the detection level is determined from the formula:
+By design, the system should detect the passage of any vehicle, such as:
+ motorcycles and mopeds,
+ passenger cars, including those with trailers,
+ light commercial vehicles (LCV), including those with trailers,
+ tractors and other agricultural machinery, including multi-trailers,
+ trucks, including those with trailers,
+ tractor-trailers, stand-alone and with semi-trailer,
+ buses, including those with trailers,
+ special, multi-axle vehicles for oversize transport,
+ military vehicles, including transporters and tanks.
+When calculating the detection level, vehicles that the system may not detect are not taken into account:
+ bicycles,
+ mopeds,
+ light wooden vehicles (such as a carriage),
+ road machinery, such as rollers, milling machines, etc.
+If multiple vehicles pass through the detection field at the same time, each should be detected independently.
+ Identification quality
+In the simplest case, by identification of a vehicle is meant its detection and subsequent recognition of the license plate number. By the term identification quality is meant the percentage value that is the ratio of the number of correctly recognized vehicle plates to the number of all identifiable vehicles that passed through the detection area, in the specified direction, at the specified time, at the correct speed:
+The number of vehicles that can be identified in a certain number of vehicles is determined by an expert during the test. Vehicles are not taken into account:
+ motorcycles, for measurements from the front,
+ agricultural machinery without a license plate marking,
+ vehicles without a license plate,
+ vehicles with an illegible license plate, about which the expert has doubts, in determining the registration number.
+ Attention
+ If the ANPR camera does not cover the entire detection area, as a result of which, for a vehicle detected by detection, the plate is not visible, or visible only partially, such a vehicle should be classified as unidentified (without plate recognition) but identifiable, i.e. included in the group.
+It is assumed that the registration number is:
+ a string of uppercase letters and numbers – if there is a lowercase letter in the plate, it should be converted to uppercase,
+ no longer than 10 characters,
+ without separators and other special characters,
+ all characters written together – characters other than a letter or number should be omitted.
+To avoid ambiguity, the license plate number should be encoded in the output in UTF-8 encoding. For some countries, recognition of the corresponding national characters is required (e.g. umlaut in German plates). For license plates from countries where the Latin alphabet is not used, it is allowed to recognize letters and numbers in the alphabet appropriate for the country (e.g. Cyrillic), but it is also allowed to convert characters from non-Latin to Latin alphabet, for example, such conversion can be used for Russian plates, plates of Middle Eastern countries (Arabic script) or Chinese plates.
+Number plate recognition should not be affected:
+ letter color and background color,
+ reflectivity (at night, the plates must be illuminated with at least infrared light),
+ arrangement of characters (single-row, double-row).
+If there is more than one vehicle in the image to be analyzed then the detection system should detect each vehicle independently, and the identification system should recognize the license plate of each vehicle separately.
+If the ANPR board recognition system provides recognition results in the form of variants (different alternatives), the first variant, i.e. the variant with the highest confidence level (if the manufacturer has marked such a level), is taken as the result, and the other results are discarded.
+The license plate is considered to be recognized correctly if the selected variant from the automatic recognition agrees verbatim as to the number of characters and their values with the result indicated by the expert – when comparing any characters other than letters and numbers are ignored. In the comparison, country codes are not taken into account (for example, the so-called eurolabel from European tables). In the comparison, letters are capitalized.
+ Classification quality
+Classification quality, or vehicle type recognition quality , is a measure quantifying (in percentage terms) the ratio of the number of correctly recognized vehicle types to the number of all classifiable vehicles that passed through the detection area within a specified time, at the correct speed and in the direction according to the system’s configuration (in particular, the system can be adapted to recognize in a given detection area vehicle types coming from one specific direction):
+The number of vehicles that can be classified in a specific series of vehicles is determined by an expert during the test. Vehicles are not taken into account:
+ bicycles,
+ mopeds,
+ light wooden vehicles (such as a carriage),
+ road machinery like rollers, milling machines, etc.,
+ vehicles that the expert is unable to assign to any of the classes recognized by the system.
+The system must be able to recognize the following classes of vehicles:
+ personal car
+ LCV (light commercial vehicle)
+ trucks (vehicles with GVW >3.5 tons and truck tractors),
+ buses
+ other
+ Maker recognition quality
+It is assumed that the system recognizes the maker of vehicles based on a photo of the front. Recognition of the vehicle maker in rear photos is not evaluated and is, as a rule, significantly worse than for the front. In a large number of cases (e.g., trucks) it is completely impossible.
+Maker recognition quality is a measure that quantifies (in percentage terms) the ratio of the number of correctly recognized makers of vehicles to the number of all recognizable vehicles that passed through the detection area) in a specified time, at the correct speed and in the direction according to the system configuration (the system in particular can be adapted to recognize in a given detection area the maker of vehicles coming from one specific direction):
+The number of vehicles that can be recognized in a specific series of vehicles is determined by an expert during the test. Vehicles are not taken into account:
+ bicycles,
+ mopeds,
+ motorcycles,
+ road machinery like rollers, milling machines, etc.,
+ tractors and other agricultural machinery,
+ vehicles not produced in series,
+ special and military vehicles,
+ vehicles for which no maker was specified by the manufacturer,
+ vehicles for which the expert is unable to determine the brand.
+ Attention
+ The system does not need to be able to recognize vehicle maker at night unless it has been specially prepared for this, e.g. by attaching special high-powered IR lighting.

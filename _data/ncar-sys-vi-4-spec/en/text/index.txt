@@ -1,0 +1,117 @@
+[image]
+
+
+NeuroCar System VI - Technical specification
+********************************************
+
+Version "EN" 4.0.5 released on Nov 12, 2022.
+
+   [image]
+
+Design and operation of a system for vehicle detection and
+identification based on license plate recognition (ANPR) and vehicle
+manufacturer and model version recognition (MMR). For operation, the
+system uses only the video stream from a camera looking at the front
+or rear of the vehicle.
+
+======================================================================
+
+Table of contents
+
+* 1. Operating principle
+
+* 2. Functions
+
+  * 2.1. Detection
+
+  * 2.2. Registration number
+
+  * 2.3. Class
+
+  * 2.4. Make and model
+
+  * 2.5. Color
+
+  * 2.6. Direction
+
+  * 2.7. Lane
+
+  * 2.8. Country
+
+  * 2.9. Speed
+
+  * 2.10. Dangerous goods
+
+  * 2.11. Multivision
+
+  * 2.12. Alerts
+
+  * 2.13. Monitoring
+
+* 3. Design
+
+  * 3.1. Cloud computing
+
+  * 3.2. Fog computing
+
+  * 3.3. Edge computing
+
+  * 3.4. Hybrid computing
+
+* 4. Devices
+
+  * 4.1. ANPR camera
+
+  * 4.2. Smartcamera
+
+  * 4.3. Smartphone
+
+  * 4.4. CPU
+
+* 5. Software
+
+  * 5.1. Terminal VI
+
+  * 5.2. BackOffice
+
+    * 5.2.1. Base
+
+    * 5.2.2. Vehicles
+
+    * 5.2.3. Monitor
+
+    * 5.2.4. Analytics
+
+    * 5.2.5. Support
+
+* 6. Data
+
+  * 6.1. VehicleTrace
+
+  * 6.2. CameraViews
+
+  * 6.3. CameraRecording
+
+  * 6.4. Status
+
+* 7. Integration
+
+  * 7.1. API
+
+  * 7.2. Notifications
+
+    * 7.2.1. Data
+
+    * 7.2.2. Notifications
+
+  * 7.3. Import
+
+Appendices
+
+* References
+
+* Changelog
+
+* License
+
+* See also

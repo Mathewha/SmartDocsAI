@@ -1,0 +1,4 @@
+Terminal VI
+Jest to dedykowany firmware dla urządzeń realizujących funkcje terminala – oprogramowanie kontroluje wszystkie funkcje urządzenia zapewniając ciągłą pracę w trybie 24/7. W szczególności steruje parametrami kamery, kontroluje stan nośników danych, kontroluje synchronizację czasu, zarządza modułami komunikacyjnymi i kontroluje przesyłanie danych do systemu nadrzędnego.
+Firmware posiada wbudowany interfejs graficzny (GUI) dostępny poprzez dowolną przeglądarkę internetową obsługującą HTML-5. Przy jego pomocy operator może monitorować stan urządzenia, może podglądać na bieżąco dane pomiarowe (zarejestrowane pojazdy). GUI pozwala także na zarządzanie uprawnieniami dostępu.
+Firmware zaimplementowane ma także RestAPI pozwalające na dostęp do danych i sterowanie urządzeniem przez zautomatyzowany system nadrzędny.

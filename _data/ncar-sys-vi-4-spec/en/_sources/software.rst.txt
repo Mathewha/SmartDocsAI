@@ -1,0 +1,89 @@
+.. _software:
+
+===============
+Oprogramowanie
+===============
+
+.. _software_terminal_vi:
+
+Terminal VI
+=============
+
+.. image:: _static/img/terminal-gui.png
+   :alt: Terminal GUI
+
+Jest to dedykowany firmware dla urządzeń realizujących funkcje terminala – oprogramowanie kontroluje wszystkie funkcje urządzenia zapewniając ciągłą pracę w trybie 24/7. W szczególności steruje parametrami kamery, kontroluje stan nośników danych, kontroluje synchronizację czasu, zarządza modułami komunikacyjnymi i kontroluje przesyłanie danych do systemu nadrzędnego.
+
+Firmware posiada wbudowany interfejs graficzny (GUI) dostępny poprzez dowolną przeglądarkę internetową obsługującą HTML-5. Przy jego pomocy operator może monitorować stan urządzenia, może podglądać na bieżąco dane pomiarowe (zarejestrowane pojazdy). GUI pozwala także na zarządzanie uprawnieniami dostępu.
+
+Firmware zaimplementowane ma także RestAPI pozwalające na dostęp do danych i sterowanie urządzeniem przez zautomatyzowany system nadrzędny.  
+
+.. _software_backoffice:
+
+BackOffice
+============
+
+Oprogramowanie dla systemu centralnego działa w chmurze pod kontrolą środowiska `Kubernetes <https://pl.wikipedia.org/wiki/Kubernetes>`_. Oprogramowanie ma konstrukcje modułową, która pozwala na elastyczne dopasowanie architektury do potrzeb użytkownika. W poniższych punktach wymieniono najważniejsze aplikacje.
+
+.. _software_backoffice_base:
+
+Baza
+------
+
+.. image:: _static/img/start-gui.png
+   :alt: Start GUI
+
+Aplikacja **Base** stanowi podstawę działania całego systemu centralnego i składa się z modułów implementujących główne funkcjonalności:
+
+* uwierzytelnianie (ang. *authentication*)
+* udostępnianie API oraz GUI (ang. *ingress*)
+* zarządzanie użytkownikami / grupami (ang. *user management*)
+* zarządzanie przechowywaniem i przeszukiwaniem danych (ang. *storage*)
+* zarządzanie konfiguracją (ang. *configuration*), w tym zarządzanie listą urządzeń pomiarowych (ang. *terminals*) oraz listą punktów pomiarowych (ang. *locations*)
+* zarządzanie odbiorem danych pomiarowych / statusów (ang. *receivers*)
+* zarządzanie przepływem danych między komponentami systemu (ang. *message routing*)
+* zarządzanie powiadomieniami – wysyłanie danych do systemów nadrzędnych
+* udostępnianie map dla innych aplikacji (w postaci wektorowej i rastrowej)
+
+Elementem aplikacji **Base** jest także główny ekran startowy systemu.
+
+.. _software_backoffice_vehicles:
+
+Pojazdy
+--------
+
+.. image:: _static/img/vehicles-gui.png
+   :alt: Start GUI
+
+Aplikacja **Vehicles** jest dedykowanym modułem pozwalającym użytkownikowi na przeglądanie danych dotyczących zarejestrowanych pojazdów. Aplikacja działa jako `aplikacja internetowa <https://pl.wikipedia.org/wiki/Aplikacja_internetowa>`_. Użytkownik ma dostęp do danych o lokalizacji punktów pomiarowych, może wyszukiwać zarejestrowane pojazdy wykorzystując rozbudowany mechanizm filtrów, może dotrzeć do pełnej listy informacji o pojeździe (zdjęcia, metadane). Dostępna jest także możliwość pobierania danych o przejazdach w formacie tabelarycznym.  
+
+.. _software_backoffice_monitor:
+
+Monitor
+--------
+
+.. image:: _static/img/monitor-gui.png
+   :alt: Monitor GUI
+
+Aplikacja **Monitor** służy do pro-aktywnego nadzoru infrastruktury pomiarowej wykorzystujące pakiet `Icinga <https://en.wikipedia.org/wiki/Icinga>`_. Aplikacja kontroluje stan wszystkich urządzeń pomiarowych oraz stan usług krytycznych działających w systemie centralnym. W razie wystąpienia awarii aplikacja umożliwia wysłanie powiadomień (np. e-mail) do wskazanej grupy operatorów.
+
+.. _software_backoffice_analytics:
+
+Analityka
+---------
+
+.. image:: _static/img/analytics-gui.png
+   :alt: Analytics GUI
+
+Aplikacja **Analytics** służy do rozszerzonych analiz danych wykorzystująca pakiet `JupyterLab <https://en.wikipedia.org/wiki/Project_Jupyter>`_. Aplikacja udostępniona jest przez GUI i pozwala na uruchamianie skryptów przygotowanych przez NeuroCar do pobrania z adresu https://gitlab.com/ncar-tools/04
+
+.. _software_backoffice_support:
+
+Support
+--------
+
+.. image:: _static/img/support-gui.png
+   :alt: Support GUI
+
+Aplikacja **Support** działa w chmurze i przeznaczona jest do zarządzania procesem naprawy usterek (ang. `Ticket tracking <https://pl.wikipedia.org/wiki/Ticket_tracking>`_).
+

@@ -1,0 +1,5 @@
+Detekcja
+BASIC
+Polega na automatycznym wykryciu przejazdu pojazdu w polu widzenia kamery (ang. free-flow ). Kamera powinna być ustawiona w taki sposób, by możliwe było odczytanie numeru rejestracyjnego. Detekcja działa dla pojazdów obserwowanych zarówno z przodu jak i z tyłu, bez względu na kierunek poruszania się. Detektor wybiera ze strumienia wideo jedno ujęcie (zdjęcie), w którym wykryty pojazd jest najlepiej widoczny → posiada czytelną tablicę rejestracyjną oraz widać na nim wizerunek kierującego.
+EXTENDED
+W konfiguracji rozszerzonej możliwe jest wykrywanie pojazdów nie posiadających tablicy rejestracyjnej, ew. których tablica jest nieczytelna – taki mechanizm zwany jest VLOOP → wirtualna pętla .

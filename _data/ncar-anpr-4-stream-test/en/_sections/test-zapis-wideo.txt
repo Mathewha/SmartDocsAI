@@ -1,0 +1,3 @@
+Video recording
+It is required that video footage covering at least the entire field of view of the ANPR camera be recorded while the test is being conducted. The video should be recorded in digital form, compressed (H.264), with a resolution of at least 640 × 360, 25 frames per second. The reference video recording can come directly from the ANPR camera or from a nearby camera facing the test area.
+It is assumed that the video recording should be continuous throughout the sub-test period. It is permissible that there will be gaps in the video material, however, they must not exceed more than 1% of the required recording time, with the length of one gap not exceeding 0.5 s.
